@@ -1,0 +1,12 @@
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.DS_Store
+
+# Folder structure
+!shap_outputs/.gitkeep
+!llm_outputs/.gitkeep
+!llm_as_a_judge_outputs/.gitkeep
+!results/.gitkeep
+!figures/.gitkeep
