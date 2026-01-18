@@ -1,12 +1,41 @@
+# ==============================
 # Python / Jupyter
+# ==============================
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
 .DS_Store
 
-# Folder structure
+# Data / models
+data/
+models/
+*.pkl
+*.joblib
+
+
+# Large intermediate artifacts
+shap_outputs/*
+llm_outputs/*
+results/*
+figures/*
+
+keep selected evaluation-relevant artifacts:
+!shap_outputs/
+!shap_outputs/**/shap_trx_*.json
+!shap_outputs/**/shap_corrupted_trx_*.json
 !shap_outputs/.gitkeep
+
+!llm_outputs/
+!llm_outputs/runs/
+!llm_outputs/runs/**/llm_trx_*.json
+!llm_outputs/runs/**/inputs/llm_prompt_trx_*.txt
 !llm_outputs/.gitkeep
-!llm_as_a_judge_outputs/.gitkeep
+
+!results/
+!results/sample_subsets/**
+!results/eval_runs/**
 !results/.gitkeep
+
+!figures/
+!figures/**
 !figures/.gitkeep
