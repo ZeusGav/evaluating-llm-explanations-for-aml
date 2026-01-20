@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3075650,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Several indicators raise suspicion, including electronic transfer indicators and large inflow/outflow amounts. There are no factors listed that would lower suspicion.\nkey_factors:\n- payment_format_ach (raises suspicion): Use of ACH could indicate electronic transfer activity that merits scrutiny given the large amounts involved.\n- amount_received (raises suspicion): The sizeable incoming amount (17441.1) may indicate unusual funds inflow.\n- amount_paid (raises suspicion): The identical outgoing amount (17441.1) could reflect a round-trip transfer raising risk.\n- to_bank (raises suspicion): Transfer to the receiving bank ID may suggest unusual counterparty routing.\n- dayofweek (raises suspicion): Timing on a weekday could align with business activity but may still warrant review alongside other factors.\ninvestigation_context: If these factors are present, the profile could warrant deeper review to determine intent and risk."
+}

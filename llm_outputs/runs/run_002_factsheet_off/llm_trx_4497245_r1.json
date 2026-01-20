@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4497245,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because several factors point away from concern, including bank-origin indicators, cheque format, and the amount received. However, the reported amount paid and the absence of a credit-card payment flag push in the opposite direction and could be consistent with scenarios that raise attention.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with payments routed through traditional bank or cheque channels rather than rapid electronic push payments.\n- from_bank=48910 (lowers suspicion) \u2014 a clear bank origin may be consistent with traceable bank-to-bank activity.\n- amount_paid=3624.7 (raises suspicion) \u2014 a larger outgoing amount could be consistent with transactions that merit additional contextual explanation.\n- payment_format_cheque=1 (lowers suspicion) \u2014 cheque usage may be consistent with conventional, documented settlement methods.\n- payment_format_credit_card=0 (raises suspicion) \u2014 lack of a credit-card payment flag could be consistent with atypical funding or payment methods that prompt questions.\n\ninvestigation_context: If considered together, these mixed signals could be consistent with routine bank and cheque payments while the higher outgoing amount and missing credit-card format could also be consistent with scenarios that raise additional questions."
+}

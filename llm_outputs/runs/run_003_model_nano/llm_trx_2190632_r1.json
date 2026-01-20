@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2190632,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The high suspiciousness score is driven by signals such as an ACH payment format, Sunday timing, and identical amounts received and paid, which together suggest unusual transfer patterns. Euro-related indicators and a known sending bank offset the risk somewhat.\nkey_factors:\n- payment_format_ach (raises suspicion): An ACH payment format could indicate rapid or automated transfers.\n- dayofweek (raises suspicion): Occurring on Sunday could be unusual for routine activity.\n- amount_received (raises suspicion): Identical amount received and paid suggests a circular transfer.\n- from_bank (lowers suspicion): A known sending bank could reflect legitimate activity.\n- payment_currency_euro (lowers suspicion): Use of euro could reflect standard currency usage.\ninvestigation_context: If these factors align, they could collectively explain the elevated suspiciousness score."
+}

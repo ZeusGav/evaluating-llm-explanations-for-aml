@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4043829,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: A very high score is driven by an ACH payment of a relatively large amount into bank 22 on day 5, which collectively raises concern. Suspicion is partly reduced because the funds originate from bank 1522 and both the payment and receiving currencies are euros, which may indicate lower risk in context.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 use of ACH could be consistent with automated or bank-to-bank transfers that warrant scrutiny.\n- amount_received (raises suspicion) \u2014 the sizable received amount may indicate higher monetary exposure and merit closer review.\n- to_bank (raises suspicion) \u2014 movement into bank 22 may be notable depending on the destination's risk profile.\n- from_bank (lowers suspicion) \u2014 originating from bank 1522 may decrease concern if that sender is a known or lower-risk counterparty.\n- receiving_currency_euro (lowers suspicion) \u2014 receipt in euros may reduce concern depending on expected currency flows.\ninvestigation_context: If these indicators describe one transaction, they could be consistent with a high-value ACH credit to bank 22 that is partly mitigated by a familiar sending bank and euro currency usage."
+}

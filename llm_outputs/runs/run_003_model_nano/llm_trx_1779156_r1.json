@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1779156,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Overall, the very large amount_received increases suspicion, while from_bank, payment_format_ach, payment_format_cash, dayofweek, and hour decrease it. A credit_card payment format raises suspicion, contributing to the small net signal.\nkey_factors:\n- amount_received (raises suspicion) \u2014 a very large inflow could raise suspicion if not supported by context.\n- from_bank (lowers suspicion) \u2014 involvement of the sending bank may reduce concern when consistent with established relationships.\n- payment_format_ach (lowers suspicion) \u2014 ACH usage can indicate standard domestic transfers, reducing suspicion.\n- payment_format_cash (lowers suspicion) \u2014 cash-based payments may reflect ordinary cash handling, reducing suspicion.\n- payment_format_credit_card (raises suspicion) \u2014 credit card payments can raise concern when not aligned with expected patterns.\ninvestigation_context: If other indicators align, this pattern could be consistent with legitimate activity."
+}

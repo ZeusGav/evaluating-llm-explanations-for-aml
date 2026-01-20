@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1468643,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most top signals\u2014including origin bank, credit card payment format, small amount, and Swiss franc receipt\u2014lower the overall suspicion and point toward a routine, low-value payment pattern. However, the payment_currency_us_dollar=0 factor raises suspicion and could indicate the use of a non-USD route that may change interpretation depending on context.\nkey_factors:\n- from_bank=139793 (lowers suspicion): if funds come from this bank, it could be consistent with expected counterparty behavior.\n- payment_format_credit_card=1 (lowers suspicion): if paid by credit card, this may reflect ordinary consumer spending.\n- amount_paid=40.18 (lowers suspicion): if the payment is this low, it could indicate a routine small-value transaction.\n- receiving_currency_swiss_franc=1 (lowers suspicion): if received in Swiss francs, this may align with normal currency settlement for the parties involved.\n- payment_currency_us_dollar=0 (raises suspicion): if USD was not used, this could suggest alternative currency routing that may affect risk interpretation.\ninvestigation_context: If additional context were available, the mix of strong lowering signals and the single non-USD indicator could be consistent with either routine low-value activity or legitimate non-USD routing depending on counterparty and purpose."
+}

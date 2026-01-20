@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2046274,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Multiple signals point to elevated risk, especially the ACH payment method, the identical large amounts received and paid, and the day-of-week timing. The hour of day and the sending-bank factor lower suspicion, but the overall combination yields a high suspiciousness score.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) The use of ACH could be associated with higher-risk transfers when seen with other indicators.\n- amount_received=16450.3 (raises suspicion) A relatively large inbound amount can increase scrutiny, especially in combination with ACH.\n- dayofweek=5 (raises suspicion) The day of week indicator can contribute to elevated risk when paired with other signals.\n- hour=20 (lowers suspicion) Transactions at 20:00 may be less typical for some activity, reducing risk in isolation.\n- from_bank=243254 (lowers suspicion) The sending-bank indicator could lower suspicion if it aligns with known legitimate relationships.\ninvestigation_context: If these factor patterns apply, the activity could reflect elevated AML risk."
+}

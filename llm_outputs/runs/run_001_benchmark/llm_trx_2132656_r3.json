@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2132656,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The transaction is highly suspicious because it is an ACH transfer involving a large amount in Saudi riyal, with the same substantial value recorded as both paid and received, which raises concern about significant value movement. Timing (dayofweek=2 and hour=18) and the sending bank slightly lower suspicion but do not outweigh the strong payment- and currency-related signals.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): An ACH method could be consistent with large automated transfers that merit closer scrutiny.\n- amount_received=23526.1 (raises suspicion): A large received amount could indicate significant funds movement that may not match routine activity.\n- payment_currency_saudi_riyal=1 (raises suspicion): Use of Saudi riyal could reflect jurisdictional or currency exposure that may increase risk depending on context.\n- dayofweek=2 (lowers suspicion): Occurring on day 2 could align with normal business-day timing and slightly reduce concern.\n- from_bank=228101 (lowers suspicion): The specific sending bank ID may correspond to an expected counterparty and modestly decrease suspicion.\n\ninvestigation_context: If the customer profile or stated purpose does not plausibly explain a large ACH in Saudi riyal, this combination of factors could be consistent with elevated risk."
+}

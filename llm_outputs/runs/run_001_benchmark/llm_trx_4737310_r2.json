@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4737310,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because multiple listed factors together raise suspicion, most notably an ACH payment in euros with an identical paid and received amount and specific sending/receiving banks; there are no listed factors that lower suspicion. These payment-format, currency, amount, bank, and timing indicators collectively increase concern about the transaction pattern. \nkey_factors:\n- payment_format_ach=1 (raises suspicion): an ACH method could be consistent with automated or large-value transfers that warrant closer attention.\n- amount_paid=9099.08 (raises suspicion): this single payment amount may indicate a sizable transfer that could be consistent with high-value activity.\n- amount_received=9099.08 (raises suspicion): identical received and paid amounts might reflect a direct pass-through or immediate movement of funds.\n- from_bank=231212 (raises suspicion): concentration with this sending bank could suggest activity tied to a specific origin institution.\n- dayofweek=5 (raises suspicion): occurrence on dayofweek=5 could be consistent with atypical timing patterns for business payments.\ninvestigation_context: If these factors are confirmed together, they could indicate coordinated high-value ACH activity involving the specified banks and euro-denominated funds."
+}

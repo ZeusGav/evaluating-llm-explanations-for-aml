@@ -1,0 +1,7 @@
+{
+  "transaction_id": 373186,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Two factors raise suspicion (hour, amount_paid), while the majority of factors decrease suspicion. This balance explains the very low suspiciousness score.\nkey_factors:\n- hour (raises suspicion) when the transaction occurs at hour 1, which could be atypical and warrants scrutiny.\n- amount_paid (raises suspicion) because the amount paid of 6443.48 may reflect unusual payment size in this context.\n- from_bank (lowers suspicion) because the sending bank ID pattern reduces the likelihood of suspicious signaling.\n- payment_format_ach (lowers suspicion) since ACH is not used here, lowering suspicion.\n- to_bank (lowers suspicion) because the receiving bank ID does not introduce additional risk signals in this set.\ninvestigation_context: If these factors hold as described, the overall risk signal remains very low."
+}

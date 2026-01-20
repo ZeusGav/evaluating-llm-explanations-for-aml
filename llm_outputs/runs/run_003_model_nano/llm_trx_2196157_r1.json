@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2196157,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Several strong indicators\u2014especially ACH payments, large and matching amounts, and Sunday timing\u2014drive the high suspiciousness score. A sending-bank factor lowers suspicion, partially offsetting the overall risk.\nkey_factors:\n- payment_format_ach (raises suspicion) could be consistent with rapid electronic transfers in some risk scenarios.\n- amount_received (raises suspicion) could indicate a large inbound transfer amount that merits scrutiny.\n- amount_paid (raises suspicion) could reflect a payment of the same large amount, suggesting potential round-tripping or reconciliation patterns.\n- dayofweek (raises suspicion) could reflect transactions occurring on a non-business day, which may indicate unusual activity.\n- from_bank (lowers suspicion) could reflect a legitimate counterpart or established relationship, reducing concern compared with unfamiliar senders.\ninvestigation_context: If these factors align, the situation could reflect a higher-risk transaction profile worth examination."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2230412,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple strong signals raise concern for this transaction \u2014 notably payment_format_ach=1, large identical amount_paid and amount_received (9301.71), and timing on dayofweek=6 and hour=17. Some factors lower concern, such as receiving_currency_euro=1, amount_ratio=1, and to_bank=15231, but their mitigating effect appears smaller than the combined raising signals.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with large automated bank transfers that warrant closer review.\n- amount_paid=9301.71 (raises suspicion) \u2014 a high single payment amount may indicate significant value movement worth scrutiny.\n- dayofweek=6 (raises suspicion) \u2014 timing late in the week could be consistent with irregular scheduling of transactions.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 use of euros might reduce concern if consistent with normal cross-border business flows.\n- amount_ratio=1 (lowers suspicion) \u2014 identical sent and received amounts could indicate no obvious fee layering and slightly mitigates risk.\n\ninvestigation_context: If these characteristics are confirmed, the mix of ACH format, high identical amounts, and late-week timing could be consistent with automated or atypical transfer patterns that merit contextual review."
+}

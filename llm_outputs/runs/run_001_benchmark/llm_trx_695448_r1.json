@@ -1,0 +1,7 @@
+{
+  "transaction_id": 695448,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The suspiciousness score of 0.997032 reflects several strong raising signals\u2014ACH payment format, large identical paid/received amounts, and a Sunday midday timing\u2014partially offset by lowering signals such as the sending bank and euro as the receiving currency. Overall, the raising factors substantially increase concern while the lowering factors modestly reduce it.\n\nkey_factors:\n- payment_format_ach (raises suspicion): the use of ACH transfers could be consistent with rapid electronic movement of funds.\n- amount_received (raises suspicion): a high received amount may indicate significant value that warrants scrutiny.\n- dayofweek (raises suspicion): a transaction on Sunday might reflect atypical timing for business activity.\n- from_bank (lowers suspicion): the identified sending bank somewhat reduces concern compared to other senders.\n- receiving_currency_euro (lowers suspicion): receiving in euro slightly lessens concern relative to other currencies.\n\ninvestigation_context: If these factor patterns hold, they could be consistent with attempts to move sizable funds quickly while also allowing for benign explanations."
+}

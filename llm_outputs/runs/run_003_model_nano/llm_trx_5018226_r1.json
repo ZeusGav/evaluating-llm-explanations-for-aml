@@ -1,0 +1,7 @@
+{
+  "transaction_id": 5018226,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The elevated score is driven by multiple signals that raise suspicion, including ACH as the payment method, large amounts received and paid, and the absence of cash or credit card payments. There are modest reductions from indicators like US-dollar currency and a specific receiving bank, but the overall pattern remains highly suspicious.\nkey_factors:\n- payment_format_ach (raises suspicion) If ACH is used as the method, this pattern could reflect automated transfers consistent with unusual fund movement.\n- amount_received (raises suspicion) A relatively large amount received, in combination with matching amount_paid, could indicate round-trip or unusual settlement activity.\n- amount_paid (raises suspicion) The equal amount paid to the received amount could suggest a round-trip flow, which may indicate layering.\n- payment_format_credit_card (raises suspicion) The absence of credit card payments (credit_card=0) could signal non-card movement patterns that deserve scrutiny.\n- payment_format_cash (raises suspicion) The absence of cash payments (cash=0) alongside ACH usage could point to non-cash transfer patterns warranting review.\ninvestigation_context: Based on these conditions, further review could focus on the unusual pattern of electronic transfers with no cash or card payments."
+}

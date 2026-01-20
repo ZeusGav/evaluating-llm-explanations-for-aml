@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4252653,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is low because several factors lower suspicion\u2014receiving_currency_rupee, amount_received, the bank indicators and the transaction hour point toward routine characteristics, while a couple of indicators push the other way. payment_format_ach and amount_paid raise suspicion to a lesser extent, but overall the lowering signals dominate, yielding a low suspiciousness score.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): ACH payment could be consistent with automated fund movement that may warrant closer look.\n- amount_paid=2457.66 (raises suspicion): the payment amount may reflect outbound funds activity that could increase concern if unexpected.\n- receiving_currency_rupee=1 (lowers suspicion): receiving in rupee could be consistent with routine local currency transfers, reducing concern.\n- amount_received=2457.66 (lowers suspicion): the received amount aligns with the payment amount, which may indicate a straightforward settlement and lower suspicion.\n- hour=0 (lowers suspicion): transaction occurring at hour 0 could reflect scheduled or overnight processing, which may be benign.\ninvestigation_context: If these patterns are unexpected for the customer, they could merit further review."
+}

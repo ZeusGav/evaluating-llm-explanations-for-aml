@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4421689,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Multiple indicators strongly align with elevated risk signals, including ACH usage, large payment amounts, and euro-denominated activity, which together push the score toward the high end. The hour of 10 lowers suspicion slightly, but the cumulative effect of the other factors keeps the overall score very high.\nkey_factors:\n- payment_format_ach (raises suspicion) - if ACH is used for this payment flow, it contributes to higher risk signals.\n- amount_paid (raises suspicion) - if a large amount is transferred, it supports elevated risk.\n- amount_received (raises suspicion) - if receiving a large amount aligns with the pattern, it adds to risk signals.\n- payment_currency_euro (raises suspicion) - if euro is used, it may reflect cross-border activity that can be riskier.\n- hour=10 (lowers suspicion) - if the transaction occurred at 10:00, it slightly reduces risk signals.\ninvestigation_context: If these indicators align with typical high-risk patterns, they may explain the elevated suspicion score."
+}

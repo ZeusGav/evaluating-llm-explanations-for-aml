@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1132827,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Upward signals from payment_format_ach and amount_paid offset downward signals from from_bank, to_bank, and hour, resulting in a low overall score of 0.011078. This balance reflects the coexistence of both raising and lowering factors.\nkey_factors:\n- payment_format_ach (raises suspicion) could reflect ACH usage that may warrant closer review if not typical for the account.\n- amount_paid (raises suspicion) could indicate a higher payment amount that might attract scrutiny if not expected.\n- from_bank (lowers suspicion) originating from the sending bank ID could indicate routine activity when paired with other factors.\n- to_bank (lowers suspicion) receiving bank ID matches the sending bank, which may indicate internal transfer and lower suspicion.\n- hour (lowers suspicion) transaction at hour 0 could be consistent with overnight processing, reducing concern.\ninvestigation_context: If these conditions hold for the account, they could explain the low overall score of 0.011078."
+}

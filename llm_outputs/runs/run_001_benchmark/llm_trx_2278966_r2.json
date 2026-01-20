@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2278966,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high largely because the transaction was processed as ACH and involves sizable payment and received amounts, which could raise suspicion. This is tempered by the sending bank identity and that the funds are received in euros, which may lower suspicion.\n\nkey_factors:\n- payment_format_ach (raises suspicion): ACH processing could be consistent with automated bank transfers that may facilitate rapid or high-volume movement. \n- amount_received (raises suspicion): a large amount received could indicate higher-value activity that warrants scrutiny. \n- amount_paid (raises suspicion): the payment amount is similarly large and may reflect concentrated flows. \n- from_bank (lowers suspicion): the sending bank ID may be associated with characteristics that reduce concern in this context. \n- receiving_currency_euro (lowers suspicion): receipt in euros could align with routine regional or settlement patterns and thus lower concern. \ninvestigation_context: If these attributes reflect true transaction behavior, they may indicate a pattern that deserves contextual review for routing and amount-related anomalies."
+}

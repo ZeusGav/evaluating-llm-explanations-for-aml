@@ -1,0 +1,7 @@
+{
+  "transaction_id": 585477,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high suspiciousness score reflects several strong risk signals \u2014 notably payment_format_ach, a large amount_received, and activity on dayofweek=6 \u2014 while factors like from_bank and receiving_currency_euro modestly lower concern. Together, the prominent raising factors outweigh the smaller offsets, resulting in a very elevated suspicion level.\n\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 use of ACH could be consistent with account-to-account flows that merit attention.\n- amount_received (raises suspicion) \u2014 receiving a relatively large single amount could indicate unusual inflows.\n- dayofweek (raises suspicion) \u2014 transaction occurring on dayofweek=6 (Sunday) might reflect atypical timing for ordinary business activity.\n- from_bank (lowers suspicion) \u2014 the sending bank ID slightly decreases concern, possibly reflecting an established correspondent relationship.\n- receiving_currency_euro (lowers suspicion) \u2014 reception in euro modestly offsets risk, which could be consistent with normal cross-border settlement.\n\ninvestigation_context: If reviewed further, the combination of ACH format, high amount, and weekend timing could be consistent with atypical cash-flow patterns."
+}

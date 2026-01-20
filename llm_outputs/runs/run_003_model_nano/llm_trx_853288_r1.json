@@ -1,0 +1,7 @@
+{
+  "transaction_id": 853288,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The score is driven by the ACH payment format, the matched amounts between amount_received and amount_paid, and Friday timing. Receiving currency in euros lowers suspicion, while the other factors keep the overall risk high.\n\nkey_factors:\n- payment_format_ach (raises suspicion): If payment_format_ach is 1, this raises suspicion because ACH transfers can be used for rapid movement of funds.\n- amount_received (raises suspicion): If amount_received is equal to the amount_paid, this raises suspicion as it may indicate a deliberate matching transfer pattern.\n- to_bank (raises suspicion): If to_bank is 23, this raises suspicion due to a targeted recipient.\n- dayofweek (raises suspicion): If dayofweek is 5 (Friday), this raises suspicion given timing patterns.\n- receiving_currency_euro (lowers suspicion): If receiving_currency_euro is 1, this lowers suspicion by indicating euro receipt.\n\ninvestigation_context: If ACH usage, matched amounts, Friday timing to a specific recipient, and euro receipt are observed together, the overall suspicion could be elevated, with euro receipt dampening part of the risk."
+}

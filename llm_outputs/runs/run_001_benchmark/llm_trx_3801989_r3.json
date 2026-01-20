@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3801989,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score reflects multiple factors that lower concern (for example, payment_format_ach=0, from_bank=15, and payment_currency_yen=1) while one factor (payment_currency_us_dollar=0) modestly raises concern. Overall, the lowering indicators outweigh the small increase, resulting in a low score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): could indicate the payment did not use ACH and may be consistent with expected routing.\n- from_bank=15 (lowers suspicion): may reflect a known sending institution and could reduce contextual concern.\n- payment_currency_yen=1 (lowers suspicion): payment in yen could be consistent with local currency flows and may lower scrutiny.\n- payment_currency_us_dollar=0 (raises suspicion): not being in US dollars might modestly increase scrutiny if USD activity had been expected.\n- payment_format_cheque=1 (lowers suspicion): use of cheque could indicate a traditional payment method and may reduce automated concern.\n\ninvestigation_context: If reviewed in context, the pattern may reflect routine yen\u2011denominated transfers, although the non\u2011USD indicator could merit contextual consideration."
+}

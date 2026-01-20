@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2229722,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The high suspiciousness score is driven by factors that raise concern\u2014ACH format, large amounts, and a Sunday transaction. However, the sending bank and US dollar currency dampen the signal somewhat.\nkey_factors:\n- payment_format_ach (raises suspicion) The use of ACH could indicate higher risk transfers in this context.\n- amount_received (raises suspicion) The large amount received could reflect unusual activity requiring review.\n- dayofweek (raises suspicion) A transaction on Sunday could suggest non-standard timing for transfers.\n- from_bank (lowers suspicion) The sending bank may align with routine activity, reducing concerns in this case.\n- payment_currency_us_dollar (lowers suspicion) Use of US dollars may reduce suspicion if USD is common for this channel.\ninvestigation_context: If these factors apply as described, they could explain the elevated suspiciousness score."
+}

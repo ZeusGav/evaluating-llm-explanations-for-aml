@@ -1,0 +1,7 @@
+{
+  "transaction_id": 695555,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Most factors lower suspicion overall. However, the increase in amount_received and the use of bitcoin as the payment currency could raise concern.\n\nkey_factors:\n- amount_received (raises suspicion) could reflect inbound funds needing closer review when seen with other indicators.\n- amount_ratio (lowers suspicion) near 1 suggests a balanced flow, reducing concern.\n- from_bank (lowers suspicion) sending bank appears routine, which lowers risk in isolation.\n- payment_currency_bitcoin (raises suspicion) use of bitcoin as the payment currency may indicate higher-risk activity.\n- payment_format_bitcoin (lowers suspicion) bitcoin-related payment format reduces concern in this context.\n\ninvestigation_context: If inbound amount_received and bitcoin-related indicators occur together with routine signals, the overall suspiciousness could remain low."
+}

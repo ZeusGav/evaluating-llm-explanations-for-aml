@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4252653,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Several features lower concern\u2014receiving and payment in rupees, the transaction amount, sending/receiving bank indicators, and the hour of day\u2014while the use of ACH and the payment amount provide limited raising signals. Overall, the lowering indicators outweigh the raising ones, producing a low net level of suspicion. \nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with electronic transfers that may warrant attention in context.\n- amount_paid (raises suspicion): the payment amount could reflect a transfer size that merits review depending on counterparties.\n- receiving_currency_rupee (lowers suspicion): receiving in rupee could be consistent with routine domestic activity and reduce concern.\n- amount_received (lowers suspicion): the received amount could suggest a moderate payment size that lowers immediate concern.\n- hour (lowers suspicion): a transaction at hour 0 could reflect off\u2011peak or automated processing and may reduce suspicion.\ninvestigation_context: If additional context is available, the combination of an ACH payment with rupee\u2011denominated, moderate amounts could be consistent with routine domestic transfers rather than illicit activity."
+}

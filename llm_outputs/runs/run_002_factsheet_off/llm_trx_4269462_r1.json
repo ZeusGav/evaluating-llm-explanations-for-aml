@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4269462,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very high because multiple features \u2014 an ACH payment, Saudi riyal usage, a large received amount, timing signals, and lack of card/cheque formats \u2014 collectively raise concern. One factor (from_bank=148016) lowers suspicion, but its effect is outweighed by the other increasing factors.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): an ACH payment could be consistent with larger bank-to-bank transfers that may require scrutiny.\n- payment_currency_saudi_riyal=1 (raises suspicion): use of Saudi riyals might reflect cross-jurisdictional currency flow that could be relevant to AML risk.\n- amount_received=49149.3 (raises suspicion): a sizable incoming amount could be consistent with elevated risk depending on customer profile.\n- from_bank=148016 (lowers suspicion): origin from this specific bank may mitigate concern if that bank has strong controls.\n- payment_format_credit_card=0 (raises suspicion): absence of a credit card format may indicate non-retail transfer methods typical of higher-value movements.\ninvestigation_context: If these patterns are unusual for the customer or counterparties, they may indicate behavior worth further review."
+}

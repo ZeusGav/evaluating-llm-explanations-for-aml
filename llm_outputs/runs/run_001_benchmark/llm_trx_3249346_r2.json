@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3249346,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The low suspiciousness score reflects several factors that lower concern (non-ACH and cheque payment indicators, the specific sending bank, and local currency), while a large amount received and the payment not being in US dollars increase concern. Overall, the lowering factors outweigh the raising ones, producing a low score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 the absence of ACH could be consistent with alternative payment channels that reduce automated transfer risk.\n- payment_format_cheque=1 (lowers suspicion) \u2014 a cheque indicator could be consistent with manual, traceable settlement.\n- from_bank=112212 (lowers suspicion) \u2014 the sending bank ID might indicate a routine counterparty in context.\n- amount_received=68810.1 (raises suspicion) \u2014 a relatively large received amount could be consistent with higher-value activity warranting attention.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 payment not in US dollars could be consistent with cross-currency flows that merit closer look.\n\ninvestigation_context: If validated, these factors could suggest a high-value transaction processed via non-ACH/cheque and local-currency channels, which may lessen but not eliminate concern."
+}

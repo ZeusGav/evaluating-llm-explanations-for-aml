@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1468643,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The overall rationale is that most factors decrease suspicion, while one indicator slightly increases it, yielding a very small overall score. In contexts that involve routine non-USD payments, these effects align with a low level of concern.\n\nkey_factors:\n- from_bank=139793 (lowers suspicion): this bank could be a routine sender in ordinary activity.\n- payment_format_credit_card=1 (lowers suspicion): credit card payments are a common consumer method.\n- amount_paid=40.18 (lowers suspicion): a small, ordinary payment amount.\n- payment_format_ach=0 (lowers suspicion): ACH not used here may reflect non-ACH preference in typical transactions.\n- payment_currency_us_dollar=0 (raises suspicion): not using USD could be notable in contexts where USD is expected.\n\ninvestigation_context: If the context involves routine consumer payments, the combination may explain the very low suspicion; however the USD-not-used signal could warrant closer review if cross-border activity is suspected."
+}

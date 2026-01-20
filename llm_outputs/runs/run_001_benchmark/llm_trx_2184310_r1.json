@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2184310,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because the payment was an ACH transfer with large, equal paid and received amounts and the absence of credit card use, which all raise concern. The transaction hour at 4 (early morning) provides a small countervailing signal that lowers suspicion slightly.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 being an ACH transfer could be consistent with high-value account-to-account movement that merits attention.\n- amount_received=15756 (raises suspicion) \u2014 a sizable received amount could indicate significant value passing through the account.\n- amount_paid=15756 (raises suspicion) \u2014 the identical paid amount may reflect immediate passthrough or settlement behavior that could warrant scrutiny.\n- payment_format_credit_card=0 (raises suspicion) \u2014 absence of credit card funding could be consistent with non-retail transfer patterns.\n- hour=4 (lowers suspicion) \u2014 an early morning timestamp may indicate routine processing timing that slightly reduces concern.\n\ninvestigation_context: If these flags reflect actual transaction attributes, they may be consistent with automated high-value ACH movement between accounts and could merit contextual review."
+}

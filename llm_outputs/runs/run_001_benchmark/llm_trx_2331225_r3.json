@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2331225,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The overall score is very low because multiple attributes point toward lower concern (payment_format_ach=0, from_bank=11107, amount_received=898.23, payment_format_cheque=1). Only the absence of a credit-card payment method (payment_format_credit_card=0) creates a small upward signal, so net suspiciousness remains minimal.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with routine non-ACH routing or standard settlement methods.\n- from_bank=11107 (lowers suspicion): the sending bank identifier could reflect a familiar or expected counterparty and routine flow.\n- amount_received=898.23 (lowers suspicion): this transaction size could be consistent with ordinary customer activity rather than structured extremes.\n- payment_format_cheque=1 (lowers suspicion): payment by cheque may indicate conventional, traceable settlement practices.\n- payment_format_credit_card=0 (raises suspicion): lack of a credit-card payment option could, in some contexts, be associated with less typical payment rails and slightly elevate concern.\n\ninvestigation_context: If more context were available, these indicators together would suggest a largely routine transaction with a small, context-dependent countervailing signal."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4974365,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Overall, the elevated score is driven by raised indicators such as payment_format_ach and large amounts. The from_bank factor lowers suspicion, tempering the overall assessment.\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be a higher-risk channel in this context.\n- amount_paid (raises suspicion): the sizable amount paid increases potential risk.\n- amount_received (raises suspicion): the matching large receipt heightens concern.\n- to_bank (raises suspicion): destination bank ID 12 suggests targeted routing.\n- from_bank (lowers suspicion): origin bank ID 11157 mitigates concern, implying routine source.\ninvestigation_context: This combination could reflect a scenario where ACH-based transfers with large amounts and euro receiving currency contribute to higher risk, while the known sending bank mitigates some concern."
+}

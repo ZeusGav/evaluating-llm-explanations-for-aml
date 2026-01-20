@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2331225,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because multiple attributes lower concern\u2014no ACH, cheque payment present, the payment amounts, and the early weekday timing all point away from high risk. The absence of a credit card payment slightly raises concern, so the score is non-zero but minimal.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with non-electronic clearing and routine bank-handled settlement.\n- amount_received=898.23 (lowers suspicion): this payment amount could be consistent with ordinary commercial or payroll activity.\n- payment_format_cheque=1 (lowers suspicion): cheque payment could indicate traditional business disbursement practices.\n- hour=1 (lowers suspicion): early-hour timing might reflect automated or scheduled processing rather than unusual behavior.\n- payment_format_credit_card=0 (raises suspicion): lack of a credit-card channel could modestly increase scrutiny as an atypical routing of funds.\ninvestigation_context: If considered in context, the combination of routine indicators and the missing credit-card channel could be consistent with benign business transfers or might reflect atypical payment routing that merits contextual review."
+}

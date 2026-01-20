@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2300247,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score is driven mainly by multiple lowering indicators \u2014 notably cheque payment, non-ACH format, yuan as both payment and receiving currency, and a matching received amount \u2014 which collectively outweigh the one raising factor. A single moderately large payment amount raises some concern, but the transaction attributes and timing point toward lower overall suspicion.  \nkey_factors:\n- payment_format_cheque=1 (lowers suspicion): cheque payment could be consistent with manual or conventional settlement rather than automated high-risk flows.\n- payment_format_ach=0 (lowers suspicion): absence of ACH routing may indicate non-automated channels that lower automated-routing concerns.\n- payment_currency_yuan=1 (lowers suspicion): payment in yuan could be consistent with domestic currency settlement and reduces cross-currency complexity.\n- amount_paid=10105.3 (raises suspicion): the relatively large nominal amount could be consistent with higher-value transactions that warrant attention.\n- amount_received=10105.3 (lowers suspicion): identical received amount may indicate a straightforward single-currency transfer rather than complex routing.  \ninvestigation_context: If more context becomes available, these mixed signals could suggest the payment may reflect routine high-value settlement rather than illicit activity."
+}

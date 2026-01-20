@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1563529,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The transaction's very low suspiciousness score is driven by several top factors that lower concern \u2014 notably from_bank, amount_paid, payment_format_cheque, amount_received, and amount_ratio \u2014 which together suggest a direct, matched payment in US dollars. No top factors listed raise suspicion, so the combined signal remains minimal.\nkey_factors:\n- from_bank=220 (lowers suspicion): could reflect a recognized or expected sending bank for this relationship, consistent with routine origin.\n- amount_paid=30.14 (lowers suspicion): a small, specific payment amount may be consistent with ordinary retail or service payments.\n- payment_format_cheque=1 (lowers suspicion): cheque payment could indicate a formal, traceable instruction consistent with legitimate settlement.\n- amount_received=30.14 (lowers suspicion): identical received amount suggests no value alteration and may indicate a straightforward transfer.\n- amount_ratio=1 (lowers suspicion): a 1:1 paid-to-received ratio may be consistent with a single-pass payment rather than complex layering.\ninvestigation_context: If additional context is available, these indicators may be consistent with a routine, fully settled payment rather than indicators of laundering."
+}

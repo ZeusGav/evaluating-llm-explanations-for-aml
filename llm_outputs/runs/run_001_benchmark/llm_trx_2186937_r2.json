@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2186937,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score is driven mainly by multiple lowering signals \u2014 cash payment, yuan used for both sides, a consistent sending bank, and matching paid/received amounts \u2014 while the absence of US dollar usage provides a small raising signal. Together these factors could be consistent with routine domestic transfers but might merit contextual consideration if other risk indicators are present.\n\nkey_factors:\n- payment_format_cash (lowers suspicion): cash payment may reflect routine local transactions rather than cross-border structuring.\n- payment_currency_yuan (lowers suspicion): payment in yuan could be consistent with domestic settlement patterns.\n- receiving_currency_yuan (lowers suspicion): receiving in yuan may align with same-currency flow and lower mismatch risk.\n- from_bank (lowers suspicion): transactions originating from this sending bank in isolation may reduce immediate concern.\n- payment_currency_us_dollar (raises suspicion): absence of US dollar usage might warrant attention in contexts where dollar flows are expected.\n\ninvestigation_context: If considered alongside other information, this combination could indicate routine domestic activity but might be noteworthy in specific risk scenarios."
+}

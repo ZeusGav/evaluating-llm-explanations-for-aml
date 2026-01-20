@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2150318,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Multiple rising indicators support a high level of suspicion, including ACH usage, weekend timing, large amount, and euro currency use, while the early hour provides a modest lowering signal. Overall, the balance of signals yields a high suspiciousness score.\n\nkey_factors:\n- payment_format_ach raises suspicion: when ACH is used, this could indicate higher-risk activity.\n- dayofweek raises suspicion: transactions on day 6 (Sunday) could be consistent with elevated risk patterns.\n- amount_paid raises suspicion: a payment of this magnitude could indicate higher-risk activity.\n- euro currency raises suspicion: use of euro could reflect cross-border movement.\n- hour lowers suspicion: the transaction occurs at hour 7, which could reduce suspicion.\n\ninvestigation_context: This combination of signals could warrant further review if the factors align."
+}

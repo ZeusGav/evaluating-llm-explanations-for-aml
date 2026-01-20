@@ -1,0 +1,7 @@
+{
+  "transaction_id": 996276,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The overall suspiciousness score of 0.002186 is very low, driven by several factors that decrease suspicion. A USD-related factor could raise suspicion if USD were involved, but it is not active here.\n\nkey_factors:\n- payment_format_cash (lowers suspicion) Cash payment method is used, which lowers suspicion in this case.\n- payment_format_ach (lowers suspicion) ACH is not used; this lowers suspicion.\n- from_bank (lowers suspicion) Sending bank ID is present, reducing suspicion.\n- receiving_currency_swiss_franc (lowers suspicion) Receiving Swiss francs lowers suspicion.\n- payment_currency_us_dollar (raises suspicion) Could raise suspicion if USD were used as the payment currency.\n\ninvestigation_context: The observed combination could be consistent with routine activity, with the USD-related factor representing a potential concern if USD were involved."
+}

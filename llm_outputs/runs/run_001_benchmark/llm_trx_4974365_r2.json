@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4974365,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high suspiciousness score is mainly driven by an ACH payment method, large equal paid/received amounts, receipt in euros, and routing to bank 12, which raise concern; the sender bank ID 11157 partially lowers that concern. Together these factors suggest high-value, cross-currency ACH movement that could be consistent with activity meriting closer review while noting one offsetting indicator. \nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with rapid bank-to-bank transfers that might obscure provenance. \n- amount_paid (raises suspicion): a large payment amount could indicate high-value movement warranting scrutiny. \n- amount_received (raises suspicion): an equally large received amount could reflect full-value pass-throughs between accounts. \n- from_bank=11157 (lowers suspicion): the specific sending bank ID may reduce concern if it corresponds to an established correspondent. \n- receiving_currency_euro=1 (raises suspicion): receipt in euros could indicate cross-currency flow that may increase risk. \ninvestigation_context: If these indicators reflect actual transaction behavior, they could be consistent with high-value, cross-border ACH activity that might warrant further contextual review."
+}

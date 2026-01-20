@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2328769,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is low overall because several transaction attributes point away from concern while only a couple raise flags. The sending bank and the paid amount increase suspicion, but absence of ACH, shekel currency indicators, and cheque format lower it, producing a low net suspiciousness.\nkey_factors:\n- from_bank=70 (raises suspicion) \u2014 if the originator bank is unusual for this customer, it could warrant closer review.\n- amount_paid=7592.05 (raises suspicion) \u2014 a relatively sizable payment may increase scrutiny depending on customer profile.\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with non-electronic or more traceable payment channels.\n- receiving_currency_shekel=1 (lowers suspicion) \u2014 payment settled in shekels could be consistent with routine domestic activity.\n- payment_format_cheque=1 (lowers suspicion) \u2014 use of a cheque may indicate a conventional payment method and thus lower concern.\ninvestigation_context: If these attributes accurately describe the transaction, they may indicate routine domestic shekel activity despite some indicators that raise concern."
+}

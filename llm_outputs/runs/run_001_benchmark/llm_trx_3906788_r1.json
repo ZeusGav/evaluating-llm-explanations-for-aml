@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3906788,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple strong indicators drive the high suspiciousness score \u2014 notably the ACH payment format, the specific receiving bank, and a sizable euro amount all increase concern. A couple of attributes, such as the sending bank ID and the late\u2011afternoon hour, slightly lower concern but do not offset the raising factors.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 ACH payment could be consistent with large bank-to-bank transfers that may warrant attention.\n- to_bank=22 (raises suspicion) \u2014 routing to receiving bank ID 22 may indicate concentration at that recipient and could merit scrutiny.\n- amount_received=15526.3 (raises suspicion) \u2014 a substantial received amount in the receiving currency could be consistent with higher-value activity that attracts review.\n- from_bank=1 (lowers suspicion) \u2014 sending bank ID 1 slightly reduces concern and may reflect a familiar or expected origin.\n- hour=16 (lowers suspicion) \u2014 occurrence at hour 16 slightly lowers concern and could align with normal business\u2011hour timing.\ninvestigation_context: If reviewed further, this pattern could be consistent with a large ACH euro transfer to the specified receiving bank while some sender and timing attributes appear less concerning."
+}

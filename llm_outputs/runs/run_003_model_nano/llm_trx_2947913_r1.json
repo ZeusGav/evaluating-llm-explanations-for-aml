@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2947913,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The ACH payment format combined with a notably equal amount received and amount paid, along with sending and receiving bank identifiers, raises suspicion. The receiving_currency_euro factor lowers suspicion in this context.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) If an ACH transfer is used, it could be associated with faster movement of funds, which may warrant closer review.\n- amount_received=13431.6 (raises suspicion) A large amount received could trigger additional scrutiny when paired with other indicators.\n- amount_paid=13431.6 (raises suspicion) An identical amount paid may reflect round-number transfers that merit review.\n- from_bank=214621 (raises suspicion) The transfer appearing to originate from a specific sending bank ID may indicate a pattern needing review.\n- receiving_currency_euro=1 (lowers suspicion) If the receiving currency is euro, this factor lowers overall suspicion in this context.\ninvestigation_context: If the transaction used ACH, involved a notable matching amount, and involved the specified banks, this pattern could contribute to elevated suspicion."
+}

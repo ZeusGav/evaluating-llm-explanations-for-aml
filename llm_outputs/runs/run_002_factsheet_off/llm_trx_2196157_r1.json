@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2196157,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is driven up mainly by the transaction being an ACH payment, occurring on dayofweek=6, and a relatively large amount received, while one factor (from_bank=249118) moderates the risk. Other timing and destination attributes also raise concern, resulting in an overall high suspiciousness rating.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): could be consistent with higher-risk automated bank transfers depending on context.\n- dayofweek=6 (raises suspicion): may indicate activity on an atypical business day which could be unusual for the customer.\n- amount_received=15373 (raises suspicion): a sizable incoming amount that could be notable relative to normal activity.\n- from_bank=249118 (lowers suspicion): linkage to this originating bank may reduce concern if that bank is a familiar or regulated correspondent.\n- to_bank=222 (raises suspicion): routing to this destination bank could be notable depending on typical counterparties.\n\ninvestigation_context: If these factor patterns hold for this customer, they might reflect a payment profile worth closer contextual review."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2466813,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The high suspiciousness score is driven by multiple increases, notably ACH as the payment format and the amounts received and paid both being 14606, suggesting a potentially problematic transfer pattern. However, lowering signals from the sending bank (from_bank=12) and US dollar usage (payment_currency_us_dollar=1) temper the overall assessment.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) - could indicate use of ACH as the payment format, which may be linked to faster electronic transfers.\n- amount_received=14606 (raises suspicion) - the sizeable amount received could be part of a suspicious flow when paired with other signals.\n- amount_paid=14606 (raises suspicion) - the same amount paid reinforces a matched transfer pattern that may raise concern.\n- from_bank=12 (lowers suspicion) - originating from this sending bank ID reduces suspicion because it may reflect routine activity.\n- payment_currency_us_dollar=1 (lowers suspicion) - US dollar usage could indicate standard currency usage, reducing some risk.\n\ninvestigation_context: If these signals persist, this combination could be consistent with a higher-risk transfer scenario depending on the surrounding activity."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2184310,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Multiple indicators point to unusual funds activity, notably the use of ACH and large matching inflow/outflow amounts. The early-hour timing slightly lowers suspicion, but the overall pattern remains highly suspicious.\nkey_factors:\n- payment_format_ach=1 raises suspicion: this payment method could be used for rapid transfers that warrant review.\n- amount_received=15756 raises suspicion: a large inflow amount could be part of suspicious funds movement.\n- amount_paid=15756 raises suspicion: a large outflow amount could align with unusual transfer patterns.\n- hour=4 lowers suspicion: occurring at 4 AM is less typical and reduces concern.\n- receiving_currency_euro=0 raises suspicion: not receiving euros could reflect unusual currency routing.\ninvestigation_context: If these factors apply to the case, they point toward potential illicit fund movement that merits review."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4510010,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because several factors lower suspicion \u2014 notably payment_format_ach=0 and payment_format_cheque=1 together with large amount_paid=511713 and Saudi riyal indicators suggest routine cleared payments. One factor increases suspicion (payment_currency_us_dollar=0), which could indicate limited USD involvement that might be relevant in context. \nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 could be consistent with a non-ACH payment channel that appears routine.\n- payment_format_cheque=1 (lowers suspicion) \u2014 could be consistent with a cheque-based settlement rather than atypical electronic routing.\n- amount_paid=511713 (lowers suspicion) \u2014 could reflect a single expected transaction size rather than fragmentation or structuring.\n- receiving_currency_saudi_riyal=1 (lowers suspicion) \u2014 could be consistent with domestic currency use and typical local flows.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 could indicate absence of USD exposure, which may be notable depending on expected currency patterns.\ninvestigation_context: If these feature values are accurate, they could be consistent with routine domestic cheque payments, although the lack of USD involvement might be relevant in context."
+}

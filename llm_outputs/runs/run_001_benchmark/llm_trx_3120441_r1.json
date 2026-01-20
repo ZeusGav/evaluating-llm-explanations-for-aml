@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3120441,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score is driven mainly by attributes that lower concern, including non-ACH and cheque payment formats, yen denomination, and specific sending/receiving bank indicators. Partially offsetting this, the relatively large paid and received amounts slightly raise concern but do not overcome the lowering signals.\nkey_factors:\n- payment_format_ach (lowers suspicion) \u2014 absence of ACH could be consistent with non-ACH settlement or manual payment channels.\n- payment_currency_yen (lowers suspicion) \u2014 yen denomination could be consistent with routine local-currency flows.\n- payment_format_cheque (lowers suspicion) \u2014 cheque usage might reflect traditional settlement methods rather than high-risk electronic routing.\n- amount_received (raises suspicion) \u2014 the sizable received amount may be notable depending on customer profile and transaction purpose.\n- amount_paid (raises suspicion) \u2014 the large paid amount could indicate concentration or liquidity movement in context.\ninvestigation_context: If these factor values are accurate, the mix could be consistent with routine yen-denominated cheque/non-ACH transfers, although the elevated amounts may still be notable depending on counterparty and account history."
+}

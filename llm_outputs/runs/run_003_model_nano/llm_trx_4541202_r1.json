@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4541202,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Several indicators lower suspicion, including the absence of ACH, an identifiable sending bank, a matching received amount, and cheque usage. However, the outgoing amount paid raises suspicion, producing the very small overall score.\nkey_factors:\n- payment_format_ach lowers suspicion: If ACH is not used, this could reflect routine activity and lowers suspicion.\n- from_bank lowers suspicion: The sending bank ID provides traceability and may indicate normal business flow, lowering suspicion.\n- amount_received lowers suspicion: The amount received (1841.14) could be consistent with typical customer activity, lowering suspicion.\n- payment_format_cheque lowers suspicion: The use of cheque may reflect traditional payments, lowering suspicion in this context.\n- amount_paid raises suspicion: An outgoing payment of 1841.14 could be unusual in this situation, raising suspicion.\ninvestigation_context: If the pattern persists, this combination could reflect routine activity with a minor concern."
+}

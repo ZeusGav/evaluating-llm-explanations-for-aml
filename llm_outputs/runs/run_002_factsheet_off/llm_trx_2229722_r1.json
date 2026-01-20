@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2229722,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very high suspiciousness score reflects several raising factors\u2014an ACH payment, large identical amounts paid and received, and timing\u2014that suggest atypical transfer behavior, while the origin bank and USD currency somewhat reduce the signal. Overall, the combination of ACH format, large matching inflow/outflow, and timing pushes the score up despite modest offsets from the from_bank and payment_currency_us_dollar factors. \nkey_factors:\n- payment_format_ach=1 (raises suspicion): use of ACH could be consistent with high-volume bank transfers rather than consumer card activity.\n- amount_received=18663 (raises suspicion): a large incoming amount may indicate an unusually large single transfer.\n- amount_paid=18663 (raises suspicion): the identical outgoing amount may indicate rapid pass-through or circular movement of funds.\n- from_bank=11296 (lowers suspicion): the transaction originating from this bank reduces the signal in context, if that origin is typical for known counterparties.\n- payment_currency_us_dollar=1 (lowers suspicion): use of USD slightly reduces the signal, which could reflect routine settlement currency in some corridors.\ninvestigation_context: If these attributes are atypical for the customer or counterparty, they could be consistent with structuring or rapid pass-through activity."
+}

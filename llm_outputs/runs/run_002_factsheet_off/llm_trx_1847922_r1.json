@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1847922,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The extremely low suspiciousness score is driven by multiple factors that lower concern, including electronic payment formats, matching amounts paid and received, and identifiable bank identifiers. Together these features could be consistent with a routine, traceable payment pattern rather than indicators that raise suspicion.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): may reflect a non-ambiguous electronic payment channel that supports traceability. \n- payment_format_credit_card=1 (lowers suspicion): could indicate a card-based transaction pattern that is commonly documented and reversible. \n- amount_received=863.89 (lowers suspicion): matching amount_received and amount_paid may suggest a straightforward settlement rather than layering. \n- from_bank=1490 (lowers suspicion): presence of a sender bank identifier may indicate known routing that reduces opacity. \n- hour=23 (lowers suspicion): late-hour timing could reflect customer behavior or time-zone effects rather than concealment.\n\ninvestigation_context: If these attributes are accurate, they could be consistent with routine commercial or consumer payments rather than efforts to obscure funds."
+}

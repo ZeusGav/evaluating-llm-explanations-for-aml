@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4839378,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most top factors lower the suspiciousness score \u2014 several indicators such as payment_format_ach=0, from_bank=13157, payment_format_cash=1, hour=22, and receiving_currency_rupee=1 point toward routine payment characteristics that reduce concern. One factor, payment_currency_us_dollar=0, slightly raises suspicion by indicating absence of USD usage, but its effect is small compared with the lowering factors.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 could be consistent with non-ACH routing or cash-based workflows that are typical for certain customers.\n- from_bank=13157 (lowers suspicion) \u2014 may indicate familiar origination from a known correspondent bank.\n- payment_format_cash=1 (lowers suspicion) \u2014 could reflect direct cash handling or local settlement practices reducing electronic-transfer complexity.\n- hour=22 (lowers suspicion) \u2014 might reflect after-hours activity that is normal for this customer segment.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 could indicate absence of USD in this flow, which may be notable depending on expected currency usage.\n\ninvestigation_context: If contextual records confirm local-currency and known-bank activity, the overall pattern may be consistent with routine domestic payments, although the lack of USD could be relevant in specific trade or cross-border contexts."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1030747,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple factors raise the score \u2014 the ACH payment format, a substantial amount received, timing on day 6, and use of Saudi riyal all increase suspicion \u2014 while indicators tied to the origin and destination banks partially reduce it. The combined effect of those increasing signals outweighs the decreases, producing a very high suspiciousness assessment.\n\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 use of ACH could be consistent with rapid or automated transfers that may require closer scrutiny.\n- amount_received=56984 (raises suspicion) \u2014 receiving 56,984 could indicate a large-value movement that may be notable for risk assessment.\n- dayofweek=6 (raises suspicion) \u2014 occurrence on day 6 could reflect timing outside typical business patterns and might be relevant to review.\n- payment_currency_saudi_riyal=1 (raises suspicion) \u2014 payment in Saudi riyal could indicate regional or currency-specific flows that may be relevant to risk.\n- from_bank=249176 (lowers suspicion) \u2014 originating from this from_bank lowers suspicion and could reflect an expected or less concerning source.\n\ninvestigation_context: If these attributes are accurate, they could be consistent with a high-risk payment pattern that warrants contextual evaluation."
+}

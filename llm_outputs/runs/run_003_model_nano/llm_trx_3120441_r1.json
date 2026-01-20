@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3120441,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The overall score is very low because several indicators lower suspicion, while a small subset raises it. Increases come from amount_received, amount_paid, and not using credit cards (payment_format_credit_card=0); decreases come from not using ACH (payment_format_ach=0), cheque usage (payment_format_cheque=1), and the sending bank (from_bank=210292).\nkey_factors:\n- amount_received (raises suspicion): If the receiving amount is sizeable in this context, it could signal unusual inflow.\n- amount_paid (raises suspicion): If the paying amount is substantial, it may indicate potential round-tripping or settlement activity.\n- payment_format_credit_card=0 (raises suspicion): Not using credit cards could reflect a non-card channel that warrants caution.\n- payment_format_cheque=1 (lowers suspicion): Cheque-based payments can be seen as traditional and less problematic in many contexts.\n- from_bank=210292 (lowers suspicion): Originating from this sending bank ID could align with ordinary counterparties.\ninvestigation_context: If this activity aligns with normal customer behavior, these signals together could represent a low-risk scenario."
+}

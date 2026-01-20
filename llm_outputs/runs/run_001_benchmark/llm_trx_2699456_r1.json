@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2699456,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is driven up by an ACH payment in Saudi riyal for a sizable amount occurring at midday, which together suggest a high-risk profile. The identified sending bank lowers the score somewhat, but not enough to offset the other increasing factors. \nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with rapid electronic transfers that merit scrutiny.\n- payment_currency_saudi_riyal=1 (raises suspicion) \u2014 payment in Saudi riyal may indicate cross-jurisdictional flows to consider.\n- amount_received=66965.3 (raises suspicion) \u2014 the large received amount could be consistent with higher-risk, high-value transfers.\n- from_bank=48526 (lowers suspicion) \u2014 the specific sending bank in this case reduces concern and may reflect a known origin.\n- hour=12 (raises suspicion) \u2014 timing at midday might reflect business-hours movement or patterns to assess in context.\ninvestigation_context: If these attributes are verified, they may be consistent with a high-risk pattern of large ACH transfers denominated in Saudi riyal."
+}

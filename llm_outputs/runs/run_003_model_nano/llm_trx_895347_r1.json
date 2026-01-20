@@ -1,0 +1,7 @@
+{
+  "transaction_id": 895347,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Most indicators lower suspicion, including ACH, credit card, and known sender-bank signals. The amount_paid factor raises suspicion, but the overall effect is still very low.\nkey_factors:\n- payment_format_ach lowers suspicion: ACH usage can align with expected payment behavior.\n- payment_format_credit_card lowers suspicion: credit card payments may reflect normal activity.\n- from_bank lowers suspicion: funds coming from a known bank ID suggest legitimacy.\n- amount_paid raises suspicion: the payment amount may indicate unusual or unexpected settlement.\n- amount_received lowers suspicion: receiving the same amount supports straightforward settlement.\ninvestigation_context: If these signals hold, the overall suspicion remains very low, but any shift in these factors could warrant further review."
+}

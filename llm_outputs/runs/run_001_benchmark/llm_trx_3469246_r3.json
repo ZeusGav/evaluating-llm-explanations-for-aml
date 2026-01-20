@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3469246,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because multiple attributes lower suspicion, including amount_ratio near 1, small amount_paid/received, non-ACH and bitcoin payment indicators, specific sending/receiving bank IDs, and midweek morning timing. A small increase is driven by amount_received and the cheque flag, which could be consistent with modest inbound value or non-cheque handling but are outweighed by the lowering signals.\nkey_factors:\n- amount_ratio (lowers suspicion): ratio near 1 could be consistent with balanced send/receive amounts.\n- amount_paid (lowers suspicion): a small payment amount could indicate a low-value transaction.\n- amount_received (raises suspicion): inbound amount signal could reflect modest incoming value that slightly elevates concern.\n- payment_format_bitcoin (lowers suspicion): bitcoin payment indicator could be consistent with cryptocurrency routing for routine transfers.\n- payment_format_cheque (raises suspicion): cheque flag off might reflect non-cheque handling that marginally raises concern.\ninvestigation_context: If accurate, the combination of low amounts, bitcoin format, specific bank IDs, and midweek morning timing might reflect routine low-value inbound transfers rather than illicit activity."
+}

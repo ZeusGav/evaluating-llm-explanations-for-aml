@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3159964,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The overall suspiciousness is extremely low because several strong indicators lower concern \u2014 credit card payment, non\u2011ACH format, a specific sending bank, and receipt in rubles \u2014 while a single small signal from the received amount raises concern. Taken together, the lowering factors outweigh the minor increase from amount_received, producing the very low score.\nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion) \u2014 payment by credit card could be consistent with routine consumer or merchant activity.\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH may indicate an alternative channel that lowers concern.\n- from_bank=17120 (lowers suspicion) \u2014 sending bank ID 17120 may reflect a known or low\u2011risk correspondent relationship.\n- receiving_currency_ruble=1 (lowers suspicion) \u2014 receipt in rubles could be consistent with domestic currency settlement.\n- amount_received=38574.8 (raises suspicion) \u2014 the received amount matching the paid amount might reflect passthrough movement and could warrant contextual consideration.\ninvestigation_context: If additional context is obtained, the small increase tied to amount_received might be consistent with passthrough or fee patterns while other indicators may point to routine activity."
+}

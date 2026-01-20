@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2278966,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Several factors raise suspicion: ACH usage, transfers to the receiving bank, and large matched amounts drive the high score. A euro-receiving context lowers the concern somewhat.\n\nkey_factors:\n- payment_format_ach (raises suspicion): if ACH is used, this could indicate an electronic transfer channel associated with higher-risk activity.\n- to_bank (raises suspicion): transfers to the receiving bank ID could reflect destination risk, increasing scrutiny.\n- amount_received (raises suspicion): a large received amount could be unusual for the profile, elevating concern.\n- amount_paid (raises suspicion): a large outgoing amount could indicate round-tripping or matched payments, raising concern.\n- receiving_currency_euro (lowers suspicion): if the receiving currency is euro, this could align with common settlement practices and reduce alarm.\n\ninvestigation_context: If ACH usage, high-to-bank transfers, and large amounts occur together, the elevated signals could drive the high score."
+}

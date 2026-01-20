@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1779156,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple strong lowering signals (absence of ACH, cash payment indicator, USD currency and a matching paid amount) outweigh the limited raising signals, producing a very low suspiciousness score. While the large amount received and the absence of credit-card usage raise some concern, their influence is small compared with the lowering factors.  \nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with use of non-ACH channels for this payment.  \n- payment_format_cash=1 (lowers suspicion) \u2014 a cash payment indicator may reflect immediate or expected cash settlement.  \n- amount_received (raises suspicion) \u2014 a large received amount could be consistent with a high-value transfer that merits attention.  \n- amount_paid (lowers suspicion) \u2014 the paid amount may align with the received value, which could suggest straightforward settlement.  \n- payment_format_credit_card=0 (raises suspicion) \u2014 lack of credit-card usage might reflect alternative channels that sometimes warrant review.  \ninvestigation_context: If these attributes describe a single transaction, the combination of a high incoming amount with several lowering indicators could be consistent with a legitimate high-value payment rather than obvious illicit activity."
+}

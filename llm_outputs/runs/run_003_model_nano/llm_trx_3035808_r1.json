@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3035808,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The score is elevated by signals including ACH payment format, matched amounts, and timing indicators (Friday, noon) that raise suspicion, while the US dollar denomination and a sending-bank pattern reduce the concern. The combination of these factors helps explain the high score.\nkey_factors:\n- payment_format_ach=1 (raises suspicion); use of ACH could reflect payment flows that warrant closer review.\n- amount_received=12843.2 and amount_paid=12843.2 (raises suspicion); identical inbound and outbound amounts may suggest a structured or round-trip pattern.\n- dayofweek=5 and hour=12 (raises suspicion); Friday at noon could indicate timing patterns that warrant scrutiny.\n- to_bank=15085 (raises suspicion), from_bank=147241 (lowers suspicion); the transfer route appears not entirely straightforward.\n- payment_currency_us_dollar=1 (lowers suspicion); payment_format_credit_card=0 (raises suspicion) and payment_format_cheque=0 (raises suspicion).\ninvestigation_context: If these observed factors align with the case specifics, they could explain the high suspiciousness score."
+}

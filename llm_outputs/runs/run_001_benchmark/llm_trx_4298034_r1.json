@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4298034,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because all top factors push suspicion downward \u2014 notable examples are the specific sending/receiving banks, a cash ACH indicator pattern, a modest equal amount, off\u2011peak hour, and USD currency. No top factors in this list raise suspicion, so the combination could be consistent with routine, small USD cash movements rather than apparent illicit behavior.\n\nkey_factors:\n- from_bank=3932 (lowers suspicion): if the funds originate from this sending bank, that bank identifier is associated here with reduced concern.\n- payment_format_cash=1 (lowers suspicion): if the transaction is marked as cash, this characteristic is contributing to lower suspicion in this case.\n- amount_paid=385.14 (lowers suspicion): if the payment amount is about 385.14, this modest, equal amount to the receiver lowers the alert level.\n- hour=2 (lowers suspicion): if the transaction occurred at hour 2, that timing is associated here with decreased suspicion.\n- payment_currency_us_dollar=1 (lowers suspicion): if the payment currency is USD, that currency indicator reduces the suspicion score.\n\ninvestigation_context: If further context is relevant, these attributes may be consistent with routine small USD cash transfers rather than indicators of clear illicit activity."
+}

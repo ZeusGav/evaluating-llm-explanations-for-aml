@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3700498,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The main raising signal is from_bank (raises suspicion), while payment_format_ach, payment_format_cheque, hour, and receiving_currency_rupee (lowers suspicion) temper the risk, producing a modest score of 0.051330. This pattern could reflect a single strong signal offset by several lowering indicators.\n\nkey_factors:\n- from_bank (raises suspicion) the sending bank ID could indicate an unusual counterparty.\n- payment_format_ach (lowers suspicion) absence of ACH usage reduces concern.\n- payment_format_cheque (lowers suspicion) cheque-based payments reduce risk signals.\n- hour (lowers suspicion) late-hour activity at 22:00 could be less indicative of suspicious behavior.\n- receiving_currency_euro (raises suspicion) not receiving euro may suggest cross-border patterns.\n\ninvestigation_context: If the strong from_bank signal is present alongside several lowering indicators, the overall suspiciousness could be considered modest."
+}

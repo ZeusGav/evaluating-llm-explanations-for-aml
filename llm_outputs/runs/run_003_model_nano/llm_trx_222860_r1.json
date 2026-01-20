@@ -1,0 +1,7 @@
+{
+  "transaction_id": 222860,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: No factors raise suspicion; the same-bank transfer, non-ACH format, reinvestment payment type, matched rupee amounts, and timing all lower suspicion. This combination helps explain the very low suspiciousness score of 0.000033.\nkey_factors:\n- from_bank=7; to_bank=7 (lowers suspicion) \u2013 same-bank transfer, which could be a routine internal transaction.\n- payment_format_ach=0 (lowers suspicion) \u2013 not using ACH, which may reflect a non-ACH settlement pattern.\n- payment_format_reinvestment=1 (lowers suspicion) \u2013 reinvestment payment format could align with expected activity.\n- amount_paid=325.55 and amount_received=325.55 (lowers suspicion) \u2013 matched amounts in the same currency.\n- hour=0 and dayofweek=3 (lowers suspicion) \u2013 activity at hour 0 on a mid-week day could reflect routine processing.\ninvestigation_context: If these factors are representative of typical domestic transfers, the low suspiciousness score would be expected."
+}

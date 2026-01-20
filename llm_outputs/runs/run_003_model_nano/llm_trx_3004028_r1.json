@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3004028,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: All provided factors point to lower suspicion, with none increasing risk. Together, they produce a very low suspiciousness score of 0.000045.\n\nkey_factors:\n- amount_paid (lowers suspicion) could be consistent with routine transfers.\n- from_bank (lowers suspicion) could align with the payer's usual banking relationships.\n- payment_format_ach (lowers suspicion) not using ACH could be consistent with typical payment methods.\n- payment_format_wire (lowers suspicion) use of wire transfer might reflect normal settlement patterns.\n- receiving_currency_uk_pound (lowers suspicion) receiving in UK pounds may reflect expected currency for the recipient.\n\ninvestigation_context: If these factors are observed together, they could indicate normal activity rather than high risk."
+}

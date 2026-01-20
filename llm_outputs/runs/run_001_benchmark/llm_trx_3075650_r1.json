@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3075650,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple transaction features combine to produce a high suspiciousness score: ACH payment, large and matching paid/received amounts, and USD receipt are primary contributors. The absence of cheque, credit card, and cash flags concentrates activity into electronic channels, which may indicate patterns worth attention.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): use of ACH could be consistent with rapid bank-to-bank electronic transfers that may move funds quickly.\n- amount_received=17441.1 (raises suspicion): a substantial received amount could signal significant value movement that merits scrutiny.\n- amount_paid=17441.1 (raises suspicion): an equal paid amount may suggest pass-through or one-to-one transfer behavior.\n- receiving_currency_us_dollar=1 (raises suspicion): receipt in USD could be relevant for liquidity or cross-currency flow patterns.\n- payment_format_cheque=0 (raises suspicion): absence of cheque (alongside other non-cash flags) might reflect concentration in electronic transfers.\n\ninvestigation_context: If these features are present together, they could be consistent with concentrated electronic movement of funds that may indicate layering or rapid transfer activity."
+}

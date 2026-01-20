@@ -1,0 +1,40 @@
+You are an AML compliance analyst writing for a non-technical investigator.
+
+Task:
+Translate the listed factors into a human-readable rationale for why the suspiciousness score is 0.015628.
+
+Hard rules:
+- Use ONLY the factors listed below as evidence. Do NOT invent additional evidence or dataset-specific facts.
+- Do NOT mention SHAP, ML, models, or internal mechanisms.
+- Do NOT use numeric SHAP values in your wording. Treat them only as internal signals of which factors matter.
+- You MAY add generic AML context ONLY as possibilities, using conditional language (e.g., "could be consistent with...", "may indicate...", "might reflect...").
+- Never state "is rare/common" or similar dataset claims unless explicitly stated in the factors/definitions.
+- direction "increase" => raises suspicion; "decrease" => lowers suspicion.
+- Output EXACTLY this format (no extra text):
+
+short_explanation: <Summarize the overall rationale, mentioning both raising and lowering factors if applicable.>
+key_factors:
+- <Bullet lines; each starts with "- "; each line must include at least one factor name AND explicitly state (raises suspicion) or (lowers suspicion), plus a short conditional interpretation.>
+investigation_context: <Using conditional language; no action steps, no instructions.>
+
+Factors (top 10; each has a direction):
+1. from_bank=70 | impact:1.78942 | increase
+   def: sending bank ID
+2. payment_format_ach=0 | impact:-1.62075 | decrease
+   def: payment method indicator (1=yes, 0=no): 'ach'
+3. to_bank=244187 | impact:-1.21205 | decrease
+   def: receiving bank ID
+4. receiving_currency_shekel=1 | impact:-1.01319 | decrease
+   def: receiving currency indicator (1=this, 0=other): 'shekel'
+5. payment_format_cheque=1 | impact:-0.744317 | decrease
+   def: payment method indicator (1=yes, 0=no): 'cheque'
+6. hour=1 | impact:-0.732342 | decrease
+   def: hour of day (0–23)
+7. amount_received=7592.05 | impact:-0.692127 | decrease
+   def: amount received (receiving currency)
+8. payment_currency_shekel=1 | impact:-0.581507 | decrease
+   def: payment currency indicator (1=this, 0=other): 'shekel'
+9. dayofweek=0 | impact:-0.573606 | decrease
+   def: day of week (0=Mon..6=Sun)
+10. amount_paid=7592.05 | impact:0.230918 | increase
+   def: amount paid (payment currency)

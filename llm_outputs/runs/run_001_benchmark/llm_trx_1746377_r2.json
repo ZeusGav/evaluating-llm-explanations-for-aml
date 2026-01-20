@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1746377,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high suspiciousness score reflects multiple transaction attributes that raise concern (ACH payment method, the payment amount, and occurrence on Sunday) while two attributes mitigate concern (sending bank ID and payment in US dollars). Overall, the combination suggests notable risk signals despite some offsets, which could be consistent with unusual transfer behavior depending on context. \nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with automated account-to-account movement that may indicate layering depending on origin and purpose.\n- amount_paid (raises suspicion): a payment of 7052.99 could be large enough to warrant scrutiny if it is inconsistent with expected activity.\n- dayofweek (raises suspicion): occurrence on day 6 (Sunday) could reflect timing chosen to avoid typical oversight or align with atypical customer behavior.\n- from_bank (lowers suspicion): the sending bank ID is associated here with a signal that reduces overall concern, which might indicate a familiar or lower\u2011risk origin in context.\n- payment_currency_us_dollar (lowers suspicion): payment in US dollars slightly offsets risk, which could reflect routine currency use for the counterparties involved.\ninvestigation_context: If reviewed further, these combined signals could be consistent with atypical transfer patterns that merit contextual validation."
+}

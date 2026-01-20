@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4269465,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because multiple features raise concern \u2014 notably an ACH payment format, a large value transfer in Saudi riyal, and timing on day 6. One mitigating signal is the originating bank identifier, which lowers suspicion somewhat.\n\nkey_factors:\n- payment_format_ach (raises suspicion): could be consistent with automated account-to-account movement that warrants closer context.\n- amount_received (raises suspicion): could indicate a large-value transfer that may be atypical for the customer profile.\n- dayofweek (raises suspicion): might reflect timing (day 6) that could be inconsistent with normal business patterns.\n- payment_currency_saudi_riyal (raises suspicion): could be consistent with Riyal-denominated flows relevant to regional risk considerations.\n- from_bank (lowers suspicion): might reflect an established originating bank relationship that reduces concern.\n\ninvestigation_context: If these attributes are confirmed, they might indicate an atypical high-value ACH transfer in Riyals occurring on day 6 that merits contextual review."
+}

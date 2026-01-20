@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4839378,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low score reflects multiple factors that lower concern (non\u2011ACH, cash payment, late hour, large amount in rupees) outweighing a single small raising factor. The non\u2011USD payment indicator slightly raises suspicion but could be consistent with domestic currency activity rather than USD\u2011denominated risk. \nkey_factors:\n- payment_format_ach=0 (lowers suspicion): the absence of ACH could be consistent with non\u2011electronic or in\u2011person settlement patterns.\n- payment_format_cash=1 (lowers suspicion): a cash payment indicator could suggest an in\u2011person cash transaction rather than an electronic transfer.\n- hour=22 (lowers suspicion): a 22:00 timestamp could reflect routine after\u2011hours activity in the sender's time zone.\n- amount_paid=99228 (lowers suspicion): the stated payment size in the payment currency could be consistent with a high\u2011value domestic transaction.\n- payment_currency_us_dollar=0 (raises suspicion): the non\u2011USD payment flag could indicate non\u2011USD routing that may warrant contextual review if USD exposure is a concern.\ninvestigation_context: If these attributes are accurate, they could be consistent with routine domestic rupee cash transactions rather than high\u2011risk USD cross\u2011border activity."
+}

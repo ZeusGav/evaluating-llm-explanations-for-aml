@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4392188,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score is driven mainly by several lowering factors such as absence of ACH, the specific sending and receiving bank IDs, cheque payment, and US dollar currency, while modest increases arise from the payment amount, early hour, absence of credit card use, and the received amount. Overall, the lowering signals outweigh the modest increases, resulting in a low score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 if ACH was not used, the payment could be consistent with non-ACH settlement methods that may carry less concern.\n- from_bank=11157 (lowers suspicion) \u2014 if the sender is this bank ID, the origin may reflect routine activity tied to that institution.\n- payment_format_cheque=1 (lowers suspicion) \u2014 if paid by cheque, the transaction could have additional documentation consistent with lower immediate concern.\n- amount_paid=10792.6 (raises suspicion) \u2014 a larger payment amount could indicate higher-value movement that may attract attention.\n- hour=6 (raises suspicion) \u2014 an early-morning transaction could reflect atypical timing that increases scrutiny.\n\ninvestigation_context: If these attributes are accurate, the pattern could reflect routine bank-to-bank cheque settlement combined with some higher-value or off-hour elements."
+}

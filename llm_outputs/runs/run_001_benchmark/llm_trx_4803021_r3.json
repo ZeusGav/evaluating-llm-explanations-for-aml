@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4803021,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very high suspiciousness score is driven mainly by the transaction being an ACH payment, a relatively large amount received, and the transfer occurring on Sunday, which together raise concern. These are partially offset by the specific sending bank ID and the receiving currency being euro, which lower the score.  \nkey_factors:\n- payment_format_ach=1 (raises suspicion): the use of ACH could be consistent with sizable electronic transfers that merit scrutiny.  \n- amount_received=14222.2 (raises suspicion): a larger received amount could indicate higher-value activity that might be atypical for the customer.  \n- dayofweek=6 (raises suspicion): a Sunday transaction could reflect timing outside normal business hours and might be unusual.  \n- from_bank=225215 (lowers suspicion): the specific sending bank ID lowers suspicion and could reflect a familiar counterparty.  \n- receiving_currency_euro=1 (lowers suspicion): receiving in euros lowers suspicion and could be consistent with expected currency flows.  \ninvestigation_context: If these factors occur together, they might reflect a large weekend ACH euro receipt that could be consistent with atypical or higher-risk activity."
+}

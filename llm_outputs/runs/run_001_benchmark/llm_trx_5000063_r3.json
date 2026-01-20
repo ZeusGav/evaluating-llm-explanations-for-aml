@@ -1,0 +1,7 @@
+{
+  "transaction_id": 5000063,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because use of ACH payments, a substantial amount received, and routing to the indicated receiving bank all raise concern; however, the specific sending bank ID and the fact the funds are in euro somewhat lower the overall suspicion. These mixed signals combine to produce a strong alert driven mainly by payment method and amount but partially offset by the sending bank and currency.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): an ACH payment could be consistent with automated or higher-velocity bank transfers that merit closer review.\n- amount_received=14365.3 (raises suspicion): a sizable received amount could be consistent with unusual or notable transaction value.\n- to_bank=12 (raises suspicion): routing to this receiving bank may align with patterns that increase scrutiny for incoming funds.\n- from_bank=22758 (lowers suspicion): the sending bank identifier reduces concern, which might indicate a known or lower-risk origin.\n- receiving_currency_euro=1 (lowers suspicion): payment in euro may lessen concern here if that currency aligns with expected business flows.\n\ninvestigation_context: If these factors reflect the true transaction context, they could be consistent with a large ACH transfer into the receiving bank while the sender ID and euro denomination mitigate some risk."
+}

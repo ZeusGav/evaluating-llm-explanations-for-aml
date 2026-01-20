@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2277774,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very high score is driven mainly by an ACH payment (payment_format_ach=1) with a large equal incoming and outgoing amount (amount_received=19693.8 and amount_paid=19693.8) occurring on dayofweek=6, which raises concern. However, factors such as hour=23, from_bank=111443, and payment_currency_us_dollar=1 lower the score somewhat and could indicate contextual features that mitigate risk.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with higher-risk electronic account transfers that warrant attention.\n- amount_received=19693.8 (raises suspicion) \u2014 may indicate a sizable incoming value that could require scrutiny.\n- amount_paid=19693.8 (raises suspicion) \u2014 might reflect matching in/out flows, which could be indicative of passthrough activity.\n- hour=23 (lowers suspicion) \u2014 may lower concern if late-hour timing aligns with expected customer behavior or operations.\n- from_bank=111443 (lowers suspicion) \u2014 might reflect a specific originating bank relationship that reduces contextual risk.\ninvestigation_context: If validated, this combination could be consistent with passthrough or timing anomalies that merit contextual review."
+}

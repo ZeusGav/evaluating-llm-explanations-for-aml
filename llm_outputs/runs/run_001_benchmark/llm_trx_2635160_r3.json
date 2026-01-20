@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2635160,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high score is driven mainly by an ACH payment that involved a sizable payment which equals the amount received, and the transaction ties to specific sending/receiving banks and a late-afternoon hour, all of which raise concern. The fact the payment currency is US dollar lowers suspicion somewhat but does not offset the other raising signals.\nkey_factors:\n- payment_format_ach (raises suspicion): an ACH method could be consistent with automated bank transfers that, in some contexts, attract scrutiny.\n- amount_paid (raises suspicion): a payment of 9226.42 may indicate a higher-value transfer that could be notable for monitoring.\n- amount_received (raises suspicion): the received amount matching the paid amount may reflect a direct large-value movement without intermediary adjustments.\n- from_bank (raises suspicion): the sending bank ID could be relevant if that institution is associated with higher-risk flows in certain situations.\n- payment_currency_us_dollar (lowers suspicion): use of USD may reduce concern in some contexts where USD transactions are standard.\ninvestigation_context: If these signals hold true, they could be consistent with higher-risk ACH transfer patterns under AML considerations."
+}

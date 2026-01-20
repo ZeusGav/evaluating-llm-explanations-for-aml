@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2284945,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is low because multiple attributes lower suspicion \u2014 absence of ACH, use of cheque, both payment and receiving currency in shekel, specific sending/receiving banks and a late hour all reduce concern, while the transaction falling on a Sunday and not being in US dollars slightly raise it. Overall the lowering indicators dominate, suggesting a low-risk profile unless the weekend/non\u2011USD pattern is unexpected for this account. \nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with non\u2011electronic or manual settlement flows. \n- payment_format_cheque=1 (lowers suspicion) \u2014 cheque payment could indicate paper-based processing rather than automated wiring. \n- receiving_currency_shekel=1 (lowers suspicion) \u2014 receiving in shekel may align with domestic currency activity. \n- dayofweek=6 (raises suspicion) \u2014 a Sunday transaction could reflect atypical timing or batch processing. \n- payment_currency_us_dollar=0 (raises suspicion) \u2014 not being in USD may indicate a local\u2011currency pattern or deviation from USD expectations. \ninvestigation_context: If these factors match the account\u2019s normal domestic cheque and bank behavior on weekend nights, the low score may be benign; if not, the Sunday timing and non\u2011USD payment might indicate an atypical pattern."
+}

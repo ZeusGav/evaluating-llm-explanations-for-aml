@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4723772,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The high 0.997648 score is driven by several indicators that raise suspicion, including ACH usage, weekend timing, a large incoming amount, and receiving in Saudi Riyal. A sending-from-bank signal lowers the concern, shaping the overall level of risk.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) could reflect the use of ACH and may signal higher-risk activity.\n- dayofweek=6 (raises suspicion) weekend timing could indicate unusual activity.\n- amount_received=31774.2 (raises suspicion) a relatively large sum entering.\n- receiving_currency_saudi_riyal=1 (raises suspicion) receiving in Saudi Riyal suggests cross-border currency flow.\n- from_bank=48308 (lowers suspicion) sending bank could be a lower-risk counterpart.\ninvestigation_context: If these factors are present, the activity could be considered highly suspicious and warrant closer investigation."
+}

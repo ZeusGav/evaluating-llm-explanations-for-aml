@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2635160,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high score is mainly driven by use of ACH, the large payment and matching received amount, and activity tied to a specific sending bank and late-hour timing, which raise concern; conversely, the payment being in US dollars provides a modest countervailing signal that lowers concern. Together these factors suggest a profile of a sizeable same-value bank transfer that is atypical for simple, low-risk payments but has one mitigating element.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): use of ACH could be consistent with direct bank-to-bank transfers that enable rapid movement of funds.\n- amount_paid=9226.42 (raises suspicion): this sizable payment could be consistent with unusually large single outflows that merit attention.\n- amount_received=9226.42 (raises suspicion): an equivalent received amount may be consistent with a single high-value settlement rather than many small transactions.\n- from_bank=233580 (raises suspicion): concentration of funds from this sending bank could be consistent with sender-side patterns that elevate risk.\n- payment_currency_us_dollar=1 (lowers suspicion): payment in US dollars could be consistent with routine domestic or international trade and slightly reduces concern.\n\ninvestigation_context: If these factors are unexpected for the customer or counterparty, they could be consistent with elevated transactional risk."
+}

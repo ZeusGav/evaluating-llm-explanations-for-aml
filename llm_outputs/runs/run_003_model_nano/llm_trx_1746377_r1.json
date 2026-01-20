@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1746377,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The high suspiciousness score is driven by multiple signals that raise concern, including ACH payments, a notably large amount, and weekend timing. Two factors reduce suspicion\u2014from_bank and payment_currency_us_dollar\u2014muting the overall risk but not fully offsetting the combined raises.\nkey_factors:\n- payment_format_ach (raises suspicion): Use of ACH could indicate automated or bulk transfers.\n- amount_paid (raises suspicion): Amount of 7052.99 could be notable when combined with other signals.\n- dayofweek (raises suspicion): Saturday timing may reflect transfers outside typical business hours.\n- from_bank (lowers suspicion): From this bank, this signal lowers concern in context.\n- payment_currency_us_dollar (lowers suspicion): USD as currency reduces suspicion depending on context.\ninvestigation_context: If similar patterns recur in other transactions, this combination could indicate elevated AML risk that warrants review."
+}

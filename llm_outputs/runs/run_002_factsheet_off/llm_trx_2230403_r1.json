@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2230403,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is driven up mainly by an ACH payment format combined with a weekday indicator and large identical paid/received amounts, which together increase concern about this transaction pattern. Some factors\u2014specifically the sending bank identifier and the use of euros for the receiver\u2014pull the score down but do not offset the strong upward signals.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 ACH format could be consistent with automated or high\u2011volume bank transfers that merit closer attention.\n- dayofweek=6 (raises suspicion) \u2014 occurrence on this day could align with timing patterns sometimes seen in atypical transaction routing.\n- amount_received=9736.35 (raises suspicion) \u2014 a relatively large incoming amount could indicate higher risk if unusual for the party.\n- amount_paid=9736.35 (raises suspicion) \u2014 identical paid and received amounts might reflect passthrough or circular movement.\n- from_bank=15231 (lowers suspicion) \u2014 the sender bank identifier may be associated with characteristics that reduce concern in this context.\n\ninvestigation_context: If these combined characteristics hold, they might be consistent with automated high\u2011value transfers that warrant contextual review."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3801989,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because multiple strong lowering signals (ACH format, specific originating bank, yen currency, and transaction size) point toward routine electronic yen payments. A single small increasing signal tied to the absence of US dollar usage slightly offsets but does not materially raise concern. \nkey_factors:\n- payment_format_ach (lowers suspicion): the use of ACH could be consistent with standard electronic transfers between banks. \n- from_bank (lowers suspicion): funds originating from bank 15 may reflect an expected counterparty relationship rather than anomalous routing. \n- payment_currency_yen (lowers suspicion): payment in yen could be consistent with routine domestic or expected currency flows. \n- payment_currency_us_dollar (raises suspicion): absence of USD (value 0) slightly raises concern as it may indicate non\u2011USD activity that differs from typical USD\u2011denominated patterns. \n- amount_received (lowers suspicion): the reported amount may be consistent with ordinary commercial transfer sizes and thus lowers concern. \ninvestigation_context: If reviewed, the mix of strong yen/ACH/known\u2011bank signals alongside a minor non\u2011USD indicator might suggest routine corporate payments rather than clear illicit behavior."
+}

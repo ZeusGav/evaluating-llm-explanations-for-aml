@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2186937,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple strong lowering signals drive the very low score \u2014 cash payment presence, non\u2011ACH format, yuan used for payment and receipt, and the reported amounts lower suspicion. One opposing signal (absence of US dollar) raises concern and may indicate routing away from USD channels, but it is outweighed by the other factors.  \nkey_factors:\n- payment_format_cash=1 (lowers suspicion): presence of cash could be consistent with routine local or on\u2011hand liquidity activity.  \n- payment_format_ach=0 (lowers suspicion): absence of ACH may indicate non\u2011automated or domestic payment methods that lower automated transfer concern.  \n- payment_currency_yuan=1 (lowers suspicion): use of yuan for payment could be consistent with domestic currency settlement.  \n- amount_received=137448 (lowers suspicion): the reported amount may reflect a single expected settlement rather than fragmented or layered transfers.  \n- payment_currency_us_dollar=0 (raises suspicion): lack of US dollar use might suggest deliberate avoidance of USD channels.  \ninvestigation_context: If confirmed, the predominance of yuan and cash signals could be consistent with routine domestic activity, while the non\u2011use of US dollars might indicate alternative routing choices."
+}

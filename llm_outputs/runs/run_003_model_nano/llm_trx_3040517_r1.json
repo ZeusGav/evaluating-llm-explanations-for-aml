@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3040517,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Two signals (amount_paid and payment_format_credit_card) raise suspicion, while several indicators (payment_format_ach, from_bank, payment_format_cash, to_bank, amount_received) lower suspicion, producing a very small net score.\nkey_factors:\n- amount_paid=1713.07 (raises suspicion): when the paid amount is higher than typical across similar transactions, this could raise suspicion.\n- payment_format_credit_card=0 (raises suspicion): absence of credit card usage could raise suspicion if card-based patterns are expected.\n- payment_format_ach=0 (lowers suspicion): absence of ACH usage could lower suspicion if non-ACH methods are common for this activity.\n- from_bank=21387 (lowers suspicion): sending from this bank ID could lower suspicion if it matches the expected counterparty profile.\n- amount_received=1713.07 (lowers suspicion): receiving the same amount as paid could lower suspicion as it suggests straightforward settlement.\ninvestigation_context: If these signals persist, the overall assessment could reflect ordinary activity tempered by occasional deviations."
+}

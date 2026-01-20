@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2166062,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple strong indicators raise concern\u2014ACH as the payment format, a sizable payment amount, Sunday timing, and the specified receiving bank all push the assessment toward suspicious. Two factors lower concern: the sending bank identifier and the receiving currency being euros may temper the overall risk signal.\n\nkey_factors:\n- payment_format_ach (raises suspicion): Use of ACH could be consistent with high-value bank-to-bank transfers that merit closer attention.\n- amount_paid (raises suspicion): The payment amount (10148.7) may indicate a large transfer that could be atypical for routine activity.\n- dayofweek (raises suspicion): Occurrence on dayofweek=6 (Sunday) may reflect timing outside normal business days.\n- from_bank (lowers suspicion): The sending bank identifier (24850) lowers suspicion and could indicate a known or expected source.\n- receiving_currency_euro (lowers suspicion): Receiving currency = euro lowers suspicion and may reflect legitimate euro-denominated business flows.\n\ninvestigation_context: If reviewed, this pattern could be consistent with a sizable ACH transfer sent on a Sunday to the specified receiving bank, while the sending bank ID and euro currency might temper concern."
+}

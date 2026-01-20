@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3040517,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is low because multiple strong indicators lower suspicion (absence of ACH, cash payment flag, and a known sending bank with euro currency). Some smaller signals raise concern \u2014 the payment amount and lack of a credit card indicator \u2014 but they do not offset the lowering factors, so overall suspiciousness stays minimal.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with non-ACH channels or expected payment routing.\n- payment_format_cash=1 (lowers suspicion): cash payment flag may indicate on-hand settlement rather than automated settlement.\n- from_bank=21387 (lowers suspicion): the originating bank ID aligns with a lowering signal that suggests expected sender context.\n- amount_paid=1713.07 (raises suspicion): the transaction amount could be notable relative to usual patterns and therefore increases attention.\n- payment_format_credit_card=0 (raises suspicion): lack of a credit card payment indicator marginally raises concern if card usage would be expected.\n\ninvestigation_context: If reviewed further, these mixed signals could be consistent with routine cash-origin transfers but might warrant context-specific clarification depending on counterparty and purpose."
+}

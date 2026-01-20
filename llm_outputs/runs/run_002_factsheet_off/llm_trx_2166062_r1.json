@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2166062,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple features strongly raise the score\u2014ACH payment format, a large paid amount matching the amount received, weekend timing, and routing to bank 22\u2014while origin from bank 24850 and receiving in euros reduce the signal. The net pattern of pronounced raising factors with some mitigating signals produces the very high suspiciousness score.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 ACH format could be consistent with automated bank transfers that may move funds efficiently.\n- amount_paid=10148.7 (raises suspicion) \u2014 a high payment amount could be consistent with substantial fund movement that increases concern.\n- dayofweek=6 (raises suspicion) \u2014 transaction on day 6 could be consistent with atypical timing for normal business activity.\n- from_bank=24850 (lowers suspicion) \u2014 originating from bank 24850 reduces the signal and might reflect a less concerning source in context.\n- to_bank=22 (raises suspicion) \u2014 routing to bank 22 could be consistent with concentration of outgoing flows to a specific destination.\n\ninvestigation_context: If these signals are accurate, the combination of strong outbound indicators and some mitigating origin/currency characteristics could be consistent with unusual routing and timing rather than routine activity."
+}

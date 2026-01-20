@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3635796,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Raising factors include the use of ACH, the large amount received and paid (15333.3), and Sunday timing, plus a matching large payment, which together push the score higher. The euro-denominated receiving factor lowers suspicion, helping explain the overall high score.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 ACH usage could raise suspicion in this context.\n- amount_received (raises suspicion) \u2014 amount_received of 15333.3 may raise suspicion.\n- dayofweek (raises suspicion) \u2014 Sunday timing could raise suspicion.\n- amount_paid (raises suspicion) \u2014 amount_paid equals amount_received, which may raise suspicion.\n- receiving_currency_euro (lowers suspicion) \u2014 receiving in euros lowers suspicion.\ninvestigation_context: If the euro component were not present, the overall suspicion could be higher or lower depending on the remaining signals."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 666019,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is low because multiple recorded attributes\u2014the absence of ACH, presence of cheque payment, specific sending and receiving bank IDs, US dollar currency, weekday morning timing, and the recorded amount\u2014collectively contribute to lowering suspicion. A small countervailing influence from the paid amount and the credit-card indicator being zero slightly raises suspicion, preventing an even lower score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with non-automated settlement methods and reduce automated-transfer concerns.\n- from_bank=10232 (lowers suspicion): this sending bank ID could reflect routine activity with that origin.\n- payment_format_cheque=1 (lowers suspicion): use of cheque may indicate manual, documented payment flows rather than rapid electronic transfers.\n- amount_paid=1513.95 (raises suspicion): the paid amount could, in some contexts, be consistent with structuring or notable transaction size.\n- payment_format_credit_card=0 (raises suspicion): the credit-card indicator being zero may reflect atypical routing that slightly offsets the lowering signals.\n\ninvestigation_context: If accurate, these factors could be consistent with a routine cheque payment in USD during business hours with only minor offsetting signals from the payment amount and credit-card indicator."
+}

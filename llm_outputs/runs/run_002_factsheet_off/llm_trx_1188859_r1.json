@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1188859,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple strong lowering signals (origin bank, Australian currencies, large identical amounts, and timing) suggest limited concern, while the use of ACH format and the absence of USD as payment currency provide modest raising signals. Overall, the lowering factors outweigh the increases, resulting in a low suspiciousness score.\nkey_factors:\n- from_bank (lowers suspicion) \u2014 the specific origin bank indicator could be consistent with expected counterparties or normal routing.\n- payment_format_ach (raises suspicion) \u2014 ACH format may indicate automated or batch transfers that could warrant further contextual review.\n- receiving_currency_australian_dollar (lowers suspicion) \u2014 receiving in AUD may align with invoicing or regional business flows.\n- amount_received (lowers suspicion) \u2014 the large, round received amount might reflect commercial settlement rather than fragmented layering.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 the absence of USD as payment currency could, in some contexts, suggest alternative routing that merits attention.\ninvestigation_context: If reviewed, these mixed signals could be consistent with routine commercial cross-border payments but may also benefit from contextual verification."
+}

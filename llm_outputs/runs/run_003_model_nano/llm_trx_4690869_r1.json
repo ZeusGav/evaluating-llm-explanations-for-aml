@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4690869,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The tiny suspiciousness score reflects one small upward signal from not using the credit card, but is largely offset by multiple downward signals from other channels. Overall, the balance of factors yields a near-zero level of suspicion.\nkey_factors:\n- payment_format_credit_card=0 (raises suspicion) when the absence of card payment contrasts with other signals suggesting card usage in similar transactions.\n- from_bank=5175 (lowers suspicion) because a clearly identifiable sending bank provides traceability and reduces concern.\n- payment_format_ach=0 (lowers suspicion) since not using ACH reduces exposure through that channel.\n- payment_format_cash=1 (lowers suspicion) because cash usage supports a cash-based pattern and lowers concern about non-cash channels.\n- amount_paid=3570.06 (raises suspicion) as a payment amount may stand out from usual patterns in this context.\ninvestigation_context: This pattern could be consistent with routine activity if expected payment methods and counterparties align."
+}

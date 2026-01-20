@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2046274,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high suspiciousness rating is driven primarily by an ACH payment format and large identical amounts received and paid, which raise concern, while the transaction hour and the originating bank indicator reduce concern to some extent. Overall, several strong raising factors outweigh the lowering factors, suggesting the pattern merits attention even if some attributes may be benign.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with rapid electronic transfers that may require scrutiny.\n- amount_received=16450.3 (raises suspicion) \u2014 a large inbound amount may indicate significant value movement that could be noteworthy.\n- amount_paid=16450.3 (raises suspicion) \u2014 an equally large outbound amount may suggest pass-through or linked debiting behavior.\n- hour=20 (lowers suspicion) \u2014 occurring around 8 PM may reflect after\u2011hours activity and thus modestly reduces concern.\n- from_bank=243254 (lowers suspicion) \u2014 the originating bank value may indicate a familiar or lower\u2011risk source and slightly lowers concern.\n\ninvestigation_context: If reviewed further, these factors could be consistent with electronic pass\u2011through activity but might also reflect routine business payments depending on context."
+}

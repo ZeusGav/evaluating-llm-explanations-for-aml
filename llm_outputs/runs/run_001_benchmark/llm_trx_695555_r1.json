@@ -1,0 +1,7 @@
+{
+  "transaction_id": 695555,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because several attributes (small paid amount, near\u2011one amount ratio, specific bank indicators and payment format flags) lower concern, outweighing the modest signals that raise it. However, the received amount and the fact the currency is bitcoin could still raise some attention if seen in context.\n\nkey_factors:\n- amount_ratio (lowers suspicion) \u2014 a ratio near 1 could indicate the paid and received values match, which may be consistent with straightforward settlement.\n- amount_paid (lowers suspicion) \u2014 a very small paid amount could reflect low\u2011value or test transactions rather than high\u2011value laundering.\n- amount_received (raises suspicion) \u2014 a nonzero received amount could indicate incoming funds that may warrant context-specific review.\n- payment_currency_bitcoin (raises suspicion) \u2014 use of bitcoin as the currency could increase attention because cryptocurrency may be used to move value across systems.\n- payment_format_bitcoin (lowers suspicion) \u2014 a bitcoin payment format flag here may reflect routine or expected on\u2011chain receipts in this flow.\n\ninvestigation_context: If these attributes are correct, the pattern could reflect routine small bitcoin receipts rather than a high\u2011risk scheme."
+}

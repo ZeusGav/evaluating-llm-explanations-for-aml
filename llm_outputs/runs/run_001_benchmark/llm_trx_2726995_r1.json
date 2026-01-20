@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2726995,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most attributes lower suspicion \u2014 payment method indicators, the sending/receiving bank IDs, Australian dollar currency, and evening timing point toward expected payment characteristics; only the payment amount slightly raises concern. Overall, the combined lowering factors outweigh the small increase from amount_paid, resulting in the very low suspiciousness score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 if ACH was not used, this could be consistent with alternative rails that are typical for card transactions.\n- payment_format_credit_card=1 (lowers suspicion) \u2014 if a credit card was used, this may indicate consumer-style payments rather than high-risk wire behavior.\n- from_bank=220541 (lowers suspicion) \u2014 the specific sending bank ID lowers concern and could reflect a routine sending institution.\n- receiving_currency_australian_dollar=1 (lowers suspicion) \u2014 Australian dollar reception may be consistent with normal domestic or regional activity.\n- amount_paid=8919.28 (raises suspicion) \u2014 the payment amount slightly raises concern and might be notable relative to expected customer patterns.\n\ninvestigation_context: If reviewed, the combination of card payment, a particular sending bank, Australian-dollar amounts and evening timing could be consistent with routine consumer activity and help explain the low score."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3469246,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because several transaction attributes lower suspicion, such as a nearly matched amount ratio, a small paid amount, and an expected originating bank and timing. A small countervailing signal comes from the amount received and the absence of a cheque format, which could, conditionally, reflect an incoming value or a non-cheque payment pattern that may warrant attention.\n\nkey_factors:\n- amount_ratio (lowers suspicion): a near\u2011one ratio could be consistent with matched debits and credits, reducing concern.\n- amount_paid (lowers suspicion): a small paid amount could indicate low-value activity that lowers risk.\n- amount_received (raises suspicion): a measurable received amount could, conditionally, represent incoming funds that merit review.\n- payment_format_cheque (raises suspicion): absence of a cheque format may, in some contexts, align with non-cheque flows that require context.\n- from_bank (lowers suspicion): the specific originating bank value is associated here with lower suspicion, which may reflect routine origin patterns.\n\ninvestigation_context: If needed, these mixed signals could indicate a routine low\u2011value incoming transfer rather than clear illicit behavior, depending on additional case context."
+}

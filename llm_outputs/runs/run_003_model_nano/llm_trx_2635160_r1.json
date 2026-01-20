@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2635160,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The high suspiciousness score is driven by several indicators that raise suspicion\u2014ACH payment format, substantial amounts paid and received, and bank-to-bank movement\u2014while the US dollar currency indicator lowers suspicion slightly. The timing patterns and bank relationships further support an elevated risk assessment.\n\nkey_factors:\n- payment_format_ach raises suspicion: If the transaction uses ACH, this method could be consistent with batch electronic transfers that warrant review.\n- amount_paid raises suspicion: The amount paid of 9226.42 could be considered substantial and merits scrutiny depending on the profile.\n- amount_received raises suspicion: The matching amount received of 9226.42 could indicate a direct transfer that requires corroboration.\n- from_bank raises suspicion: The sending bank ID 233580 provides an origin that may require verification.\n- payment_currency_us_dollar lowers suspicion: Using US dollars may reduce currency risk in this context, though other indicators keep the overall concern elevated.\n\ninvestigation_context: If these indicators align with the account's typical activity, the elevated risk is supported; if not, the currency indicator could temper the concern."
+}

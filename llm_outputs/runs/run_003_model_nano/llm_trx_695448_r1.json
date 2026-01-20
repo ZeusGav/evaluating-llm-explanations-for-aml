@@ -1,0 +1,7 @@
+{
+  "transaction_id": 695448,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The score of 0.997032 is driven by several factors that raise suspicion\u2014including ACH payments, large matching amounts received and paid, and weekend timing\u2014while some indicators slightly reduce the risk. Lowering factors include the specific sending bank, euro-denominated elements, and a separate receiving bank, which temper the overall assessment.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) This could reflect a preference for ACH in scenarios that historically show elevated risk, depending on context.\n- amount_received=12481.9 (raises suspicion) A large inbound payment amount may indicate unusual or high-risk inflows.\n- dayofweek=6 (raises suspicion) Weekend timing could correspond to less monitored activity and higher risk windows.\n- amount_paid=12481.9 (raises suspicion) A matching large outbound payment reinforces a potential link to the inbound amount.\n- from_bank=211 (lowers suspicion) A particular sending bank ID can reduce concern if it\u2019s considered low-risk or routine.\n\ninvestigation_context: If ACH usage, large matching amounts, and weekend timing are observed together, the overall score may rise, whereas sending from bank 211 and euro-denominated elements could reduce the level of concern."
+}

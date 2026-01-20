@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2328769,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The small score reflects two signals that raise suspicion from from_bank and amount_paid. These are offset by several factors that lower suspicion, such as payment_format_ach, dayofweek, and amount_received, yielding a net low suspiciousness.\n\nkey_factors:\n- from_bank raises suspicion (raises suspicion): when a transfer originates from this sending bank ID, it could contribute to higher concern.\n- amount_paid raises suspicion (raises suspicion): the amount paid is notable and could contribute to higher concern, depending on context.\n- payment_format_ach lowers suspicion (lowers suspicion): absence of ACH format reduces concern.\n- dayofweek lowers suspicion (lowers suspicion): transaction on this day of week reduces concern.\n- amount_received lowers suspicion (lowers suspicion): receiving amount aligns with typical patterns, reducing concern.\n\ninvestigation_context: If similar factor combinations persist, the overall suspiciousness score would likely remain low."
+}

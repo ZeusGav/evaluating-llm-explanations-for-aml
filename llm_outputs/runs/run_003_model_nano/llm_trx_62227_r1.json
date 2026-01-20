@@ -1,0 +1,7 @@
+{
+  "transaction_id": 62227,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Overall, the only factor that raises suspicion is amount_received=12.62, but it is outweighed by multiple lowering indicators such as from_bank, payment_format_reinvestment, payment_currency_us_dollar, and amount_ratio=1. The net effect is a very low score of 0.000014.\nkey_factors:\n- amount_received=12.62 (raises suspicion) in this context as the incoming amount may stand out relative to typical flows.\n- from_bank=3698 (lowers suspicion) because using this sending bank ID by itself is not flagged and could reflect routine activity.\n- payment_format_reinvestment=1 (lowers suspicion) since reinvestment indicators can reduce concern in this context.\n- payment_currency_us_dollar=1 (lowers suspicion) as US dollar usage may align with expected currency flows.\n- amount_ratio=1 (lowers suspicion) indicating paid-to-received amounts match, reducing discrepancy.\ninvestigation_context: If the amount_received remains 12.62 with reinvestment and a matched paid-to-received ratio, the activity could be consistent with routine cash flows."
+}

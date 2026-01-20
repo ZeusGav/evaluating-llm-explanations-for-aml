@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4039580,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is driven up by the use of ACH and the payment amount while being pulled down by the sending bank identifier, the received amount, USD currency, and timing attributes. These opposing signals produce a moderately elevated suspiciousness level because payment-format indicators raise concern while account- and transaction-level attributes reduce it.\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with automated bank transfers that may enable rapid movement of funds.\n- amount_paid (raises suspicion): the payment amount may indicate a sizable outgoing value that could be noteworthy in context.\n- from_bank (lowers suspicion): the specific sending bank identifier may reflect a known counterparty and thus lessen concern.\n- amount_received (lowers suspicion): the received amount may align with expected incoming value and reduce the signal for unusual activity.\n- payment_currency_us_dollar (lowers suspicion): payment in US dollar could be consistent with routine USD-denominated activity and lower the level of concern.\ninvestigation_context: If taken together, these mixed indicators could be consistent with routine ACH activity or, alternatively, with unusual routing that requires contextual interpretation."
+}
