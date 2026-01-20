@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4298034,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The overall rationale is that the listed factors collectively lower suspicion, with no indicators that raise suspicion. These reductions could reflect routine customer activity and standard payment flows.\n\nkey_factors:\n- from_bank=3932 | (lowers suspicion) could be consistent with routine activity involving a known counterparty in the sender's regular network.\n- payment_format_ach=0 | (lowers suspicion) could indicate a non-ACH payment pattern consistent with the client\u2019s normal activity.\n- payment_format_cash=1 | (lowers suspicion) cash-based transactions may be typical for the client and not inherently suspicious.\n- amount_paid=385.14 | (lowers suspicion) a modest amount that may align with the client\u2019s usual transaction size.\n- to_bank=70 | (lowers suspicion) directing funds to an expected or familiar recipient could fit normal behavior.\n\ninvestigation_context: If the transaction profile aligns with the customer's normal behavior, these factors would support a lower level of suspicion."
+}

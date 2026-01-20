@@ -1,0 +1,7 @@
+{
+  "transaction_id": 509060,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score reflects several factors that lower concern \u2014 for example absence of ACH, a specific originating bank identifier, moderate payment amounts, and use of local currency. No factors in the provided list raise suspicion, so this pattern could be consistent with routine, low-risk payments in certain contexts.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with non-ACH settlement methods used in routine transactions.\n- from_bank=29 (lowers suspicion) \u2014 a specific originating bank identifier may indicate a regular counterparty relationship rather than anomalous routing.\n- amount_received=1768.92 (lowers suspicion) \u2014 a moderate received amount could be consistent with typical customer activity rather than high-value red flags.\n- payment_format_cash=1 (lowers suspicion) \u2014 cash-format payment alongside other benign signals might reflect ordinary retail or informal settlement patterns.\n- receiving_currency_brazil_real=1 (lowers suspicion) \u2014 use of local currency may be consistent with domestic transactions and reduced cross-border complexity.\ninvestigation_context: If account history or business purpose shows routine activity and local counterparties, these indicators might align with expected low-risk behavior."
+}

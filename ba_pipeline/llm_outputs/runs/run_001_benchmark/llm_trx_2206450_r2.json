@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2206450,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The transaction scores very high because several attributes raise concern\u2014ACH payment method, the specific receiving bank, a sizeable paid amount, and weekend timing\u2014while some attributes lower concern, notably the reported amount received and the receiving currency being euro. These mixed signals could be consistent with movement of funds via ACH to a particular bank even though euro settlement and the received amount may mitigate apparent discrepancies.\n\nkey_factors:\n- payment_format_ach (raises suspicion): could indicate use of ACH rails that may be used to move funds between accounts quickly.\n- to_bank (raises suspicion): could indicate concentration of flows toward the specified receiving bank.\n- amount_paid (raises suspicion): could indicate a comparatively large transfer size that may be higher risk.\n- amount_received (lowers suspicion): could indicate the recorded received amount offsets some discrepancy in the payment.\n- receiving_currency_euro (lowers suspicion): could indicate settlement in euros which may align with expected cross-border or currency-specific flows.\n\ninvestigation_context: If these attributes reflect true transaction behavior, they could be consistent with purposeful ACH transfers to the named receiving bank despite euro settlement."
+}

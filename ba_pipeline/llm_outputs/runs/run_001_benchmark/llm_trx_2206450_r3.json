@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2206450,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high suspiciousness score is driven by an ACH payment of 3501.5 sent on a Sunday to receiving bank 20, with timing and routing features raising concern. However, the identical received amount, euro as the receiving currency, and the sending bank indicator provide countervailing signals that lower the overall concern yet do not eliminate the elevated score.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 an ACH method could be consistent with electronic transfers that warrant scrutiny given other signals.\n- to_bank=20 (raises suspicion) \u2014 routing to receiving bank 20 could indicate concentration to a specific counterparty that may be notable.\n- amount_paid=3501.5 (raises suspicion) \u2014 this payment amount could be consistent with higher-value activity that attracts attention.\n- amount_received=3501.5 (lowers suspicion) \u2014 identical received amount could reduce concern about loss, conversion, or obvious layering.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 euro as the receiving currency could, depending on context, lessen concern if it matches expected settlement currency.\ninvestigation_context: If reviewed, this combination could be consistent with a high-value ACH transfer to bank 20 on a Sunday but might also reflect routine euro-denominated settlement depending on counterparties."
+}

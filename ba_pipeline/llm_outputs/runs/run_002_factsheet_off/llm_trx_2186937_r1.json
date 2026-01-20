@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2186937,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most listed factors lower the concern score because they point to yuan-denominated, domestically originating payments and common payment formats, producing a very low suspiciousness result. The single factor that raises concern is the absence of US dollar payments, which could slightly increase scrutiny in certain contexts but does not overcome the lowering signals.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 the lack of ACH activity could be consistent with non\u2011ACH payment flows that reduce electronic transfer complexity.\n- payment_format_cash=1 (lowers suspicion) \u2014 presence of cash may reflect routine domestic cash transactions rather than concealed electronic layering.\n- from_bank=1267 (lowers suspicion) \u2014 a specific originating bank identifier could indicate a known banking relationship, reducing immediate concern.\n- payment_currency_yuan=1 (lowers suspicion) \u2014 use of yuan may be consistent with domestic currency settlement, lessening cross\u2011currency exposure.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 absence of USD activity could, in some cases, indicate limited USD exposure that may merit contextual consideration.\ninvestigation_context: If these signals are confirmed, they could be consistent with routine domestic yuan payments, though the lack of USD involvement might warrant contextual review."
+}

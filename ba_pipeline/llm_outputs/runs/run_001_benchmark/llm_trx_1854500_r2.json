@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1854500,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high score reflects several strong risk signals: use of ACH and large identical paid and received amounts, plus a notable receiving bank ID, which raise concern. This is partly offset because the payment is in US dollars, which may lower suspicion in some contexts.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could indicate automated bank-to-bank transfers that may be used to move funds quickly.\n- amount_received=17498 (raises suspicion) \u2014 a relatively large incoming amount could warrant closer scrutiny.\n- amount_paid=17498 (raises suspicion) \u2014 matching paid and received amounts could be consistent with passthrough or layering activity.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 being USD may lessen concern if USD is expected for this customer or corridor.\n- to_bank=12 (raises suspicion) \u2014 the receiving bank ID may be notable if it corresponds to a higher-risk counterparty.\n\ninvestigation_context: If these elements reflect a single high-value ACH between the listed banks, the pattern could be consistent with rapid fund movement that merits review."
+}

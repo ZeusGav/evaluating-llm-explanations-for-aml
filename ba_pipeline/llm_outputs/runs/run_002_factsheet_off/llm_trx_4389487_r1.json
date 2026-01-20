@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4389487,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high score is largely driven by an ACH-format transfer in Saudi riyal on dayofweek=6 with a large paid/received amount, which raises suspicion; at the same time, the presence of from_bank=119 and to_bank=49365 lowers the concern somewhat. Taken together, the timing, format, currency, and size could be consistent with atypical or higher-risk activity, even though certain routing details temper the signal.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 an ACH transfer could be consistent with remote electronic fund movement that merits attention.\n- dayofweek=6 (raises suspicion) \u2014 a transaction occurring on dayofweek=6 could indicate unusual timing relative to normal business patterns.\n- payment_currency_saudi_riyal=1 (raises suspicion) \u2014 use of Saudi riyal could be consistent with cross-border or currency-specific exposure.\n- from_bank=119 (lowers suspicion) \u2014 the originating bank identifier may reduce concern if it aligns with expected counterparties.\n- to_bank=49365 (lowers suspicion) \u2014 the destination bank identifier may temper risk if it reflects known or lower-risk routing.\n\ninvestigation_context: If these factors align with unfamiliar counterparties or inconsistent client profiles, they may warrant closer review for potential atypical or cross-border activity."
+}

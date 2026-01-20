@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2726995,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The overall score is very low because the majority of signals reduce suspicion (e.g., ACH not used, credit card as the payment method, known sending/receiving banks, and AUD as the currency). The only factor that raises suspicion is amount_paid, which provides a small upward signal.\nkey_factors:\n- payment_format_ach (lowers suspicion) because ACH is not used here, reducing channel risk.\n- payment_format_credit_card (lowers suspicion) since credit card is used, which can be a common, legitimate channel.\n- from_bank (lowers suspicion) because the sending bank is known and typical in this flow.\n- receiving_currency_australian_dollar (lowers suspicion) as AUD reduces currency risk in this context.\n- amount_paid (raises suspicion) due to the signal of higher payment amount, which may warrant closer review despite other lowering signals.\ninvestigation_context: If these signals hold, the overall risk remains low with a small uptick driven by the amount_paid signal."
+}

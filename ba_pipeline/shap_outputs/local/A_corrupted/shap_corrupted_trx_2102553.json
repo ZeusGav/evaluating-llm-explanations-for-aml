@@ -1,0 +1,66 @@
+{
+  "transaction_id": 2102553,
+  "model_proba": 0.0004042738873977214,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 0.0,
+      "shap_value": 3.1475651264190674,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 1.0,
+      "shap_value": 2.3934483528137207,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 20861.0,
+      "shap_value": 2.2295947074890137,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": -0.5876942276954651,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 8522.89,
+      "shap_value": 0.47403568029403687,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 1.0,
+      "shap_value": 0.30824485421180725,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 17321.0,
+      "shap_value": 0.2987692654132843,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.23752275109291077,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 8522.89,
+      "shap_value": -0.1427399069070816,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11423361301422119,
+      "direction": "increase"
+    }
+  ]
+}

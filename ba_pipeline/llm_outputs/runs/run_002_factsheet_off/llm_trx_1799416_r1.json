@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1799416,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score arises because all listed transaction attributes point toward routine characteristics\u2014credit card payment, modest equal amounts sent and received, an evening hour, a known originating bank, and euro currency. No listed factor increases concern, so the activity appears more consistent with ordinary payments than with high-risk behavior. \nkey_factors:\n- from_bank=1490 (lowers suspicion): may reflect a familiar or established originating bank relationship consistent with routine transfers.\n- payment_format_credit_card=1 (lowers suspicion): could be consistent with consumer card-based spending rather than atypical transfer methods.\n- amount_paid=208.56 (lowers suspicion): may indicate a moderate transaction size that is less suggestive of large-value layering.\n- hour=21 (lowers suspicion): could reflect typical evening consumer activity rather than unusual timing for high-risk flows.\n- receiving_currency_euro=1 (lowers suspicion): may indicate settlement in a common fiat currency consistent with ordinary commerce.\ninvestigation_context: If additional review is desired, these attributes may indicate normal card-based, euro-denominated activity rather than indicators of novel or high-risk schemes."
+}

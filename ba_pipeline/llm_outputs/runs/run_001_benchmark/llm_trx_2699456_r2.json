@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2699456,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because multiple indicators raise concern\u2014notably ACH usage, payments denominated and received in Saudi riyal, a sizable amount, and a midday timestamp. One factor, the originating bank identifier (from_bank=48526), lowers the score and partially offsets those raising signals.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): use of ACH could be consistent with fast electronic transfer patterns that may require closer scrutiny.\n- payment_currency_saudi_riyal=1 (raises suspicion): payment in Saudi riyal could be consistent with currency concentration or jurisdictional exposure.\n- receiving_currency_saudi_riyal=1 (raises suspicion): receiving currency matching the payment currency could be consistent with single-currency routing or regional flows.\n- amount_received=66965.3 (raises suspicion): a substantial single amount could be consistent with high-value transfer activity.\n- from_bank=48526 (lowers suspicion): the specific sending bank identifier reduces concern and may reflect a known sender profile.\n\ninvestigation_context: If these signals align with the customer's expected behavior, they could be consistent with concentrated currency flows or cross-border payment patterns."
+}

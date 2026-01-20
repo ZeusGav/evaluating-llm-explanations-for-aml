@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2726995,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most contributing signals lower suspicion\u2014card payment, absence of ACH, the identified sending/receiving banks, and Australian dollar usage\u2014while the payment amount provides a small opposing signal that raises suspicion. Overall, the lowering signals outweigh the single increase, producing the very low suspiciousness score. \nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion) \u2014 use of a credit card could be consistent with routine consumer payments.\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of an ACH method may indicate non-ACH channels consistent with expected patterns.\n- from_bank=220541 (lowers suspicion) \u2014 the identified sending bank may reflect a known banking relationship and reduce concern.\n- receiving_currency_australian_dollar=1 (lowers suspicion) \u2014 receiving in AUD could be consistent with domestic or expected currency flows.\n- amount_paid=8919.28 (raises suspicion) \u2014 the payment size could, under some circumstances, warrant closer attention.\ninvestigation_context: If these attributes match the customer's normal behavior, the combination of factors may indicate routine activity rather than illicit activity."
+}

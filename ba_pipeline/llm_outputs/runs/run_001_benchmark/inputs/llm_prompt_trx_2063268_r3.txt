@@ -1,0 +1,41 @@
+You are an AML compliance analyst writing for a non-technical investigator.
+
+Task:
+Translate the listed factors into a human-readable rationale for why the suspiciousness score is 0.927497.
+
+Hard rules:
+- Use ONLY the factors listed below as evidence. Do NOT invent additional evidence or dataset-specific facts.
+- Do NOT mention SHAP, ML, models, or internal mechanisms.
+- Do NOT use numeric SHAP values in your wording. Treat them only as internal signals of which factors matter.
+- You MAY add generic AML context ONLY as possibilities, using conditional language (e.g., "could be consistent with...", "may indicate...", "might reflect...").
+- Never state "is rare/common" or similar dataset claims unless explicitly stated in the factors/definitions.
+- direction "increase" => raises suspicion; "decrease" => lowers suspicion.
+- Keep the output <= 150 words total.
+- Output EXACTLY this format (no extra text):
+
+short_explanation: <EXACTLY 2 sentences. Summarize the overall rationale, mentioning both raising and lowering factors if applicable.>
+key_factors:
+- <EXACTLY 5 bullet lines; each starts with "- "; each line must include at least one factor name AND explicitly state (raises suspicion) or (lowers suspicion), plus a short conditional interpretation.>
+investigation_context: <EXACTLY 1 sentence using conditional language; no action steps, no instructions.>
+
+Factors (top 10; each has a direction):
+1. payment_format_ach=1 | impact:2.66882 | increase
+   def: payment method indicator (1=yes, 0=no): 'ach'
+2. from_bank=221279 | impact:-0.865066 | decrease
+   def: sending bank ID
+3. hour=22 | impact:-0.630459 | decrease
+   def: hour of day (0–23)
+4. amount_paid=3377.08 | impact:0.606705 | increase
+   def: amount paid (payment currency)
+5. amount_received=3377.08 | impact:-0.307243 | decrease
+   def: amount received (receiving currency)
+6. to_bank=8539 | impact:-0.286529 | decrease
+   def: receiving bank ID
+7. receiving_currency_euro=1 | impact:-0.175543 | decrease
+   def: receiving currency indicator (1=this, 0=other): 'euro'
+8. payment_format_cheque=0 | impact:0.155973 | increase
+   def: payment method indicator (1=yes, 0=no): 'cheque'
+9. dayofweek=5 | impact:0.130053 | increase
+   def: day of week (0=Mon..6=Sun)
+10. payment_format_credit_card=0 | impact:0.122592 | increase
+   def: payment method indicator (1=yes, 0=no): 'credit card'

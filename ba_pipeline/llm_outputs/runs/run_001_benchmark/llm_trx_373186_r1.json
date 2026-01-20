@@ -1,0 +1,7 @@
+{
+  "transaction_id": 373186,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple transaction attributes\u2014sending bank ID (from_bank=4), non\u2011ACH format, ruble currency, cheque indicator, receiving bank and the received amount\u2014collectively lower the level of concern, producing a very small score. There are modest opposing signals from the transaction hour (hour=1) and the amount_paid that slightly raise suspicion, but they are outweighed by the stronger lowering factors.  \nkey_factors:\n- from_bank=4 (lowers suspicion): use of this sending bank may reflect an expected counterparty or routine routing.  \n- payment_format_ach=0 (lowers suspicion): absence of ACH could indicate a different, potentially standard payment channel.  \n- payment_currency_ruble=1 (lowers suspicion): payment in rubles may be consistent with local currency settlement.  \n- hour=1 (raises suspicion): a transaction occurring at hour=1 might reflect unusual timing and could merit contextual review.  \n- amount_paid=6443.48 (raises suspicion): the payment size may attract attention depending on customer profile and transaction patterns.  \ninvestigation_context: If customer, counterparty, or business-pattern context is available, these signals might be interpreted as routine domestic activity despite the late-hour timing."
+}

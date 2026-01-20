@@ -1,0 +1,66 @@
+{
+  "transaction_id": 895347,
+  "model_proba": 4.025299131171778e-05,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 0.0,
+      "shap_value": 2.8395090103149414,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 1.0,
+      "shap_value": 2.7656421661376953,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 238190.0,
+      "shap_value": 2.6551730632781982,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_swiss_franc",
+      "value": 1.0,
+      "shap_value": 0.7935363054275513,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 242081.0,
+      "shap_value": 0.7794800996780396,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 5011.57,
+      "shap_value": 0.6944233775138855,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_swiss_franc",
+      "value": 1.0,
+      "shap_value": 0.2712397873401642,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 5011.57,
+      "shap_value": -0.21473318338394165,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 3.0,
+      "shap_value": 0.1991627961397171,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 17.0,
+      "shap_value": 0.12432825565338135,
+      "direction": "increase"
+    }
+  ]
+}

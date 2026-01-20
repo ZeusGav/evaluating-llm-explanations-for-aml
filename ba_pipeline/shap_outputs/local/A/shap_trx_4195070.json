@@ -1,0 +1,66 @@
+{
+  "transaction_id": 4195070,
+  "model_proba": 7.010489935055375e-05,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 0.0,
+      "shap_value": -2.761894941329956,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 23833.0,
+      "shap_value": -2.2590878009796143,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 1.0,
+      "shap_value": -1.457877516746521,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 22.0,
+      "shap_value": -1.0278563499450684,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 1484.92,
+      "shap_value": -0.9628164768218994,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_shekel",
+      "value": 1.0,
+      "shap_value": -0.7733156681060791,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 142836.0,
+      "shap_value": -0.5753418803215027,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 1484.92,
+      "shap_value": -0.2445252537727356,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_shekel",
+      "value": 1.0,
+      "shap_value": -0.2369857132434845,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 3.0,
+      "shap_value": -0.15075600147247314,
+      "direction": "decrease"
+    }
+  ]
+}

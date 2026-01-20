@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2102553,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because several prominent features lower concern, including use of a credit card, absence of ACH, use of euro, and bank/time indicators that reduce risk signals. Some factors \u2014 activity on dayofweek=6 (Sunday) and the payment amount \u2014 push the score up slightly and could be consistent with atypical timing or notable payment size.\n\nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion): if paid by credit card, this could be consistent with consumer-style transactions and reduce concern.\n- payment_format_ach=0 (lowers suspicion): absence of ACH transfers may lower suspicion compared with bank-to-bank movement in some contexts.\n- receiving_currency_euro=1 (lowers suspicion): if the receiving currency is euro, this could align with expected regional activity and lower risk signals.\n- dayofweek=6 (raises suspicion): activity on Sunday could be atypical and may indicate unusual timing worth noting.\n- amount_paid=8522.89 (raises suspicion): this payment size could be notable depending on customer profile and might increase scrutiny.\n\ninvestigation_context: If weekend timing is combined with a notable payment amount, it may reflect patterns that warrant contextual review."
+}

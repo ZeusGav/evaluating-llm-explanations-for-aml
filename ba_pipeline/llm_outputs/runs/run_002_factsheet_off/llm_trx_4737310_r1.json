@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4737310,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very high because multiple listed factors raise suspicion \u2014 notably the ACH payment format, substantial identical paid and received amounts, the sending bank, and the weekday of the transaction, which could be consistent with rapid or passthrough movement of funds. None of the top listed factors lower the score.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): presence of an ACH transfer could be consistent with automated or high-volume electronic movement.\n- amount_paid=9099.08 (raises suspicion): a substantial payment amount could indicate high-value activity that may warrant closer contextual review.\n- amount_received=9099.08 (raises suspicion): an identical received amount could be consistent with rapid passthrough or circular transfers.\n- from_bank=231212 (raises suspicion): funds originating from this sending bank could be relevant if that counterparty\u2019s behavior is atypical.\n- dayofweek=5 (raises suspicion): a transaction on this weekday could align with timing patterns that may be relevant to the assessment.\ninvestigation_context: If these patterns are unusual for the customer or counterparties, they could be consistent with activity requiring further contextual analysis."
+}

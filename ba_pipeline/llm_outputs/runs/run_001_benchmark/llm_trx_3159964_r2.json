@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3159964,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most factors \u2014 including use of a credit card, ruble as both payment and receiving currency, a common hour/day, and the paid amount \u2014 push the signal downward, while the received amount is the single factor that raises concern. Because multiple lowering signals outweigh that one increase, the overall suspiciousness is extremely low.\n\nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion) \u2014 could be consistent with routine card-funded payment patterns.\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH flag may reduce indicators linked to bank-transfer risk.\n- payment_currency_ruble=1 (lowers suspicion) \u2014 may indicate ruble-denominated payment, lowering cross-currency complexity.\n- amount_received=38574.8 (raises suspicion) \u2014 if unusually large for this context, it might warrant further attention.\n- amount_paid=38574.8 (lowers suspicion) \u2014 matching paid amount could suggest a straightforward one-to-one settlement rather than obfuscation.\n\ninvestigation_context: If the single increase for amount_received reflects a routine settlement while other factors indicate ruble credit-card activity, the low score could appropriately reflect limited apparent risk."
+}

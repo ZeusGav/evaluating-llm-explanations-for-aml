@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2466813,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very high suspiciousness score is driven by the ACH payment indicator, the reported paid and received amounts, and the receiving bank flag, which could be consistent with notable inbound ACH activity and thus raise concern. These signals are partially offset by the sending bank identifier, the use of US dollars, and the equal paid/received ratio, which may lower suspicion. \nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 could be consistent with an electronic ACH transfer pattern that may reflect automated or higher-volume routing.\n- amount_received (raises suspicion) \u2014 could reflect a sizable incoming value that may be characteristic of higher-risk transfers.\n- to_bank (raises suspicion) \u2014 could indicate routing to a receiving bank profile that might be associated with elevated concern.\n- from_bank (lowers suspicion) \u2014 could reflect a known sending bank identifier that may reduce uncertainty about the origin.\n- payment_currency_us_dollar (lowers suspicion) \u2014 could indicate settlement in USD that may lessen currency-related complexity.\ninvestigation_context: If confirmed, the combination of an ACH format with these amount and routing signals could be consistent with an inbound transfer pattern that may indicate atypical activity."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3801989,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most strong signals lower the score \u2014 non\u2011ACH and cheque formats, yen as payment/receiving currency, use of bank 15, and a moderate received amount point toward routine settlement patterns; only the absence of US dollar usage modestly raises concern. Taken together, the lowering factors dominate, producing the very low suspiciousness score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with non\u2011electronic or traditional settlement methods and routine vendor payments.\n- payment_format_cheque=1 (lowers suspicion): presence of cheque payment may align with conventional, traceable transfers in some business contexts.\n- payment_currency_yen=1 (lowers suspicion): use of yen for payment could be consistent with local currency transactions and ordinary cross\u2011border invoicing.\n- from_bank=15 (lowers suspicion): the sending bank being 15 could reflect a regular relationship or familiar correspondent banking route.\n- payment_currency_us_dollar=0 (raises suspicion): lack of US dollar denomination may, depending on context, be atypical for certain counterparties and therefore worth noting.\n\ninvestigation_context: If other account or counterparty details are atypical, the absence of USD combined with these routine indicators might be relevant to risk assessment."
+}

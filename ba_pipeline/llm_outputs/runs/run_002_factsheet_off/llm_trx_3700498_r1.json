@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3700498,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The transaction's low suspiciousness score (0.051330) is mainly driven down by factors that lower concern \u2014 cheque payment, no ACH, a late hour, and use of rupee for payment and receipt. Countervailing upward pressure comes from the originating bank (from_bank=70) and the absence of USD/EUR, which could reflect atypical routing or origin.\n\nkey_factors:\n- from_bank=70 (raises suspicion) \u2014 origin from this bank could indicate an unusual source or routing.\n- payment_format_cheque=1 (lowers suspicion) \u2014 cheque payment may reflect a traditional cleared instrument.\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH may suggest a non-automated transfer pattern.\n- receiving_currency_rupee=1 (lowers suspicion) \u2014 receiving in rupees may be consistent with local currency flows.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 non\u2011USD payment may signal non-standard currency routing.\n\ninvestigation_context: If additional account or counterparty details are available, the mix of routine payment attributes and a specific originating bank could be consistent with local activity that has some atypical routing or currency features."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 222860,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low score reflects that all top-listed attributes point away from concern, primarily bank identifiers, payment methods labeled as reinvestment/non-ACH, rupee currency, and a modest payment amount. No listed factor increases suspicion.  \nkey_factors:\n- from_bank=7 (lowers suspicion): if the sending bank is this institution, it could be consistent with a routine source of funds.  \n- payment_format_ach=0 (lowers suspicion): being non-ACH may indicate the payment used an alternative standard channel rather than an unusual transfer method.  \n- payment_format_reinvestment=1 (lowers suspicion): a reinvestment designation could reflect internal portfolio activity rather than external suspicious flows.  \n- payment_currency_rupee=1 (lowers suspicion): use of rupees may be consistent with domestic currency activity rather than cross\u2011currency complexity.  \n- amount_paid=325.55 (lowers suspicion): the relatively modest payment size could be consistent with routine retail or reinvestment transactions.  \ninvestigation_context: If these attributes accurately describe the transaction, they could be consistent with routine, low\u2011value reinvestment activity in rupees rather than indicators of illicit behavior."
+}

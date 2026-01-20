@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4737310,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Several indicators point to unusual payment routing and timing that collectively heighten risk. There are no factors in this list that lower suspicion.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) use of ACH could be flagged when paired with a known sending bank and matching amounts.\n- amount_paid=9099.08 (raises suspicion) an exact amount paid that matches the amount received may indicate round-tripping.\n- amount_received=9099.08 (raises suspicion) same pattern as amount_paid reinforces potential coordination.\n- from_bank=231212 (raises suspicion) sending bank ID could indicate routing through a traceable channel.\n- dayofweek=5 (raises suspicion) Friday activity can reflect timing patterns that warrant scrutiny.\ninvestigation_context: If these factors co-occur, the elevated score could reflect increased suspicion about the transaction pattern."
+}

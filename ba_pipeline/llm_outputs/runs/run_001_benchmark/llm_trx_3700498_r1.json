@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3700498,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The low suspiciousness reflects several strong lowering signals \u2014 notably cheque payment format, late-hour timing, and rupee as the receiving currency \u2014 while a prominent sending bank and the absence of euro slightly raise concern. Overall, the lowering factors outweigh the increases, so the transaction appears only mildly suspicious and could be consistent with routine cheque-based transfers involving rupees. \nkey_factors:\n- from_bank=70 (raises suspicion) \u2014 activity tied to this sending bank could be consistent with a source that merits closer attention.\n- payment_format_cheque=1 (lowers suspicion) \u2014 use of cheque could be consistent with conventional, traceable payment practices.\n- hour=22 (lowers suspicion) \u2014 a late-evening timestamp might reflect normal after-hours processing rather than evasive timing.\n- receiving_currency_rupee=1 (lowers suspicion) \u2014 receipt in rupees could align with expected domestic or local currency flows.\n- receiving_currency_euro=0 (raises suspicion) \u2014 absence of euro where it might be expected could slightly increase concern.\ninvestigation_context: If these factor patterns are accurate, the combination may indicate routine domestic cheque activity with a specific sender that only modestly elevates risk."
+}

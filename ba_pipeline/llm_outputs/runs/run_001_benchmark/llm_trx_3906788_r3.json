@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3906788,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very high suspiciousness score is driven mainly by attributes that raise concern \u2014 notably the ACH payment format, a sizeable incoming euro amount, and the specific receiving bank \u2014 which collectively increase risk signals. A couple of attributes, such as the sending bank and the transaction hour, slightly lower concern but do not offset the dominant raising factors.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): ACH payment format could be consistent with rapid bank transfers that may be used to move funds quickly.\n- amount_received=15526.3 (raises suspicion): a large incoming amount may indicate elevated transaction risk or atypical exposure.\n- payment_currency_euro=1 (raises suspicion): payment in euros may reflect cross\u2011currency or jurisdictional activity that might merit attention.\n- to_bank=22 (raises suspicion): routing to receiving bank 22 could be notable depending on the recipient profile or associations.\n- from_bank=1 (lowers suspicion): originating from sending bank 1 may reduce concern if that source is known or has established controls.\ninvestigation_context: If these attributes coincide with other unusual indicators, the transaction may warrant closer scrutiny as potential AML risk."
+}

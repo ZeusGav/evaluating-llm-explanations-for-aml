@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1799416,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because multiple listed transaction attributes reduce concern, including payment method, amounts, timing and currency. No listed factor increases suspicion among the top contributors.\n\nkey_factors:\n- payment_format_credit_card (lowers suspicion) \u2014 if the payment was made by credit card, this could be consistent with routine consumer transactions. \n- amount_paid (lowers suspicion) \u2014 an amount_paid of 208.56 could be consistent with ordinary retail or service payments rather than unusually large transfers. \n- hour (lowers suspicion) \u2014 a transaction at hour=21 might reflect typical evening activity for personal spending. \n- receiving_currency_euro (lowers suspicion) \u2014 settlement in euros could be consistent with normal cross-border or local euro-denominated business. \n- payment_format_ach (lowers suspicion) \u2014 the absence of ACH (payment_format_ach=0) may indicate use of alternate standard channels rather than ACH-specific patterns.\n\ninvestigation_context: If these features are accurate for the transaction, they may collectively suggest a lower-risk, routine payment pattern rather than indicators of illicit layering or concealment."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4541202,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The suspiciousness score is very low because several factors lower concern (no ACH, presence of a cheque payment, and a specific sending bank ID) while two factors modestly raise concern (the payment amount and absence of credit-card usage). Overall, the lowering indicators outweigh the increases, producing the near-zero score.  \nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with non-electronic routing rather than automated transfer risk.\n- payment_format_cheque=1 (lowers suspicion): cheque payment could indicate traditional, documented settlement that may reduce certain automated red flags.\n- from_bank=2454 (lowers suspicion): presence of a specific sending bank ID could be consistent with a regular institutional source.\n- amount_paid=1841.14 (raises suspicion): this payment amount could be notable if it is atypical for the account or relevant thresholds.\n- payment_format_credit_card=0 (raises suspicion): lack of credit-card use may be unusual in contexts where card payments are expected and could merit contextual review.\ninvestigation_context: If these listed attributes reflect the transaction, the pattern may be consistent with routine bank/cheque activity rather than high-risk behavior."
+}

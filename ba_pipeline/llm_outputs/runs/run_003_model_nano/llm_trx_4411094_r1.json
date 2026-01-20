@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4411094,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The suspicion score is driven upward by ACH usage, a relatively large amount paid, and the absence of a credit card payment. Not using USD also raises suspicion, while euro receiving lowers the overall suspicion.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) The use of ACH could be associated with higher-risk transfer patterns in some contexts.\n- amount_paid=2217.25 (raises suspicion) A relatively large payment amount can trigger additional review.\n- payment_format_credit_card=0 (raises suspicion) The absence of credit card payment may indicate alternative, potentially higher-risk channels.\n- payment_currency_us_dollar=0 (raises suspicion) Not using USD may reflect unusual currency patterns.\n- receiving_currency_euro=1 (lowers suspicion) Receiving euro aligns with typical cross-border activity and lowers risk in this case.\ninvestigation_context: If these patterns persist, they could indicate a higher-risk profile for this customer."
+}

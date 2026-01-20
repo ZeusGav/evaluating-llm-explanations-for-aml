@@ -1,0 +1,66 @@
+{
+  "transaction_id": 4737310,
+  "model_proba": 0.9983127117156982,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": -2.7648801803588867,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 9099.08,
+      "shap_value": -0.6842588782310486,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 9099.08,
+      "shap_value": -0.6710477471351624,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 231212.0,
+      "shap_value": -0.4330635368824005,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": -0.39696186780929565,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.15655957162380219,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": -0.12730446457862854,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1502.0,
+      "shap_value": -0.10331422090530396,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_mexican_peso",
+      "value": 0.0,
+      "shap_value": -0.06899936497211456,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": -0.05759967863559723,
+      "direction": "decrease"
+    }
+  ]
+}

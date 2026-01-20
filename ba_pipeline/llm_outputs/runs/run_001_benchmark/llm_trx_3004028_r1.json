@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3004028,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The top factors all lower the suspiciousness score: small equal amounts, wire payment in UK pounds, specific sending/receiving bank IDs, and a daytime hour point toward lower risk. Because no listed factor raises suspicion, these attributes could be consistent with a routine low-value GBP wire transfer, though contextual review may be warranted.\n\nkey_factors:\n- amount_paid=17.75 (lowers suspicion): the small paid amount could be consistent with a low-value, routine transfer.\n- amount_received=17.75 (lowers suspicion): the equal received amount may indicate no complex conversion or splitting.\n- payment_format_wire=1 (lowers suspicion): use of wire format could reflect normal bank-to-bank settlement.\n- receiving_currency_uk_pound=1 (lowers suspicion): receiving currency in UK pounds may reduce conversion complexity for this payment.\n- hour=11 (lowers suspicion): the transaction occurring at hour 11 could be consistent with regular business-hour activity.\n\ninvestigation_context: If further context is needed, these attributes might reflect an ordinary low-value GBP wire between the specified banks."
+}

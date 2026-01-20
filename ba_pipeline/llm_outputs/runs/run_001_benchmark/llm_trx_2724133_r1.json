@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2724133,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score reflects a mix of signals: the payment being sent via ACH and the payment currency indicator raise concern, while the small equal amounts, the specific sending bank, and the euro as the receiving currency reduce it. Overall, ACH use increases suspicion but the low amount, sender/receiver bank IDs, euro receipt, and evening/weekday timing temper that concern.\n\nkey_factors:\n- payment_format_ach (raises suspicion): Use of ACH could be consistent with automated or batch transfers that may warrant attention.\n- payment_currency_us_dollar (raises suspicion): The payment not being in US dollars could indicate cross-currency activity that might require scrutiny.\n- amount_paid (lowers suspicion): The modest payment amount could be consistent with low-value or routine transactions.\n- from_bank (lowers suspicion): The identified sending bank is associated here with lower concern, which may suggest known or expected flows.\n- receiving_currency_euro (lowers suspicion): Receipt in euros may align with ordinary cross-border settlement patterns and reduce risk in this context.\n\ninvestigation_context: If these attributes are accurate, the case could represent a routine small-value cross-currency ACH transfer, although the ACH channel and non-USD indicator might merit contextual review."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3159964,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most top indicators (payment format, originating/receiving banks, currencies, timing, and amount paid) point away from suspicious activity while the received amount slightly raises concern; overall the lowering factors dominate, yielding a very low suspiciousness score. This pattern could be consistent with routine credit-card-funded transfers in rubles where an incoming settlement amount stands out only modestly.  \nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion) \u2014 could indicate consumer or card-based payment flows rather than high-risk wire patterns.\n- from_bank=17120 (lowers suspicion) \u2014 may reflect a specific originating bank profile consistent with routine activity.\n- receiving_currency_ruble=1 (lowers suspicion) \u2014 could be consistent with local currency settlement rather than cross-currency layering.\n- amount_received=38574.8 (raises suspicion) \u2014 may warrant attention as a notable incoming amount relative to other signals.\n- amount_paid=38574.8 (lowers suspicion) \u2014 could indicate a matching outgoing payment suggesting a settled transfer rather than unexplained inflow.\ninvestigation_context: If these entries are accurate, the dominant lowering factors suggest low likelihood of suspicious activity, although the incoming amount might require contextual interpretation."
+}

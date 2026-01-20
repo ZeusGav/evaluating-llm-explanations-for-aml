@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1577254,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is driven up mainly by an ACH payment format together with identical, sizable received and paid amounts and timing on day 6, which could be consistent with rapid electronic fund movement or passthrough behavior. Some factors lower concern \u2014 the specific destination bank and use of US dollars may reflect routine counterparties or common currency handling, but they do not outweigh the strong raising signals.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could indicate an electronic bank transfer channel that enables rapid movement of funds.\n- amount_received=13305.9 (raises suspicion) \u2014 the inbound amount may be sufficiently large to be notable.\n- amount_paid=13305.9 (raises suspicion) \u2014 the identical outbound amount may reflect passthrough or layering patterns.\n- to_bank=15723 (lowers suspicion) \u2014 the destination bank may be a routine or expected receiver, which can lessen immediate concern.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 use of USD may reflect standard currency handling that reduces unusualness.\n\ninvestigation_context: If these matched ACH flows and amounts are atypical for the customer or counterparty, they could be consistent with layering or passthrough activity."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3700498,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The modest suspiciousness arises because a raising signal from from_bank=70 is offset by several lowering indicators such as payment_format_cheque, hour=22, and receiving_currency_rupee. A minor additional raising signal from payment_currency_us_dollar being absent slightly increases concern but does not outweigh the lowering factors. \nkey_factors:\n- from_bank=70 (raises suspicion) \u2014 If funds come from bank 70, this factor could be associated with higher risk depending on context.\n- payment_format_cheque=1 (lowers suspicion) \u2014 If paid by cheque, this may be consistent with slower, documented settlement.\n- hour=22 (lowers suspicion) \u2014 A late hour could align with end-of-day processing rather than urgent timing.\n- receiving_currency_rupee=1 (lowers suspicion) \u2014 Receiving in rupee may reflect normal domestic settlement patterns.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 Absence of US dollar denomination could, depending on expectations, slightly increase concern.\ninvestigation_context: If these factors reflect routine domestic cheque settlement from bank 70 late in the day, the activity may be benign; if they reflect unexpected routing or counterparties, it could indicate elevated concern."
+}

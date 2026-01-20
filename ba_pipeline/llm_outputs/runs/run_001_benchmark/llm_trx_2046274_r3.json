@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2046274,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very high because several strong raising signals \u2014 notably ACH usage and large equal incoming and outgoing amounts \u2014 point to elevated transactional risk, while timing and the sender bank provide modest lowering signals. Overall, the raising factors outweigh the lowering ones, producing the high suspiciousness result.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with rapid electronic transfers that warrant closer scrutiny in some contexts.\n- amount_received=16450.3 (raises suspicion) \u2014 a substantial received amount might indicate high-value movement that could be of interest.\n- amount_paid=16450.3 (raises suspicion) \u2014 the matching paid amount may be consistent with full-value transfers that elevate risk considerations.\n- hour=20 (lowers suspicion) \u2014 the evening transaction time might reduce concern if legitimate activity often occurs at that hour.\n- from_bank=243254 (lowers suspicion) \u2014 the sending bank identifier might reflect a relationship or profile that lowers concern for this transfer.\n\ninvestigation_context: If supported by account history or counterparty details, these factor patterns could be consistent with either legitimate high-value settlement or attempts to move funds, depending on context."
+}

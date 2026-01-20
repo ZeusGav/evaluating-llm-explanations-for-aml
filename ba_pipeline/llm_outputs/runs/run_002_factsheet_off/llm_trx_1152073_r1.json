@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1152073,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple transaction features push the score high because ACH format, large received and paid amounts, and timing indicators raise concern, while the originating bank and USD currency modestly reduce it. The overall rationale is that high-value ACH activity at the given time increases suspicion despite some factors that lower it.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 use of ACH could be consistent with large electronic transfers that may require closer scrutiny.\n- amount_received (raises suspicion) \u2014 a substantial amount received could indicate significant inflows that may warrant attention.\n- amount_paid (raises suspicion) \u2014 an equally large amount paid could suggest rapid onward movement of funds.\n- from_bank (lowers suspicion) \u2014 a specific originating bank may lower concern if it aligns with expected counterparty behavior.\n- payment_currency_us_dollar (lowers suspicion) \u2014 payment in USD may temper concern if USD is the normal operating currency.\ninvestigation_context: If these features reflect the full transaction context, the mix of high-value ACH activity and timing signals could be consistent with expedited fund movement while the bank and currency details may moderate that concern."
+}

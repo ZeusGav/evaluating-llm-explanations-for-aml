@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1243036,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most signals point toward low concern: small, nearly equal paid/received amounts, a credit\u2011card payment in US dollars, and timing/recipient indicators lower the score, while a specific sending bank and the fact funds were received exert limited upward pressure. Overall, the lowering factors outweigh the raises, producing a very low suspiciousness score.  \nkey_factors:\n- amount_paid (lowers suspicion): the low payment amount could be consistent with routine, low\u2011value activity.  \n- amount_ratio (lowers suspicion): the paid/received ratio near 1.0 may indicate no conversion or fees and a straightforward transfer.  \n- payment_format_credit_card (lowers suspicion): a credit\u2011card payment could reflect normal retail behavior rather than complex fund movement.  \n- from_bank (raises suspicion): the sending bank ID shows an upward signal that could be associated with higher contextual risk in some situations.  \n- amount_received (raises suspicion): the presence of received funds in the destination currency provides a modest increase in alertness, which in some contexts might reflect immediate receipt or layering.  \ninvestigation_context: This combination could be consistent with a routine, small\u2011value credit\u2011card transaction, although the sending bank and receipt pattern might be viewed differently depending on additional contextual information."
+}

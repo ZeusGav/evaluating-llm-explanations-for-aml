@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3249346,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Several strong lowering factors (payment formats in use and local currency) reduce the overall suspiciousness, while a relatively large amount received and a non-USD payment raise concern. Overall the lowering factors outweigh the increases, producing a low suspiciousness score.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with routine non-ACH settlement channels.\n- amount_received=68810.1 (raises suspicion) \u2014 a large received amount could be consistent with higher-risk or unusual value transfers.\n- receiving_currency_shekel=1 (lowers suspicion) \u2014 payment in shekel may indicate domestic-currency activity that reduces cross-border currency concerns.\n- payment_format_cheque=1 (lowers suspicion) \u2014 use of cheque may reflect a traceable, traditional payment method that lowers immediate concern.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 non-USD payment could raise questions if USD would normally be expected for this relationship.\ninvestigation_context: If the large amount is inconsistent with the customer's known profile it might warrant closer review, otherwise the local currency and payment formats may explain the low score."
+}

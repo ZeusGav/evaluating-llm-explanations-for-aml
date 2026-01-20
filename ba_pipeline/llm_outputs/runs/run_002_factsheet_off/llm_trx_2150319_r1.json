@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2150319,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple transaction attributes\u2014notably ACH format, the weekday, sizable amounts, and the destination bank\u2014collectively raise concern, while the originating bank factor reduces concern. Overall, the raising factors outweigh the lowering factor, producing the very high suspiciousness score.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with automated or indirect transfer pathways that may warrant scrutiny.\n- from_bank=12 (lowers suspicion) \u2014 origin from this bank may indicate a familiar or lower-risk source in the available records.\n- dayofweek=6 (raises suspicion) \u2014 activity on this day could be consistent with non-standard timing or efforts to exploit less-monitored periods.\n- amount_received=11349.2 (raises suspicion) \u2014 a sizable incoming amount could be consistent with significant consolidation or structuring patterns.\n- to_bank=11 (raises suspicion) \u2014 destination to this bank may reflect routing through specific institutions that could be relevant.\n\ninvestigation_context: If these feature patterns are confirmed by account history or counterparty information, they could be consistent with atypical routing or transaction behavior that may warrant further review."
+}

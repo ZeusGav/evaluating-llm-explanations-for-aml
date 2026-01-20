@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4723791,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high suspiciousness score is driven by payment_format_ach=1, dayofweek=6, amount_received=37845.1 and use of Saudi riyal, which together raise concern that this is a sizable ACH transfer. These signals are partially offset by from_bank=48308 and hour=5, which lower the level of suspicion in this context.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion), could be consistent with automated electronic transfers that merit closer scrutiny.\n- dayofweek=6 (raises suspicion), may indicate timing outside typical business-day patterns.\n- amount_received=37845.1 (raises suspicion), could reflect a high-value movement that warrants attention.\n- from_bank=48308 (lowers suspicion), may reflect an originating institution or profile that reduces immediate concern.\n- hour=5 (lowers suspicion), might reflect processing at an hour that lessens the atypical nature of the transfer.\n\ninvestigation_context: If these factor interpretations hold, the combination of ACH format, weekend timing, and a large riyal amount could be consistent with scenarios needing review, while the originating bank and early-hour timing might mitigate urgency."
+}

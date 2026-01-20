@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3906788,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: 0.999605 reflects a strong aggregation of high-risk indicators, including ACH transfers, a receiving bank ID, and a sizable amount received. However, the disclosed sending bank ID and the daytime hour provide some moderating signals that lower the overall suspicion.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 use of ACH transfers can be associated with higher-risk flows, which could raise suspicion.\n- to_bank (raises suspicion) \u2014 receiving bank ID presence may indicate routing patterns that raise suspicion.\n- amount_received (raises suspicion) \u2014 amount received of 15526.3 could raise suspicion depending on typical activity.\n- from_bank (lowers suspicion) \u2014 sending bank ID is present, which could lower suspicion by improving traceability.\n- hour (lowers suspicion) \u2014 transfer occurring at hour 16 could lower suspicion relative to unusual hours.\ninvestigation_context: Depending on broader activity, these factors could be consistent with legitimate transfers or with higher-risk patterns."
+}

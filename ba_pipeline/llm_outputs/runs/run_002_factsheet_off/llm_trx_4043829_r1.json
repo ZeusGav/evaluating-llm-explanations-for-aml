@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4043829,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high suspiciousness score is driven by the use of ACH, large received and paid amounts, many recipient banks, and a later-week transaction timing, which raise concern. Some factors \u2014 notably multiple origin banks and euro currency use for payment/receipt \u2014 lower the score and could indicate established banking relationships or currency alignment.\n\nkey_factors:\n- payment_format_ach (raises suspicion): ACH format could be consistent with automated bulk transfers that merit closer review.\n- amount_received (raises suspicion): a large incoming amount may indicate high-value activity that could be noteworthy.\n- amount_paid (raises suspicion): a similarly large outgoing amount may suggest substantial flow-through of funds.\n- to_bank (raises suspicion): multiple recipient banks might reflect distribution of funds across accounts, which could be atypical.\n- from_bank (lowers suspicion): many origin banks (from_bank) could reflect diversified legitimate payer relationships that lower concern.\n\ninvestigation_context: If these patterns hold, the mix of high-value ACH flows and multiple recipients could be consistent with complex transfer behavior, while euro usage and numerous origin banks might point to routine cross-border or institutional activity."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2233432,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because an ACH payment for a large amount occurred on a Sunday, which together raise suspicion. Certain identifiers like the sending bank and use of US dollars reduce the signal and partially offset that concern.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 an ACH method could be consistent with large electronic transfers that raise attention. \n- amount_received (raises suspicion) \u2014 a high received amount could indicate unusually large value movement. \n- dayofweek (raises suspicion) \u2014 occurrence on a Sunday could be atypical for routine business activity. \n- from_bank (lowers suspicion) \u2014 the specific sending bank ID is associated with a lower signal and might reflect expected institutional behavior. \n- payment_currency_us_dollar (lowers suspicion) \u2014 use of US dollars could align with normal currency usage and temper concern.\ninvestigation_context: If these attributes are accurate, they could be consistent with a high-value ACH transfer on a weekend that might reflect elevated risk."
+}

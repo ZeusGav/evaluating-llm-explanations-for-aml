@@ -1,0 +1,7 @@
+{
+  "transaction_id": 616493,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is low because multiple lowering factors \u2014 payment by cheque in US dollars, a modest paid amount, and the specific sending bank \u2014 outweigh smaller increasing signals. Only the receiving bank and the morning hour provide modest raises, so the overall profile could be consistent with routine, low-value activity.\nkey_factors:\n- from_bank=7478 (lowers suspicion) \u2014 this sending bank association may reflect a routine origin.\n- payment_format_cheque=1 (lowers suspicion) \u2014 cheque payment could indicate a slower, non-urgent settlement method consistent with ordinary transactions.\n- amount_paid=164.18 (lowers suspicion) \u2014 the modest payment size may suggest lower inherent risk.\n- to_bank=1420 (raises suspicion) \u2014 the receiving bank identifier may warrant attention depending on the counterparty's risk profile.\n- hour=9 (raises suspicion) \u2014 a morning transaction time might attract interest if it is atypical for the account's normal timing.\ninvestigation_context: If these factors hold, they could be consistent with a routine, low-value cheque payment in USD rather than inherently suspicious behavior."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4195070,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low score is driven by multiple factors that lower suspicion \u2014 notably absence of ACH, presence of cash payment, a moderate received amount in shekels, and a late hour \u2014 which together point away from anomalous activity. There are no top contributing factors that raise suspicion among the listed items, so the combination could be consistent with routine local transactions.  \nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with manual or non-automated settlement rather than complex electronic routing.  \n- payment_format_cash=1 (lowers suspicion): a cash payment may indicate straightforward point-of-sale or retail activity rather than layered electronic transfers.  \n- amount_received=1484.92 (lowers suspicion): a moderate amount could be consistent with routine personal or small-business payments.  \n- receiving_currency_shekel=1 (lowers suspicion): use of the shekel may suggest domestic currency flow, aligning with local transactions.  \n- hour=22 (lowers suspicion): a late-evening timestamp might reflect routine after-hours activity rather than structured daytime patterns.  \ninvestigation_context: If additional context is available, these features could be consistent with routine domestic cash receipts rather than indicators of structured or cross-border laundering."
+}

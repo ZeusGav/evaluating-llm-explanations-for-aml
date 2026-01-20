@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1468643,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple features point toward low concern \u2014 a small, credit-card-funded 40.18 payment to a Swiss franc recipient between specific sending and receiving banks on a weekday morning collectively lower suspiciousness. However, the payment currency not being US dollars slightly raises suspicion and could change interpretation depending on context.\nkey_factors:\n- from_bank=139793 (lowers suspicion) \u2014 originating from a specific sending bank could be consistent with an established relationship or routine flow.\n- payment_format_credit_card=1 (lowers suspicion) \u2014 credit-card funding could be consistent with consumer purchases or low-risk retail activity.\n- amount_paid=40.18 (lowers suspicion) \u2014 the small payment amount could be consistent with routine, low-value transactions.\n- receiving_currency_swiss_franc=1 (lowers suspicion) \u2014 receiving in Swiss francs could align with ordinary cross-border settlement patterns.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 the absence of US dollar currency could indicate non\u2011USD routing that might affect traceability or require context.\ninvestigation_context: If there is no clear business or consumer context for this non\u2011USD, small credit\u2011card payment between these banks, the non\u2011USD aspect could be more concerning."
+}

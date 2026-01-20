@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2635160,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because several factors raise concern, notably an ACH payment format and a large payment amount, while use of US dollars slightly lowers concern. Timing indicators (hour 17 and dayofweek 0) also contribute to increased suspicion in this profile.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with an electronic bank transfer format that may enable rapid movement of funds.\n- amount_paid=9226.42 (raises suspicion) \u2014 this sizable single payment could indicate significant value transfer depending on customer profile.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 USD usage may be consistent with routine settlement and slightly reduces concern.\n- hour=17 (raises suspicion) \u2014 a late-afternoon timestamp could, in some contexts, align with timing patterns of interest.\n- dayofweek=0 (raises suspicion) \u2014 the transaction occurring on this specific day could, depending on context, reflect atypical timing.\n\ninvestigation_context: If these factor combinations are unusual for the customer or their business, they may merit closer contextual review."
+}

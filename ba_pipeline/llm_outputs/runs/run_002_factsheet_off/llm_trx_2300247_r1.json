@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2300247,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple transaction attributes push the score very low because several listed factors lower suspicion, while the relatively large payment amount raises concern. The net result is a low suspiciousness score driven mainly by lowering signals despite the higher amount_paid.  \nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 if not an ACH transfer, this could be consistent with an alternative payment method that reduces automated-transfer concerns.  \n- from_bank=20 (lowers suspicion) \u2014 originating from bank 20 may indicate a familiar counterparty relationship and reduce anomalousness.  \n- payment_format_cheque=1 (lowers suspicion) \u2014 a cheque payment could be consistent with slower, more traceable settlement methods.  \n- payment_currency_yuan=1 (lowers suspicion) \u2014 use of yuan might reflect domestic currency activity and lower cross-currency complexity.  \n- amount_paid=10105.3 (raises suspicion) \u2014 a relatively large payment amount could be consistent with higher transactional risk and merits contextual consideration.  \ninvestigation_context: If the substantial amount_paid cannot be explained by the customer\u2019s profile or known business purpose, it might indicate elevated transactional risk."
+}

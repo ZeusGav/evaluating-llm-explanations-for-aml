@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2278966,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high score is driven mainly by an ACH payment together with large, identical paid and received amounts, which raise concern. Some factors \u2014 specifically the sender bank identifier and receiving currency being euro \u2014 lower concern but do not fully offset the raising signals.\n\nkey_factors:\n- payment_format_ach (raises suspicion): the use of ACH could be consistent with higher-risk electronic transfers if other indicators align.\n- amount_received (raises suspicion): a large received amount could indicate significant value movement that may merit scrutiny.\n- amount_paid (raises suspicion): an identical large paid amount may reflect pass-through or mirrored funds, which can be atypical.\n- from_bank (lowers suspicion): the sending bank identifier reduces concern here and may indicate a familiar sender relationship.\n- receiving_currency_euro (lowers suspicion): receipt in euros lowers concern in this context and might reflect routine EUR-denominated activity.\n\ninvestigation_context: If the ACH transfer and matching large amounts are part of routine commercial activity, they may be explainable; if not, they could reflect atypical value movement."
+}

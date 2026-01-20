@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2206450,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The high suspicion score is driven by several factors that raise concern, notably the ACH payment method, the recipient bank ID, a moderately large amount, and weekend timing. The matching amount received and euro-receiving indicator may lower the level of concern, shaping the overall score.\nkey_factors:\n- payment_format_ach=1 raises suspicion, because using ACH can be subject to enhanced monitoring for electronic transfers.\n- to_bank=20 raises suspicion, as the receiving bank ID 20 may reflect an uncommon destination.\n- amount_paid=3501.5 raises suspicion, since the amount is moderately large for the scenario.\n- dayofweek=6 raises suspicion, indicating weekend timing which can be unusual for transfers.\n- amount_received=3501.5 lowers suspicion, because the receiving amount matches the amount paid, which can be consistent with a mirrored transaction.\ninvestigation_context: This pattern could be consistent with scenarios that warrant elevated review, depending on the customer's normal activity."
+}

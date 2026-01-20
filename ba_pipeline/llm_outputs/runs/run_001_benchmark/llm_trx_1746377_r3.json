@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1746377,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Multiple strong indicators raise concern\u2014notably the use of ACH, a substantial payment amount, and a Sunday timing\u2014while the sending bank identifier and payment in US dollars modestly reduce concern. Combined, the raising factors outweigh the lowering ones, producing a very high suspiciousness score of 0.997718.\n\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with large automated account-to-account transfers that warrant scrutiny.\n- amount_paid (raises suspicion): an amount of 7052.99 could indicate a sizeable single transfer that may be atypical for routine activity.\n- dayofweek (raises suspicion): occurrence on dayofweek=6 (Sunday) could reflect unusual timing for business payments.\n- from_bank (lowers suspicion): from_bank=23842 lowers concern, which might reflect a known or lower-risk sending institution.\n- payment_currency_us_dollar (lowers suspicion): payment in US dollars lowers concern, which could align with standard currency patterns.\n\ninvestigation_context: If these factors are accurate, they could be consistent with high-value weekend ACH activity that may merit further review."
+}

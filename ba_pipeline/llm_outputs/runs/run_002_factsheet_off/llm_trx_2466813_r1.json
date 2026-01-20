@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2466813,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high score is driven by several raising signals: an ACH payment format, a large amount_received that equals the amount_paid, and a destination bank indicator that together elevate concern. These are partially offset by the from_bank value and the use of U.S. dollars (and a neutral amount_ratio), which lower suspicion to some extent.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with high-volume electronic transfers that merit attention.\n- amount_received=14606 (raises suspicion) \u2014 may indicate a sizable inbound movement that increases scrutiny.\n- amount_paid=14606 (raises suspicion) \u2014 could reflect an outbound of the same size, suggesting possible pass-through behavior.\n- from_bank=12 (lowers suspicion) \u2014 may reduce concern relative to other origin banks.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 could be less unusual if USD is expected for this customer profile.\n\ninvestigation_context: If similar transactions show the same pattern of large matching inflows and outflows via ACH, this could be consistent with rapid pass-through activity."
+}

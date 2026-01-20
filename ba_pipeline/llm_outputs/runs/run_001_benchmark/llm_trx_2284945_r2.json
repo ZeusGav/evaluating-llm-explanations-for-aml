@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2284945,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The suspiciousness score is low because several attributes (no ACH, specific sending/receiving banks, shekel currency, and a late hour) point toward lower concern, while a few attributes (Sunday timing and non\u2011USD indicator) slightly raise concern. Overall the lowering factors outweigh the increases, producing the very low score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 the absence of an ACH payment could be consistent with routine non\u2011ACH settlement methods that may pose less concern in some contexts.\n- from_bank=1198 (lowers suspicion) \u2014 the specific sending bank ID is associated here with lower concern, which could reflect trusted correspondent relationships.\n- receiving_currency_shekel=1 (lowers suspicion) \u2014 payment received in shekels may align with normal domestic activity and thus reduce concern.\n- dayofweek=6 (raises suspicion) \u2014 a Sunday transaction could be atypical for regular business activity and might increase scrutiny in some scenarios.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 the payment not being in US dollars slightly raises concern if USD usage is expected for the customer or corridor.\n\ninvestigation_context: If these attributes are accurate, the transaction might be considered lower risk overall, although the weekend timing and non\u2011USD indicator could be relevant contextual factors."
+}

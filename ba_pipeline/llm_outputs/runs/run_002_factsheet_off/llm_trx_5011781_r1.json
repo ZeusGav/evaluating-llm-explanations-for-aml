@@ -1,0 +1,7 @@
+{
+  "transaction_id": 5011781,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high suspiciousness score is driven by ACH payment usage, substantial amounts paid and received, and a day/time indicator that raise concern. These upward signals are partially offset by origin from bank 20 and receipt in euros, which lower overall concern.\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH payments could be consistent with rapid or automated fund movement that may indicate layering.\n- amount_received (raises suspicion): a large incoming amount could be consistent with high-value inflows that warrant scrutiny.\n- amount_paid (raises suspicion): a large outgoing amount could be consistent with significant disbursements that may reflect unusual flows.\n- dayofweek (raises suspicion): dayofweek=6 could indicate timing patterns that may be atypical for ordinary activity.\n- from_bank (lowers suspicion): from_bank=20 may lower concern if the originating institution is associated with stronger controls or expected business flows.\ninvestigation_context: If these factor patterns are accurate, they could reflect concentrated high-value ACH activity at a particular time and day."
+}

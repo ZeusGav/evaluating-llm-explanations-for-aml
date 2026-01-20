@@ -1,0 +1,7 @@
+{
+  "transaction_id": 5000063,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because ACH payment format, identical large incoming and outgoing amounts, the destination bank, and timing raise concern, while the sending bank identifier and the receiving currency lower concern. Overall, the pattern of a large same\u2011amount in-and-out ACH transfer toward bank 12 on a Friday afternoon could be consistent with rapid pass-through activity despite some mitigating signals.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 if sent as ACH this could be consistent with automated or rapid transfers used to move funds.\n- amount_received=14365.3 (raises suspicion) \u2014 a sizeable incoming amount could be consistent with significant value movement.\n- amount_paid=14365.3 (raises suspicion) \u2014 an identical outgoing amount may indicate immediate pass-through or layering behavior.\n- from_bank=22758 (lowers suspicion) \u2014 the sending bank identifier reduces the signal and could reflect a known or lower-risk origin.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 use of euro on the receiving side lowers the score and could reflect cross-currency or regional context.\n\ninvestigation_context: If these factors are accurate, they could be consistent with rapid pass-through or timing-based patterns sometimes seen in illicit money movement."
+}

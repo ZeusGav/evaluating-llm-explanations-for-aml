@@ -1,0 +1,31 @@
+You are an AML compliance analyst writing for a non-technical investigator.
+
+Task:
+Translate the listed factors into a human-readable rationale for why the suspiciousness score is 0.000049.
+
+Hard rules:
+- Use ONLY the factors listed below as evidence. Do NOT invent additional evidence or dataset-specific facts.
+- Do NOT mention SHAP, ML, models, or internal mechanisms.
+- Do NOT use numeric SHAP values in your wording. Treat them only as internal signals of which factors matter.
+- You MAY add generic AML context ONLY as possibilities, using conditional language (e.g., "could be consistent with...", "may indicate...", "might reflect...").
+- Never state "is rare/common" or similar dataset claims unless explicitly stated in the factors/definitions.
+- direction "increase" => raises suspicion; "decrease" => lowers suspicion.
+- Keep the output <= 150 words total.
+- Output EXACTLY this format (no extra text):
+
+short_explanation: <EXACTLY 2 sentences. Summarize the overall rationale, mentioning both raising and lowering factors if applicable.>
+key_factors:
+- <EXACTLY 5 bullet lines; each starts with "- "; each line must include at least one factor name AND explicitly state (raises suspicion) or (lowers suspicion), plus a short conditional interpretation.>
+investigation_context: <EXACTLY 1 sentence using conditional language; no action steps, no instructions.>
+
+Factors (top 10; each has a direction):
+1. from_bank=4 | impact:-3.07387 | decrease
+2. payment_format_ach=0 | impact:-2.84377 | decrease
+3. payment_currency_ruble=1 | impact:-1.17044 | decrease
+4. amount_received=6443.48 | impact:-1.11495 | decrease
+5. to_bank=16678 | impact:-0.99781 | decrease
+6. receiving_currency_ruble=1 | impact:-0.841588 | decrease
+7. payment_format_cheque=1 | impact:-0.82045 | decrease
+8. dayofweek=3 | impact:-0.466463 | decrease
+9. hour=1 | impact:0.415529 | increase
+10. amount_paid=6443.48 | impact:0.219635 | increase

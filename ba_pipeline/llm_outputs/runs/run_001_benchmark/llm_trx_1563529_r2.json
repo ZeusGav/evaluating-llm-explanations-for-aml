@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1563529,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score is driven by multiple factors that lower concern, including a modest paid amount, matching received amount, use of cheque as the payment method, and US dollar settlement. No listed factors raise suspicion, so the combined signals could be consistent with routine or expected payment behavior. \nkey_factors:\n- from_bank=220 (lowers suspicion): could reflect a routine sending bank identifier and may indicate an established counterparty relationship.\n- amount_paid=30.14 (lowers suspicion): a relatively small payment could be consistent with ordinary retail or routine transfers.\n- payment_format_cheque=1 (lowers suspicion): payment by cheque may align with conventional, traceable payment methods and reduce immediate concern.\n- amount_ratio=1 (lowers suspicion): equal paid and received amounts could indicate no obvious currency mismatch or layering.\n- payment_currency_us_dollar=1 (lowers suspicion): settlement in US dollars may be consistent with standard invoicing or common settlement currency.\ninvestigation_context: If further review is considered, the combination of cheque payment, matching amounts, and US dollar settlement might reflect routine business or individual payments."
+}

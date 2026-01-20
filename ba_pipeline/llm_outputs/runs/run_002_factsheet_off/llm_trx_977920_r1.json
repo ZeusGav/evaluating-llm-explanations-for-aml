@@ -1,0 +1,7 @@
+{
+  "transaction_id": 977920,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score reflects multiple top factors pointing away from risk \u2014 origin and destination banks, a credit card payment format, modest equal paid/received amounts, Australian dollar currency, and an evening hour. None of the top listed factors indicates increased risk.\nkey_factors:\n- from_bank=15 (lowers suspicion) \u2014 if this is an expected origin, it could reflect routine sending.\n- to_bank=228009 (lowers suspicion) \u2014 if this is a regular recipient, it may indicate normal payee behavior.\n- payment_format_credit_card=1 (lowers suspicion) \u2014 if paid by card, it could be ordinary consumer spending.\n- amount_paid=173.9 (lowers suspicion) \u2014 if the amount matches typical payments, it may not indicate concern.\n- receiving_currency_australian_dollar=1 (lowers suspicion) \u2014 if AUD aligns with the customer's normal currency, this might reflect standard domestic activity.\ninvestigation_context: If account history and customer profile align with these factors, the transaction could be consistent with routine activity."
+}

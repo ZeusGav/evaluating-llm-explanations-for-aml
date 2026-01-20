@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2230412,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because this is an ACH transfer of a substantial amount processed on a Sunday, which together raise concern. Receiving in euros and the paid amount matching the received amount temper the concern but do not fully offset the other signals.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 an ACH method is used, which could be consistent with automated bank transfers that may be used for rapid fund movement.\n- amount_paid (raises suspicion) \u2014 the payment size is large and could be consistent with higher-value or notable activity.\n- dayofweek (raises suspicion) \u2014 the transaction occurring on a Sunday might reflect atypical timing for normal business flows.\n- receiving_currency_euro (lowers suspicion) \u2014 the receiving currency is euro, which could be consistent with routine cross-border settlement in that currency.\n- amount_ratio (lowers suspicion) \u2014 the amount_paid equals amount_received, which might indicate no obvious internal routing or fee differences for this transfer.\ninvestigation_context: If these factors hold, they could be consistent with a large automated weekend bank transfer that nevertheless settles in euros at a one-to-one amount, which may or may not reflect routine settlement."
+}

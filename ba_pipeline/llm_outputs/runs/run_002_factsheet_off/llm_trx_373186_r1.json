@@ -1,0 +1,7 @@
+{
+  "transaction_id": 373186,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most strong signals point toward lower suspicion \u2014 several transaction attributes (originating bank, ACH format, ruble currency, and the amount) align with lower-risk patterns, while timing and the paid amount provide limited countervailing concern. Overall, the lowering factors outweigh the raising ones, producing a very low suspiciousness score in this instance.\n\nkey_factors:\n- from_bank=4 (lowers suspicion) \u2014 could reflect a known or routine sending bank associated with regular activity.\n- payment_format_ach=0 (lowers suspicion) \u2014 could indicate a standard ACH-style transfer rather than informal or opaque payment routes.\n- payment_currency_ruble=1 (lowers suspicion) \u2014 transacting in rubles could be consistent with expected domestic currency usage for these parties.\n- hour=1 (raises suspicion) \u2014 occurring at hour 1 may be atypical timing and could warrant contextual review.\n- amount_paid=6443.48 (raises suspicion) \u2014 the payment size may be notable relative to other activity and might merit attention in context.\n\ninvestigation_context: If the parties routinely transact in rubles via ACH from bank 4, the mix of routine attributes and only limited timing/amount flags could be consistent with benign activity."
+}

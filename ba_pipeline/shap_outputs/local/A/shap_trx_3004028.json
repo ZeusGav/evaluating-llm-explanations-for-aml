@@ -1,0 +1,66 @@
+{
+  "transaction_id": 3004028,
+  "model_proba": 4.481729047256522e-05,
+  "top_features": [
+    {
+      "feature": "amount_paid",
+      "value": 17.75,
+      "shap_value": -2.3339197635650635,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 220504.0,
+      "shap_value": -2.3053042888641357,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_ach",
+      "value": 0.0,
+      "shap_value": -1.7873650789260864,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_wire",
+      "value": 1.0,
+      "shap_value": -1.482678771018982,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_uk_pound",
+      "value": 1.0,
+      "shap_value": -0.8782020211219788,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 11.0,
+      "shap_value": -0.5703574419021606,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 5.0,
+      "shap_value": -0.46337905526161194,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_uk_pound",
+      "value": 1.0,
+      "shap_value": -0.44531869888305664,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17.75,
+      "shap_value": -0.330282062292099,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_ratio",
+      "value": 0.999999943661975,
+      "shap_value": -0.23672716319561005,
+      "direction": "decrease"
+    }
+  ]
+}

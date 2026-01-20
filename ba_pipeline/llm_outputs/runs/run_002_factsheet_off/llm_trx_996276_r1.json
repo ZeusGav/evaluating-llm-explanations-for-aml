@@ -1,0 +1,7 @@
+{
+  "transaction_id": 996276,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: Most prominent factors lower the suspiciousness score \u2014 for example, lack of ACH, a cash payment flag, and receipt in Swiss francs pull the score down, while bank identifiers and the incoming amount also contribute to lower risk. One factor (non\u2011USD payment) raises suspicion modestly, but the combined signals produce a very low overall suspiciousness score.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 could be consistent with a non\u2011ACH payment method rather than an unusual ACH pattern.\n- payment_format_cash=1 (lowers suspicion) \u2014 could be consistent with a cash-like payment route that, in this context, reduces the score.\n- receiving_currency_swiss_franc=1 (lowers suspicion) \u2014 could be consistent with routine receipt in CHF for this counterparty or corridor.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 could be consistent with activity in a non\u2011USD currency that in some contexts may warrant closer attention.\n- amount_received=26036.8 (lowers suspicion) \u2014 could reflect a single incoming amount that, here, contributes to lower alerting.\ninvestigation_context: If investigated further, these features could be consistent with routine non\u2011ACH, cash or CHF receipts and a non\u2011USD payment flag might be a contextual nuance rather than definitive misconduct."
+}

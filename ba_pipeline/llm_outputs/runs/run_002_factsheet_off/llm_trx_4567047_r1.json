@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4567047,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is driven up by factors that suggest an electronic ACH transfer of a moderate-sized payment occurring at midday, while other factors such as the receiving bank and USD currency reduce concern. Taken together, the strong ACH and payment amount increase suspicion despite mitigating signs from the destination bank and currency indicating routine routing could be involved.\nkey_factors:\n- payment_format_ach (raises suspicion): The transaction being ACH could be consistent with automated or batch transfers that might reflect structured flows.\n- amount_paid=4540.12 (raises suspicion): A mid-range payment amount could be consistent with notable value movement warranting attention.\n- hour=12 (raises suspicion): A midday timestamp could be consistent with business-hour transfers or scheduled processing.\n- to_bank=231004 (lowers suspicion): The specific destination bank is associated here with patterns that reduce concern, possibly indicating routine routing.\n- payment_currency_us_dollar=1 (lowers suspicion): Use of USD may align with standard currency flows that lessen immediate suspicion.\ninvestigation_context: If reviewed further, these mixed signals could be consistent with either routine corporate ACH activity or potentially structured transfers depending on additional transactional context."
+}

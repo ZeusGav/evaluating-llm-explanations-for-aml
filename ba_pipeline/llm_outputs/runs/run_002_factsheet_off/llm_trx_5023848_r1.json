@@ -1,0 +1,7 @@
+{
+  "transaction_id": 5023848,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because the transaction is an ACH payment with substantial paid and received amounts and it is routed to bank 20, which raise concern, while the originating bank identifier, euro as the receiving currency, and an equal amount ratio reduce concern. Overall, the factors that raise suspicion outweigh those that lower it, yielding the very high suspiciousness value.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): being an ACH payment could be consistent with rapid electronic movement that may require scrutiny.\n- amount_paid=12389.8 (raises suspicion): a sizeable single payment could indicate a high-value transfer pattern that may be noteworthy.\n- to_bank=20 (raises suspicion): routing to this destination bank could reflect concentration or routing behavior that might warrant attention.\n- from_bank=23344 (lowers suspicion): the specific origin bank identifier could reflect a known or expected source profile, which may reduce concern.\n- receiving_currency_euro=1 (lowers suspicion): receiving in euros could align with normal cross-border settlement flows and might lessen anomalousness.\n\ninvestigation_context: If these data points are accurate, they could be consistent with a high-value ACH transfer pattern combining routing and amount signals."
+}

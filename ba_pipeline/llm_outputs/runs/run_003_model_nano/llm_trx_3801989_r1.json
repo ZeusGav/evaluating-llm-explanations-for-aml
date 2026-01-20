@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3801989,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Multiple factors indicate lower risk, such as ACH payments, transfers from a bank, Yen currencies, and cheque payments. A single US-dollar payment indicator raises suspicion, producing a small net score of 0.000270.\nkey_factors:\n- payment_format_ach (lowers suspicion) If ACH is used, this pattern tends to lower suspicion because it aligns with standard processing channels.\n- from_bank (lowers suspicion) Receiving funds from a bank ID is a common pattern that lowers suspicion when observed in routine payments.\n- payment_currency_yen (lowers suspicion) Payments in Yen align with local currency usage and may lower suspicion in this context.\n- payment_format_cheque (lowers suspicion) Cheque payments can indicate traditional, lower-risk processing, reducing suspicion.\n- payment_currency_us_dollar (raises suspicion) A US-dollar payment indicator could raise suspicion, especially when contrasted with Yen and local currency patterns.\ninvestigation_context: If these conditions hold, the small residual score could reflect a predominance of lower-risk indicators with a single counter-indicator."
+}

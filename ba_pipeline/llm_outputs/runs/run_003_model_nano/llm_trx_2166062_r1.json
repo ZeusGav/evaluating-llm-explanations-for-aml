@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2166062,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The elevated score is driven by signals that raise suspicion, including ACH usage, high transfer amounts, Sunday timing, and a targeted receiving bank. However, the large from_bank value and euro-based receiving currency provide counter-signals that temper the overall risk.\nkey_factors:\n- payment_format_ach ( raises suspicion) The transaction used ACH, which could indicate an unusual payment channel for this type of transfer.\n- amount_paid ( raises suspicion) The amount_paid of 10148.7 could reflect a high-value transfer that merits closer review when seen with other signals.\n- dayofweek ( raises suspicion) Occurring on dayofweek=6 (Sunday) may be unusual timing for this activity and could raise suspicion.\n- to_bank ( raises suspicion) Receiving into to_bank=22 could indicate a destination with heightened risk signals.\n- amount_received ( raises suspicion) The amount_received of 10148.7 aligns with the paid amount and may indicate a mirrored or round-trip pattern.\ninvestigation_context: If these signals are considered together, they could warrant closer review of this ACH transfer pattern."
+}

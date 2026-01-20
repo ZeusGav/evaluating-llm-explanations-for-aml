@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4389487,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The overall score reflects multiple signals that raise suspicion (ACH usage, Saudi Riyal currencies, weekend timing, and a large inbound amount) while a known sending bank lowers suspicion. This combination contributes to an elevated risk signal that may warrant closer scrutiny.\nkey_factors:\n- payment_format_ach=1 raises suspicion; if this ACH usage is ongoing, it could indicate electronic transfer activity that merits closer review.\n- dayofweek=6 raises suspicion; weekend timing could reflect non-standard transfer patterns.\n- payment_currency_saudi_riyal=1 raises suspicion; payments in Saudi Riyal may reflect regional routing that needs scrutiny.\n- from_bank=119 lowers suspicion; sending from this bank could reduce novelty and risk here.\n- amount_received=59658.8 raises suspicion; a large inbound amount of this size could trigger closer examination.\ninvestigation_context: If these patterns persist, the activity could align with higher risk signals and warrant closer review."
+}

@@ -1,0 +1,66 @@
+{
+  "transaction_id": 509060,
+  "model_proba": 0.0005312878056429327,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 0.0,
+      "shap_value": 2.4457502365112305,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 29.0,
+      "shap_value": 1.6946016550064087,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 1768.92,
+      "shap_value": 1.492765188217163,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 1.0,
+      "shap_value": 1.3102704286575317,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 211.0,
+      "shap_value": 0.4556618332862854,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_brazil_real",
+      "value": 1.0,
+      "shap_value": 0.3720927834510803,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_brazil_real",
+      "value": 1.0,
+      "shap_value": 0.2835366427898407,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 5.0,
+      "shap_value": 0.2193058729171753,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 1768.92,
+      "shap_value": 0.12578743696212769,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.10432790219783783,
+      "direction": "increase"
+    }
+  ]
+}

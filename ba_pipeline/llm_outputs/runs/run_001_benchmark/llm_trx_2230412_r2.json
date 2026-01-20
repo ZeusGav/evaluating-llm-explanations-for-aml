@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2230412,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high score is driven by an ACH payment of a large amount occurring late on a Sunday afternoon, which together raise concern about an unusual high-value transfer. Receiving currency being euro and an identical paid/received ratio reduce suspicion somewhat, but do not outweigh the raising factors.\nkey_factors:\n- payment_format_ach (raises suspicion): payment via ACH could be consistent with automated account-to-account transfers that may warrant scrutiny.\n- amount_paid (raises suspicion): a large payment amount could be consistent with higher exposure or atypical value for the account.\n- dayofweek (raises suspicion): transaction on dayofweek=6 (Sunday) could indicate activity outside normal business days and may be unusual.\n- receiving_currency_euro (lowers suspicion): use of euro could align with expected cross-border or business flows and may reduce concern.\n- amount_ratio (lowers suspicion): amount_ratio=1 (lowers suspicion) may indicate a straight pass-through where paid and received amounts match.\ninvestigation_context: If these factors are confirmed, they may indicate a high-value ACH transfer outside normal hours that could merit further contextual review."
+}

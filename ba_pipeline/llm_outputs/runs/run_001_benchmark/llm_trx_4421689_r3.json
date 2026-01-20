@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4421689,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because the payment was an ACH transfer for a substantial amount where the paid and received amounts match and the currency is euros, which together raise concern about sizable, direct fund movement. This is partially offset by the transaction occurring at hour 10, which may reflect routine business-hours activity and lowers immediate suspicion.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): use of ACH could be consistent with automated bank transfers that may facilitate rapid or high-volume fund movement.\n- amount_paid=12249.7 (raises suspicion): the sizable payment amount could indicate significant value transfer worthy of attention.\n- amount_received=12249.7 (raises suspicion): identical received amount suggests little attrition or simple pass-through of funds, which may be notable.\n- payment_currency_euro=1 (raises suspicion): euro denomination could indicate cross-border or jurisdictional exposure that may affect risk considerations.\n- hour=10 (lowers suspicion): occurring at hour 10 may be consistent with normal business-hours activity and thus lowers immediate concern.\n\ninvestigation_context: If accurate, these attributes could be consistent with a large ACH euro payment that may reflect routine business activity or, depending on other context, patterns of concern."
+}

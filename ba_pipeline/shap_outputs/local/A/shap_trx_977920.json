@@ -1,0 +1,66 @@
+{
+  "transaction_id": 977920,
+  "model_proba": 4.661159255192615e-05,
+  "top_features": [
+    {
+      "feature": "from_bank",
+      "value": 15.0,
+      "shap_value": -2.395139217376709,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_ach",
+      "value": 0.0,
+      "shap_value": -2.3649742603302,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -1.3183149099349976,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 228009.0,
+      "shap_value": -1.1136560440063477,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 173.9,
+      "shap_value": -0.9657520055770874,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 1.0,
+      "shap_value": -0.8963607549667358,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 173.9,
+      "shap_value": -0.7975762486457825,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_australian_dollar",
+      "value": 1.0,
+      "shap_value": -0.5047506093978882,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_australian_dollar",
+      "value": 1.0,
+      "shap_value": -0.33593693375587463,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 3.0,
+      "shap_value": -0.20500054955482483,
+      "direction": "decrease"
+    }
+  ]
+}

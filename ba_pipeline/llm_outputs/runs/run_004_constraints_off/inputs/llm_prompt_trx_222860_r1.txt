@@ -1,0 +1,40 @@
+You are an AML compliance analyst writing for a non-technical investigator.
+
+Task:
+Translate the listed factors into a human-readable rationale for why the suspiciousness score is 0.000033.
+
+Hard rules:
+- Use ONLY the factors listed below as evidence. Do NOT invent additional evidence or dataset-specific facts.
+- Do NOT mention SHAP, ML, models, or internal mechanisms.
+- Do NOT use numeric SHAP values in your wording. Treat them only as internal signals of which factors matter.
+- You MAY add generic AML context ONLY as possibilities, using conditional language (e.g., "could be consistent with...", "may indicate...", "might reflect...").
+- Never state "is rare/common" or similar dataset claims unless explicitly stated in the factors/definitions.
+- direction "increase" => raises suspicion; "decrease" => lowers suspicion.
+- Output EXACTLY this format (no extra text):
+
+short_explanation: <Summarize the overall rationale, mentioning both raising and lowering factors if applicable.>
+key_factors:
+- <Bullet lines; each starts with "- "; each line must include at least one factor name AND explicitly state (raises suspicion) or (lowers suspicion), plus a short conditional interpretation.>
+investigation_context: <Using conditional language; no action steps, no instructions.>
+
+Factors (top 10; each has a direction):
+1. from_bank=7 | impact:-3.63455 | decrease
+   def: sending bank ID
+2. payment_format_ach=0 | impact:-2.358 | decrease
+   def: payment method indicator (1=yes, 0=no): 'ach'
+3. payment_format_reinvestment=1 | impact:-1.96486 | decrease
+   def: payment method indicator (1=yes, 0=no): 'reinvestment'
+4. payment_currency_rupee=1 | impact:-0.929894 | decrease
+   def: payment currency indicator (1=this, 0=other): 'rupee'
+5. amount_paid=325.55 | impact:-0.673873 | decrease
+   def: amount paid (payment currency)
+6. receiving_currency_rupee=1 | impact:-0.582147 | decrease
+   def: receiving currency indicator (1=this, 0=other): 'rupee'
+7. to_bank=7 | impact:-0.509196 | decrease
+   def: receiving bank ID
+8. amount_received=325.55 | impact:-0.246121 | decrease
+   def: amount received (receiving currency)
+9. hour=0 | impact:-0.2437 | decrease
+   def: hour of day (0–23)
+10. dayofweek=3 | impact:-0.122087 | decrease
+   def: day of week (0=Mon..6=Sun)

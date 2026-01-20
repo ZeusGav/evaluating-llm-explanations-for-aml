@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4690869,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because several factors push suspicion down (ACH not used, the specific sending bank, a cash indicator, euro as the currencies, and the transaction timing), while two factors \u2014 the payment amount and the absence of a credit-card payment \u2014 push suspicion up. Overall, the decreasing indicators outweigh the increasing ones, resulting in the very low suspiciousness score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with an alternative payment route that reduces concern.\n- from_bank=5175 (lowers suspicion) \u2014 this sending bank may reflect a routine or expected counterparty and lower concern.\n- payment_format_cash=1 (lowers suspicion) \u2014 a cash payment could be consistent with legitimate cash-based activity in context.\n- amount_paid=3570.06 (raises suspicion) \u2014 this paid amount could be notable and may indicate a higher-value transfer warranting attention.\n- payment_format_credit_card=0 (raises suspicion) \u2014 non-credit-card channel could bypass card controls and may increase scrutiny.\n\ninvestigation_context: If interpreted together, these mixed signals could be consistent with routine commercial activity or, alternatively, may merit attention if other contextual risk factors are present."
+}

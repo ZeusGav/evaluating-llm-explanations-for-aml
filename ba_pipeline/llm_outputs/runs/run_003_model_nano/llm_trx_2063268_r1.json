@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2063268,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Raising factors such as the use of ACH as the payment method and the amount paid contribute to a high suspicion level, along with timing-related signals and non-cheque payment patterns. A late-hour timing provides a small lowering influence that moderates the overall score.\nkey_factors:\n- payment_format_ach (raises suspicion): Using ACH as the payment method could indicate non-traditional processing when paired with a sizable amount paid.\n- amount_paid (raises suspicion): A payment of 3377.08 is a notable transfer that may trigger closer review.\n- dayofweek (raises suspicion): Day 5 (Saturday) timing could indicate unusual activity.\n- payment_format_cheque (raises suspicion): Not using cheque as the payment method may align with patterns requiring closer tracing.\n- hour (lowers suspicion): The 22:00 hour timing lowers the concern, suggesting less risky timing in this context.\ninvestigation_context: Based on these factors, the high score could reflect a pattern where ACH payments, a sizable amount, and weekend timing raise risk, while late-hour activity provides some mitigation."
+}

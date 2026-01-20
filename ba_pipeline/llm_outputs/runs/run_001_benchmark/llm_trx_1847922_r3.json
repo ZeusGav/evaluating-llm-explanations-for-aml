@@ -1,0 +1,7 @@
+{
+  "transaction_id": 1847922,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because all top-listed attributes pull suspicion down and there are no listed factors that raise suspicion. The combination of credit-card payment indicators, modest amounts in euros, late-hour timing, and the listed bank identifiers together reduce concern under the provided factors.  \nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion) \u2014 could be consistent with a typical card payment pattern rather than a higher\u2011risk channel.  \n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH may reduce concern linked to that specific payment rail.  \n- amount_received=863.89 (lowers suspicion) \u2014 a modest, single payment amount could be consistent with ordinary commercial or consumer activity.  \n- hour=23 (lowers suspicion) \u2014 late-evening timing might align with normal after-hours consumer transactions.  \n- receiving_currency_euro=1 (lowers suspicion) \u2014 use of euros may be consistent with routine cross-border or regional business in that currency.  \ninvestigation_context: If additional context is available, these factors may be consistent with routine euro credit-card payments occurring late in the day rather than indicators of illicit activity."
+}

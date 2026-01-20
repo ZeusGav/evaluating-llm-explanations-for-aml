@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4567047,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is elevated because use of ACH, a relatively large payment amount, and the midday hour push the transaction toward higher concern. Offsetting elements \u2014 the specific receiving bank, payment currency being US dollars, and the weekday \u2014 reduce the overall suspiciousness, resulting in a high but not extreme score.\n\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with higher-risk automated transfers depending on counterparty and context.\n- amount_paid (raises suspicion): the payment size could be notable and may indicate greater value moving through the channel.\n- hour (raises suspicion): a transaction at midday might reflect operational timing patterns that sometimes align with elevated activity.\n- to_bank (lowers suspicion): the receiving bank identifier reduces concern, which could reflect familiar or lower-risk counterparty characteristics.\n- payment_currency_us_dollar (lowers suspicion): use of US dollars decreases the score and may indicate standard, widely used currency flows.\n\ninvestigation_context: If these attributes are accurate, the mix of ACH and a sizable midday payment alongside mitigating bank and currency indicators may represent mixed signals that warrant contextual review."
+}

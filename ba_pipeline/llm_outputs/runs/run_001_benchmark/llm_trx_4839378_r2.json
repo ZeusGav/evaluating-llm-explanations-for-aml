@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4839378,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because multiple factors decrease concern \u2014 for example non\u2011ACH, identified sending/receiving banks, cash payment format, rupee currency, and the observed amount all lower the alert level. One small offsetting factor (payment_currency_us_dollar=0) raises concern slightly because a non\u2011USD payment in this mix could be notable, but it is outweighed by the other decreases. \nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 if ACH is not used, the payment channel here reduces concern compared with an ACH pattern.\n- payment_format_cash=1 (lowers suspicion) \u2014 if the payment is cash, it may reflect routine cash handling in this context.\n- receiving_currency_rupee=1 (lowers suspicion) \u2014 if the receiver currency is rupee, this could be consistent with domestic currency activity.\n- amount_paid=99228 (lowers suspicion) \u2014 if the payment amount matches expected transaction size, it reduces anomalousness.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 if the payment is not in USD, this aspect may slightly increase attention.\ninvestigation_context: If reviewed, the mix of several lowering indicators and one modest raising indicator may be consistent with routine rupee\u2011denominated activity rather than a USD\u2011linked anomaly."
+}

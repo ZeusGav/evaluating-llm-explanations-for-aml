@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2166062,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is high because several attributes\u2014ACH payment, a sizable payment amount, Sunday timing, and the receiving bank\u2014raise concern; at the same time the sending-bank identifier lowers concern. Overall, the mix of strong raising factors with a mitigating sending-bank signal yields a very elevated suspiciousness score.\n\nkey_factors:\n- payment_format_ach (raises suspicion): ACH usage could be consistent with automated or large-value transfers that may warrant attention.\n- amount_paid (raises suspicion): the substantial payment amount could be consistent with elevated monetary exposure or unusual transaction size.\n- dayofweek (6 - Sunday) (raises suspicion): occurrence on a Sunday could reflect activity outside typical business days and might be notable.\n- to_bank (raises suspicion): the receiving bank ID increases concern here and could reflect destination-related risk.\n- from_bank (lowers suspicion): the sending bank ID reduces concern and might indicate a familiar or lower-risk origin.\n\ninvestigation_context: If these attributes are verified, they could be consistent with atypical ACH flows or destination-focused risk that merits contextual review."
+}

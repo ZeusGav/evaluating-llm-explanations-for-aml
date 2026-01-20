@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3159964,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The overall score remains very low because multiple factors lower suspicion. The amount_received factor raises suspicion modestly, but ACH, from_bank, payment_format_credit_card, and dayofweek lower suspicion, yielding a near-zero total.\n\nkey_factors:\n- amount_received (raises suspicion) could reflect a matched inbound amount that warrants scrutiny.\n- payment_format_ach (lowers suspicion) when the payment is sent via ACH, a common domestic channel.\n- from_bank (lowers suspicion) the sending bank ID aligns with expected counterparties.\n- payment_format_credit_card (lowers suspicion) the use of credit card reduces risk in this context.\n- dayofweek (lowers suspicion) activity occurred on a routine weekday, which could be typical for this transfer.\n\ninvestigation_context: If the inbound amount matches the outbound amount, this could be consistent with routine settlement and lowers overall suspicion."
+}

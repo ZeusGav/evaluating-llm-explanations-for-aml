@@ -1,0 +1,7 @@
+{
+  "transaction_id": 3120441,
+  "run_name": "run_002_factsheet_off",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very low because several strong lowering factors (currency in yen, payer bank, and payment formats) outweigh modest upward signals. However, the transaction amounts and absence of a credit card format provide a small increase in attention that may warrant contextual explanation.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with non-ACH settlement methods and reduces concern in this record.\n- payment_currency_yen=1 (lowers suspicion) \u2014 use of yen may align with expected regional activity and lowers suspicion.\n- amount_received=17788.2 (raises suspicion) \u2014 the relatively large received amount increases attention as it could represent a material transfer.\n- payment_format_credit_card=0 (raises suspicion) \u2014 lack of credit card flow may shift profile away from routine retail activity and slightly raises attention.\n- from_bank=210292 (lowers suspicion) \u2014 receipt from bank 210292 decreases concern, possibly reflecting a familiar or trusted counterparty.\n\ninvestigation_context: If more context on counterparties or payment purpose is available, the modest upward influence from amounts could be consistent with legitimate large invoices or may require further explanation."
+}

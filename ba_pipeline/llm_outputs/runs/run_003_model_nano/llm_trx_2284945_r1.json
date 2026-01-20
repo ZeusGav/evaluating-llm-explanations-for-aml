@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2284945,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: The small score results from two signals that raise suspicion (dayofweek=6 and payment_currency_us_dollar=0) and three signals that lower suspicion (payment_format_ach=0, from_bank=1198, receiving_currency_shekel=1). This mix yields a nuanced result rather than a clear alert.\nkey_factors:\n- dayofweek=6 raises suspicion: Sunday activity could deviate from normal patterns and warrant review.\n- payment_currency_us_dollar=0 raises suspicion: Not using US dollars for payment currency may indicate a non-standard settlement.\n- payment_format_ach=0 lowers suspicion: Absence of ACH usage reduces exposure to common ACH-channel activity.\n- from_bank=1198 lowers suspicion: The sending bank ID appears routine, reducing concern.\n- receiving_currency_shekel=1 lowers suspicion: Receiving in shekel may reflect regional norms, lowering concern.\ninvestigation_context: If these patterns reflect typical regional activity, the observed score could be consistent with ordinary monitoring rather than a high-risk event."
+}

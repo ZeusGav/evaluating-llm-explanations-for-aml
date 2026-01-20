@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4039580,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Raising factors include ACH usage and the paid amount, which elevate suspicion. Lowering factors are midweek timing and the 15:00 hour, which reduce suspicion, shaping the overall score.\nkey_factors:\n- payment_format_ach=1 raises suspicion: use of ACH payments could indicate automated or batch transfers.\n- amount_paid=2514.2 raises suspicion: the amount paid mirrors the received amount, suggesting a mirrored transfer.\n- dayofweek=3 lowers suspicion: midweek timing can be routine, reducing suspicion.\n- hour=15 lowers suspicion: afternoon timing may be common, reducing concern.\n- payment_format_credit_card=0 raises suspicion: not using credit card while other methods are used could indicate atypical channel choice.\ninvestigation_context: This mix could be consistent with legitimate activity in some contexts, but conditionally may indicate elevated risk."
+}

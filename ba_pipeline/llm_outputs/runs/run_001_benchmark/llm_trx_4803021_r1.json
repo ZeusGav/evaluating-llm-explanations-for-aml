@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4803021,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The score is very high because the transaction is an ACH transfer for a substantial, equal paid-and-received amount processed on a Sunday, which raises concern. Some attributes, notably the sending bank ID and the euro receiving currency, provide modest countervailing signals that lower suspicion.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion), as an ACH method could be consistent with rapid bank-to-bank movement that may merit scrutiny.\n- amount_received=14222.2 (raises suspicion), since a sizable received amount could indicate higher risk when combined with other signals.\n- amount_paid=14222.2 (raises suspicion), matching paid and received amounts may reflect straightforward transfers that could be relevant to layering or circular flows.\n- dayofweek=6 (raises suspicion), occurring on a Sunday may be atypical for normal business activity and could warrant attention.\n- from_bank=225215 (lowers suspicion), the specific sending bank identifier modestly reduces concern and may suggest a known correspondent profile.\n\ninvestigation_context: If considered further, these factors could collectively suggest the transaction warrants review to determine whether benign explanations or suspicious typologies apply."
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2230403,
+  "run_name": "run_003_model_nano",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "llm_text": "short_explanation: Several signals raise suspicion, including ACH usage, Sunday timing, and matching transfer amounts, while the sending bank and euro receiving currency modestly lower concern. Together, these factors explain the high suspiciousness score.\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could indicate an electronic transfer pattern that warrants closer review.\n- dayofweek (raises suspicion): dayofweek=6 (Sunday) timing may reflect unusual activity warranting investigation.\n- amount_received (raises suspicion): amount_received=9736.35 matches the corresponding amount paid, suggesting a balancing transfer that may raise suspicion.\n- from_bank (lowers suspicion): funds reported as coming from bank ID 15231 could reflect ordinary banking relationships, reducing concern.\n- receiving_currency_euro (lowers suspicion): euro as the receiving currency could reflect standard cross-border activity, reducing concern.\ninvestigation_context: If these signals align\u2014ACH usage, Sunday timing, and matching amounts\u2014this could be consistent with routine activity or indicate a pattern warranting closer review."
+}

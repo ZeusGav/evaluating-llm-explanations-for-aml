@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4510010,
+  "run_name": "run_001_benchmark",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The very low suspiciousness score is driven largely by multiple factors that lower concern\u2014cheque payment, large identical paid and received amounts in Saudi riyal, and other transaction identifiers and timing that suggest a routine settlement. One countervailing signal is that payment_currency_us_dollar=0 (raises suspicion), which could be consistent with local\u2011currency behavior or regional payment routing that may warrant contextual review.\nkey_factors:\n- payment_format_cheque=1 (lowers suspicion): could indicate settlement via cheque, which may be consistent with established business payments.\n- amount_paid=511713 (lowers suspicion): a large paid amount that, taken with other signals, may reflect a single legitimate high\u2011value transaction.\n- amount_received=511713 (lowers suspicion): identical received amount could be consistent with a straightforward, balanced transfer.\n- receiving_currency_saudi_riyal=1 (lowers suspicion): Riyal denomination may indicate routine local\u2011currency activity.\n- payment_currency_us_dollar=0 (raises suspicion): non\u2011USD payment indicator could reflect regional currency usage or routing patterns that merit contextual attention.\ninvestigation_context: If further context is desired, the non\u2011USD indicator could be evaluated together with the cheque payment and Riyal amounts to determine whether the pattern appears routine or requires deeper review."
+}

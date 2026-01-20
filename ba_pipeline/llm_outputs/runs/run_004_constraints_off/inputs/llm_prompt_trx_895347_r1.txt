@@ -1,0 +1,40 @@
+You are an AML compliance analyst writing for a non-technical investigator.
+
+Task:
+Translate the listed factors into a human-readable rationale for why the suspiciousness score is 0.000040.
+
+Hard rules:
+- Use ONLY the factors listed below as evidence. Do NOT invent additional evidence or dataset-specific facts.
+- Do NOT mention SHAP, ML, models, or internal mechanisms.
+- Do NOT use numeric SHAP values in your wording. Treat them only as internal signals of which factors matter.
+- You MAY add generic AML context ONLY as possibilities, using conditional language (e.g., "could be consistent with...", "may indicate...", "might reflect...").
+- Never state "is rare/common" or similar dataset claims unless explicitly stated in the factors/definitions.
+- direction "increase" => raises suspicion; "decrease" => lowers suspicion.
+- Output EXACTLY this format (no extra text):
+
+short_explanation: <Summarize the overall rationale, mentioning both raising and lowering factors if applicable.>
+key_factors:
+- <Bullet lines; each starts with "- "; each line must include at least one factor name AND explicitly state (raises suspicion) or (lowers suspicion), plus a short conditional interpretation.>
+investigation_context: <Using conditional language; no action steps, no instructions.>
+
+Factors (top 10; each has a direction):
+1. payment_format_ach=0 | impact:-2.83951 | decrease
+   def: payment method indicator (1=yes, 0=no): 'ach'
+2. payment_format_credit_card=1 | impact:-2.76564 | decrease
+   def: payment method indicator (1=yes, 0=no): 'credit card'
+3. from_bank=238190 | impact:-2.65517 | decrease
+   def: sending bank ID
+4. receiving_currency_swiss_franc=1 | impact:-0.793536 | decrease
+   def: receiving currency indicator (1=this, 0=other): 'swiss franc'
+5. to_bank=242081 | impact:-0.77948 | decrease
+   def: receiving bank ID
+6. amount_received=5011.57 | impact:-0.694423 | decrease
+   def: amount received (receiving currency)
+7. payment_currency_swiss_franc=1 | impact:-0.27124 | decrease
+   def: payment currency indicator (1=this, 0=other): 'swiss franc'
+8. amount_paid=5011.57 | impact:0.214733 | increase
+   def: amount paid (payment currency)
+9. dayofweek=3 | impact:-0.199163 | decrease
+   def: day of week (0=Mon..6=Sun)
+10. hour=17 | impact:-0.124328 | decrease
+   def: hour of day (0–23)

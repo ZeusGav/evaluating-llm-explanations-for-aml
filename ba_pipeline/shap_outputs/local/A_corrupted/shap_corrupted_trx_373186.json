@@ -1,0 +1,66 @@
+{
+  "transaction_id": 373186,
+  "model_proba": 4.86029421153944e-05,
+  "top_features": [
+    {
+      "feature": "from_bank",
+      "value": 4.0,
+      "shap_value": 3.073873281478882,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_ach",
+      "value": 0.0,
+      "shap_value": 2.84377384185791,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_ruble",
+      "value": 1.0,
+      "shap_value": 1.1704416275024414,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 6443.48,
+      "shap_value": 1.114949345588684,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 16678.0,
+      "shap_value": 0.9978101849555969,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_ruble",
+      "value": 1.0,
+      "shap_value": 0.8415876030921936,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 1.0,
+      "shap_value": 0.8204498887062073,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 3.0,
+      "shap_value": 0.46646326780319214,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 1.0,
+      "shap_value": -0.4155292510986328,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 6443.48,
+      "shap_value": -0.21963484585285187,
+      "direction": "decrease"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "transaction_id": 4269462,
+  "run_name": "run_001_benchmark",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high suspiciousness score reflects several raising factors\u2014notably use of ACH, payments denominated in Saudi riyal, a large received amount, and timing indicators\u2014while one sending-bank identifier slightly reduces concern. The sending bank (from_bank) lowers the score but does not fully offset the cumulative raising signals.  \nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with rapid account-to-account transfers that warrant attention.  \n- payment_currency_saudi_riyal (raises suspicion): denomination in Saudi riyal may indicate concentration in a specific foreign currency, which could be noteworthy.  \n- amount_received (raises suspicion): a sizable received amount could be consistent with higher-value activity that attracts scrutiny.  \n- from_bank (lowers suspicion): the specific sending bank ID modestly reduces the score, which may reflect institution-related context mitigating concern.  \n- hour (raises suspicion): the transaction hour (14) contributes to the score and could be consistent with timing patterns of interest.  \ninvestigation_context: If corroborated, this mix of ACH in Saudi riyal and a large received amount could be consistent with atypical payment behavior such as concentrated foreign-currency flows or automated high-value transfers."
+}

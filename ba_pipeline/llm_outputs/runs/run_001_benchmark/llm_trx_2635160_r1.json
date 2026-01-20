@@ -1,0 +1,7 @@
+{
+  "transaction_id": 2635160,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "llm_text": "short_explanation: The high score reflects several factors that raise concern, notably an ACH payment of a large amount that was sent and received as the same value, and timing and channel indicators that increase alerting. The score is partly offset because the payment was in US dollars, which could be consistent with routine commercial settlement and thus slightly lowers concern.\n\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 an ACH method could be consistent with direct bank-to-bank transfers that may move large sums outside card rails.\n- amount_paid (raises suspicion) \u2014 a high payment amount could be consistent with significant value transfers that warrant attention.\n- amount_received (raises suspicion) \u2014 the matching received amount could indicate a single large, linked movement rather than fragmented payments.\n- payment_currency_us_dollar (lowers suspicion) \u2014 use of US dollars may suggest ordinary commercial settlement and could reduce immediate concern.\n- hour (raises suspicion) \u2014 occurring in the late afternoon could be consistent with end-of-day settlement timing that may be used to move funds.\n\ninvestigation_context: If accurate, this combination could be consistent with late-afternoon ACH transfers of large, matching dollar amounts between specific banks and may reflect atypical account activity."
+}
