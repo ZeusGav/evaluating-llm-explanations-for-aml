@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2947913,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Multiple strong indicators raise suspicion\u2014an ACH payment format combined with large paid and received amounts and identifiable sending/receiving banks\u2014while the fact the funds are received in euros slightly reduces concern. The aggregate of the increasing factors outweighs the euro-related decrease, producing a very high suspiciousness signal.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): an ACH payment method could be consistent with automated bank transfers that enable rapid movement of funds.\n- amount_received=13431.6 (raises suspicion): a sizable incoming amount could be consistent with high-value transfers that elevate risk.\n- amount_paid=13431.6 (raises suspicion): an identical paid amount may be consistent with full-value settlement patterns.\n- from_bank=214621 (raises suspicion): concentration from this sending bank could be consistent with unusual counterparty behavior.\n- receiving_currency_euro=1 (lowers suspicion): receipt in euros could mitigate some concern depending on expected currency flows.\n\ninvestigation_context: If this combination reflects a large ACH inflow in euros from the specified sending bank, it could be consistent with atypical high-value automated transfers that may indicate structuring or account misuse."
-}

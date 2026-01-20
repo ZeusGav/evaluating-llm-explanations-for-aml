@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5018226,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score is driven by large equal paid/received amounts and use of ACH, which raise concern, while the receiving bank identifier and USD payment reduce concern to some degree. Timing on a weekday afternoon also modestly increases the overall suspicion.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 ACH as the method could be consistent with sizeable electronic transfers that merit review.\n- amount_received=17462.3 (raises suspicion) \u2014 a relatively large received amount could indicate material value movement worth scrutiny.\n- amount_paid=17462.3 (raises suspicion) \u2014 identical paid and received amounts could reflect potential pass-through activity that may be notable.\n- to_bank=12979 (lowers suspicion) \u2014 the specific receiving bank identifier modestly lowers concern and might reflect a familiar domestic counterparty.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 settlement in USD modestly reduces concern and could indicate a common trading currency.\n\ninvestigation_context: If accurate, these factors could point to a high-value ACH transfer on a weekday afternoon that is partially offset by the receiving bank and USD settlement."
-}

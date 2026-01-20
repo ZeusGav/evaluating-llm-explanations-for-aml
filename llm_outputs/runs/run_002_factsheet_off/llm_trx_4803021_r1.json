@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4803021,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high suspiciousness score is driven mainly by the use of an ACH payment format and the equal, sizable received and paid amounts, which raise concern about rapid or sizable fund movement. Some factors, such as the originating bank identifier and the receiving currency being euro, slightly reduce concern in this context.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with fast bank transfers that may be used to move funds quickly.\n- amount_received=14222.2 (raises suspicion) \u2014 a received amount of 14222.2 could indicate significant value movement warranting attention.\n- amount_paid=14222.2 (raises suspicion) \u2014 matching paid and received amounts could reflect rapid pass-through or circular movement.\n- from_bank=225215 (lowers suspicion) \u2014 the specific originating bank identifier may reduce concern if it aligns with known, lower\u2011risk correspondents.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 receipt in euros may slightly reduce concern if consistent with expected currency flows.\n\ninvestigation_context: If these factors are inconsistent with the customer's normal profile, they may indicate a need for closer review."
-}

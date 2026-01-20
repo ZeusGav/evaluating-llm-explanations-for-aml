@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1970067,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is driven up by an ACH payment together with substantial equal amounts paid and received and timing on day 5, while signals from the sending bank and USD settlement reduce the level of concern. Several payment-format indicators being unset also modestly push the result higher rather than lower.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): presence of ACH could be consistent with large bank-to-bank transfers that merit attention.\n- amount_received=13573.3 (raises suspicion): a sizable received amount may indicate higher-value activity worthy of review.\n- amount_paid=13573.3 (raises suspicion): an equal sizable outgoing amount could be consistent with pass-through or high-value payments.\n- from_bank=8623 (lowers suspicion): the sending bank identifier reduces concern and could reflect a routine institutional source.\n- payment_currency_us_dollar=1 (lowers suspicion): USD settlement lowers concern and may reflect standard domestic currency flows.\ninvestigation_context: If verified, this combination could be consistent with a high-value ACH transfer on day 5 that is partially mitigated by the sending bank and USD settlement."
-}

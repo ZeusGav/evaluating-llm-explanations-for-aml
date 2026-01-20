@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4389487,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because multiple factors raise concern (ACH payment method, Sunday timing, Saudi riyal currency, and a large received amount) while some bank identifiers lower concern. The combination could be consistent with automated, high-value or region-specific transfers, whereas the sending/receiving bank IDs somewhat mitigate immediate suspicion.\nkey_factors:\n- payment_format_ach (raises suspicion): could be consistent with automated bank transfers that enable rapid movement of funds.\n- dayofweek=6 (raises suspicion): a Sunday transaction might indicate activity outside typical weekday patterns.\n- payment_currency_saudi_riyal (raises suspicion): use of Saudi riyal may reflect region-specific or cross-border flows requiring context.\n- amount_received (raises suspicion): a large received amount could indicate significant value transfer that warrants attention.\n- from_bank=119 (lowers suspicion): the sending bank ID reduces concern and might reflect a recognized origin.\ninvestigation_context: If these factor patterns are accurate, they might indicate a need to verify the transaction purpose and origin."
-}

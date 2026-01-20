@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4392188,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The overall low suspiciousness score is driven by several strong decreasing indicators\u2014absence of ACH payment, a cheque payment format, and known sending and receiving banks\u2014which outweigh smaller increasing signals. Smaller increases such as the transaction amount, the early-hour time, and the matching received amount could be consistent with routine large transfers but slightly raise attention.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 lack of ACH could indicate use of other, more manual or transparent channels that reduce automated-transfer concern.\n- payment_format_cheque=1 (lowers suspicion) \u2014 cheque payment format may reflect traditional processing and lower immediacy-related risk.\n- from_bank=11157 (lowers suspicion) \u2014 the originating bank identifier may suggest a known source that decreases immediate concern.\n- amount_paid=10792.6 (raises suspicion) \u2014 a relatively large paid amount could be consistent with higher-value activity that warrants attention.\n- hour=6 (raises suspicion) \u2014 an early-morning transaction time might be atypical for some customers and could increase scrutiny.\n\ninvestigation_context: If the amount and timing are unusual for this customer, they might indicate atypical behavior even though payment channel and bank indicators currently lower concern."
-}

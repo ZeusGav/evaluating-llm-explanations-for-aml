@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3249346,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Overall, the score is low because several indicators lower risk, while one factor raises concern. The amount_received increases suspicion, whereas the absence of ACH, the from_bank value, and the receiving currency being Shekel lowers suspicion; not using US dollars also raises suspicion.\n\nkey_factors:\n- amount_received (raises suspicion) The amount_received of 68810.1 could indicate larger inbound funds that may require closer review depending on context.\n- payment_format_ach (lowers suspicion) The absence of ACH (payment_format_ach=0) lowers suspicion, suggesting a non-ACH payment method.\n- from_bank (lowers suspicion) The from_bank value 112212 lowers suspicion, indicating the sending bank matches expected counterparty patterns.\n- receiving_currency_shekel (lowers suspicion) Receiving currency Shekel lowers suspicion, aligning with currency patterns for this activity.\n- payment_currency_us_dollar (raises suspicion) Not using US dollars raises suspicion, possibly reflecting non-US currency settlement patterns.\n\ninvestigation_context: If these signals occur together in a transaction, the overall assessment could be consistent with a low level of suspiciousness despite a single raising signal."
-}

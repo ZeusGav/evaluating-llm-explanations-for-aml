@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5011781,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very high because several features raise concern \u2014 notably payment_format_ach, to_bank, and the large amount values occur together and the transaction timing falls on a Sunday midday; these patterns could be consistent with rapid large-value ACH movement to a particular receiver. Some factors lower the score, specifically from_bank and receiving_currency_euro, which may temper risk if they indicate a known origin or a euro-denominated flow.\n\nkey_factors:\n- payment_format_ach (raises suspicion): could be consistent with high-speed bank transfers that concentrate funds via ACH.\n- to_bank (raises suspicion): receiving bank ID 22 may indicate concentration of incoming activity to that institution.\n- amount_received (raises suspicion): the sizeable received amount could be consistent with large-value transfers that warrant attention.\n- from_bank (lowers suspicion): sending bank ID 20 may reduce concern if it represents a familiar or traceable origin.\n- receiving_currency_euro (lowers suspicion): euro denomination may mitigate risk if it aligns with expected currency flows.\n\ninvestigation_context: If these inputs are accurate, the combination could be consistent with concentrated ACH movement of sizable euro-denominated funds to a single receiving bank while the originating bank somewhat mitigates concern."
-}

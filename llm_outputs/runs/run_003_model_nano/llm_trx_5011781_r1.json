@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5011781,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The score is driven by multiple signals that raise suspicion, including ACH payments, a large amount received, weekend timing, and midday activity. However, the euro-denominated receiving currency lowers the overall concern.\nkey_factors:\n- payment_format_ach=1 raises suspicion, as ACH payments may flag higher-risk activity.\n- amount_received=13338.3 raises suspicion.\n- dayofweek=6 raises suspicion, indicating potential weekend activity.\n- hour=12 raises suspicion, reflecting midday timing of transfers.\n- receiving_currency_euro=1 lowers suspicion, suggesting euro-denominated receiving currency.\ninvestigation_context: If these indicators align, the activity could represent unusual fund movement warranting further review."
-}

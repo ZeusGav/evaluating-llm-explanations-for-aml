@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5023848,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because this is an ACH transaction for a relatively large amount, with the receiving bank and the day of week contributing to elevated concern. These increases are partially offset by the sending bank identifier and the fact the funds are received in euro, which lower the score.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with higher-risk payment rails in some scenarios and therefore raises concern.\n- amount_paid=12389.8 (raises suspicion) \u2014 the large transferred amount could indicate higher-value movement that warrants attention.\n- to_bank=20 (raises suspicion) \u2014 the receiving bank ID may reflect routing to a recipient that could increase scrutiny in context.\n- from_bank=23344 (lowers suspicion) \u2014 the sending bank identifier reduces the score and may indicate a familiar or lower-risk origin in this record.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 receipt in euro may be consistent with expected currency handling and thus lowers the score.\n\ninvestigation_context: If these attributes are verified, they could be consistent with a high-value ACH transfer that merits contextual review."
-}

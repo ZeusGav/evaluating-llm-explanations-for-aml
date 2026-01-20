@@ -1,7 +1,0 @@
-{
-  "transaction_id": 853288,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because the payment is an ACH transfer of a large, equal amount sent and received, routed into bank 23 on a weekday, which raises suspicion; this is partially offset by the funds originating from bank 12 and the receipt being in euros, which lower suspicion. Overall, the combination of transfer format, size, routing, and timing drives concern while some origin and currency attributes temper it.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with high-volume electronic transfers that require scrutiny.\n- amount_received=16093.5 (raises suspicion) \u2014 a large single receipt could indicate notable or structured movement.\n- amount_paid=16093.5 (raises suspicion) \u2014 identical paid amount may reflect matched or circular transfers between accounts.\n- from_bank=12 (lowers suspicion) \u2014 originating from bank 12 may, in context, reduce immediate concern.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 receipt in euros could align with ordinary cross-border settlement patterns.\n\ninvestigation_context: If these features coexist, they could be consistent with coordinated interbank transfer activity and may need contextual explanation."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4497245,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is low because multiple factors lower concern \u2014 notably the absence of ACH, a cheque payment, the received amount, the sending bank ID, and typical timing \u2014 while one factor (amount_paid) raises a modest concern. Overall the lowering indicators outweigh the single increasing indicator, producing the low suspiciousness value. \nkey_factors:\n- payment_format_ach=0 (lowers suspicion), which could be consistent with non-automated, manual payment methods rather than an ACH transfer.\n- from_bank=48910 (lowers suspicion), which may indicate the sender is a known or expected counterparty in this context.\n- amount_received=3624.7 (lowers suspicion), as a moderate received amount could be consistent with routine business or personal payments.\n- amount_paid=3624.7 (raises suspicion), since the paid amount matching the received amount might, in some contexts, reflect passthrough activity that could merit attention.\n- payment_format_cheque=1 (lowers suspicion), because a cheque payment may reflect conventional, non-instant settlement processes.\ninvestigation_context: If additional context is available, these attributes could be consistent with routine transactions but might warrant further review only when combined with other concerning indicators."
-}

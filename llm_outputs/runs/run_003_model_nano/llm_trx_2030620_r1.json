@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2030620,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Most factors decrease suspicion, including from_bank, amount_paid, payment_format_ach, to_bank, hour, amount_received, and receiving_currency_euro. However, dayofweek=5 and payment_currency_us_dollar=0 provide small upward signals, yielding a final score of 0.000140.\nkey_factors:\n- dayofweek=5 (raises suspicion) \u2014 day of week 5 could reflect timing that raises concern.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 not USD could be unusual if USD expected.\n- from_bank=21745 (lowers suspicion) \u2014 sending from this bank ID can align with routine transfers.\n- amount_paid=55.28 (lowers suspicion) \u2014 this amount may be consistent with normal activity.\n- payment_format_ach=0 (lowers suspicion) \u2014 not using ACH reduces a common risk signal.\ninvestigation_context: If activity occurs on day of week 5 and currency signals differ from the usual pattern, they may raise suspicion, but the other downward signals temper the overall concern."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1984624,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Several factors raise suspicion, notably ACH payment format, the sizable amount received, weekend timing, and Saudi Riyal currency usage. The from_bank factor lowers suspicion, tempering the overall assessment.\nkey_factors:\n- payment_format_ach raises suspicion: The use of ACH could be associated with transfers that AML programs scrutinize, suggesting closer review.\n- amount_received raises suspicion: The amount received could warrant review to confirm source and purpose.\n- dayofweek raises suspicion: Weekend timing could indicate atypical activity, meriting further examination.\n- payment_currency_saudi_riyal raises suspicion: Using Saudi Riyal could hint at cross-border activity needing verification.\n- from_bank lowers suspicion: The sending bank ID may indicate legitimate origin, reducing concern when evaluated with other signals.\ninvestigation_context: Depending on whether these factors align, the overall suspiciousness could be elevated by the raising signals while tempered by the lowering signal from the sending bank."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3004028,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because the top signals all point toward routine, aligned payment characteristics that lower suspicion (matching small amount, same currency, wire method, and typical bank/hour indicators). No top factors in the provided list raise suspicion, so these lowering signals dominate the rationale.\nkey_factors:\n- amount_paid=17.75 (lowers suspicion): a low payment amount that could be consistent with routine, low-value transfers.\n- payment_format_wire=1 (lowers suspicion): use of a wire format that may reflect standard bank-to-bank settlement rather than atypical channels.\n- payment_currency_uk_pound=1 (lowers suspicion): payment in UK pounds that might indicate same-currency, straightforward settlement.\n- amount_ratio=1 (lowers suspicion): identical paid and received amounts that could be consistent with no apparent conversion or loss.\n- from_bank=220504 (lowers suspicion): a known sending bank identifier that may reflect regular banking relationships.\ninvestigation_context: If further context is available, these combined features could be consistent with routine, low-value same-currency wire transfers rather than suspicious activity."
-}

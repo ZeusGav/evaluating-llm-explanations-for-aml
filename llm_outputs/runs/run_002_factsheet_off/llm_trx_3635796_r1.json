@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3635796,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very high suspiciousness score is driven mainly by payment_format_ach=1, a large amount_received, and activity on dayofweek=6, which raise concern. These signals are partly offset by receiving_currency_euro=1 and amount_ratio=1, which may lower suspicion.\nkey_factors:\n- payment_format_ach=1 (raises suspicion); could be consistent with expedited bank-transfer channels that may move funds quickly.\n- amount_received=15333.3 (raises suspicion); the large incoming amount may indicate higher-value activity warranting scrutiny.\n- dayofweek=6 (raises suspicion); timing on this specific day of week may reflect atypical transaction patterns.\n- receiving_currency_euro=1 (lowers suspicion); settlement in euros may align with expected currency usage for legitimate cross-border business.\n- amount_ratio=1 (lowers suspicion); a one-to-one in/out ratio may indicate pass-through or matched settlement.\ninvestigation_context: If customer profile or documentation supports the payment purpose and currency, these mixed signals may be less indicative of illicit activity."
-}

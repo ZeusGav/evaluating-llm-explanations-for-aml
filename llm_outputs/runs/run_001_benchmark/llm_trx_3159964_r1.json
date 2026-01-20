@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3159964,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most available indicators lower suspicion: credit card payment, absence of ACH, ruble used for payment and receipt, specific sending and receiving bank IDs, and timing/day align with a routine profile. However, the amount_received equaling the amount_paid modestly raises concern because it could be consistent with either a straightforward settlement or a pass-through pattern. \nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion) \u2014 could be consistent with a consumer or merchant card transaction.\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH may indicate non-ACH rails such as card processing.\n- payment_currency_ruble=1 (lowers suspicion) \u2014 use of ruble may align with domestic or single-currency activity.\n- amount_received=38574.8 (raises suspicion) \u2014 identical received amount could reflect simple settlement or a pass-through.\n- from_bank=17120 and to_bank=118202 (lowers suspicion) \u2014 specific bank IDs may reflect regular correspondent or bilateral activity.\ninvestigation_context: If additional context becomes available, the equal payment and receipt amounts might reflect either routine settlement activity or a pass-through pattern."
-}

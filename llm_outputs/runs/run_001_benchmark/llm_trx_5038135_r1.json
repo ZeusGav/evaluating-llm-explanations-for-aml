@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5038135,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score reflects several factors that raise concern\u2014use of ACH, Saudi riyal as the payment currency, a sizable amount received/paid, and absence of a credit card payment\u2014while certain bank identifiers slightly reduce the score. Together these indicators point toward electronic, high-value riyal movement that could be consistent with higher-risk transaction patterns, although some bank-related signals temper the overall suspicion.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): use of ACH could be consistent with electronic transfers that warrant closer attention.\n- payment_currency_saudi_riyal=1 (raises suspicion): payment in Saudi riyal may indicate cross-border or jurisdictional considerations.\n- amount_received=60777.8 (raises suspicion): a sizable received amount could be consistent with higher-risk value movement.\n- from_bank=150240 (lowers suspicion): this sending bank identifier contributes to lowering the overall score.\n- payment_format_credit_card=0 (raises suspicion): absence of a credit card payment method may reflect non-card transfer patterns that raise alert.\n\ninvestigation_context: If these attributes represent a large ACH transfer in Saudi riyal between the listed banks, they might indicate a transaction pattern warranting closer review."
-}

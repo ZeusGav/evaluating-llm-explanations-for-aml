@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1799416,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: No listed factors raised suspicion; multiple listed factors lowered it, producing the very low suspiciousness score. The payment method (credit card), modest amounts, evening hour, euro currency indicator and absence of cryptocurrency signals could be consistent with routine transactions rather than high-risk activity. \nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion): If the payment was by credit card, this may be consistent with normal consumer or merchant activity.\n- amount_paid=208.56 (lowers suspicion): If the amount is modest, it could reflect routine retail or service payment rather than large suspicious flows.\n- hour=21 (lowers suspicion): If the transaction occurred at 21:00, this timing might align with ordinary after-work purchasing patterns.\n- receiving_currency_euro=1 (lowers suspicion): If the funds were received in euros, this may indicate standard cross-border or local currency activity rather than niche currency use.\n- payment_currency_bitcoin=0 (lowers suspicion): If bitcoin was not used, this absence may reduce concerns tied to anonymity-seeking behaviors.\ninvestigation_context: If corroborating information aligns, these combined attributes may indicate a routine credit-card payment in euros at an evening hour rather than clear signs of illicit activity."
-}

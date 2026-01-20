@@ -1,7 +1,0 @@
-{
-  "transaction_id": 695555,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most top signals lower suspicion\u2014amount_ratio, amount_paid, from_bank and to_bank contribute decreases\u2014while amount_received and payment_currency_bitcoin raise suspicion. The cumulative effect of the lowering factors outweighs the raises, producing a very low suspiciousness score.\nkey_factors:\n- amount_ratio (lowers suspicion): a near\u2011one ratio may indicate matching send/receive amounts, which could be consistent with routine transfers.\n- amount_paid (lowers suspicion): a very small amount_paid may reflect low\u2011value activity that could be less concerning.\n- from_bank (lowers suspicion): the sending bank ID contributes to lower concern and may reflect a familiar or low\u2011risk counterparty.\n- amount_received (raises suspicion): the received amount in the receiving currency increases attention and could indicate notable incoming value.\n- payment_currency_bitcoin (raises suspicion): use of bitcoin as the payment currency may raise scrutiny given potential for higher anonymity or cross\u2011border movement.\ninvestigation_context: If more contextual details are available, the combination of low paid amount and matching ratios could be consistent with routine low\u2011value transfers while the bitcoin denomination might merit closer contextual review."
-}

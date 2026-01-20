@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2284945,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because several attributes point away from concern, including absence of ACH, a known sending bank, and receipt in shekels. Some aspects raise caution\u2014transactions on day 6 and the payment not being in US dollars could reflect unusual timing or currency use and slightly increase scrutiny.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with non-electronic or routine payment routes that reduce immediate concern.\n- from_bank=1198 (lowers suspicion) \u2014 a familiar sending bank ID may indicate a known counterparty and lower risk in this instance.\n- receiving_currency_shekel=1 (lowers suspicion) \u2014 funds received in shekels could align with domestic activity and lower cross\u2011border currency concerns.\n- dayofweek=6 (raises suspicion) \u2014 a Sunday transaction might reflect atypical timing that could warrant further context.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 payment not in USD could indicate alternative currency use that slightly increases attention.\ninvestigation_context: If these recorded attributes are accurate, the pattern may reflect routine domestic, non\u2011ACH activity in shekels despite weekend timing and non\u2011USD currency that could merit contextual review."
-}

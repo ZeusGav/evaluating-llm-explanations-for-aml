@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4690869,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The low suspiciousness score is driven mainly by several decreasing signals \u2014 payment_format_ach=0, from_bank=5175, and payment_format_cash=1 \u2014 which outweigh the smaller increasing signals. Two modest increases (amount_paid=3570.06 and payment_format_credit_card=0) slightly elevate concern but do not materially raise the overall score. \nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 could reflect non-ACH settlement methods and may be consistent with routine transfer channels. \n- from_bank=5175 (lowers suspicion) \u2014 could indicate an expected originating bank relationship and may reduce concern if aligned with customer profile. \n- payment_format_cash=1 (lowers suspicion) \u2014 could reflect an on\u2011site or cash-handling event and may align with certain business practices. \n- amount_paid=3570.06 (raises suspicion) \u2014 could represent a sizable outgoing payment that may warrant contextual review depending on source and recipient. \n- payment_format_credit_card=0 (raises suspicion) \u2014 absence of credit-card flow could mean non-card channels are used, which might affect traceability depending on context. \ninvestigation_context: If these factor patterns match the customer\u2019s normal activity, they could be consistent with routine behavior; if not, the modestly elevated payment attributes might warrant contextual review."
-}

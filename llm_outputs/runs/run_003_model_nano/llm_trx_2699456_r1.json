@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2699456,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Multiple factors raise suspicion, including ACH payments, Saudi Riyal usage, and a large amount received, while the from_bank factor (48526) lowers suspicion. Together they produce a very high suspiciousness signal.\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH as the payment format is indicated, which could be associated with higher risk.\n- payment_currency_saudi_riyal (raises suspicion): Saudi Riyal currency is used (indicator active), which could reflect cross-border considerations increasing risk.\n- from_bank (lowers suspicion): sending bank 48526 reduces suspicion, suggesting a source with less atypical wiring.\n- amount_received (raises suspicion): amount received of 66965.3 signals higher risk activity.\n- receiving_currency_saudi_riyal (raises suspicion): receiving in Saudi Riyals is indicated, which could raise suspicion in this currency path.\ninvestigation_context: If these indicators align, they could reflect higher-risk cross-border payment activity."
-}

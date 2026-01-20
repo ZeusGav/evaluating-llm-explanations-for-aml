@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1970167,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: High suspicion is driven by ACH usage, large mirrored amounts, and Friday activity, while a single sending bank provides a partial offset that lowers suspicion. Overall, the combination of multiple rising factors outweighs the lowering signal, resulting in a very high suspicion score.\nkey_factors:\n- payment_format_ach raises suspicion (could indicate ACH-based electronic transfers, especially with large mirrored amounts).\n- amount_received raises suspicion (large inflow amount 11995.4 could be unusual, particularly when paired with an identical outflow).\n- amount_paid raises suspicion (identical outflow amount 11995.4 could reflect self-transfer or round-number activity).\n- dayofweek raises suspicion (Friday activity could indicate end-of-week processing).\n- from_bank lowers suspicion (a single sending bank could reflect routine funding, reducing concern).\ninvestigation_context: Could be consistent with ACH-based transfers and Friday timing, with mirrored amounts driving the score, while a single sending bank might partially mitigate concern."
-}

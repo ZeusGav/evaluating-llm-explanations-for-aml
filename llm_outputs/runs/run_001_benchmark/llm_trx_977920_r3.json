@@ -1,7 +1,0 @@
-{
-  "transaction_id": 977920,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very low suspiciousness score is driven by multiple top factors that lower concern, such as the sending and receiving bank identifiers, payment method, amount, currency, and timing. There are no top contributors that raise concern, and together these attributes could be consistent with routine credit\u2011card payments in Australian dollars during evening hours.\nkey_factors:\n- from_bank=15 (lowers suspicion): if the sending bank ID corresponds to a standard institution, this may indicate an ordinary bank-originated transaction.\n- payment_format_credit_card=1 (lowers suspicion): if paid by credit card, this may reflect typical consumer or merchant payments rather than high-risk transfer types.\n- amount_paid=173.9 (lowers suspicion): if the amount is modest, it might be consistent with routine retail or service payments.\n- receiving_currency_australian_dollar=1 (lowers suspicion): if funds are denominated in AUD, this could align with normal domestic currency activity for Australian counterparties.\n- hour=19 (lowers suspicion): if the transaction occurred at 19:00, it may reflect evening consumer activity rather than atypical timing.\ninvestigation_context: If these factors accurately describe the transaction, they might indicate routine, lower-concern activity rather than clear indicators of illicit behavior."
-}

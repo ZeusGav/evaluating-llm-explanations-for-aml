@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1762226,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because multiple strong lowering signals dominate, including a near\u2011one amount_ratio, a very small amount_paid, use of the bitcoin payment format, and specific sending/receiving bank identifiers. Small increases from the amount_received and the payment not being in US dollars slightly raise concern but do not offset the lowering factors.  \nkey_factors:\n- amount_ratio (lowers suspicion): a near\u20111.0 ratio could indicate the amount paid and received match closely, which may be consistent with straightforward transfers.  \n- amount_paid (lowers suspicion): a very small payment amount could be consistent with routine micro\u2011payments or tests in some contexts.  \n- amount_received (raises suspicion): any incoming amount might reflect activity that, depending on context, could warrant attention.  \n- payment_currency_us_dollar (raises suspicion): payment not in US dollars could indicate cross\u2011currency movement that may require contextual review.  \n- payment_format_bitcoin (lowers suspicion): a bitcoin payment format may reflect cryptocurrency transfer patterns that, in some scenarios, are expected and transparent.  \ninvestigation_context: If additional contextual details are available, these attributes could be consistent with routine small cross\u2011currency or crypto transfers, or alternatively may reflect minor atypical currency flow that might merit contextual review."
-}

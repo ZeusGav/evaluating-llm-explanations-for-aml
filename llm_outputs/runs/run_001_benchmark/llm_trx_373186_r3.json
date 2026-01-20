@@ -1,7 +1,0 @@
-{
-  "transaction_id": 373186,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because multiple strong signals lower suspicion \u2014 notably the identified sending bank, ACH/cheque payment formats, ruble currency, and the modest received amount all push the assessment down. A couple of small signals (early hour and the paid amount matching the received amount) slightly raise suspicion, but not enough to offset the lowering factors. \nkey_factors:\n- from_bank=4 (lowers suspicion): may be consistent with expected activity from a known sending bank. \n- payment_format_ach=0 (lowers suspicion): could indicate an automated transfer format associated with normal settlement. \n- payment_currency_ruble=1 (lowers suspicion): might reflect domestic currency use that aligns with routine local payments. \n- hour=1 (raises suspicion): could warrant attention as an atypical transaction time that may reflect unusual timing. \n- amount_paid=6443.48 (raises suspicion): may prompt review since the paid amount equals the received amount, which could reflect structured or mirrored flows. \ninvestigation_context: If contextual review is performed, the combination of ruble currency and ACH/cheque formats may suggest routine domestic transfers, while the early-hour timing and matching amounts might merit checking transaction context."
-}

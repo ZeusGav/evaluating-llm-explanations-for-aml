@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3801989,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most attributes lower the suspicion score \u2014 the transaction is in yen, the sender and receiver use the same bank ID, and the payment is not ACH, which together point toward a routine profile and result in a very low score. Only the fact that the payment is not in US dollars slightly raises suspicion, but it is far outweighed by the lowering factors.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with an alternative, routine payment route.\n- from_bank=15 (lowers suspicion) \u2014 the identified sending bank may reflect a familiar or expected counterparty.\n- to_bank=15 (lowers suspicion) \u2014 the receiving bank matches the sender and could indicate intra-bank routing, which may be less concerning.\n- payment_currency_yen=1 (lowers suspicion) \u2014 use of yen could be consistent with normal domestic or expected currency activity.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 not using US dollars slightly increases atypicality if USD would otherwise be expected.\n\ninvestigation_context: If this pattern differs from the customer\u2019s normal behavior, these attributes could be consistent with routine yen-denominated intra-bank transfers."
-}

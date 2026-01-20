@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2466813,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score is driven primarily by use of ACH and the sizable identical amounts paid and received, which raise concern, while signals from the sending bank ID and US dollar currency push the score down somewhat. Overall, the raising factors outweigh the lowering factors, producing a very high suspiciousness rating.\n\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH payments could be consistent with rapid electronic transfers that warrant closer review.\n- amount_received (raises suspicion): an amount received of 14,606 may indicate a substantial inbound value that increases scrutiny.\n- amount_paid (raises suspicion): an amount paid of 14,606 (matching the received amount) could be consistent with passthrough or round\u2011trip activity that raises concern.\n- from_bank (lowers suspicion): the sending bank ID (12) reduces the signal and may reflect a known or lower\u2011risk sender relationship.\n- payment_currency_us_dollar (lowers suspicion): use of US dollar currency reduces the signal and may indicate conventional settlement currency.\n\ninvestigation_context: If these factors are accurate, the pattern might reflect high\u2011value ACH movement with matched in/out amounts that could be relevant to AML review."
-}

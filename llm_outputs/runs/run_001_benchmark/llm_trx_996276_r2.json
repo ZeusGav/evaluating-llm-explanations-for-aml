@@ -1,7 +1,0 @@
-{
-  "transaction_id": 996276,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Multiple transaction attributes (for example, payment_format_cash and receiving_currency_swiss_franc) point toward lower concern, while one attribute (payment_currency_us_dollar) raises concern; taken together these signals produce a very low suspiciousness score. The single increasing factor is small relative to the number of decreasing factors, so the overall rationale favors lower suspicion.\n\nkey_factors:\n- payment_format_cash (lowers suspicion): the transaction being marked as cash could be consistent with straightforward, on\u2011hand settlement.\n- receiving_currency_swiss_franc (lowers suspicion): receipt in Swiss francs may align with ordinary cross\u2011border activity for this corridor.\n- payment_format_ach (lowers suspicion): absence of ACH could be consistent with non\u2011ACH payment behavior that reduces this particular signal.\n- amount_received (lowers suspicion): the received amount is at a level that, in context, may reflect routine activity.\n- payment_currency_us_dollar (raises suspicion): use of US dollars may introduce a factor that could be associated with increased scrutiny depending on counterparty and purpose.\n\ninvestigation_context: If these attributes reflect typical customer behavior and counterparties, the pattern may be consistent with routine activity rather than high\u2011risk behavior."
-}

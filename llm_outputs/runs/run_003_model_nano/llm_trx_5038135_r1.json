@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5038135,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The overall score is driven by multiple rising indicators, including ACH payments, large incoming and outgoing amounts, and Saudi Riyal currency signals, with some lowering signals from bank identifiers. Together, these patterns support a very high level of suspiciousness.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): use of ACH could reflect automated or batch transfers that warrant closer review.\n- amount_received=60777.8 (raises suspicion): a large amount received could require source verification and may indicate unusual activity.\n- receiving_currency_saudi_riyal=1 (raises suspicion): receiving in Saudi Riyal could indicate cross-border currency activity that merits examination.\n- amount_paid=60777.8 (raises suspicion): a large outgoing amount could suggest mirrored or batch transactions needing scrutiny.\n- payment_format_credit_card=0 (raises suspicion): not using credit cards despite other electronic indicators may point to alternative payment channels.\ninvestigation_context: If these indicators persist together, they could explain a near-maximum suspiciousness score and warrant focused review of the transaction pattern."
-}

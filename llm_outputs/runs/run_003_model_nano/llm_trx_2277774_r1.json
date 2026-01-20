@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2277774,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The high score is driven by several increasing indicators\u2014ACH payments, large incoming and outgoing amounts, weekend timing, and receiving USD. The late-hour timing (hour=23) and the sending bank (from_bank=111443) reduce suspicion.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) could be consistent with high-volume transfers using ACH.\n- amount_received=19693.8 (raises suspicion) indicates a sizable incoming payment that may require review.\n- dayofweek=6 (raises suspicion) weekend activity may reflect unusual timing.\n- amount_paid=19693.8 (raises suspicion) similar magnitude outgoing payment warranting scrutiny.\n- receiving_currency_us_dollar=1 (raises suspicion) USD receiving could reflect cross-border or liquidity flows.\ninvestigation_context: This pattern could be consistent with elevated risk when ACH transfers, large sums, weekend timing, and USD receipts occur together."
-}

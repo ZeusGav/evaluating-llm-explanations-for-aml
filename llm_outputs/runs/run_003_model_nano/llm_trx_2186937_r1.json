@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2186937,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Most factors indicate lower suspicion (ACH not used, cash present, yuan currencies, and matching amounts), keeping the score very low. A single factor\u2014not using US dollars\u2014slightly raises suspicion, explaining why the total remains modest.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) because ACH is not used in this case, reducing a common payment channel risk.\n- payment_format_cash=1 (lowers suspicion) because cash payments are present, reducing concerns about electronic channel misuse in this instance.\n- dayofweek=6 (lowers suspicion) because Sunday timing may be routine, reducing atypical activity signals.\n- amount_paid=137448 (lowers suspicion) because the amount paid matches the amount received, suggesting consistency.\n- payment_currency_us_dollar=0 (raises suspicion) because USD is not used, which might indicate higher-risk currency handling.\ninvestigation_context: If USD were used instead of not-USD currencies, the overall suspicion could be even lower."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4039580,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is elevated because the transaction was sent as an ACH payment and the recorded amount_paid aligns with suspicious payment patterns, which raise concern. Offsetting this, the originating bank identifier, the reported amount_received, midweek timing, and US dollar currency flag reduce overall suspicion, moderating the final score.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): ACH format could be consistent with rapid electronic movement that may be used to layer funds in some schemes.\n- amount_paid=2514.2 (raises suspicion): the paid amount aligns with the flagged transaction size that can be used in structuring or repeat transfers.\n- from_bank=1674 (lowers suspicion): the originating bank identifier is associated here with factors that reduce the alert level.\n- amount_received=2514.2 (lowers suspicion): the received amount profile in this record lessens concern compared with other patterns.\n- payment_currency_us_dollar=1 (lowers suspicion): US dollar denomination may correspond to expected domestic flow and reduces this alert\u2019s weight.\n\ninvestigation_context: If these factors are accurate, the combination suggests payment method and amount warrant attention while other attributes temper the overall concern."
-}

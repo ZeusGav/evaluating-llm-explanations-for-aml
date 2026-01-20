@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2150319,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Multiple factors raise suspicion, including ACH payments, Sunday activity, and cross-bank transfers, while the from_bank indicator lowers concern. Together, these signals justify a high suspicion score.\nkey_factors:\n- payment_format_ach=1 raises suspicion: if ACH is used, this electronic payment pattern could attract closer scrutiny.\n- dayofweek=6 raises suspicion: activity on Sunday may indicate timing outside typical business hours and raise flags.\n- amount_received=11349.2 raises suspicion: the specified amount received could reflect patterns associated with unusual or round-trip transfers.\n- to_bank=11 raises suspicion: transferring to a specific receiving bank could indicate a defined counterpart requiring review.\n- payment_currency_euro=1 raises suspicion: euro-denominated payments may signal cross-border activity needing verification.\ninvestigation_context: If these patterns persist, they could be consistent with higher-risk activity that warrants further investigation."
-}

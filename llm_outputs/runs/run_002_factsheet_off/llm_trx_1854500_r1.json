@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1854500,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score is driven by an incoming ACH payment combined with matching substantial received and paid amounts, which together raise concern about rapid or pass-through fund movement. The fact the payment is in US dollars exerts a modest downward influence, though the destination bank further increases suspicion.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 an incoming ACH payment could be consistent with automated or high-velocity transfers that may indicate layering.\n- amount_received=17498 (raises suspicion) \u2014 a substantial received amount may indicate material funds entering the account that warrant scrutiny.\n- amount_paid=17498 (raises suspicion) \u2014 an equal paid amount may suggest immediate onward transfer or pass-through activity.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 being in US dollars might reduce currency-related ambiguity in some review contexts.\n- to_bank=12 (raises suspicion) \u2014 funds sent to bank 12 may warrant scrutiny depending on the recipient bank profile or relationship.\ninvestigation_context: If these factors are accurate, they could be consistent with rapid inbound ACH funds being forwarded to another bank while USD denomination partially tempers currency-based concerns."
-}

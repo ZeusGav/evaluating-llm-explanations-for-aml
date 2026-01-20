@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2030620,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The low suspiciousness score reflects several attributes that lower concern\u2014notably from_bank=21745, to_bank=12963, a modest amount_paid=55.28, and payment_format_cheque=1\u2014which could be consistent with routine transaction characteristics. Small increases tied to dayofweek=5 and payment_currency_us_dollar=0 may raise mild concern but do not outweigh the lowering factors.\nkey_factors:\n- from_bank=21745 (lowers suspicion): could be consistent with an expected sending-bank pattern for this payment. \n- amount_paid=55.28 (lowers suspicion): may indicate a modest transaction size that reduces concern in context. \n- payment_format_cheque=1 (lowers suspicion): could reflect a paper-cheque process consistent with routine activity. \n- dayofweek=5 (raises suspicion): occurring on that weekday might, in some contexts, be associated with timing patterns that raise mild concern. \n- payment_currency_us_dollar=0 (raises suspicion): not being US dollar could, depending on context, slightly increase scrutiny due to currency considerations.\ninvestigation_context: These mixed factors could be consistent with a routine small-value cheque payment in euros, although the weekday and currency indicators may suggest alternative explanations."
-}

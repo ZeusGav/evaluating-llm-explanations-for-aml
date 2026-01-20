@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3035808,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score reflects an ACH-format payment combined with a substantial received and paid amount and mid-week midday timing that raises concern. This is partly offset by an identified originating bank and payment in US dollars, which lower the level of suspicion.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 ACH format could be consistent with automated large transfers that merit attention.\n- amount_received (raises suspicion) \u2014 the high amount received may indicate significant value movement.\n- amount_paid (raises suspicion) \u2014 the equal amount paid may suggest immediate pass-through behavior.\n- from_bank (lowers suspicion) \u2014 the specific from_bank reduces concern and could reflect a known origin.\n- payment_currency_us_dollar (lowers suspicion) \u2014 payment in USD might lessen cross-currency complexity and reduce concern.\ninvestigation_context: If reviewed further, these factors could be consistent with high-value ACH pass-through activity occurring mid-week at midday, though origin and currency details might moderate concern."
-}

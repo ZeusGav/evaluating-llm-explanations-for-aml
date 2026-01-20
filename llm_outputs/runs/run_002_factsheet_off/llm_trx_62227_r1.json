@@ -1,7 +1,0 @@
-{
-  "transaction_id": 62227,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most contributing factors lower suspicion \u2014 the same originating and receiving bank, small payment and receipt amounts, and a reinvestment payment format all point away from concern. One factor (amount_received) slightly raises suspicion, but the reducing signals dominate, resulting in a very low suspiciousness score.\n\nkey_factors:\n- from_bank=3698 (lowers suspicion): if funds originate from this known bank, it could be consistent with routine activity between familiar counterparties.\n- amount_paid=12.62 (lowers suspicion): a small payment amount may indicate a low-risk, everyday transaction rather than large-value abuse.\n- payment_format_reinvestment=1 (lowers suspicion): use of a reinvestment format could be consistent with normal portfolio or account maintenance.\n- amount_received=12.62 (raises suspicion): identical received amount may warrant attention if it signals round-trip movement, though here it is small.\n- to_bank=3698 (lowers suspicion): funds sent to the same bank could reflect internal or familiar-bank transfers rather than external layering.\n\ninvestigation_context: If transaction records confirm these details, the pattern may be consistent with routine small-value transfers rather than suspicious activity."
-}

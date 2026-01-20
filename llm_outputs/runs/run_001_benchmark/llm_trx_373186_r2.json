@@ -1,7 +1,0 @@
-{
-  "transaction_id": 373186,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is extremely low because multiple strong lowering indicators \u2014 the identified sending bank, a non\u2011ACH payment format, and the use of ruble as the payment currency \u2014 outweigh a couple of modest raising signs. Small increases from the transaction hour and the paid amount could be consistent with timing or payment size but do not overcome the lowering factors.  \nkey_factors:\n- from_bank=4 (lowers suspicion): could reflect a routine sender profile consistent with expected counterparties.  \n- payment_format_ach=0 (lowers suspicion): non\u2011ACH method could indicate standard alternative routing rather than an ACH risk pattern.  \n- payment_currency_ruble=1 (lowers suspicion): use of ruble could be consistent with ordinary domestic currency activity.  \n- hour=1 (raises suspicion): early\u2011hour timing might reflect automated processing or cross\u2011time\u2011zone activity.  \n- amount_paid=6443.48 (raises suspicion): a moderate paid amount could, depending on context, reflect normal settlement values.  \ninvestigation_context: If account history or counterparty relationships show anomalies, these contextual details could change the interpretation of the low score."
-}

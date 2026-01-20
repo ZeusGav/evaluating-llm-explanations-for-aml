@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4723772,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Several strong indicators raise concern\u2014use of ACH, a large received amount, payments in Saudi riyal, and occurrence on day 6 (Sunday)\u2014while the sending bank ID 48308 slightly reduces concern. Overall, the combination of multiple raising factors outweighs the single lowering factor, producing the high suspiciousness score.\n\nkey_factors:\n- payment_format_ach (raises suspicion): ACH usage could be consistent with automated or high-volume electronic transfers that may align with layering patterns.\n- amount_received (raises suspicion): a received amount of 31774.2 could indicate a sizable transaction that may warrant scrutiny for unusual value.\n- payment_currency_saudi_riyal (raises suspicion): payment in Saudi riyal could reflect cross-border or jurisdiction-specific flows that may require attention.\n- dayofweek=6 (raises suspicion): a transaction on day 6 (Sunday) could be atypical timing and might reflect scheduling intended to avoid normal monitoring windows.\n- from_bank=48308 (lowers suspicion): the sending bank identifier 48308 slightly reduces concern, which could indicate a known or lower-risk counterparty.\n\ninvestigation_context: If these factors are accurate, the pattern of ACH on a Sunday with a sizable SAR payment may be consistent with scenarios that merit closer review."
-}

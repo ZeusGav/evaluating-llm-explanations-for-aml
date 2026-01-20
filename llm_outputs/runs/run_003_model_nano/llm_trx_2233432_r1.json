@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2233432,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Multiple factors raise suspicion, including the ACH payment method, the 14011.4 amounts received and paid, and the day of week. The from_bank indicator lowers suspicion, partially offsetting the overall concern.\nkey_factors:\n- payment_format_ach (raises suspicion): If the payment method is ACH, this could indicate electronic transfers warranting closer scrutiny.\n- amount_received (raises suspicion): If 14011.4 is unusual for expected activity, this raises suspicion.\n- dayofweek (raises suspicion): If dayofweek=6 (Sunday), this could reflect off-hours activity and raises suspicion.\n- amount_paid (raises suspicion): If amount paid equals 14011.4, this could indicate circular transfers and raises suspicion.\n- from_bank (lowers suspicion): If the sending bank ID 111443 is legitimate, this lowers suspicion.\ninvestigation_context: If these factors co-occur, they could contribute to the overall suspiciousness assessment in a pattern-based review."
-}

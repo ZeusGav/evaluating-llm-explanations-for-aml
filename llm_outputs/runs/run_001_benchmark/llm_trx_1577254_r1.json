@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1577254,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Several strong indicators raise the score\u2014an ACH payment method, a sizable amount, and a Sunday timestamp\u2014while payment in US dollars and the specific receiving bank lower concern. Overall, the raising factors outweigh the mitigating ones, producing a very high suspiciousness level.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): Use of ACH could be consistent with automated transfers that may be used to move funds quickly.\n- amount_received=13305.9 (raises suspicion): A relatively large received amount could indicate an uncommon high\u2011value movement for the profile.\n- dayofweek=6 (raises suspicion): A transaction on Sunday could reflect timing atypical for routine business activity.\n- to_bank=15723 (lowers suspicion): The receiving bank ID is associated here with reduced concern, which could reflect expected routing for this recipient.\n- payment_currency_us_dollar=1 (lowers suspicion): Payment in US dollars may be more typical for the parties and thus reduce apparent risk.\n\ninvestigation_context: If this mix of ACH on a Sunday with a high amount is not typical for the customer or counterparty, it could indicate elevated AML risk."
-}

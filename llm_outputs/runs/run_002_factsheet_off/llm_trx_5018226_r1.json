@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5018226,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high suspiciousness score is mainly driven by an ACH payment format together with large, identical incoming and outgoing amounts, which may indicate significant or rapid fund movement. Some factors\u2014the destination bank identifier and the use of US dollars\u2014reduce concern in this context, but the raising signals outweigh those lowering signals.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with an electronic ACH transfer channel used to move funds between accounts.\n- amount_received=17462.3 (raises suspicion) \u2014 a large incoming amount that may indicate substantial value movement.\n- amount_paid=17462.3 (raises suspicion) \u2014 the matching outgoing amount could reflect passthrough or linked transactions.\n- to_bank=12979 (lowers suspicion) \u2014 the specific destination bank identifier may suggest routing to that bank, which could lessen concern depending on counterparty context.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 use of USD may be less indicative of cross\u2011currency layering in this situation.\ninvestigation_context: If confirmed, this combination of ACH format and matching large amounts could be consistent with rapid passthrough activity rather than isolated retail payments."
-}

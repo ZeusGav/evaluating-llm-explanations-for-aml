@@ -1,7 +1,0 @@
-{
-  "transaction_id": 977920,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Multiple listed attributes push the score very low because they point to a moderate-sized, credit-card-funded payment settled in Australian dollars during evening midweek hours with no ACH indicator and specific sending/receiving banks. There are no listed factors that raise suspicion among the top contributors. \nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion): a credit-card payment could be consistent with a routine consumer purchase or typical card settlement. \n- payment_format_ach=0 (lowers suspicion): absence of ACH funding may reduce concern about certain bank-transfer patterns that can be used for layering. \n- amount_paid=173.9 (lowers suspicion): a moderate transaction amount may be consistent with ordinary commercial or consumer activity. \n- receiving_currency_australian_dollar=1 (lowers suspicion): AUD settlement could indicate local-currency processing rather than cross-border currency complexity. \n- hour=19 (lowers suspicion): an evening (19:00) timestamp might align with consumer payment timing rather than atypical out-of-hours banking behavior. \ninvestigation_context: If further review is warranted, these attributes could be consistent with routine, card-based consumer activity settled in AUD rather than indicators of complex or high-risk laundering patterns."
-}

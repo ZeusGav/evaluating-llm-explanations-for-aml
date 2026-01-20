@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1799416,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The combination of all negative-impact factors yields a very low suspiciousness score of 0.000102, reflecting minimal concern overall. There are no factors in this set that raise suspicion.\nkey_factors:\n- from_bank lowers suspicion: if the sending bank ID aligns with ordinary activity, this lowers suspicion.\n- payment_format_ach lowers suspicion: using ACH as the payment method may indicate standard domestic processing, lowering suspicion.\n- payment_format_credit_card lowers suspicion: credit card payments can reflect routine consumer transactions, lowering suspicion.\n- amount_paid lowers suspicion: a modest amount paid may be consistent with ordinary payments, lowering suspicion.\n- hour lowers suspicion: a 21:00 transaction could be within typical activity hours, lowering suspicion.\ninvestigation_context: If these conditions persist, the activity could be interpreted as low risk."
-}

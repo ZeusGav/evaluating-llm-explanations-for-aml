@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4803021,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The high score is driven by raising signals from ACH usage, the large, matched amounts, and weekend timing, while the sending bank indicator provides a lowering influence. If these signals align with prior patterns, the activity would warrant closer review.\n\nkey_factors:\n- payment_format_ach (raises suspicion): The use of ACH could reflect patterns that merit closer scrutiny, especially with high-value activity.\n- amount_received (raises suspicion): Receiving 14222.2 may indicate unusually large inflows that elevate risk.\n- amount_paid (raises suspicion): Paying 14222.2 at the same magnitude could amplify concern for value transfer patterns.\n- dayofweek (raises suspicion): Transaction on day 6 (Sunday) could be unusual timing, increasing suspiciousness.\n- from_bank (lowers suspicion): The sending bank ID 225215 may correspond to a known relationship, reducing concern in this context.\n\ninvestigation_context: If these indicators align with historical patterns, the activity could warrant closer review."
-}

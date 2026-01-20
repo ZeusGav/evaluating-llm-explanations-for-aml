@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2030620,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most transaction attributes (sending/receiving banks, low paid/received amounts, cheque format, and evening hour) point toward lower concern and are consistent with routine, lower-value activity. A minor countervailing signal from the day of week slightly raises suspicion, so the combined evidence yields a very low suspiciousness score.\n\nkey_factors:\n- from_bank=21745 (lowers suspicion): the sending bank ID could be consistent with a routine counterparty or expected source. \n- amount_paid=55.28 (lowers suspicion): the relatively small payment amount could be consistent with low-value, ordinary activity.\n- payment_format_cheque=1 (lowers suspicion): use of cheque could be consistent with traditional offline payment behavior.\n- hour=18 (lowers suspicion): the transaction occurring at hour 18 could reflect normal evening business or personal timing.\n- dayofweek=5 (raises suspicion): the day-of-week signal could indicate a timing pattern that slightly increases scrutiny compared with other days.\n\ninvestigation_context: If viewed together, the dominance of lowering factors with only a small weekday-related increase could be consistent with routine, low-risk behavior, though the timing pattern might warrant contextual interpretation."
-}

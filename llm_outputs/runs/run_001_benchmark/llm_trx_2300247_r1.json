@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2300247,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most factors point toward lower concern: absence of ACH, presence of a cheque payment, yuan used for both sides, identifiable sending/receiving bank IDs, and timing at hour 0 on day 0 all lower suspicion. The payment amount raises some concern but is small relative to those lowering signals, resulting in a very low overall suspiciousness score.\n\nkey_factors:\n- payment_format_ach (lowers suspicion): absence of ACH could be consistent with non-ACH payment flows that are less indicative of automated high-risk routing.\n- payment_format_cheque (lowers suspicion): presence of a cheque could be consistent with manual, traceable payment methods.\n- payment_currency_yuan (lowers suspicion): payment in yuan may indicate local currency use that reduces currency-mismatch concerns.\n- amount_paid (raises suspicion): a larger payment amount could be consistent with value-based risk that warrants attention in context.\n- from_bank (lowers suspicion): identifiable sending bank ID could be consistent with a clear counterparty relationship.\n\ninvestigation_context: If additional transactional or customer context becomes available, it could clarify whether the larger payment amount outweighs the multiple lowering indicators."
-}

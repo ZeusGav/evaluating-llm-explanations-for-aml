@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4421689,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very high because the transaction used payment_format_ach and involved a large amount_paid that matches amount_received, with euro currency also contributing to elevated concern. The transaction hour (hour=10) slightly lowers suspicion by suggesting business-hour timing, but it does not offset the other raising factors.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 ACH format could be consistent with rapid bank-to-bank transfers that warrant attention.\n- amount_paid (raises suspicion) \u2014 a large amount_paid could indicate a high-value transfer that may be atypical for the account.\n- amount_received (raises suspicion) \u2014 the matching amount_received could suggest immediate onward movement or circular flow of funds.\n- payment_currency_euro (raises suspicion) \u2014 use of euro may indicate cross-currency or cross-border exposure depending on the customer profile.\n- hour (lowers suspicion) \u2014 hour=10 may reflect business-hour activity, which could be less indicative of covert timing.\ninvestigation_context: If these factors are accurate, they could be consistent with layering or high-value transfer patterns and merit contextual review."
-}

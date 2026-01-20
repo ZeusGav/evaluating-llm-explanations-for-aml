@@ -1,7 +1,0 @@
-{
-  "transaction_id": 509060,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very low suspiciousness score is driven by multiple listed attributes that lower concern, including non-ACH/cash payment indicators, moderate transaction size, known sending/receiving banks, and local currency usage. No listed factors increase concern, so the combined signals point toward a pattern more consistent with routine activity than an obvious red flag.\n\nkey_factors:\n- payment_format_ach (lowers suspicion): absence of ACH may indicate use of alternative local rails and could be consistent with routine settlement.\n- payment_format_cash (lowers suspicion): cash payment indicator here reduces concern and may reflect in-person or local-currency cash handling.\n- amount_received (lowers suspicion): the transaction amount may be typical for regular customer activity rather than an exceptionally large transfer.\n- from_bank (lowers suspicion): the sending bank ID reduces concern and may suggest an expected counterparty or established banking relationship.\n- receiving_currency_brazil_real (lowers suspicion): payment in Brazilian real could be consistent with domestic transactions and lower cross-currency complexity.\n\ninvestigation_context: If these attributes align with the customer's normal behavior, they might reflect routine local settlement patterns rather than suspicious activity."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3004028,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Multiple top features point toward low-risk characteristics\u2014small equal paid/received amounts, a wire payment in UK pounds, and routine timing\u2014which collectively lower the score; no high-risk signals appear among the listed factors. Because these lowering factors dominate the profile, the overall suspiciousness is near zero.  \nkey_factors:\n- amount_paid (lowers suspicion): the small payment amount (17.75) could be consistent with routine low-value transfers.  \n- payment_format_wire (lowers suspicion): use of a wire method may indicate a standard bank transfer rather than unusual channels.  \n- receiving_currency_uk_pound (lowers suspicion): the payment being in UK pounds could align with ordinary domestic or expected currency flows.  \n- amount_ratio (lowers suspicion): a 1:1 paid/received ratio may reflect a straightforward single-currency transfer without conversion discrepancies.  \n- amount_received (lowers suspicion): the identical received amount (17.75) supports a simple, non-distorted settlement pattern.  \ninvestigation_context: If additional context is available, these indicators might reflect routine, low-value UK-pound wire activity rather than behavior that requires heightened scrutiny."
-}

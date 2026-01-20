@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1779156,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The transaction score is very low because multiple attributes reduce concern while a large received amount and the absence of credit-card payment modestly raise it. Lowering signals such as the sending bank, cash payment, and USD currency outweigh the smaller raising factors in this assessment.\n\nkey_factors:\n- payment_format_cash=1 (lowers suspicion) \u2014 if the payment is cash, this may reflect straightforward cash settlement patterns that reduce routing concern.\n- from_bank=2454 (lowers suspicion) \u2014 if originating from this sending bank ID, it may be consistent with expected counterparty behavior.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 if transacted in USD, this could align with standard currency flows for the parties involved.\n- amount_received=1.23617e+08 (raises suspicion) \u2014 if a large sum was received, it could increase exposure and warrant contextual review.\n- payment_format_credit_card=0 (raises suspicion) \u2014 if not paid by credit card, this might reflect a less-typical payment channel in this context.\n\ninvestigation_context: If reviewed, these mixed signals could indicate routine bank-to-bank cash flows but the substantial received amount may merit additional contextual inquiry."
-}

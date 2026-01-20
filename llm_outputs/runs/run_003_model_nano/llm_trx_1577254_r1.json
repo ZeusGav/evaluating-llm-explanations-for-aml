@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1577254,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The overall score is driven by several signals indicating unusual payment characteristics\u2014use of ACH, sizeable incoming funds, Sunday timing, and a non-card payment approach around 11:00. Two signals lessen risk from to_bank and payment_currency_us_dollar, but raised factors predominate.\nkey_factors:\n- payment_format_ach (raises suspicion) If the payment is sent via ACH, this could raise suspicion due to its association with certain patterns.\n- amount_received (raises suspicion) A sizeable amount received could raise suspicion depending on the expected funding profile.\n- dayofweek (raises suspicion) A transaction on Sunday could raise suspicion due to timing irregularities.\n- payment_format_credit_card (raises suspicion) Not using a credit card (0) could raise suspicion as it departs from common card-present patterns.\n- hour (raises suspicion) Processing at 11:00 could raise suspicion as timing may be outside typical business hours.\ninvestigation_context: If these signals align with the case context, this combination could indicate elevated risk and merit closer review."
-}

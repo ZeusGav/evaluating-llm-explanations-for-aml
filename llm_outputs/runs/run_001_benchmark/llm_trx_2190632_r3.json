@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2190632,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score reflects several strong increases\u2014ACH payment on Sunday, large identical paid/received amounts, and midday timing\u2014while euro currency indicators and the sending bank reduce the overall concern. These observations could be consistent with high-value transfer patterns or, alternatively, with legitimate euro-denominated flows that mitigate risk.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): ACH method could be consistent with higher-risk bank transfers or layering.\n- dayofweek=6 (raises suspicion): Transaction on Sunday could reflect non-standard timing used to avoid routine controls.\n- amount_received=10726.8 (raises suspicion): A large received amount might indicate significant funds movement warranting attention.\n- receiving_currency_euro=1 (lowers suspicion): Use of euros could reflect normal regional currency flows that offset other signals.\n- from_bank=27241 (lowers suspicion): The identified sending bank may have attributes that reduce concern relative to unknown senders.\ninvestigation_context: If verified, this mix of ACH timing and large equal in/out amounts alongside euro and originating-bank offsets could indicate either layering behavior or routine cross-border currency activity."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4567047,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The elevated score is driven by factors that raise suspicion (payment_format_ach=1, amount_paid=4540.12, hour=12), with two elements that lower suspicion (to_bank=231004, payment_currency_us_dollar=1). This combination could reflect higher risk from ACH and a sizable payment, tempered by known recipient bank and US-dollar handling.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): use of ACH could reflect a transfer channel that may be observed with caution.\n- amount_paid=4540.12 (raises suspicion): a relatively large single payment could indicate unusual activity.\n- hour=12 (raises suspicion): noon timing could be atypical for this activity.\n- to_bank=231004 (lowers suspicion): receiving to a known bank ID could reflect an expected destination.\n- payment_currency_us_dollar=1 (lowers suspicion): handling in US dollars is consistent with typical settlement patterns in this context.\ninvestigation_context: This combination could indicate elevated risk if the ACH transfer, larger payment, and noon timing occur together, while the known recipient bank and USD handling mitigate some concern."
-}

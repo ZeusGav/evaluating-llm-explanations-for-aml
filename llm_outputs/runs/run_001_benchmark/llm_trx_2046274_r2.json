@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2046274,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high suspiciousness score is driven primarily by the use of ACH, a sizable received amount, and the receiving bank, which raise concern. These raising signals are partially offset by the late hour and the sending bank identity, which lower the score but do not eliminate the other indicators.\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with rapid electronic movement of funds that merits closer attention.\n- amount_received (raises suspicion): a large received amount could indicate higher risk if it is inconsistent with expected activity.\n- to_bank (raises suspicion): the receiving bank ID may reflect counterparty characteristics that increase concern in this context.\n- hour (lowers suspicion): a later hour of activity might reflect routine after\u2011hours processing and reduces the level of suspicion.\n- from_bank (lowers suspicion): the sending bank ID may be associated with lower concern in this context.\ninvestigation_context: If additional account history or counterparty information shows unusual patterns or unexplained transfers, this combination of factors could be consistent with suspicious activity."
-}

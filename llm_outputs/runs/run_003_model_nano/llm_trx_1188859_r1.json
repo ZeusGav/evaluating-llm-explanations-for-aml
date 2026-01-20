@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1188859,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: One factor raises suspicion (payment_format_ach=1) while several others lower suspicion, producing a very small overall score. The lower signals include from_bank=6, receiving_currency_australian_dollar=1, payment_currency_australian_dollar=1, amount_received=1.20317e+06, and amount_paid=1.20317e+06.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) could reflect ACH usage, but other signals temper concern.\n- from_bank=6 (lowers suspicion) may reflect the sending bank is familiar or routine.\n- receiving_currency_australian_dollar=1 (lowers suspicion) indicates the receiving currency aligns with expected operations.\n- amount_received=1.20317e+06 (lowers suspicion) could correspond to typical settlement sizes.\n- amount_paid=1.20317e+06 (lowers suspicion) may mirror the received amount, reducing discrepancy.\n\ninvestigation_context: If the ACH payment format is routine for this counterpart and currency context, the resulting low score would be consistent with minimal suspicion."
-}

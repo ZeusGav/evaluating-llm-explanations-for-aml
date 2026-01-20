@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1847922,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most top indicators for this transaction lower its suspiciousness score \u2014 examples include use of a credit card, no ACH, identical paid and received amounts, euro currency, and a late-hour timestamp, which together point toward routine payment characteristics. No listed factor increases suspicion, so the combined signals produce the very low score.\n\nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion): could be consistent with a straightforward card-based purchase rather than complex funding arrangements.\n- payment_format_ach=0 (lowers suspicion): could indicate the transaction did not use ACH rails, aligning with simpler payment routing.\n- amount_received=863.89 (lowers suspicion): could reflect a single settled amount rather than fragmented incoming transfers.\n- amount_paid=863.89 (lowers suspicion): could suggest matching settlement with no apparent discrepancy between paid and received values.\n- receiving_currency_euro=1 (lowers suspicion): could be consistent with same-currency settlement reducing conversion complexity.\n\ninvestigation_context: If these indicators are representative, the pattern may be consistent with a routine euro-denominated credit-card payment with no ACH involvement."
-}

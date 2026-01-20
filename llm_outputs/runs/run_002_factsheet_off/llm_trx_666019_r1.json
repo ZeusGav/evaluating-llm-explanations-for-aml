@@ -1,7 +1,0 @@
-{
-  "transaction_id": 666019,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most strong signals lower suspicion \u2014 factors like non\u2011ACH format, originating and destination bank identifiers, cheque format, the received amount, currency and timing point toward routine activity, while small positive signals from the paid amount slightly raise it. Overall, the combined evidence yields a very low suspiciousness indication because the lowering factors outweigh the modest increase from the payment attributes.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 if ACH is not used this could be consistent with alternate, routine payment channels.\n- from_bank=10232 (lowers suspicion) \u2014 the originating bank identifier aligns with other non\u2011raising attributes and reduces concern.\n- payment_format_cheque=1 (lowers suspicion) \u2014 cheque format may indicate a conventional payment method rather than a high\u2011risk channel.\n- amount_received=1513.95 (lowers suspicion) \u2014 this received amount could be consistent with ordinary business or personal transfers.\n- amount_paid=1513.95 (raises suspicion) \u2014 the payment amount matching the received amount provides a small signal that merits attention in context.\n\ninvestigation_context: If further review is needed, these factors collectively could indicate routine payment behavior with only a minor, context\u2011dependent anomaly."
-}

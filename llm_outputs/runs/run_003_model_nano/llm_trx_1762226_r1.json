@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1762226,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Most factors lower the suspiciousness, suggesting routine patterns. However, the amount_received (raises suspicion) and payment_currency_us_dollar (raises suspicion) introduce a small concern.\n\nkey_factors:\n- amount_ratio (lowers suspicion) near 1 ratio could be consistent with standard settlement patterns.\n- amount_paid (lowers suspicion) very small amount paid could reflect routine micro-transactions.\n- amount_received (raises suspicion) amount received is tiny relative to typical flows and may indicate unusual handling.\n- payment_currency_us_dollar (raises suspicion) not using USD could reflect cross-border or alternative currency flow.\n- payment_format_bitcoin (lowers suspicion) presence of bitcoin formatting could reflect crypto transfer patterns.\n\ninvestigation_context: The interplay of small amount received and non-US currency usage could indicate atypical activity, while the remaining factors point to routine behavior."
-}

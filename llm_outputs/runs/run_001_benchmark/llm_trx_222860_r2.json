@@ -1,7 +1,0 @@
-{
-  "transaction_id": 222860,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because multiple listed attributes decrease concern \u2014 for example, identified sending/receiving banks, a reinvestment payment format, rupee currency, and modest equal amounts. No listed factor raises suspicion, so the combined indicators point toward a low-risk profile.  \nkey_factors:\n- from_bank=7 (lowers suspicion): identified sending bank could be consistent with a known counterparty relationship.  \n- payment_format_reinvestment=1 (lowers suspicion): reinvestment as the payment type may indicate routine portfolio activity.  \n- payment_currency_rupee=1 (lowers suspicion): use of rupees could be consistent with on\u2011shore domestic settlement.  \n- amount_paid=325.55 (lowers suspicion): a modest amount might reflect typical low-value client activity.  \n- hour=0 (lowers suspicion): timing at hour 0 may reflect off\u2011peak processing rather than atypical behavior.  \ninvestigation_context: If these data points accurately reflect the transaction, they might indicate routine, low\u2011risk reinvestment activity in rupees rather than suspicious conduct."
-}

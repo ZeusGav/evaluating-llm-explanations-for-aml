@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2331225,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very low suspiciousness score is driven mostly by attributes that lower concern\u2014payment_format_ach=0, from_bank=11107, amount_received=898.23, and payment_format_cheque=1\u2014which could be consistent with routine transaction patterns. The absence of a credit-card payment format (payment_format_credit_card=0) slightly raises suspicion, so the overall level remains low but not completely without uncertainty.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion), could be consistent with non-credit transfer behavior that often appears less risky.\n- from_bank=11107 (lowers suspicion), may reflect an expected or familiar originating bank for this account profile.\n- amount_received=898.23 (lowers suspicion), could indicate a mid-range amount consistent with routine activity.\n- payment_format_cheque=1 (lowers suspicion), may indicate a formal settlement method without immediate red flags.\n- payment_format_credit_card=0 (raises suspicion), may indicate deviation from credit-card flows and slightly increases uncertainty.\n\ninvestigation_context: If these attributes are confirmed, they could point toward routine non-credit-card transfers rather than clearly high-risk activity."
-}

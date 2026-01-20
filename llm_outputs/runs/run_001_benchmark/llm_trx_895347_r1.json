@@ -1,7 +1,0 @@
-{
-  "transaction_id": 895347,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Multiple strong lowering signals (credit card funding, no ACH, specific sending/receiving banks, Swiss franc usage and transaction timing/amount) outweigh a single small raising signal (amount paid), producing a very low suspiciousness score. Together these factors suggest the payment pattern could be consistent with routine card-funded activity while the paid amount might merit contextual review.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could indicate the transaction did not use ACH rails and may be consistent with card or non-ACH channels.\n- payment_format_credit_card=1 (lowers suspicion): credit card funding could be consistent with consumer or merchant payments rather than wire-based high-risk flows.\n- from_bank=238190 (lowers suspicion): the sending bank identifier aligns with other lowering signals and may reflect a routine origin for this transfer.\n- receiving_currency_swiss_franc=1 (lowers suspicion): receipt in Swiss francs may reflect normal currency choice for this counterparty or corridor.\n- amount_paid=5011.57 (raises suspicion): the paid amount is notable and could warrant contextual scrutiny if it is atypical for the customer profile.\n\ninvestigation_context: If account history and counterparty information align with these payment method, bank, and currency details, the pattern might reflect routine card-funded transactions rather than illicit activity."
-}

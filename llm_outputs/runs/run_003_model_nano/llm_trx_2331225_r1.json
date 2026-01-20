@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2331225,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Multiple factors collectively lower suspicion. The absence of a credit card payment format slightly raises suspicion, producing a small net score.\n\nkey_factors:\n- payment_format_credit_card=0 (raises suspicion) \u2014 could raise suspicion in contexts where card-based payments are common.\n- from_bank=11107 (lowers suspicion) \u2014 could lower suspicion if this sending bank aligns with the customer\u2019s established counterparties.\n- amount_received=898.23 (lowers suspicion) \u2014 could lower suspicion if the amount matches typical customer activity.\n- hour=1 (lowers suspicion) \u2014 could lower suspicion as this early hour is often associated with routine transfers.\n- dayofweek=0 (lowers suspicion) \u2014 could lower suspicion since Monday activity is common in business routines.\n\ninvestigation_context: This profile could reflect routine activity with a small upward signal from the absence of credit card payments, warranting context review."
-}

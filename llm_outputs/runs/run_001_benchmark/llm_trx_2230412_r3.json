@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2230412,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very high suspiciousness score reflects multiple raising factors\u2014use of ACH, a large paid amount, and a Sunday transaction\u2014partly offset by lowering factors such as receipt in euros and an equal paid/received ratio. This mix could be consistent with a high-value weekend ACH transfer that appears elevated in risk but is somewhat mitigated by euro settlement and a 1:1 amount relationship.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with higher-risk bank transfer activity depending on customer norms.\n- amount_paid=9301.71 (raises suspicion) \u2014 a large payment amount may indicate elevated value that warrants scrutiny.\n- dayofweek=6 (raises suspicion) \u2014 a Sunday timestamp might reflect atypical timing and could be relevant to risk assessment.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 receipt in euros may reduce concern in contexts where euro settlement is expected.\n- amount_ratio=1 (lowers suspicion) \u2014 a 1:1 paid/received ratio might indicate no currency spread and could mitigate risk.\n\ninvestigation_context: If accurate, these indicators could be consistent with a high-value ACH transfer on a weekend that appears risky primarily due to method, amount, and timing but is partially mitigated by euro settlement and matched amounts."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1970067,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The high score is driven by factors that raise suspicion, notably ACH payments and large matched inbound/outbound amounts, with Friday timing adding concern. However, the USD-denominated transfers and the sending-from-bank indicator can modestly lower the overall suspicion in certain contexts.\nkey_factors:\n- payment_format_ach raises suspicion: ACH usage could reflect electronic transfers that warrant review.\n- amount_received raises suspicion: large inbound amount may indicate high-risk funds movement.\n- amount_paid raises suspicion: large outbound amount could signal round-tripping or staged transfers.\n- dayofweek raises suspicion: Friday timing could align with end-of-week activity patterns.\n- from_bank lowers suspicion: funds originate from this sending bank ID could indicate legitimate source.\ninvestigation_context: This combination could reflect a higher-risk pattern when ACH usage and large, equal transfers occur on a Friday, unless offset by USD denomination or legitimate bank sourcing."
-}

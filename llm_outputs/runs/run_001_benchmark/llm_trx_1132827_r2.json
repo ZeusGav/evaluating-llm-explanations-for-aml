@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1132827,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: A couple of features raise concern \u2014 the payment_format_ach and a relatively large amount_paid \u2014 but several stronger signals lower concern, including amount_diff, matching bank IDs, and payment_currency_us_dollar. Taken together, the lowering factors outweigh the raising ones, producing a low suspiciousness result.  \nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 if ACH, this could be consistent with remote or automated transfers that merit attention.\n- amount_paid (raises suspicion) \u2014 a larger payment value may increase scrutiny because more funds are involved.\n- amount_diff (lowers suspicion) \u2014 a notable difference between amount_paid and amount_received could reflect fees or conversions and reduce immediate concern.\n- from_bank and to_bank (lowers suspicion) \u2014 matching sending and receiving bank IDs may indicate an internal or intra-bank transfer, lowering concern.\n- payment_currency_us_dollar (lowers suspicion) \u2014 use of USD may reflect routine or expected settlement and reduce suspicion.  \ninvestigation_context: If reviewed, the ACH format and larger paid amount could be consistent with automated or higher-value transfers, while matching bank IDs, payment differences, and USD currency might suggest internal or routine activity."
-}

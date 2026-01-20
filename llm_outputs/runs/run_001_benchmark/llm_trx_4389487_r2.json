@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4389487,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Several strong indicators raise suspicion \u2014 ACH payment, Saudi riyal currency, a Sunday timestamp (dayofweek=6), and a large received amount together point toward elevated risk patterns. Two bank identifiers (from_bank=119 and to_bank=49365) lower suspicion but do not fully offset the other raising signals.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): an ACH payment could indicate rapid bank-to-bank movement.\n- payment_currency_saudi_riyal=1 (raises suspicion): payment in Saudi riyal could reflect cross-border or jurisdictional activity.\n- amount_received=59658.8 (raises suspicion): the sizable incoming amount could be consistent with higher-value activity.\n- from_bank=119 (lowers suspicion): the sending bank ID lowers suspicion and could suggest a routine origin.\n- to_bank=49365 (lowers suspicion): the receiving bank ID lowers suspicion and could indicate an expected destination.\n\ninvestigation_context: If these indicators are accurate, they could be consistent with patterns that merit further contextual review."
-}

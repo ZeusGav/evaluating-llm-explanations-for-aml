@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3075650,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: High suspiciousness is driven by multiple listed signals that increase concern\u2014an ACH payment in US dollars for a substantial amount routed to a specific receiving bank\u2014with no listed factors reducing suspicion. These combined signals could be consistent with rapid, high\u2011value USD movement to a single destination and may indicate patterns warranting closer contextual review.\n\nkey_factors:\n- payment_format_ach (raises suspicion): the use of ACH could be consistent with fast electronic transfers that may be used to move funds quickly.\n- amount_received (raises suspicion): a substantial amount received may indicate a high\u2011value transfer worthy of closer scrutiny.\n- amount_paid (raises suspicion): the identical paid amount could suggest passthrough activity or single\u2011leg movement of funds.\n- receiving_currency_us_dollar (raises suspicion): receipt in USD may be relevant for monitoring cross\u2011border/value concentrations in that currency.\n- to_bank (raises suspicion): routing to bank ID 1467 may indicate concentration to a single destination or counterparty that could merit attention.\n\ninvestigation_context: If validated, these factors together could be consistent with large single ACH USD transfers to a single receiving bank and may warrant further contextual review."
-}

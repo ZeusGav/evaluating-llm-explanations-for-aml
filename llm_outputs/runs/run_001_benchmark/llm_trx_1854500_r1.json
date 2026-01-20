@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1854500,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score is driven by an ACH payment combined with large equal paid and received amounts and identifiable sending/receiving banks, which together raise concern about significant interbank fund movement. Use of US dollars slightly lowers concern, but not enough to offset the other raising factors, so the overall profile remains highly suspicious.\n\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 ACH usage could be consistent with rapid electronic transfers that may facilitate layering. \n- amount_received (raises suspicion) \u2014 a large received amount could indicate significant value movement that may reflect concentration or passthrough activity.\n- amount_paid (raises suspicion) \u2014 an equal large paid amount could suggest a near-immediate pass-through consistent with transactional layering.\n- to_bank (raises suspicion) \u2014 the receiving bank identifier could be associated with concentrated flows to a specific institution, which may merit attention.\n- payment_currency_us_dollar (lowers suspicion) \u2014 use of USD may, in some contexts, be more routine and thus slightly reduce concern.\n\ninvestigation_context: If these patterns are accurate, they may be consistent with potential layering or atypical interbank movement and could inform further contextual review."
-}

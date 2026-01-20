@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1243036,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most indicators point toward low suspiciousness because the payment amount is very small, the paid and received amounts match, the payment used a credit card in USD, and the receiving bank and timing reduce concern. However, the sender bank and the mere fact of an amount being received slightly raise concern, so the lowering signals dominate overall.\nkey_factors:\n- from_bank=70 (raises suspicion): the sender bank identifier is associated with higher concern and could reflect an origin warranting scrutiny.\n- amount_received=1.22 (raises suspicion): receipt of funds, even if small, may be notable depending on sender patterns or context.\n- amount_paid=1.22 (lowers suspicion): the very small payment amount could be consistent with routine low-value activity.\n- payment_format_credit_card=1 (lowers suspicion): use of a credit card in USD could be consistent with ordinary consumer payments and reduce anomalousness.\n- to_bank=223041 (lowers suspicion): the receiving bank identifier in this record reduces concern and might indicate a typical destination.\ninvestigation_context: If these factor interpretations hold, the pattern may be consistent with routine low-value, card-based transfers from the indicated sender bank and receiving bank."
-}

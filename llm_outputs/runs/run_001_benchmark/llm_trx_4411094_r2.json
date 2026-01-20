@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4411094,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score 0.857111 is driven largely by the transaction being sent as ACH and by indicators tied to non\u2011USD payment, which raise concern; at the same time, the specific sending bank, the received amount and the timing (weekday morning) reduce the level of concern. These opposing signals produce a high suspiciousness level but with noticeable contextual offsets.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 use of ACH could be consistent with lower\u2011visibility transfers or alternate account routing.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 a non\u2011USD payment indicator could reflect cross\u2011currency routing choices.\n- amount_paid (raises suspicion) \u2014 the payment size may be consistent with mid\u2011sized transfers that sometimes merit scrutiny.\n- amount_received (lowers suspicion) \u2014 the received amount in this case reduces the signal and may align with routine expectations.\n- from_bank (lowers suspicion) \u2014 the sending bank identifier here decreases concern and could indicate a familiar counterparty.\ninvestigation_context: If these patterns are accurate, the mix of ACH usage with non\u2011USD indicators could be consistent with atypical routing or currency choice."
-}

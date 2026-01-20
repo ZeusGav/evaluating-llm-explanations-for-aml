@@ -1,7 +1,0 @@
-{
-  "transaction_id": 222860,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very low suspiciousness score is driven by multiple listed attributes that lower concern, including reinvestment format, rupee currency usage, modest amounts, and matching bank indicators. No listed factors increase suspicion, so the combined profile suggests low concern under the provided attributes.\nkey_factors:\n- from_bank=7 (lowers suspicion) \u2014 could be consistent with a familiar sending bank and routine counterparty activity.\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with alternate settlement methods.\n- payment_format_reinvestment=1 (lowers suspicion) \u2014 may indicate automated reinvestment behavior rather than ad hoc transfers.\n- amount_paid=325.55 (lowers suspicion) \u2014 modest payment size could be consistent with routine retail or reinvestment amounts.\n- receiving_currency_rupee=1 (lowers suspicion) \u2014 use of local currency could be consistent with domestic settlement.\ninvestigation_context: If additional context is sought, this combination of reinvestment format, rupee currency, modest amounts, and matching banks could be consistent with routine domestic reinvestment activity."
-}

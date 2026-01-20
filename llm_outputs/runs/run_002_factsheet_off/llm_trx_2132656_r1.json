@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2132656,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Suspiciousness is high because an ACH-format transfer of a substantial amount denominated in Saudi riyal strongly raises concern. Timing on dayofweek=2 and hour=18 slightly lowers concern but does not offset the other raising factors.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): an ACH payment format could be consistent with automated or high-volume transfers that merit scrutiny.\n- amount_received=23526.1 (raises suspicion): a large received amount could indicate significant value movement worthy of closer review.\n- payment_currency_saudi_riyal=1 (raises suspicion): use of Saudi riyal may point to region-specific flows that could be relevant depending on counterparties.\n- dayofweek=2 (lowers suspicion): occurrence on dayofweek=2 could reflect routine weekday timing and slightly reduces atypicality.\n- hour=18 (lowers suspicion): transaction at hour=18 may align with normal evening business or consumer activity and slightly lowers concern.\ninvestigation_context: If supporting documentation or counterparty information shows a legitimate commercial purpose, these patterns may be consistent with lawful activity."
-}

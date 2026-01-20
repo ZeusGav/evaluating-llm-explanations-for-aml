@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2184310,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is driven up by indicators such as an ACH payment format and large, matching received and paid amounts, together with banking- and currency-related signals that raise concern. One factor (hour=4) slightly lowers suspicion, suggesting the timing may reflect routine off-peak processing rather than deliberate concealment.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): presence of an ACH payment could be consistent with automated or large-value bank transfers that merit attention.\n- amount_received=15756 (raises suspicion): a high received amount may indicate substantial value movement that could be atypical for ordinary retail activity.\n- amount_paid=15756 (raises suspicion): an identical paid amount could suggest immediate passthrough or circular movement of funds, which may reflect layering.\n- hour=4 (lowers suspicion): transaction occurring at hour=4 may reduce concern somewhat, as off-peak timing can align with routine processing.\n- payment_format_credit_card=0 (raises suspicion): absence of credit card involvement points to bank-to-bank movement rather than consumer card spending, which may warrant scrutiny.\n\ninvestigation_context: If these attributes are accurate, they may be consistent with a high-value ACH bank-to-bank transfer and could reflect expedited fund movement."
-}

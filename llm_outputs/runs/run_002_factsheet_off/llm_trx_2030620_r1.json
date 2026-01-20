@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2030620,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because multiple strong lowering factors (from_bank=21745, amount_paid=55.28, payment_format_ach=0, payment_format_cheque=1) reduce concern, while only small increases from dayofweek=5 and payment_currency_us_dollar=0 slightly raise it. Together, this could be consistent with routine, low\u2011value payments in a non\u2011USD currency occurring on a particular weekday, though context could change that interpretation.\n\nkey_factors:\n- from_bank=21745 (lowers suspicion): if this is a familiar or regular sending bank, it could be consistent with routine counterparty activity.\n- amount_paid=55.28 (lowers suspicion): the low transfer amount could be consistent with ordinary small-value payments rather than complex layering.\n- payment_format_ach=0 (lowers suspicion): absence of ACH here could reflect an alternative payment route that, in this instance, reduces concern.\n- payment_format_cheque=1 (lowers suspicion): presence of a cheque payment could be consistent with documented, traceable transactions.\n- dayofweek=5 (raises suspicion): occurrence on that weekday could slightly increase scrutiny if it departs from typical timing patterns.\n\ninvestigation_context: If these attributes align with the customer's normal behavior, they may indicate routine, low\u2011risk payments; if not, they might reflect an atypical pattern that requires contextual interpretation."
-}

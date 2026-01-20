@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1152073,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Overall suspiciousness is high because multiple factors raise concern \u2014 notably ACH payment, large equal paid/received amounts, and weekend/afternoon timing \u2014 while the sending bank and USD currency moderate that concern. These signals could be consistent with time-sensitive or high-value account transfers, although the identified sender and USD usage might reflect routine counterparty relationships.\n\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with direct bank-to-bank transfers that enable rapid movement of funds.\n- amount_received (raises suspicion): a large received amount could indicate higher-value transactions that merit scrutiny.\n- dayofweek (raises suspicion): occurring on dayofweek=6 (Sunday) could reflect atypical timing for normal business activity.\n- from_bank (lowers suspicion): the specific sending bank ID may correspond to an expected or lower-risk origin, reducing immediate concern.\n- payment_currency_us_dollar (lowers suspicion): payment in USD could indicate routine currency flows that lessen atypicality.\n\ninvestigation_context: If confirmed, this combination could point to high-value ACH activity on a Sunday afternoon that might warrant attention given mixed indicators."
-}

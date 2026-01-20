@@ -1,7 +1,0 @@
-{
-  "transaction_id": 854696,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Most factors lower suspicion through small amounts, standard bank IDs, and typical timing. However, ACH usage and euro as the payment currency provide modest increases, resulting in a very small overall suspiciousness score.\nkey_factors:\n- payment_format_ach (raises suspicion): The use of ACH as the payment format could raise suspicion depending on typical transfer channels for this transaction.\n- amount_paid (lowers suspicion): The payment amount of 16.6 is small; if consistent with usual activity, this lowers suspicion.\n- amount_received (lowers suspicion): The receiving amount of 16.6 aligns with typical activity, which lowers suspicion.\n- to_bank (lowers suspicion): The receiving bank ID 4600 may be common for this payer, which lowers suspicion.\n- payment_currency_euro (raises suspicion): If euros are used for the payment, this could raise suspicion in contexts where euro payments are less typical for this partner.\ninvestigation_context: This pattern could be consistent with routine activity in some contexts, but the ACH and euro-related signals may warrant closer review."
-}

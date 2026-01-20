@@ -1,7 +1,0 @@
-{
-  "transaction_id": 222860,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most top contributing attributes lower the suspiciousness score\u2014bank identifiers, payment format, currency, amounts and timing all push the assessment toward low concern. No listed top factors raise suspicion, so their combined effect yields a very low suspiciousness score.\nkey_factors:\n- from_bank=7 (lowers suspicion); could reflect a sending bank associated with routine transfers.\n- payment_format_ach=0 (lowers suspicion); could indicate a standard ACH-style payment channel rather than an unusual method.\n- payment_format_reinvestment=1 (lowers suspicion); could be consistent with reinvestment-type activity that appears internal or expected.\n- payment_currency_rupee=1 (lowers suspicion); could reflect transactions conducted in the local currency rather than cross-currency movement.\n- amount_paid=325.55 (lowers suspicion); could align with modest transaction size consistent with routine payments.\ninvestigation_context: If these attributes match the customer's normal behavior, the low score may indicate routine activity rather than suspicious conduct."
-}

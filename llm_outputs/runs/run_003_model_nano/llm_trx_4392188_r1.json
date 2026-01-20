@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4392188,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Overall, the suspiciousness score is very low because several factors decrease suspicion (from_bank, payment_format_ach, to_bank). At the same time, upward signals from amount_paid and hour contribute modestly to the assessment.\nkey_factors:\n- from_bank (lowers suspicion) could reflect a routine transfer to a known counterparty, reducing concern if the bank is expected.\n- payment_format_ach (lowers suspicion) may reflect standard ACH usage in normal workflows, reducing concern.\n- to_bank (lowers suspicion) receiving from a familiar counterpart; reduces suspicion if typical.\n- amount_paid (raises suspicion) could indicate an unusually large payment relative to normal activity, increasing concern.\n- hour (raises suspicion) activity at 6:00 could be outside typical hours, increasing concern.\ninvestigation_context: This assessment could reflect routine activity if the lowering factors align with expected behavior, or suggest closer review if the upward signals are material."
-}

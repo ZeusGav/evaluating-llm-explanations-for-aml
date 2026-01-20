@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4411094,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is elevated because payment_format_ach=1, payment_currency_us_dollar=0, and amount_paid=2217.25 raise indicators consistent with notable transfer method, non\u2011USD movement, and the paid amount. These increases are partially offset by from_bank=236867, amount_received=2217.25, and timing factors (dayofweek=4, hour=6) which lower suspicion by suggesting a straightforward flow and routine timing.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 ACH usage could be consistent with automated or batch transfers that warrant scrutiny.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 absence of USD may indicate cross\u2011currency routing that complicates traceability.\n- amount_paid=2217.25 (raises suspicion) \u2014 this paid amount could be consistent with structured or repeated disbursements.\n- from_bank=236867 (lowers suspicion) \u2014 the originating bank identifier may reflect bank\u2011specific context that reduces concern.\n- amount_received=2217.25 (lowers suspicion) \u2014 identical received and paid amounts may suggest a direct pass\u2011through rather than complex layering.\ninvestigation_context: If taken together, these signals could be consistent with either layering-style transfers or a simple pass\u2011through depending on additional transactional context."
-}
