@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2148592,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 16.8171,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP +2.8217, direction=increase) was the single largest driver — the model flagged the transaction primarily because it was sent via ACH.\n- payment_currency_saudi_riyal (value=1; SHAP +0.626) and receiving_currency_saudi_riyal (value=1; SHAP +0.409) both increased the score — the payment and receipt are in Saudi riyal.\n- dayofweek (value=6; SHAP +0.607, direction=increase) contributed positively — the transaction occurred on day 6 (Sunday), which raised the model score.\n- amount_received (value=71485.3; SHAP +0.488) provided an additional moderate increase — the received amount materially increased the predicted risk.\n- Offsetting the above, from_bank (value=149345; SHAP -0.702, direction=decrease) and to_bank (value=148586; SHAP -0.424, direction=decrease) reduced the model’s predicted risk.\n\nConclusion:\nThe model flagged this transaction mainly because it was an ACH transfer (payment_format_ach=1) in Saudi riyal (payment_currency_saudi_riyal=1 and receiving_currency_saudi_riyal=1), executed on day 6 (Sunday) with a non‑trivial received amount (71485.3) — these factors increased the score. However, the sending and receiving bank IDs (from_bank=149345 and to_bank=148586) produced negative SHAP contributions that partially offset the increase. If pursuing review, focus on verifying the purpose and source/beneficiary relationship for an ACH SAR payment on day 6 for ~71,485.3, noting that bank identifiers reduced but did not eliminate the model’s concern."
+}

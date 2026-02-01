@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4723772,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.9326,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.04756, increases) — the model’s largest driver is that this is an ACH payment.\n- dayofweek = 6 (Sunday) (SHAP +0.661366, increases) — timing on dayofweek 6 contributed upward.\n- payment_currency_saudi_riyal = 1 (SHAP +0.481182, increases) and receiving_currency_saudi_riyal = 1 (SHAP +0.214484, increases) — both currency features increased the score.\n- amount_received = 31774.2 (SHAP +0.423898, increases) — the received amount contributed to the flag.\n- from_bank = 48308 (SHAP −0.512748, decreases) — this sending bank ID reduced the score but did not offset the increases.\n\nConclusion:\nThe transaction was flagged primarily because it is an ACH transfer (payment_format_ach=1) in Saudi Riyal (payment_currency_saudi_riyal=1; receiving_currency_saudi_riyal=1) of 31,774.2 on dayofweek=6, with the sending bank (from_bank=48308) only partially mitigating the signal. If further review is needed, focus on the ACH payment, currency, timing, and amount."
+}

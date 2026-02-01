@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5011781,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 22.4908,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+3.10473; direction: increase): This is the dominant driver pushing the flag, indicating the transaction uses ACH as the payment method.\n- to_bank (value=22; SHAP=+0.90173; direction: increase): Funds are being sent to another bank, contributing to the flag signal.\n- amount_received (13338.3; SHAP=+0.871392; direction: increase) and amount_paid (13338.3; SHAP=+0.781259; direction: increase): Both receiving and paying amounts are high and equal, adding to the model’s concern through positive contributions.\n- dayofweek (6; SHAP=+0.730569; direction: increase): The transaction occurs on Sunday, which is a contributing timing signal.\n- from_bank (value=20; SHAP=-0.981696; direction: decrease): This feature reduces the risk signal, acting as a mitigating factor relative to the top positive drivers.\n\nConclusion:\nBased on the strongest drivers, the flag appears driven by ACH usage to a different bank with substantially matched incoming/outgoing amounts and Sunday timing, with a mitigating signal from the sending bank. While the from_bank effect lowers risk somewhat, the combination of ACH, to_bank destination, and matching amounts justifies a manual review of this transaction under AML scrutiny."
+}

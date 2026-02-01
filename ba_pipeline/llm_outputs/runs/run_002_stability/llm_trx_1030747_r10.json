@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1030747,
+  "run_name": "run_002_stability",
+  "repeat": 10,
+  "model": "gpt-5-mini",
+  "latency_s": 17.007,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.95104, direction: increase) — the use of ACH was the single largest positive driver of the score.\n- amount_received = 56984.0 (SHAP +0.74649, direction: increase) — the received amount contributed materially to the flag.\n- dayofweek = 6 (SHAP +0.68997, direction: increase) — the transaction occurring on day 6 increased the score.\n- payment_currency_saudi_riyal = 1 (SHAP +0.52688, direction: increase) — payment currency = Saudi Riyal increased the score.\n- (Noting a countervailing effect) from_bank = 249176 (SHAP −0.32577, direction: decrease) — this sending-bank feature reduced the score relative to the above drivers.\n\nConclusion:\nThe alert is primarily driven by an ACH payment (payment_format_ach=1) of a relatively large amount (amount_received=56984.0) denominated in Saudi Riyal (payment_currency_saudi_riyal=1) and executed on dayofweek=6; these factors collectively increased the model score enough to trigger the flag despite a modest decreasing contribution from from_bank. If ACH transfers of this magnitude in SAR on day 6 are atypical for the entity, that combination likely explains the alert and warrants further reviewer investigation."
+}

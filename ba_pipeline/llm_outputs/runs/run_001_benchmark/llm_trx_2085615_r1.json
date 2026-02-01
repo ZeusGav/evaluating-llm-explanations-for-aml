@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2085615,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 21.1063,
+  "llm_text": "Why:\n- payment_format_ach (value=1, SHAP=+2.82653): the use of ACH was the single largest positive contributor to the flag score.\n- amount_received (value=16,655.7, SHAP=+1.19866) and amount_paid (value=16,655.7, SHAP=+0.51998): the relatively large, equal paid/received amount increased the score.\n- to_bank (value=20, SHAP=+0.867398): the receiving bank ID (20) increased the score.\n- dayofweek (value=6 → Sunday, SHAP=+0.834764): occurrence on dayofweek=6 (Sunday) increased the score.\n- hour (value=0, SHAP=-0.791869) and from_bank (value=12513, SHAP=-0.709333): a midnight hour and the sending bank ID (12513) each reduced the score (partial offsets).\n\nConclusion:\nThe transaction was flagged primarily because it is an ACH transfer (payment_format_ach=1) of a sizable amount (16,655.7) into receiving bank ID 20 that occurred on dayofweek=6 (Sunday); these factors jointly raised the model score. The midnight hour (hour=0) and the sending bank (from_bank=12513) partially mitigated the score. If pursuing review, focus checks on the ACH payment details and the receiving-bank context (to_bank=20) given the identified drivers."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2216614,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.0878,
+  "llm_text": "Why:\n- payment_format_ach: payment_format_ach = 1 contributed strongly to an increased score (SHAP +3.05803), so the ACH payment method was the primary driver of the flag.\n- dayofweek: dayofweek = 6 (Sunday) increased the score (SHAP +0.719058), indicating the transaction timing (Sunday) pushed the alert higher.\n- amount_received and amount_paid: amount_received = 17,113.6 (SHAP +0.604153) and amount_paid = 17,113.6 (SHAP +0.494747) both increased the score, so the magnitude of the payment in the reported currency contributed to the flag.\n- from_bank: from_bank = 222 decreased the score (SHAP −0.671646), so the sender bank identifier partially offset the other increasing factors.\n\nConclusion:\nThe model flagged this transaction mainly because it was an ACH payment (payment_format_ach=1) of relatively large size (amount_received and amount_paid ≈ 17,113.6) executed on dayofweek=6 (Sunday), with those factors producing the largest positive SHAP contributions. This increase was partially mitigated by the negative contribution from from_bank=222. If further review is needed, focus checks on the ACH characteristics and the Sunday execution, since those features most directly drove the alert."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1152073,
+  "run_name": "run_002_stability",
+  "repeat": 5,
+  "model": "gpt-5-mini",
+  "latency_s": 15.2687,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.902) — the ACH payment format was the single largest positive contributor to the flag.\n- amount_received = 15968.2 (SHAP +0.900) and amount_paid = 15968.2 (SHAP +0.764) — the transaction amount (same paid/received) meaningfully increased the risk score.\n- dayofweek = 6 (SHAP +0.782) — the transaction occurring on day 6 (Sunday) further increased the score.\n- from_bank = 908 (SHAP −0.922) — the sending bank reduced the score and partially offset the above increases.\n\nConclusion:\n- The model flagged this transaction primarily because an ACH payment (payment_format_ach) of a sizable amount (amount_paid/amount_received = 15968.2) occurred on dayofweek = 6 (Sunday); the sending bank (from_bank = 908) reduced but did not fully negate the overall risk signal.\n- For review, focus on validating the ACH origin and the payment amount/timing (payment_format_ach, amount_paid/amount_received, dayofweek) since those are the main drivers of the alert."
+}

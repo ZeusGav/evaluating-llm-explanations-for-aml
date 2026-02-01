@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5015772,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 28.2418,
+  "llm_text": "Why\n\n- payment_format_ach (value=1): This ACH payment format has the strongest positive signal (SHAP_value=2.8679, direction=increase), indicating the transaction is processed via ACH, which is a high-risk channel in many AML models.\n\n- amount_received (14593.3): A large value received contributes (SHAP_value=1.08238, direction=increase). The substantial inbound amount supports the elevated risk signal.\n\n- amount_paid (14593.3): The identical large amount paid also contributes (SHAP_value=0.577666, direction=increase), reinforcing the pattern of a high-value transfer.\n\n- to_bank (25547): This receives a negative SHAP signal (SHAP_value=-0.484506, direction=decrease). This acts as a mitigating factor relative to the top three signals, indicating a reduced risk contribution from the recipient bank identifier.\n\n- dayofweek (5): Friday (dayofweek=5) adds an additional increase signal (SHAP_value=0.441732, direction=increase), which can be associated with timing patterns in some illicit activity scenarios.\n\nConclusion\n\nBased on the top drivers, the transaction presents a high-risk pattern driven by ACH-based payment (payment_format_ach) with large, equal amounts received and paid (amount_received and amount_paid), occurring on a Friday (dayofweek). The negative signal from to_bank slightly mitigates risk, but the overall driver mix remains elevated for review."
+}

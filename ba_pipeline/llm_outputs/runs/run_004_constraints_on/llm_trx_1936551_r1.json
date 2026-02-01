@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1936551,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 8.2158,
+  "llm_text": "Why: The model flagged this transaction primarily because payment_format_ach = 1 (large positive SHAP 2.8596), indicating an ACH payment format strongly increases score. High monetary values (amount_received = 17065.8, SHAP 0.921956; amount_paid = 17065.8, SHAP 0.873791) further increase the signal. The transaction occurring on dayofweek = 6 (Sunday, SHAP 0.670465) also raises the score. These drivers together explain the elevated flag.\n\nConclusion: The flag is driven mainly by ACH payment method plus sizable, matching paid/received amounts and a weekend timing. Notably, from_bank (24963, SHAP -0.53296) and to_bank (8771, SHAP -0.265166) provided downward pressure on the score, partially offsetting the increase. If further review is needed, focus on ACH routing and the large equal payment amounts given the weekend timestamp."
+}

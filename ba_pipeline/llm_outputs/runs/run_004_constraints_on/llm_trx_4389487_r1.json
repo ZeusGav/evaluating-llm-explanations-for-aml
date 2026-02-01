@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4389487,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 14.306,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.97296, direction increase): the ACH payment format is the single largest positive driver of the flag.\n- dayofweek = 6 (SHAP +0.635554, increase): occurrence on day 6 (Sunday) raised the score.\n- payment_currency_saudi_riyal = 1 (SHAP +0.613033, increase) and amount_received = 59658.8 (SHAP +0.535469, increase): use of Saudi Riyal and a relatively large received amount both increased the alert likelihood.\n- from_bank = 119 (SHAP −0.395323, decrease): the sending bank reduced the overall score (partially offsetting the increases).\n\nConclusion:\nThe transaction was flagged mainly because it was an ACH payment (payment_format_ach) on day 6, settled in Saudi Riyals with a sizable amount (amount_received). The presence of from_bank = 119 lowered the risk contribution but did not fully offset the other positive drivers."
+}

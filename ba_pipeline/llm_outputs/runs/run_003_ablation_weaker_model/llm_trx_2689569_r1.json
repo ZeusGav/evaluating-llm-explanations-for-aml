@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2689569,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 24.5444,
+  "llm_text": "Why\n- payment_format_ach = 1 (SHAP_value = 3.00401; direction: increase): This is the strongest driver, indicating that using an ACH payment format significantly increases the risk signal for this transaction.\n- payment_currency_saudi_riyal = 1 (SHAP_value = 0.595907; direction: increase): Saudi Riyal as the payer currency contributes to the risk signal.\n- receiving_currency_saudi_riyal = 1 (SHAP_value = 0.244702; direction: increase): Receiving in Saudi Riyal further reinforces the risk signal.\n- amount_received = 77127.4 (SHAP_value = 0.27204; direction: increase) and amount_paid = 77127.4 (SHAP_value = 0.153102; direction: increase): The substantial transfer amount contributes to the elevated risk.\n- from_bank = 149340 (SHAP_value = -0.45353; direction: decrease): This factor reduces the risk signal, acting as a mitigating influence.\n\nConclusion\n- The flag appears driven primarily by the ACH payment format and the use of Saudi Riyal on both ends, augmented by a relatively large transfer amount. The sending-bank factor reduces risk somewhat. Based on these drivers alone, the transaction shows an elevated risk signal that justifies further AML review, focusing on ACH-related activity and currency pattern, with attention to the legitimacy of the large transfer."
+}

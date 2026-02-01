@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1746377,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 18.3456,
+  "llm_text": "Why:\n- payment_format_ach (value=1) with SHAP value 2.9112 (direction: increase) — The model assigns a strong positive contribution to ACH-based payments, indicating this payment format materially increases the risk signal.\n- amount_paid (7052.99) with SHAP value 1.1174 (direction: increase) — A relatively large payment amount contributes positively to the risk score, reinforcing the elevated risk impression.\n- dayofweek (6, Sunday) with SHAP value 0.891227 (direction: increase) — Timing on Sunday adds a further positive risk signal according to the model.\n\nOptional offset:\n- from_bank (23842) with SHAP value -0.391379 (direction: decrease) — A smaller negative contribution suggesting sending from this bank slightly lowers the risk, partially offsetting the top drivers.\n\nConclusion:\nBased on the top contributors, the transaction shows elevated risk characteristics driven by ACH payment format, a sizable payment amount, and weekend timing, with a minor offset from the sending bank. These drivers alone justify a heightened review; this does not establish illicit activity, but warrants further investigation (e.g., corroborating customer context, source of funds, and counterparty details)."
+}

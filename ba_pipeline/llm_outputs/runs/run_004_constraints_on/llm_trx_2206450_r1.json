@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2206450,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 25.4427,
+  "llm_text": "Why:\nThe model’s top driver is payment_format_ach (value=1), which strongly increased the flagging (SHAP +2.743). Secondary contributors that further increased the score were to_bank (value=20, SHAP +0.959), amount_paid (value=3501.5, SHAP +0.777), and timing dayofweek (value=6, SHAP +0.740). In contrast, amount_received (value=3501.5, SHAP −0.575) and receiving_currency_euro (value=1, SHAP −0.187) modestly reduced the model score.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach=1) to receiving bank ID 20 with a mid-range amount (amount_paid=3501.5) occurring on dayofweek=6. However, an identical amount_received and receiving_currency_euro=1 partially offset the risk signal. If one treats SHAP magnitudes as importance, the ACH method and recipient bank drove the alert most strongly."
+}

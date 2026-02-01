@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2226424,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 11.4921,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP 2.89316, direction: increase): the use of ACH is the single largest driver raising the alert score.\n- amount_paid = 5183.46 (SHAP 0.803789, direction: increase): a relatively large paid amount further increases the score.\n- dayofweek = 6 (Sunday) (SHAP 0.73198, direction: increase): transaction occurring on Sunday adds to the model’s risk signal.\n- receiving_currency_euro = 1 (SHAP -0.249707, direction: decrease): receiving in EUR slightly offsets the score but does not outweigh the increases above.\n\nConclusion:\nThe transaction was flagged primarily because payment_format_ach, amount_paid (5183.46), and dayofweek (6/Sunday) collectively raised the model score; receiving_currency_euro modestly reduced it. If needed, prioritize review of ACH activity and transactions of similar size occurring on weekends."
+}

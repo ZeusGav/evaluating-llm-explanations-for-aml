@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3006741,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 27.8389,
+  "llm_text": "Why:\n- payment_format_ach (value=1) increases risk signal: SHAP value 2.84553 with direction \"increase\" indicates ACH as the payment method is a strong contributor to the flag.\n- amount_received (18120.0) increases risk signal: SHAP value 0.988532 with direction \"increase\" shows a relatively large incoming amount contributing to the alert.\n- amount_paid (18120.0) increases risk signal: SHAP value 0.600014 with direction \"increase\" shows a large outgoing/payment amount, reinforcing the elevated signal.\n- to_bank (701) increases risk signal: SHAP value 0.284065 with direction \"increase\" indicates a transfer to a specific receiving bank that adds to the concern.\n- from_bank (21258) decreases risk signal: SHAP value -0.315163 with direction \"decrease\" slightly offsets risk, but the positive contributions from ACH and large amounts remain predominant.\n\nConclusion:\nBased on the top drivers, the flag is driven by the use of ACH (payment_format_ach) and the sizable transfer amounts (amount_received and amount_paid), with a modest offset from the sending bank (from_bank). The overall signal appears elevated due to the ACH method and large amounts, though the negative contribution from the sending bank reduces the risk slightly. Further review is advised to confirm legitimate intent and consistency with customer behavior."
+}

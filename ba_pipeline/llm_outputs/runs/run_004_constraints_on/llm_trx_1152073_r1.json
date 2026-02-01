@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1152073,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 8.9639,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1) which had the largest positive SHAP (2.90216, direction: increase), indicating ACH as a strong contributor. Large transaction size (amount_received = 15968.2; SHAP 0.899807, direction: increase; amount_paid = 15968.2; SHAP 0.764144, direction: increase) further raised the score. Timing contributed: dayofweek (value=6, Sun) had a positive SHAP (0.781602, direction: increase). Partially offsetting these was from_bank (value=908) with a negative SHAP (-0.922438, direction: decrease), which lowered the model score.\n\nConclusion: The alert appears driven mainly by ACH payment method plus relatively high amount and Sunday timing, though the sending bank (from_bank=908) reduced risk contribution. If these feature values are accurate, the model’s score exceeds threshold primarily because of payment_format_ach and the amounts."
+}

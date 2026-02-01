@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5018226,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 26.1508,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=2.82994; direction=increase): The dominant driver indicates the transaction used ACH as the payment method, which strongly increases the flag.\n- amount_received (value=17462.3; shap_value=1.28302; direction=increase): A very large inflow amount contributes significantly to the flag.\n- amount_paid (value=17462.3; shap_value=0.61878; direction=increase): The same large outflow amount adds further signal when paired with the ACH method.\n- Together, these top drivers imply an ACH-based transfer with a large value and a matching inflow/outflow amount, which is the core rationale for the flag.\n\nConclusion:\nThe strongest signals come from payment_format_ach and the large, matching amounts (amount_received and amount_paid), indicating a high-risk ACH transfer pattern. Minor drivers do exist but do not override the primary signal. Based on these drivers, the transaction presents a strong risk signal warranting further review."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3035908,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 17.109,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — highest contributor (SHAP +3.03318, direction: increase). The model score rose substantially because the payment is ACH.\n- payment_currency_saudi_riyal (value=1) — (SHAP +0.571676, direction: increase). Payment currency being Saudi Riyal increased the score.\n- amount_received (value=30072.8) — (SHAP +0.322905, direction: increase). The reported received amount contributed positively to the score.\n- receiving_currency_saudi_riyal (value=1) — (SHAP +0.257559, direction: increase). Receiving currency also being Saudi Riyal added to the score.\n- from_bank (value=48308) — (SHAP −0.416701, direction: decrease). The sending bank ID reduced the model score modestly.\n\nConclusion:\nThe flag is driven primarily by the payment being ACH (payment_format_ach=1) and by both payment and receiving currencies being Saudi Riyal (payment_currency_saudi_riyal=1, receiving_currency_saudi_riyal=1), with the amount_received (30072.8) adding further upward pressure; the from_bank (48308) partially offset the score. If similar transactions combine ACH in SAR with comparable amounts, the model is likely to produce elevated risk scores."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2422807,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 37.1895,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — SHAP +2.90659 (increase): the largest single contributor; the model strongly penalized the ACH payment format.\n- amount_paid (value=10873.2) — SHAP +0.76320 (increase): a material payment amount that raised the score.\n- amount_received (value=10873.2) — SHAP +0.60027 (increase): the received amount is the same numeric value as the paid amount and also increased the score.\n- to_bank (value=20) — SHAP +0.58188 (increase): the receiving bank ID contributed meaningfully to the higher risk score.\n\nConclusion:\nThe transaction was flagged primarily because payment_format_ach=1 (largest positive driver) combined with relatively large, identical amount_paid and amount_received (10873.2) and the receiving bank (to_bank=20) increased the model risk score. Conditionally, given amount_paid equals amount_received, this pattern could indicate a direct pass‑through/one‑to‑one transfer flow (may warrant review), and the receiving bank (to_bank=20) should be examined as a contributing factor."
+}

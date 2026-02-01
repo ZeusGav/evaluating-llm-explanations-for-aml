@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1984624,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 9.8925,
+  "llm_text": "Why: The model flagged this transaction primarily because payment_format_ach (value=1) strongly increased the score (SHAP +2.94586). Larger transaction size—amount_received (19753.5) —also increased the score (SHAP +0.806184). The payment occurred on dayofweek (6 = Sunday), which raised the score (SHAP +0.68572), and the payment_currency_saudi_riyal (value=1) further increased risk (SHAP +0.458878). Partially offsetting these was from_bank (118) which decreased the score (SHAP −0.451851).\n\nConclusion: The model’s rationale is that an ACH payment (payment_format_ach=1) in Saudi Riyals of ~19,753.5 on day 6 drove the alert, with the sending bank (from_bank=118) reducing but not eliminating the signal. If ACH payments of this currency/amount on day 6 are atypical for this profile, further manual review is warranted."
+}

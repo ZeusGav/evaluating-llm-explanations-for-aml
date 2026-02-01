@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2184310,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 8.9155,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1; SHAP=+2.89853), indicating an ACH payment format strongly increases the score. Large transaction size—amount_received (15756.0; SHAP=+0.914667) and amount_paid (15756.0; SHAP=+0.690211)—also meaningfully increase the score. The hour (4; SHAP=-0.300579) modestly decreases the score but does not offset the positive contributions from payment_format_ach and the amounts.\n\nConclusion: The transaction was flagged mainly because payment_format_ach=1 combined with sizeable amounts (amount_received and amount_paid ≈ 15,756) substantially raised the model score. If payment_format_ach indeed denotes an ACH transfer, the model treats that format plus these amount levels as higher risk (based on the reported SHAP contributions)."
+}

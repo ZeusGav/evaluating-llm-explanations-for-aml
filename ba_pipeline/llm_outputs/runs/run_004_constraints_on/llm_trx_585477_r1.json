@@ -1,0 +1,8 @@
+{
+  "transaction_id": 585477,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.3359,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach = 1 (increase), which has the largest positive SHAP contribution, indicating ACH format strongly raised the score. Secondary contributors were amount_received = 14962.8 (increase) and amount_paid = 14962.8 (increase), both increasing the score (similar sizable amounts). dayofweek = 6 (increase) also raised the score, indicating weekend timing contributed. These factors combined increased the model output above the alert threshold.\n\nConclusion: The alert is mainly attributable to payment_format_ach (increase) together with high identical amounts (amount_received and amount_paid) and Sunday execution (dayofweek = 6). If an ACH transfer of ~14,962.8 occurs on dayofweek = 6, the model is more likely to flag it — further review of payment purpose and counterparty details is recommended."
+}

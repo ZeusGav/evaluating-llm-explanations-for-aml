@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1566107,
+  "run_name": "run_002_stability",
+  "repeat": 7,
+  "model": "gpt-5-mini",
+  "latency_s": 18.0712,
+  "llm_text": "Why:\n- payment_format_ach = 1 (payment_format_ach) was the dominant driver and substantially increased the model score (SHAP +2.7343), i.e., the ACH payment format is the primary reason for the flag.\n- amount_paid = 16269.7 (amount_paid) and amount_received = 16269.7 (amount_received) both contributed positively (SHAP +0.9757 and +0.9127 respectively), so a relatively large, equal paid/received amount further increased the flagging score.\n- to_bank = 10 (to_bank) provided an additional positive contribution (SHAP +0.4243), indicating the receiving bank identity increased the risk signal.\n- dayofweek = 4 (dayofweek) reduced the score (SHAP −0.4583), but this negative contribution was smaller in magnitude than the combined positive drivers above and did not prevent the overall flag.\n\nConclusion:\nThe transaction was flagged mainly because it is an ACH transfer (payment_format_ach=1) with a sizable, identical paid and received amount (16269.7) and a receiving bank (to_bank=10) that further raised the score; the day of week (dayofweek=4) slightly lowered the score but did not offset the other effects. If further review is needed, focus checks on the ACH payment details and the receiving bank (to_bank=10), given these features drove the model decision."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 585477,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 19.1185,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.88153, direction: increase) — the payment being ACH is the single largest driver pushing the model score upward.\n- amount_received = 14962.8 (SHAP +0.830828, direction: increase) — the receiving amount materially increased the flag likelihood.\n- amount_paid = 14962.8 (SHAP +0.760081, direction: increase) — the paid amount also increased the score; note both amount_received and amount_paid are the same numeric value in the drivers.\n- dayofweek = 6 (SHAP +0.740754, direction: increase) — the transaction occurring on day 6 (Sunday) contributed to the higher score.\n\nConclusion:\n- The model flagged this transaction primarily because it is an ACH transfer (payment_format_ach) combined with relatively large, equal amounts (amount_received and amount_paid = 14962.8) that together with the Sunday timing (dayofweek = 6) raised the risk score.  \n- Based solely on these drivers, a focused review of the ACH payment and counterparty details is warranted; this assessment is conditional on and limited to the named features above."
+}

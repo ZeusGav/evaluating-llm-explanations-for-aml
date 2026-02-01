@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2184310,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 9.9668,
+  "llm_text": "Why:\n- payment_format_ach = 1 (payment_format_ach) was the dominant contributor, increasing the model score substantially (+2.90 SHAP), i.e., an ACH payment format strongly drove the flag.\n- amount_received = 15,756 (amount_received) increased the score (+0.91 SHAP); amount_paid = 15,756 (amount_paid) also increased the score (+0.69 SHAP). Both equal high-value amounts contributed positively to the flag.\n- hour = 4 (hour) had a small negative effect (-0.30 SHAP), slightly reducing the model score but not offsetting the above increases.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach = 1) combined with relatively large and identical payment and receipt amounts (amount_received = 15,756 and amount_paid = 15,756), which together raised the model score; the early-hour timestamp (hour = 4) marginally lowered the score. If one is assessing priority, the ACH payment format and the two high/identical amount features are the most relevant drivers to investigate further."
+}

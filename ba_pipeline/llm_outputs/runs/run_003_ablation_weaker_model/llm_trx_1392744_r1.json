@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1392744,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 28.4627,
+  "llm_text": "Why:\n- payment_format_ach (feature: payment_format_ach) has the largest positive SHAP contribution (2.87879) with direction \"increase,\" indicating that the use of ACH as the payment method is the strongest factor pushing the transaction toward a flag.\n- dayofweek (feature: dayofweek) contributes positively (SHAP 0.621813, direction increase) with value 6 (Sunday), suggesting weekend timing is elevating the risk signal.\n- payment_currency_saudi_riyal (feature: payment_currency_saudi_riyal) contributes positively (SHAP 0.606203, direction increase), indicating involvement of Saudi Riyal as the payment currency increases risk.\n- from_bank (feature: from_bank) contributes negatively (SHAP -0.428745, direction decrease), which reduces the risk signal from the banks involved.\n- to_bank (feature: to_bank) contributes negatively (SHAP -0.304935, direction decrease), similarly reducing the risk signal associated with the receiving bank.\n\nConclusion:\nBased on the top drivers, the flag is primarily driven by ACH as the payment method, weekend timing, and Saudi Riyal currency involvement, with notable but opposing signals from the sending and receiving banks reducing the overall risk signal. The positive drivers collectively outweigh the negative bank-related drivers, supporting the flag for review. Potentially helpful follow-up: verify transaction intent and counterparties given the ACH format and Saudi Riyal/Currency setup, while noting the bank signals mitigate some risk."
+}

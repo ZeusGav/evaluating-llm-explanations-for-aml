@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4296465,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 26.8331,
+  "llm_text": "Why:\n- Primary driver: payment_format_ach (value=1) with SHAP_value=2.89687 and direction increase. This is the strongest contributor and directly elevates risk due to ACH as the payment method.\n- Strong currency-related driver: payment_currency_saudi_riyal (value=1) SHAP_value=0.781167 with direction increase. This indicates the payment uses Saudi Riyal, supporting higher risk signals in combination with other SAR-related indicators.\n- Supporting but offsetting factor: from_bank (value=50528) SHAP_value=-0.62233 with direction decrease. This negative contribution reduces risk, partially countering the ACH/SAR signals from the top driver.\n- Additional risk signal: dayofweek (value=6) SHAP_value=0.614479 with direction increase. Weekend timing adds incremental risk in AML patterns.\n\nNote: Other drivers (e.g., to_bank with negative SHAP, receiving_currency_saudi_riyal, etc.) are present but have smaller absolute contributions and are not emphasized here as primary drivers.\n\nConclusion:\nOverall, the top contributors suggest elevated risk driven primarily by an ACH payment in Saudi Riyal (SAR) and weekend timing, with some mitigating signal from the sending bank. Based on these drivers, the transaction should be escalated for manual review and request for additional context (purpose, source of funds, recipient details). If further information strongly supports legitimate activity, risk may be mitigated, but current driver signals indicate a non-negligible AML concern."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4059238,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.7797,
+  "llm_text": "Why: The model flag was driven primarily by payment_format_ach = 1 (strong positive contribution, SHAP +2.89128), indicating an ACH payment format increased risk. Large transaction size contributed (amount_received = 13861.1, SHAP +0.867411; amount_paid = 13861.1, SHAP +0.586983). Timing added modestly (dayofweek = 5 → Saturday, SHAP +0.365149). Partially offsetting factors reduced the score: from_bank = 235509 (SHAP −0.334891) and payment_currency_us_dollar = 1 (SHAP −0.250844).\n\nConclusion: The alert is mainly attributable to an ACH transfer (payment_format_ach) of relatively high, identical paid/received amounts (~13861.1) occurring on dayofweek 5, with some mitigation from the sending bank (from_bank) and USD currency. If further review is needed, verify ACH routing and the rationale for the high identical amount, given those are the principal drivers."
+}

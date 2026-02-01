@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2184310,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 30.7743,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=2.89853; direction increase): This is the strongest driver, indicating the transaction used the ACH payment format, which contributed positively to the flag.\n- amount_received (15756.0; shap_value=0.914667; direction increase) and amount_paid (15756.0; shap_value=0.690211; direction increase): These large, equal inbound/outbound amounts jointly push risk higher, contributing noticeably to the flag.\n- hour (4; shap_value=-0.300579; direction decrease): The early-hour timestamp reduces risk in this model’s rationale, somewhat offsetting the other drivers.\n- Minor/secondary drivers (e.g., smaller SHAP values for additional fields) exist but are not among the top contributors and thus not central to the flag’s justification.\n\nConclusion:\nThe flag is driven primarily by the ACH payment method and the large, symmetric inbound/outbound amounts, with the early-hour timestamp slightly reducing risk. Based on these drivers alone, there is elevated risk signal, but no definitive conclusion about intent can be made from the provided data. Recommend targeted follow-up focusing on the ACH channel usage and the business rationale for the transaction, and optionally verify the sending/receiving banks if appropriate."
+}

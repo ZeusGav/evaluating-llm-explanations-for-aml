@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1030747,
+  "run_name": "run_002_stability",
+  "repeat": 8,
+  "model": "gpt-5-mini",
+  "latency_s": 22.7646,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+2.95104, direction=increase): the payment method (ACH) is the single largest contributor to the flag.\n- amount_received (value=56984.0; SHAP=+0.746488, direction=increase): the high received amount increased the model score.\n- dayofweek (value=6; SHAP=+0.689965, direction=increase): occurrence on day 6 (Sunday) increased the score.\n- payment_currency_saudi_riyal (value=1; SHAP=+0.526883, direction=increase): payment currency being Saudi Riyal contributed to higher risk.\n- from_bank (value=249176; SHAP=-0.325773, direction=decrease): the sending bank ID modestly decreased the score, partially offsetting increases.\n\nConclusion:\nThe transaction was flagged primarily because an ACH transfer (payment_format_ach=1) of a relatively large amount (amount_received=56984.0) in Saudi Riyal (payment_currency_saudi_riyal=1) occurred on dayofweek=6 (Sunday); these features materially increased the model risk despite a modest risk reduction from from_bank (249176). If ACH payments in SAR of this magnitude on day 6 are not typical for the customer, this pattern may warrant further review."
+}

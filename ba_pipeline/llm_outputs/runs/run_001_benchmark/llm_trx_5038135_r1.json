@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5038135,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 18.5267,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP +2.87717, direction=increase): the model’s largest single driver — being an ACH payment materially raised the risk score.\n- payment_currency_saudi_riyal (value=1; SHAP +0.638912, direction=increase): payment currency = Saudi Riyal contributed to a higher score.\n- amount_received (value=60777.8; SHAP +0.606884, direction=increase): a relatively large received amount increased the score.\n- receiving_currency_saudi_riyal (value=1; SHAP +0.317249, direction=increase): receiving currency = Saudi Riyal further increased the score.\n- amount_paid (value=60777.8; SHAP +0.297136, direction=increase): the payment amount also contributed to increasing the score.\n- from_bank (value=150240; SHAP -0.492466, direction=decrease): the sending bank ID partially reduced the risk score (offsetting but not negating the increases above).\n\nConclusion:\nThe alert is driven primarily by an ACH transfer in Saudi Riyal with matching payment and received amounts of 60,777.8 (features: payment_format_ach=1; payment_currency_saudi_riyal=1; receiving_currency_saudi_riyal=1; amount_paid=60777.8; amount_received=60777.8), which raised the model score. The sending bank (from_bank=150240) reduced the score somewhat (SHAP -0.492466) but did not cancel the net increase. If further review is required, verify the ACH SAR payment details and counterparty (from_bank=150240) as these are the principal drivers of the flag."
+}

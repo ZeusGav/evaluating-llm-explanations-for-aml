@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2358561,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 27.2618,
+  "llm_text": "Why:\n- Highest impact driver: payment_format_ach (value=1, shap_value=2.88604, direction increase) — ACH as the payment method contributed strongly to the flag.\n- Strong follow-on signals: amount_received (13966.5, shap_value=0.757027, direction increase) and amount_paid (13966.5, shap_value=0.661095, direction increase) — large exchange amounts associated with the flag.\n- Supporting signal: to_bank (value=1547, shap_value=0.31414, direction increase) — the receiving bank indicator adds to the risk signal.\n- Risk-reducing signal (modest): receiving_currency_euro (value=1, shap_value=-0.271524, direction decrease) — euro receiving currency reduces risk contribution slightly.\n\nConclusion:\nBased on the above drivers, the transaction exhibits elevated AML risk driven primarily by ACH payment method and large, mirrored transfer amounts, with the receiving bank contributing to the concern. The euro receiving currency dampens the risk modestly. Review is warranted given these driver signals."
+}

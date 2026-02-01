@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1970167,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 11.8073,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (feature: payment_format_ach; value=1) which has the largest positive SHAP (3.0887 → increase). Elevated transfer size also contributes: amount_received (11995.4; SHAP 0.8308 → increase) and amount_paid (11995.4; SHAP 0.7868 → increase). Receiving bank ID (to_bank; value=11; SHAP 0.4499 → increase) and transaction timing (dayofweek; value=5 [Saturday]; SHAP 0.3558 → increase) further raise the score. The sending bank (from_bank; value=20; SHAP -0.7736 → decrease) provides the largest mitigating effect.\n\nConclusion:\nThe alert primarily reflects an ACH transfer (payment_format_ach) of ~11,995.4 (amount_received/amount_paid) on dayofweek=5 to to_bank (ID 11), with partial mitigation from from_bank (ID 20). If ACH transfers of this size to to_bank on Saturdays are atypical for this customer or channel, a focused review is warranted."
+}

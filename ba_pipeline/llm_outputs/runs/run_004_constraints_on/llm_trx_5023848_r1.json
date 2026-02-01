@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5023848,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.7577,
+  "llm_text": "Why:\nThe model flagged the transaction primarily because payment_format_ach (value=1) had the largest positive SHAP (2.90004), indicating an ACH transfer strongly increases the alert score. Large values for amount_paid (12389.8, SHAP=0.85718) and amount_received (12389.8, SHAP=0.823461) further increased the score, consistent with a sizable single transfer. to_bank (value=20, SHAP=0.511779) and dayofweek (value=5, SHAP=0.44197 — Saturday) contributed additional positive signal. Conversely, from_bank (value=23344, SHAP=-0.633972) reduced the score but did not offset the strong positive drivers.\n\nConclusion:\nBased solely on the named drivers, this ACH transfer of 12,389.8 (payment and receiving amounts equal) to to_bank=20 on dayofweek=5 triggered the alert primarily due to payment_format_ach and the large amounts. If further review is needed, focus on the ACH nature, the recipient bank (to_bank=20), and the Saturday timing as the most relevant factors."
+}

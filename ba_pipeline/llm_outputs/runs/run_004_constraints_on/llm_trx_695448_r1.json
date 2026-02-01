@@ -1,0 +1,8 @@
+{
+  "transaction_id": 695448,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.2104,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1; SHAP=+2.82801, strong increase), together with high amount_received (12481.9; SHAP=+0.851023, increase), dayofweek (6 — Sunday; SHAP=+0.756385, increase), and amount_paid (12481.9; SHAP=+0.735158, increase). These four features—an ACH payment (payment_format_ach=1) of sizable equal paid/received amounts (amount_received and amount_paid = 12,481.9) occurring on dayofweek=6—collectively raised the model score.\n\nConclusion: Based solely on these drivers, the model flagged the transaction because an ACH transfer of a relatively large amount on a Sunday increased risk. If ACH (payment_format_ach=1) coincides with high amounts and a weekend day (dayofweek=6), the model is more likely to flag."
+}

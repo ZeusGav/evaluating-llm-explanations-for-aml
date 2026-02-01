@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2046274,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 20.094,
+  "llm_text": "Why:\n- payment_format_ach (value=1) has the largest positive SHAP contribution (shap_value=2.85887, direction: increase), indicating the ACH payment format is a major driver of the flag.\n- amount_received (16450.3) has a substantial positive SHAP contribution (shap_value=0.994091, direction: increase), suggesting a high value inflow is contributing to the alert.\n- amount_paid (16450.3) also contributes positively (shap_value=0.614774, direction: increase), reinforcing the impact of a large, equal outflow amount on the risk signal.\n- dayofweek (value=5) contributes positively (shap_value=0.402226, direction: increase), adding a timing signal to the flag (note: dayofweek=5 corresponds to Saturday in the provided scale).\n\nConclusion:\n- The flag appears driven primarily by ACH usage together with a high-value transfer pattern (large equal amount_received and amount_paid) and a Saturday timing signal. If these drivers align with the customer’s typical behavior, this may warrant routine review; if not, it strengthens the need for due diligence (e.g., source/destination validation, documentation of purpose). The hour feature reduces risk slightly, but the top drivers indicate the ACH/high-value pattern as the main concern."
+}

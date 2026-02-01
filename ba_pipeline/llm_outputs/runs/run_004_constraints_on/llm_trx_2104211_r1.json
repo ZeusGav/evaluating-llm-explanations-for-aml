@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2104211,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 14.6312,
+  "llm_text": "Why: The alert is mainly driven by payment_format_ach = 1 (large positive contribution, SHAP +3.04848), indicating an ACH payment method; dayofweek = 6 (positive, SHAP +0.734021), indicating processing on day 6; and amount_received = 53835.2 (positive, SHAP +0.655381), indicating a relatively large incoming amount. These increase the model score. Partially offsetting contributors include hour = 1 (negative, SHAP -0.606192) and from_bank = 48211 (negative, SHAP -0.515331), which reduce the score.\n\nConclusion: The model flagged the transaction primarily because it is an ACH payment (payment_format_ach) occurring on dayofweek 6 with a sizable amount_received. This elevation is somewhat mitigated by the early-hour timing (hour = 1) and the sending bank ID (from_bank = 48211). If further review is needed, focus on verifying ACH details, the circumstances of processing on day 6, and the large amount received."
+}

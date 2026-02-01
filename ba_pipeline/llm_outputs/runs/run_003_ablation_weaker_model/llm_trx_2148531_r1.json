@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2148531,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 28.7035,
+  "llm_text": "Why:\n- The strongest contributor is payment_format_ach (value=1) with SHAP_value=2.87547, indicating ACH payments strongly increase the flag in this model.\n- Currency pattern contributes: payment_currency_saudi_riyal (value=1, SHAP_value=0.677314) and receiving_currency_saudi_riyal (value=1, SHAP_value=0.341263). These indicate the transaction involves Saudi Riyal on both sides, which elevates risk per the driver set.\n- Temporal pattern contributes: dayofweek (value=6; Sunday) with SHAP_value=0.602776, meaning Sunday timing adds to the risk signal.\n- Amount pattern contributes: amount_received (46154.1) with SHAP_value=0.503409, so a relatively large receiving amount increases risk.\n- Secondary counterbalance: from_bank (value=119) with SHAP_value=-0.415561 and to_bank (value=48211) with SHAP_value=-0.347162 contribute negatively, i.e., they dampen the risk signal, but not enough to override the top positive drivers.\n- Other minor drivers (e.g., payment_format_credit_card=0, receiving_currency_euro=0, payment_currency_us_dollar=0) have small or negligible contributions and are not driving the flag.\n\nConclusion:\nBased on the provided drivers, the transaction is flagged primarily due to the use of ACH, the Saudi Riyal currency pattern on both sides, Sunday timing, and a relatively large amount received. The sending/receiving bank indicators slightly offset the signal but do not negate the elevated risk indicated by the top drivers. Consider escalating for manual review to confirm legitimate activity."
+}

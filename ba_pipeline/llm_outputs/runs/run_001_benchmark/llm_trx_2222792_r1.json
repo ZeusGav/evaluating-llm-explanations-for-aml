@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2222792,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.9465,
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant driver (SHAP=+2.93191, direction=increase): the model’s top positive contributor is that this is an ACH payment.\n- dayofweek (value=6) contributed positively (SHAP=+0.660885, direction=increase): the transaction occurring on dayofweek=6 (Sunday) increased the flag score.\n- amount_received (value=15563.9) and amount_paid (value=15563.9) both contributed positively (SHAP=+0.643854 and +0.591814, directions=increase): the transaction amounts (~15,563.9) increased the model’s risk signal.\n- receiving_currency_euro (value=1) contributed negatively (SHAP=-0.333862, direction=decrease): the fact the receiving currency is euro reduced the score somewhat.\n- from_bank (value=21749) had a small negative contribution (SHAP=-0.250224, direction=decrease): this sending bank ID lowered the score slightly.\n\nConclusion:\n- The model flagged the transaction principally because it is an ACH payment (payment_format_ach=1), executed on dayofweek=6 (Sunday), with relatively large amounts (amount_received and amount_paid ≈ 15,563.9). Those positive contributors outweighed modest negative contributions from receiving_currency_euro=1 and from_bank=21749. \n- If further review is needed, focus checks on the ACH payment characteristics, timing (dayofweek=6), and the transaction amount, since these are the strongest model drivers."
+}

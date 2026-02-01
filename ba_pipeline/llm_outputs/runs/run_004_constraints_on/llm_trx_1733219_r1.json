@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1733219,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.7305,
+  "llm_text": "Why:\n- payment_format_ach (value=1) is the strongest positive driver (SHAP +2.87562 → increase), materially raising the alert score.\n- amount_received (14776.6; SHAP +1.07446 → increase) and amount_paid (14776.6; SHAP +0.864685 → increase) further increased the score — the model responds to these relatively large, equal amounts.\n- to_bank (value=1; SHAP +0.324661 → increase) provided an additional uptick.\n- dayofweek (value=4; SHAP −0.456042 → decrease) modestly reduced the score.\n\nConclusion:\nThe flag is primarily driven by an ACH payment method (payment_format_ach=1) combined with sizable, matching amount_received and amount_paid, with a smaller contribution from to_bank. The day of week (dayofweek=4) slightly offsets the signal. If ACH activity or the observed amounts are atypical for the receiving bank (to_bank=1), further review is warranted."
+}

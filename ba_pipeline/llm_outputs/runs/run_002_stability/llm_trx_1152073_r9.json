@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1152073,
+  "run_name": "run_002_stability",
+  "repeat": 9,
+  "model": "gpt-5-mini",
+  "latency_s": 16.7971,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — SHAP +2.90216 (increase): the model’s largest single driver; the ACH payment format strongly increased the alert score.\n- amount_received (value=15968.2) — SHAP +0.899807 (increase): the relatively large received amount contributed to raising the score.\n- dayofweek (value=6) — SHAP +0.781602 (increase): occurring on day 6 (Sunday) increased the score.\n- amount_paid (value=15968.2) — SHAP +0.764144 (increase): the paid amount (same value) also increased the score.\n- from_bank (value=908) — SHAP −0.922438 (decrease): the sending bank ID 908 reduced the alert score (mitigating effect).\n\nConclusion:\nThe model flagged this transaction mainly because it is an ACH transfer (payment_format_ach=1) combined with relatively large amounts (amount_received and amount_paid = 15,968.2) occurring on dayofweek=6 (Sunday). The sending bank (from_bank=908) partially offset the score but did not outweigh the positive drivers. If one accepts the model’s learned patterns (i.e., ACH + high amount + Sunday increase risk), this combination explains the alert and merits review."
+}

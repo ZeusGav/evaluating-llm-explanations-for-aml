@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1047240,
+  "run_name": "run_002_stability",
+  "repeat": 4,
+  "model": "gpt-5-mini",
+  "latency_s": 26.6973,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.11968, direction: increase) — the payment method being ACH is the single largest contributor to the alert score.\n- amount_received = 14,737.5 (SHAP +0.93679, direction: increase) and amount_paid = 14,737.5 (SHAP +0.66249, direction: increase) — the relatively large monetary size (and the fact both fields have the same value) materially increases the model score.\n- dayofweek = 5 (Sat) (SHAP +0.35469, direction: increase) — the transaction occurring on day 5 (Saturday) further increases the score.\n- from_bank = 15 (SHAP −0.32736, direction: decrease) — the sending bank ID contributes a modest mitigating effect on the score.\n\nConclusion:\nThe alert is primarily driven by an ACH payment (payment_format_ach) combined with sizable, equal amount_received and amount_paid values, with additional upward contribution from the transaction occurring on a Saturday. The sending bank (from_bank) partially offsets the risk signal. Conditionally, given payment_format_ach = 1 and identical amounts in amount_received and amount_paid, it may be useful to verify ACH routing and counterparty details and confirm whether this is a routine/expected ACH transfer."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2046274,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 17.2649,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.85887, increase) — the model's largest positive contributor; the ACH payment format strongly increased the flagging score.\n- amount_received = 16450.3 (SHAP +0.99409, increase) and amount_paid = 16450.3 (SHAP +0.61477, increase) — both amounts are identical and materially large in magnitude, and each increased the score.\n- dayofweek = 5 (Saturday) (SHAP +0.402226, increase) — occurring on Saturday contributed to a higher score.\n- hour = 20 (20:00) (SHAP −0.364302, decrease) — the 8 PM execution time modestly reduced the score.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach) combined with relatively large, equal received and paid amounts (amount_received and amount_paid), with additional upward pressure from occurring on a Saturday (dayofweek). This upward pressure was partially offset by the later hour (hour = 20). If the model treats ACH and larger/equal send/receive amounts as higher risk (as the SHAP values indicate), that combination explains the elevated score."
+}

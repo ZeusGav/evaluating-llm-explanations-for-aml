@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2190632,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.9392,
+  "llm_text": "Why: The model flagged this transaction primarily because payment_format_ach (value=1) strongly increased risk (SHAP +2.829). Additional increases came from dayofweek (value=6 — Sunday; SHAP +0.841) and the transaction size: amount_received (10726.8; SHAP +0.725) and amount_paid (10726.8; SHAP +0.716) — notably the received and paid amounts are the same. from_bank (27241) provided a partial decrease in score (SHAP −0.474), slightly offsetting the increase. Hour (12) provided a small further increase (SHAP +0.280).\n\nConclusion: Based solely on these drivers, the alert is driven mainly by an ACH transfer (payment_format_ach=1) occurring on dayofweek=6 (Sunday) at hour=12 with identical mid‑range amounts (amount_received and amount_paid = 10726.8). The sending bank (from_bank=27241) modestly reduces the model score. If additional review is needed, focus on ACH timing (Sunday/noon) and the matching amounts."
+}

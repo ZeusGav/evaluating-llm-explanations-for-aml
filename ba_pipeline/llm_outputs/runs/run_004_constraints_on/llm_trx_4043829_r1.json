@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4043829,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.8162,
+  "llm_text": "Why:\n- payment_format_ach = 1 contributed strongly to an increased score (feature: payment_format_ach), indicating the ACH method was the dominant risk driver.\n- amount_received = 13839.8 (feature: amount_received) and amount_paid = 13839.8 (feature: amount_paid) both increased the score, so a relatively large single amount was influential.\n- to_bank = 22 (feature: to_bank) increased the score, implicating the receiving bank as a risk factor.\n- from_bank = 1522 (feature: from_bank) decreased the score (feature: from_bank), partially offsetting other increases.\n- dayofweek = 5 (feature: dayofweek) modestly increased the score, so timing (day 5) also contributed.\n\nConclusion:\nThe model flagged the transaction primarily because it was an ACH payment (payment_format_ach) of a sizable amount (amount_received/amount_paid ~13839.8) routed to receiving bank 22, with additional upward contribution from dayofweek = 5. The lower contribution from from_bank = 1522 slightly reduced the score but did not negate the combined increases. If ACH + high amount + to_bank 22 coincide, the model is more likely to flag."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1566107,
+  "run_name": "run_002_stability",
+  "repeat": 9,
+  "model": "gpt-5-mini",
+  "latency_s": 20.4109,
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant driver (SHAP +2.7343): the use of ACH materially increased the model score.\n- amount_paid (16269.7) (SHAP +0.9757) and amount_received (16269.7) (SHAP +0.9127): the transaction magnitude (same paid/received amounts) further increased the score.\n- to_bank (10) (SHAP +0.4243): the receiving bank ID contributed additional positive risk weight.\n- dayofweek (4) (SHAP −0.4583): the day-of-week reduced the score somewhat but did not offset the positive contributions above.\n\nConclusion:\nThe alert is primarily driven by the payment method (payment_format_ach=1) combined with the relatively large, matched payment amounts (amount_paid and amount_received ≈ 16,269.7) and the receiving bank (to_bank=10). These factors collectively raised the risk score despite a modest downward effect from dayofweek=4. If investigating, focus (conditionally) on ACH-specific controls/authorization and the counterparty at to_bank=10, since those items are the drivers identified by the model."
+}

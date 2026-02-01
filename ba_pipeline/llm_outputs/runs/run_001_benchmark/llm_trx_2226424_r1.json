@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2226424,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 27.0237,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.89316, direction: increase): the model’s strongest driver — the ACH payment format substantially raised the alert score.\n- amount_paid = 5183.46 (SHAP +0.803789, direction: increase): a mid‑four‑figure amount materially increased the score.\n- dayofweek = 6 (Sunday) (SHAP +0.73198, direction: increase): transaction occurring on day 6 (Sunday) increased the score.\n- hour = 16 (SHAP +0.158252, direction: increase): the 16:00 hour added a small further increase.\n- receiving_currency_euro = 1 (SHAP −0.249707, direction: decrease): the fact the receiving currency is euro modestly reduced the score.\n\nConclusion:\n- The alert is driven primarily by the payment method (payment_format_ach) with meaningful support from the transaction size (amount_paid) and the timing (dayofweek = 6, hour = 16). The receiving_currency_euro factor slightly offsets risk but not enough to counter the large ACH contribution. \n- Conditional/hedged note: if payment_format_ach = 1, then the payment was processed via ACH according to the available feature, which is the dominant model driver and the principal reason this transaction was flagged."
+}

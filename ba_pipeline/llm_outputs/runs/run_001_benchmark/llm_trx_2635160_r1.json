@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2635160,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 18.1238,
+  "llm_text": "Why:\n- payment_format_ach = 1 had the largest positive SHAP (2.81086) and therefore is the primary driver increasing the model score.\n- amount_paid = 9226.42 (SHAP +0.808249) and amount_received = 9226.42 (SHAP +0.722327) both materially increased the score, indicating the transaction value contributed to the flag.\n- from_bank = 233580 (SHAP +0.259003) contributed further to an increased score based on the sender bank identifier.\n- hour = 17 (SHAP +0.225023) contributed positively to the score (transaction occurred at hour 17).\n- payment_currency_us_dollar = 1 had a negative SHAP (-0.149836) and therefore slightly decreased the overall score (partial offset).\n\nConclusion:\nThe model flagged this transaction mainly because it was an ACH payment (payment_format_ach) combined with a payment/receipt amount of 9,226.42 (amount_paid and amount_received) plus contributing effects from the sending bank (from_bank = 233580) and the transaction hour (hour = 17). The fact that the payment currency is US dollar (payment_currency_us_dollar = 1) slightly reduced the model score but did not offset the larger positive contributions. If any of the primary drivers (e.g., payment_format_ach or the payment amounts) were different, the model score would likely be lower."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2229722,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 10.486,
+  "llm_text": "Why: The model flagged this transaction mainly because payment_format_ach (value=1) strongly increased the score (SHAP +2.86083). Large amounts — amount_received (18663, SHAP +0.946637) and amount_paid (18663, SHAP +0.732343) — further increased the score. dayofweek (6, SHAP +0.765607) also increased the score (transaction on Sunday). One mitigating driver was from_bank (11296, SHAP -0.853389), which decreased the score.\n\nConclusion: The flag arises from the combination of ACH format (payment_format_ach=1) and sizable identical payment/receipt amounts (amount_received/amount_paid=18663) occurring on dayofweek=6; from_bank (11296) partially offsets the signal. If further review is needed, focus on ACH routing and the large same-value in/out amounts given the Sunday timing."
+}

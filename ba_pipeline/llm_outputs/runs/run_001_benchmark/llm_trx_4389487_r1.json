@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4389487,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 21.1942,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — large positive contribution (SHAP ≈ +2.973); the ACH payment format was the strongest driver that increased the model score.\n- dayofweek (value=6) — positive contribution (SHAP ≈ +0.636); the transaction occurring on dayofweek=6 (Sunday) increased the score.\n- payment_currency_saudi_riyal (value=1) — positive contribution (SHAP ≈ +0.613); payment currency = Saudi Riyal increased the score.\n- amount_received (value=59658.8) — positive contribution (SHAP ≈ +0.535); the received amount (59658.8) increased the score.\n- from_bank (value=119) — negative contribution (SHAP ≈ −0.395); the sending bank ID 119 partially decreased the model score (offsetting some risk).\n\nConclusion:\nThe model flagged this transaction primarily because it was an ACH payment (payment_format_ach=1) in Saudi Riyals (payment_currency_saudi_riyal=1) of a relatively large amount (amount_received=59658.8) that occurred on dayofweek=6 (Sunday). This signal is somewhat offset by the sending bank feature (from_bank=119) which reduced the score. If one interprets ACH payments in SAR on dayofweek=6 as higher-risk patterns (per the model drivers), then this transaction matches that pattern and warrants review."
+}

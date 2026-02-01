@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4949831,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.1876,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.028; direction: increase) — The use of ACH format is the single largest positive driver raising the model score.\n- amount_received = 17119.9 (SHAP +0.742; direction: increase) — The reported received amount materially increases the score.\n- amount_paid = 17119.9 (SHAP +0.495; direction: increase) — The paid amount (same value) further increases the score.\n- dayofweek = 5 (SHAP +0.389; direction: increase) — Occurrence on day 5 (Saturday, given 0=Mon..6=Sun) modestly increases the score.\n- from_bank = 118 (SHAP −0.575; direction: decrease) — The sending bank reduces the score (negative contribution), but its effect is smaller than the ACH and amount drivers.\n\nConclusion:\nThe alert is primarily driven by payment_format_ach = 1 together with relatively large transaction amounts (amount_received and amount_paid ≈ 17,119.9), with an additional modest increase from occurrence on dayofweek = 5. The sending bank (from_bank = 118) reduces the model score but not enough to offset the dominant ACH and amount contributions. If further action is needed, focus checks on the ACH payment details and the large amount given these drivers."
+}

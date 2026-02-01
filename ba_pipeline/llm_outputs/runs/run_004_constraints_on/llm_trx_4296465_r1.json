@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4296465,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.0707,
+  "llm_text": "Why: The model flag is primarily driven by the payment method and currency: payment_format_ach = 1 (SHAP +2.89687, direction: increase) and payment_currency_saudi_riyal = 1 (SHAP +0.78117, direction: increase). These strongly raise the score. A weekend execution (dayofweek = 6; SHAP +0.61448, increase) further increases the signal. Two bank identifiers partially offset risk: from_bank = 50528 (SHAP -0.62233, decrease) and to_bank = 148350 (SHAP -0.48254, decrease), which reduce the overall contribution.\n\nConclusion: Net effect is elevated risk driven mainly by ACH format (payment_format_ach), Saudi riyal currency (payment_currency_saudi_riyal), and Sunday timing (dayofweek). The sending and receiving bank features (from_bank, to_bank) mitigate but do not fully counterbalance those increases. If one assumes the relative SHAP magnitudes reflect importance, the ACH + SAR + weekend combination explains why the transaction was flagged."
+}

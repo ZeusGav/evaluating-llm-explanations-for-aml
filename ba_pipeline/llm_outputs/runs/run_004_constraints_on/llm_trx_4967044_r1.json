@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4967044,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 14.8942,
+  "llm_text": "Why: The model score is driven primarily by payment_format_ach=1 (SHAP +2.6974, increases risk), combined with a large transaction size: amount_received=17945.7 (SHAP +1.09529, increases) and amount_paid=17945.7 (SHAP +0.486472, increases). The timing also contributed: dayofweek=5 (SHAP +0.470036, increases). These four features together meaningfully raised the flag.\n\nConclusion: The alert is principally due to an ACH payment (payment_format_ach) of substantial magnitude (amount_received/amount_paid ≈ 17,945.7) occurring on dayofweek=5, which the model weighted as higher risk. If these features are legitimate on review (e.g., expected ACH and known counterparties), they would explain the score; otherwise they justify further review."
+}

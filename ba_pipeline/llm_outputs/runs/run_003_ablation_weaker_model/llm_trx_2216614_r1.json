@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2216614,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 23.2289,
+  "llm_text": "Why:\n- payment_format_ach (value=1) has a large positive SHAP value (3.05803), indicating the ACH payment method strongly increases the model’s risk signal and is the primary driver for the flag.\n- dayofweek (value=6) has a positive SHAP value (0.719058), meaning the transaction on day 6 (Sunday) contributes to higher risk.\n- from_bank (value=222) has a negative SHAP value (-0.671646), i.e., this sending-bank factor reduces the risk signal somewhat.\n- amount_received (value=17113.6) has a positive SHAP value (0.604153), indicating a relatively large incoming amount increases the risk score.\n- (Note: amount_paid (0.494747) is also positive but less impactful than the above, while other smaller contributors are not included as they are minor drivers.)\n\nConclusion:\nBased solely on the named drivers, the flag is supported by a strong ACH-payment signal, combined with Sunday timing and a substantial incoming amount, with a mitigating effect from the sending-bank factor. The net effect suggests elevated risk warranting manual review, though the negative from_bank contribution prevents a full automatic conclusion of illicit activity. If policy treats ACH transfers as high-risk, that would further reinforce escalation."
+}

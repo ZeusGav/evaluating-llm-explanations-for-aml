@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2947913,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 7.1276,
+  "llm_text": "Why: The model flagged this transaction mainly because payment_format_ach = 1 (SHAP +2.91424, direction: increase), indicating an ACH payment format strongly raised the score. Large amounts also contributed: amount_received = 13431.6 (SHAP +1.06366, increase) and amount_paid = 13431.6 (SHAP +0.716867, increase). Sending and receiving institutions added further lift: from_bank = 214621 (SHAP +0.569508, increase) and to_bank = 1547 (SHAP +0.309093, increase).\n\nConclusion: The alert is driven primarily by an ACH transfer (payment_format_ach) of 13,431.6 (amount_received and amount_paid) between from_bank 214621 and to_bank 1547. If one accepts the model signals above, these specific features explain why the transaction score exceeded the threshold."
+}

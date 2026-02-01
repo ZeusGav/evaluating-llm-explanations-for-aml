@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4389487,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 26.3331,
+  "llm_text": "Why:\n- payment_format_ach: The feature is present with value 1 and the largest SHAP contribution (2.97296) and is marked as increasing the risk. This indicates the transaction’s reliance on ACH as the payment method is a primary driver of the flag.\n- dayofweek: Day of week is 6 (Sunday) with SHAP 0.635554 and direction increase, suggesting weekend timing contributes to the flag signal.\n- payment_currency_saudi_riyal: The payment currency is Saudi Riyal (value 1) with SHAP 0.613033 and direction increase, making currency choice a notable risk factor.\n- receiving_currency_saudi_riyal: Receiving currency is also Saudi Riyal (value 1) with SHAP 0.282036 and direction increase, reinforcing the currency pattern as a driver.\n- amount_received and amount_paid: Both amounts are 59658.8 with SHAP values 0.535469 (increase) for amount_received and 0.247892 (increase) for amount_paid, indicating a large transfer value associated with the identified currency/method is contributing to the flag.\n- from_bank: Sending bank ID is 119 with SHAP -0.395323 and direction decrease, providing a modest countervailing signal (slightly reducing the flag’s strength).\n\nConclusion:\nThe flag appears primarily driven by an ACH payment in Saudi Riyal with a large transfer amount and weekend timing, as indicated by the top-contributing drivers: payment_format_ach (increase), dayofweek (increase), payment_currency_saudi_riyal (increase), and amount_received/amount_paid (increases). These factors collectively raise AML concern and warrant further review of counterparties, business purpose, and settlement details."
+}

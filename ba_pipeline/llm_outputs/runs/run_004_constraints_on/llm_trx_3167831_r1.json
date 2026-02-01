@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3167831,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 16.1328,
+  "llm_text": "Why:\nThe model’s strongest contributors indicate this was flagged because payment_format_ach (value=1) had a large positive impact (SHAP 2.96829, direction=increase), meaning an ACH payment strongly raised the risk score. amount_paid (value=6426.47) was the next largest positive driver (SHAP 0.963357, direction=increase), so the relatively large payment amount further increased the score. to_bank (value=12) also contributed positively (SHAP 0.463956, direction=increase), indicating the receiving bank (to_bank=12) raised the score.\n\nConclusion:\nBased solely on the cited drivers, the alert arises primarily from an ACH payment (payment_format_ach=1) of 6,426.47 (amount_paid) routed to to_bank=12. Minor negative contributions (e.g., hour=19 and receiving_currency_euro=1) did not offset the main drivers. If ACH payments to to_bank=12 at this amount are normal for the customer, the score may be explainable; otherwise, review ACH routing and beneficiary bank details."
+}

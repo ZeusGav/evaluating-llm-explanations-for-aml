@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3635796,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 11.5395,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.8765, increase): the use of ACH was the largest driver increasing the flag score.\n- amount_received = 15333.3 (SHAP +0.9341, increase) and amount_paid = 15333.3 (SHAP +0.7113, increase): both high-value amounts contributed to raising the score; the identical values amplify the signal from the paid/received legs.\n- dayofweek = 6 (SHAP +0.7663, increase): occurrence on day 6 (Sunday) further increased the model score.\n\nConclusion:\nThe model flagged this transaction primarily because it is a large-value (15333.3) ACH transfer executed on dayofweek 6, with matching paid and received amounts. Based solely on these drivers, the item warrants manual review; if ACH transfers or weekend activity are subject to heightened controls, this would further support escalation."
+}

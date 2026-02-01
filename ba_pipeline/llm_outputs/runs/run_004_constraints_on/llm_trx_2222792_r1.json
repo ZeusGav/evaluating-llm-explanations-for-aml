@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2222792,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.8885,
+  "llm_text": "Why: The flag is driven primarily by payment_format_ach = 1 (strong positive contribution; SHAP ≈ +2.93, direction = increase). Secondary contributors increasing the score are dayofweek = 6 (Sunday; SHAP ≈ +0.66, increase), amount_received = 15563.9 (SHAP ≈ +0.64, increase) and amount_paid = 15563.9 (SHAP ≈ +0.59, increase). These features together raised the model score. This increase was partially offset by receiving_currency_euro = 1 (SHAP ≈ −0.33, direction = decrease).\n\nConclusion: The transaction was flagged chiefly because it is an ACH transfer (payment_format_ach) involving relatively large, equal received/paid amounts on dayofweek = 6. The fact that the receiving currency is euro slightly lowers the alert score. If ACH transfers of this size and timing are atypical for the counterparty, further review would be reasonable (conditional on available account- or customer-context)."
+}

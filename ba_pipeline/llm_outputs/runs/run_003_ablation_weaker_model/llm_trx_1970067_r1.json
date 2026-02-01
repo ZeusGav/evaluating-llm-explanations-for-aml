@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1970067,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 25.8506,
+  "llm_text": "Why:\n- payment_format_ach: value=1; shap_value=2.91916; direction=increase. This is the largest positive driver, indicating the ACH payment method strongly contributed to the flag.\n- amount_received: value=13573.3; shap_value=1.1527; direction=increase. A high incoming amount supports the model’s concern.\n- amount_paid: value=13573.3; shap_value=0.827298; direction=increase. The same magnitude for amount_paid reinforces the prominent transfer signal.\n- dayofweek: value=5; shap_value=0.419004; direction=increase. Friday timing adds incremental risk signal.\n- from_bank: value=8623; shap_value=-0.399046; direction=decrease. This sending-bank factor reduces the overall risk signal, providing a mitigating effect.\n\nConclusion:\nThe flag appears to be driven primarily by the ACH payment format (highest positive SHAP) together with a large, symmetric transfer (amount_received and amount_paid both 13573.3) and a Friday transaction (dayofweek=5). The sending-bank factor (from_bank) provides a modest mitigating effect. Based solely on these drivers, this pattern could reflect a routine ACH settlement on a Friday, but it warrants review to determine AML risk given the strong ACH signal and sizable transfer amounts."
+}

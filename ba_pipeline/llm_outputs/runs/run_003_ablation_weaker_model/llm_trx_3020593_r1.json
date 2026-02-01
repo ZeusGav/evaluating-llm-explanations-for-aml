@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3020593,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 29.9523,
+  "llm_text": "Why:\n- payment_format_ach: value=1; SHAP=2.89162; direction increase. Explanation: The ACH-based payment method is the strongest contributor to the flag, per the SHAP signal, indicating this format raises risk.\n- amount_paid: 11972.8; SHAP=0.889744; direction increase. Explanation: A sizeable amount being paid increases risk signal.\n- amount_received: 11972.8; SHAP=0.787085; direction increase. Explanation: An equal-sized receiving amount further increases the risk signal.\n- from_bank: 11056; SHAP=-0.336469; direction decrease. Explanation: The sending-bank signal reduces risk, but this negative contribution is smaller in magnitude than the positive signals from ACH and the amounts.\n- hour: 12; SHAP=0.300213; direction increase. Explanation: Midday timing adds a modest risk signal.\n\nConclusion:\nBased on the top drivers, the transaction is flagged primarily due to the ACH payment format and the large, matched paid/received amounts, with a secondary, modest contribution from the midday hour. The sending bank signal reduces risk, but not enough to offset the dominant positive signals. If supported by further review, this pattern could be consistent with higher-risk fund movement patterns, though no definitive conclusion can be drawn from these driver signals alone."
+}

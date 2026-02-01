@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1392744,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.3233,
+  "llm_text": "Why: The alert is driven primarily by payment_format_ach=1 (SHAP +2.87879, increase), indicating ACH origination strongly increased the score. dayofweek=6 (SHAP +0.621813, increase — Sunday) and payment_currency_saudi_riyal=1 (SHAP +0.606203, increase) further raised the score, as did amount_received=31783.0 (SHAP +0.295498, increase) and receiving_currency_saudi_riyal=1 (SHAP +0.268666, increase). Offsetting effects came from from_bank=119 (SHAP -0.428745, decrease) and to_bank=49365 (SHAP -0.304935, decrease), which reduced the model score.\n\nConclusion: The record was flagged mainly because it is an ACH payment in Saudi Riyals occurring on dayofweek=6 with amount_received=31783.0; bank identifiers partially mitigated the signal. If investigating, prioritize verifying ACH routing and currency origin/receipt consistent with these drivers."
+}

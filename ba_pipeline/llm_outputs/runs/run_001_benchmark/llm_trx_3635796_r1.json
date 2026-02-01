@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3635796,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 17.7997,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+2.87653, direction=increase): the payment being ACH is the single largest driver increasing the alert score.\n- amount_received (value=15333.3; SHAP=+0.934122, direction=increase): the received amount (15,333.3) meaningfully increases the score.\n- dayofweek (value=6 → Sunday; SHAP=+0.766317, direction=increase): the transaction occurring on dayofweek=6 (Sunday) contributes to a higher score.\n- amount_paid (value=15333.3; SHAP=+0.711315, direction=increase): the paid amount equals the received amount (15,333.3) and further increases the score.\n- receiving_currency_euro (value=1; SHAP=−0.234298, direction=decrease): receiving_currency_euro slightly reduces the alert score (a mild mitigating factor).\n\nConclusion:\nThe model flagged this transaction primarily because it was an ACH transfer (payment_format_ach=1) involving a relatively large, matching paid and received amount (amount_received=15333.3 and amount_paid=15333.3) that occurred on a Sunday (dayofweek=6). The fact that the receiving currency is euro (receiving_currency_euro=1) modestly decreases the score but does not offset the stronger increasing drivers. \n\nConditional note (hedged): if an ACH payment (payment_format_ach=1) of this magnitude and with identical paid/received amounts occurs on a weekend (dayofweek=6), the model’s score is expected to be higher given the cited driver contributions."
+}

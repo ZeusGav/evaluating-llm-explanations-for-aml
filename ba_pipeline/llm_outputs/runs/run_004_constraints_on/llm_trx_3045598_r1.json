@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3045598,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.1454,
+  "llm_text": "Why: The flag is driven primarily by payment_format_ach = 1 (strong positive contribution), indicating an ACH payment format raised the score. Both amount_paid = 9880.3 and amount_received = 9880.3 contributed positively, so the transaction amount and the identical paid/received values increased risk. payment_currency_saudi_riyal = 1 also increased the score. Conversely, from_bank = 148785 had a negative contribution (decreased the score), partially offsetting the above.\n\nConclusion: The model flagged this transaction mainly because it is an ACH transfer (payment_format_ach) of a substantial, identical amount (amount_paid and amount_received = 9880.3) in Saudi Riyals (payment_currency_saudi_riyal), despite a reducing signal from from_bank = 148785. If ACH format and these amount/currency patterns are treated as higher-risk by the model, this combination explains the alert."
+}

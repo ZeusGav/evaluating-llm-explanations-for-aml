@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1942237,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 9.0998,
+  "llm_text": "Why: The flag is driven primarily by the payment method and transaction size. The model lists payment_format_ach = 1 (feature: payment_format_ach) with the largest positive SHAP (+2.79569 → increase), and both amount_received = 14460.9 (feature: amount_received, SHAP +0.83214 → increase) and amount_paid = 14460.9 (feature: amount_paid, SHAP +0.69969 → increase) contributing to higher risk. The receiving bank (to_bank = 20; feature: to_bank, SHAP +0.89908 → increase) also raises the score. Partially offsetting these is the sending bank (from_bank = 410; feature: from_bank, SHAP -0.84028 → decrease), which reduced the model score.\n\nConclusion: The transaction was flagged mainly because it is an ACH payment (payment_format_ach) of substantial, equal amounts (amount_received and amount_paid) to receiving bank 20 (to_bank). This signal is somewhat mitigated by the negative contribution from from_bank = 410. If ACH payments and the specified receiving bank typically drive alerts, the combined high ACH contribution and amounts plausibly explain the flag."
+}

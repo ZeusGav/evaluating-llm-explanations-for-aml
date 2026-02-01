@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2233432,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 10.8217,
+  "llm_text": "Why: The model flagged this transaction primarily because payment_format_ach=1 (strong positive driver) and relatively large amounts (amount_received=14011.4 and amount_paid=14011.4 each increased the score). The dayofweek=6 (Sunday) also contributed to a higher score. Conversely, from_bank=111443 and payment_currency_us_dollar=1 exerted negative SHAP effects (they reduced the model score), partially offsetting the increases.\n\nConclusion: The model’s rationale centers on an ACH payment of ~14,011.4 executed on dayofweek=6, which raised the alert likelihood; however, the originating bank (from_bank=111443) and USD payment currency lowered it. If further review is needed, focus checks on the ACH nature and transaction timing given these driver contributions."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2278966,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 9.5645,
+  "llm_text": "Why: The model flagged this item mainly because payment_format_ach = 1 had the largest positive contribution (SHAP 3.14549, direction: increase). Receiving bank (to_bank = 20) further increased the score (SHAP 1.06159, increase). Transaction size also raised the score: amount_received = 14148.0 (SHAP 0.905171, increase) and amount_paid = 14148.0 (SHAP 0.61475, increase). A countervailing factor was from_bank = 12, which reduced the score (SHAP -1.02009, direction: decrease).\n\nConclusion: The flag is driven primarily by the ACH payment format (payment_format_ach=1), the receiving bank identifier (to_bank=20), and the transaction amounts (amount_received/amount_paid=14148.0), partially offset by from_bank=12. If ACH channel and this receiving bank are monitored for elevated model risk, prioritizing review of the ACH payment and to_bank=20 would be appropriate."
+}

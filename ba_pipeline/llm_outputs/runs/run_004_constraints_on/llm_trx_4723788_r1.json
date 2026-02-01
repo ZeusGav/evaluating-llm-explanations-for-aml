@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4723788,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.0585,
+  "llm_text": "Why:\n- payment_format_ach = 1 was the primary driver (SHAP +2.926, direction: increase), indicating the model strongly flags ACH payments.\n- payment_currency_saudi_riyal = 1 contributed positively (SHAP +0.616, increase), and receiving_currency_saudi_riyal = 1 also added (SHAP +0.242, increase), so SAR as payment/receiving currency raised the score.\n- payment_currency_us_dollar = 0 (absence of USD) had a positive contribution (SHAP +0.335, increase), i.e., non‑USD payment increased risk.\n- from_bank = 148016 had a negative contribution (SHAP −0.432, direction: decrease), partially offsetting the flag.\n\nConclusion:\nThe alert is principally driven by an ACH transfer denominated in Saudi Riyal (and not in USD), with the sending bank feature reducing but not negating the risk score. If ACH payments in SAR are atypical for this channel/customer, that pattern likely explains the flag."
+}

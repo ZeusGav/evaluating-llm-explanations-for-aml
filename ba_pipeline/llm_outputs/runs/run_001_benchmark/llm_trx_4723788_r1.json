@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4723788,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.5786,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — largest contributor: SHAP +2.926 (increase). The model’s score rose primarily because the payment was made via ACH.\n- payment_currency_saudi_riyal (value=1) — SHAP +0.616 (increase). The payment currency being Saudi riyal contributed to increasing the flag score.\n- payment_currency_us_dollar (value=0) — SHAP +0.335 (increase). The payment not being in US dollars increases the score (the model attributes higher score when payment_currency_us_dollar = 0).\n- receiving_currency_saudi_riyal (value=1) — SHAP +0.242 (increase). The receiving currency being Saudi riyal further increased the score.\n- from_bank (value=148016) — SHAP -0.432 (decrease). The sending bank ID reduced the model score (partially offsetting the increases above).\n\nConclusion:\nThe transaction was flagged mainly because it is an ACH payment (payment_format_ach=1) denominated in Saudi riyal (payment_currency_saudi_riyal=1 and receiving_currency_saudi_riyal=1), with the absence of USD (payment_currency_us_dollar=0) also increasing the score. This upward pressure was partially offset by a negative contribution from the sending bank (from_bank = 148016). If the positive contributions from the ACH and Saudi riyal features outweigh the sending-bank decrease (as indicated by the SHAP magnitudes), the net model score led to the alert."
+}

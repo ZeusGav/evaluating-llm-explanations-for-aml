@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2233431,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 10.827,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.99): the model’s strongest driver is that the payment was made by ACH, which substantially increased the flagging score.\n- amount_received = 14108.6 (SHAP +0.88) and amount_paid = 14108.6 (SHAP +0.76): the relatively large, equal payment and receipt amounts both contributed to raising the score.\n- dayofweek = 6 (SHAP +0.77): the transaction occurring on day 6 (Sunday) further increased the score.\n- from_bank = 22828 (SHAP −0.72): the sending bank ID actually reduced the model score (a mitigating factor).\n- payment_currency_us_dollar = 1 (SHAP −0.28): payment in US dollars slightly decreased the score (a minor mitigant).\n\nConclusion:\n- The transaction was flagged primarily because it was an ACH transfer (payment_format_ach) combined with a sizable amount (amount_received and amount_paid ≈ 14,108.6) occurring on dayofweek = 6; these features materially increased the model score. The flagging effect was partially offset by from_bank and payment_currency_us_dollar, which reduced the score. \n- If further review is required, focus checks on the ACH origin and the large, same-valued payment/receipt on dayofweek = 6, noting that the sending bank (from_bank) and USD currency (payment_currency_us_dollar) were model-level mitigants."
+}

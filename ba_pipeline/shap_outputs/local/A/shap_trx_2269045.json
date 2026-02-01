@@ -1,0 +1,66 @@
+{
+  "transaction_id": 2269045,
+  "model_proba": 0.9958568215370178,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0492825508117676,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 12498.02,
+      "shap_value": 0.6588079929351807,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 12498.02,
+      "shap_value": 0.642949104309082,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 21.0,
+      "shap_value": -0.5958096981048584,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.5470510125160217,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 148389.0,
+      "shap_value": -0.5428847670555115,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.18344038724899292,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.17769365012645721,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1726028025150299,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.1218707412481308,
+      "direction": "increase"
+    }
+  ]
+}

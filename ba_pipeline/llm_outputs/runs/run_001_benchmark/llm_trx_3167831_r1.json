@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3167831,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 16.4174,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+2.96829; direction=increase): The model’s largest contributor — the transaction being an ACH payment strongly increased the flag score.\n- amount_paid (value=6426.47; SHAP=+0.963357; direction=increase): The paid amount materially increased the score and is a secondary driver.\n- to_bank (value=12; SHAP=+0.463956; direction=increase): The receiving bank ID (12) contributed further to raising the risk score.\n- hour (value=19; SHAP=-0.193358; direction=decrease): The transaction hour (19:00) slightly reduced the score but did not offset the above increases.\n\nConclusion:\n- The alert is primarily driven by the combination of payment_format_ach=1, a notable amount_paid=6426.47, and routing to to_bank=12; hour=19 provided a small mitigating effect. \n- Based solely on these drivers, a focused review of the ACH payment details and the relationship to receiving bank 12 is warranted (conditional recommendation inferred from the named drivers)."
+}

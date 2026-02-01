@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3640921,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 28.5344,
+  "llm_text": "Why:\n- payment_format_ach (value=1) with SHAP_value=2.87324, direction increase: This is the strongest contributor, indicating that an ACH payment format is strongly associated with the flag in this model’s reasoning.\n- amount_received (13325.5) with SHAP_value=1.09402, direction increase: The sizable received amount contributes to the risk signal.\n- from_bank (230257) with SHAP_value=0.667287, direction increase: The sending bank ID is linked to higher risk in this case.\n- amount_paid (13325.5) with SHAP_value=0.649648, direction increase: The matching substantial amount paid also contributes to the risk signal.\n\nNote: The remaining drivers (e.g., to_bank, dayofweek, hour, etc.) have smaller absolute SHAP values and are not included as primary drivers here to reflect the top contributors.\n\nConclusion:\nThe flag is primarily driven by the ACH payment format plus relatively large matching received/paid amounts and the sending bank ID, which together indicate a higher risk signal in this instance. Based solely on these drivers, the transaction appears elevated risk relative to a baseline; however, this does not constitute a definitive determination of illicit activity. If these drivers reflect patterns seen in our training data, a follow-up review focusing on ACH-related transactions, the counterparties involved, and the transaction amounts is warranted to assess intent and legitimacy."
+}

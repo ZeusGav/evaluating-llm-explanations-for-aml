@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2222792,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 26.6212,
+  "llm_text": "Why:\n- payment_format_ach: The transaction uses an ACH payment format (payment_format_ach = 1) and has the largest positive SHAP contribution (shap_value = 2.93191, direction increase), indicating the model strongly associates ACH-based transfers with the flagged pattern in this case.\n- dayofweek: Day of week is 6 (Sunday) with a positive SHAP (shap_value = 0.660885, direction increase), suggesting weekend timing adds risk per the model’s logic.\n- amount_received and amount_paid: Both amounts are 15563.9, with positive SHAP contributions (amount_received = 0.643854, amount_paid = 0.591814, both direction increase). The simultaneous receipt and payment of identical amounts can be interpreted by the model as a pattern often seen in matched or offsetting transfers, contributing to the flag.\n\nConclusion:\nBased on the top drivers, the flag appears driven by an ACH payment on a Sunday with a matched transfer amount. This combination is interpreted by the model as elevated risk. A manual review is recommended to determine legitimate business reasons (e.g., standard payroll or settlement timing) and to assess for potential AML concerns."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4949831,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 25.7128,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=3.02815; direction: increase) — ACH as the payment method is the single strongest contributor to the flag.\n- amount_received (value=17119.9; shap_value=0.742454; direction: increase) — a large incoming amount adds notable risk signal.\n- amount_paid (value=17119.9; shap_value=0.495264; direction: increase) — matching large payout further supports the flag signal.\n- dayofweek (value=5; shap_value=0.38923; direction: increase) — activity on this day contributes to risk per the model.\n- from_bank (value=118; shap_value=-0.574998; direction: decrease) — sending-bank factor reduces risk signal, partially offsetting the above drivers.\n\nConclusion:\nBased solely on the provided drivers, the transaction is flagged due to strong risk signals from ACH usage and large, matched transfer amounts, with a modest offset from the sending-bank factor. Overall, the model indicates elevated risk for this transaction, though the from_bank driver partially mitigates the score."
+}

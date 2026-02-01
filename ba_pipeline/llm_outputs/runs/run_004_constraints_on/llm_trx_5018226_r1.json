@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5018226,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 11.8461,
+  "llm_text": "Why: The model signal is driven primarily by payment_format_ach = 1 (strongly increases score), combined with large transaction values: amount_received = 17462.3 (increases) and amount_paid = 17462.3 (increases). These three features together produced the largest positive SHAP contributions and explain why the probability of a flag rose.\n\nConclusion: The alert is principally due to an ACH payment (payment_format_ach) of about 17,462.3 in the transaction currency (amount_received / amount_paid). Given these drivers, the transaction merits manual review focused on the ACH movement and the high amount; note that payment_currency_us_dollar = 1 had a small decreasing effect but did not offset the ACH and amount drivers."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5027067,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 10.8289,
+  "llm_text": "Why: The model flagged the transaction primarily because payment_format_ach (value=1) contributed the largest positive SHAP (+2.90662), i.e., ACH payment format raised the risk score. amount_received (11226.2, SHAP +0.82796) and amount_paid (11226.2, SHAP +0.71171) further increased the score, indicating the transaction size contributed to the alert. dayofweek (value=5, SHAP +0.43207) also raised the score (day 5 per mapping), while from_bank (117453, SHAP −0.55407) partially reduced the score.\n\nConclusion: The alert is driven mainly by use of ACH (payment_format_ach=1) together with the ~11,226.2 payment amounts and occurrence on dayofweek=5. The sending bank (from_bank) modestly lowered the model score. If ACH payments and this amount range are treated as higher-risk by the model, that combination explains the flag."
+}

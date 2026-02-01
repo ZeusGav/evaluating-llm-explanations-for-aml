@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4269465,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 29.906,
+  "llm_text": "Why:\n- Top contributing driver: payment_format_ach (value=1; shap_value=3.02109; direction increase). This indicates the ACH payment format is a strong positive contributor to the flag.\n- Second: amount_received (value=53104.4; shap_value=0.878929; direction increase). A large inflow amount is a notable risk-contributing factor.\n- Third: dayofweek (value=6; shap_value=0.807226; direction increase). Weekend timing is contributing to the risk signal.\n- Fourth: payment_currency_saudi_riyal (value=1; shap_value=0.459144; direction increase). Use of Saudi Riyal in the payer’s side increases the model’s risk signal.\n\nNote: from_bank has a negative contribution (value=249176; shap_value=-0.306126; direction decrease), which modestly offsets the risk, but is not among the top drivers and does not negate the primary risk signals from the four listed above.\n\nConclusion:\n- Based on the listed drivers, the flag is driven by ACH as the payment format, a large amount received, weekend timing, and SAR currency usage, in that order of impact. The negative contribution from the sending bank slightly mitigates risk but does not remove the overall risk signal from the top drivers. This pattern warrants standard AML investigative steps to verify legitimacy and expected business context."
+}

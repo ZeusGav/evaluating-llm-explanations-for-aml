@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2200191,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.3589,
+  "llm_text": "Why:\nThe model’s top driver was payment_format_ach (value=1; SHAP=+2.94384, direction=increase) — an ACH payment strongly raised the score. Additional positive contributors were dayofweek (value=6, i.e. Sunday; SHAP=+0.7267, direction=increase), amount_paid (9853.57; SHAP=+0.5671, direction=increase), amount_received (9853.57; SHAP=+0.3402, direction=increase), and payment_currency_saudi_riyal (value=1; SHAP=+0.2700, direction=increase). A partial offset came from from_bank (119; SHAP=-0.4828, direction=decrease), which lowered the score.\n\nConclusion:\nThe transaction was flagged mainly because it is an ACH transfer (payment_format_ach=1) executed on Sunday (dayofweek=6) in SAR for ~9,853.57 (amount_paid/amount_received), with ACH and timing producing the largest SHAP increases. The sending bank (from_bank=119) modestly reduced risk. If one accepts these feature effects, the model’s flag is attributable primarily to ACH format, weekend timing, currency, and transaction size."
+}

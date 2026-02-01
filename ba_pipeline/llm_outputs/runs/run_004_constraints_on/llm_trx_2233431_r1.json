@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2233431,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.4676,
+  "llm_text": "Why: The model flagged the item mainly because payment_format_ach = 1 (SHAP +2.988; increases score), combined with high value fields amount_received = 14108.6 (SHAP +0.877; increases) and amount_paid = 14108.6 (SHAP +0.759; increases). Timing also contributed: dayofweek = 6 (Sunday) (SHAP +0.772; increases). Offsetting signals that reduced the score were from_bank = 22828 (SHAP -0.715; decreases) and payment_currency_us_dollar = 1 (SHAP -0.282; decreases).\n\nConclusion: The alert is driven primarily by the ACH payment method plus a relatively large same-value payment occurring on a Sunday, with partial mitigation from the sending bank identifier and USD currency. If reviewing, focus on ACH routing and transaction purpose given the weekend timing and amount."
+}

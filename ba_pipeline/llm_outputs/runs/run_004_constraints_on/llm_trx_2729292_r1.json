@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2729292,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.0713,
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant driver, strongly increasing the model score (SHAP +2.776), i.e., the ACH payment format chiefly drove the flag.\n- amount_received (17441.1) increased the score (SHAP +0.967), and amount_paid (17441.1) also increased it (SHAP +0.450), indicating the model responded to a relatively large transaction amount.\n- to_bank (1467) contributed to an increased score (SHAP +0.510), meaning the receiving bank ID materially influenced the flag.\n- hour (22) slightly decreased the score (SHAP −0.456), partially offsetting the increases above.\n\nConclusion:\nThe transaction was flagged principally because payment_format_ach plus sizable amounts (amount_received/amount_paid ≈ 17,441.1) and the receiving bank (to_bank=1467) raised the model score; the late hour (hour=22) modestly reduced it. If investigating, reviewers should prioritize verification of the ACH flow, the receiving bank (1467), and the reported amounts."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1984624,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 24.5471,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — largest positive contributor (SHAP +2.94586); the model increased the score because the payment was sent via ACH.\n- amount_received (19753.5) — positive contributor (SHAP +0.80618); the relatively high received amount increased the score.\n- dayofweek (6) — positive contributor (SHAP +0.68572); the transaction occurring on day 6 (Sunday) increased the score.\n- payment_currency_saudi_riyal (value=1) — positive contributor (SHAP +0.45888); payment in Saudi riyal increased the score.\n- amount_paid (19753.5) — positive contributor (SHAP +0.35909); the paid amount also increased the score.\n- from_bank (118) — negative contributor (SHAP −0.45185); the sending bank ID reduced the model score (partially offsetting the increases).\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH transfer (payment_format_ach=1) of a sizable amount (amount_received/amount_paid = 19,753.5) in Saudi riyals (payment_currency_saudi_riyal=1) occurring on day 6 (dayofweek=6), all of which increased the model risk score. This increase was partially mitigated by a negative contribution from the sending bank (from_bank=118). If one interprets amount_paid and amount_received being equal combined with payment_currency_saudi_riyal=1, it could suggest a same‑currency ACH movement (no visible conversion), which may be relevant for further review."
+}

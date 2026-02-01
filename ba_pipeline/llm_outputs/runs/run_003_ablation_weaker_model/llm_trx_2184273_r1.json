@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2184273,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 23.9803,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=2.8732; direction=increase) is the strongest driver, indicating the transaction used ACH and this method strongly contributes to the flag.\n- amount_received (13055.8; shap_value=1.21042; increase) and amount_paid (13055.8; shap_value=0.641277; increase) both push the flag, with substantial positive contributions at the same nominal amount.\n- dayofweek (6; shap_value=0.505227; increase) adds to the flag, suggesting weekend timing may be associated with higher risk in this context.\n- Note: other drivers with negative contributions (receiving_currency_euro; to_bank; from_bank) imply some mitigating effects, but their magnitudes are smaller than the top three drivers and do not offset the primary signals.\n\nConclusion:\n- Based on the top drivers, the transaction exhibits elevated risk driven by ACH usage, equal high inbound/outbound amounts, and Sunday timing. Some mitigating signals exist (euro receiving and specific banks), but the primary factors justify escalation for further review and verification of counterparties and payment routing."
+}

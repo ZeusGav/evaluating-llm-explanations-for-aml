@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1030747,
+  "run_name": "run_002_stability",
+  "repeat": 9,
+  "model": "gpt-5-mini",
+  "latency_s": 16.4071,
+  "llm_text": "Why:\n- payment_format_ach = 1: This feature produced the largest positive contribution (SHAP +2.95104), so the model treats an ACH-format payment as strongly increasing the flag score.\n- amount_received = 56984.0: A high received amount contributed positively (SHAP +0.746488), indicating the model views this size as increasing risk.\n- dayofweek = 6: The transaction occurring on day 6 (SHAP +0.689965) increased the score, i.e., the model associates this day with higher risk.\n- payment_currency_saudi_riyal = 1: Payment currency being Saudi Riyal added to the score (SHAP +0.526883), further increasing the flag likelihood.\n\nConclusion:\nThe model flagged this transaction mainly because it is an ACH payment (payment_format_ach) in Saudi Riyal (payment_currency_saudi_riyal) for a relatively large received amount (amount_received = 56,984) that occurred on day 6 (dayofweek = 6); these features contributed the most to increasing the score. (Note: other features in the driver list had smaller opposing or supporting effects but were not primary contributors.)"
+}

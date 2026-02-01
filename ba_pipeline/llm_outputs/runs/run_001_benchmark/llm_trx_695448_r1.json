@@ -1,0 +1,8 @@
+{
+  "transaction_id": 695448,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.272,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.82801, direction: increase) — the payment being ACH was the single largest driver raising the model score.\n- amount_received = 12481.9 (SHAP +0.851023, direction: increase) — the received amount materially increased the score.\n- dayofweek = 6 (SHAP +0.756385, direction: increase) — the transaction occurring on day 6 (Sunday) contributed to a higher score.\n- amount_paid = 12481.9 (SHAP +0.735158, direction: increase) — the paid amount (equal to the received amount) further increased the score.\n- from_bank = 211 (SHAP -0.397467, direction: decrease) — the sending bank ID reduced the score modestly (a mitigating contribution).\n\nConclusion:\nThe transaction was flagged because the model score was driven up primarily by payment_format_ach = 1 together with relatively large amount_received/amount_paid (12481.9) and execution on dayofweek = 6 (Sunday). The sending bank (from_bank = 211) partially mitigates the score but does not offset the strong positive contributions from the ACH format and amounts. If one accepts only the provided drivers, the net effect is an elevated model score attributable chiefly to ACH + the ~12,481.9 amount occurring on day 6."
+}

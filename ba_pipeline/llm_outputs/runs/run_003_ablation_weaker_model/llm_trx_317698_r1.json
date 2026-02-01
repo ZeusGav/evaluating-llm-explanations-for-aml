@@ -1,0 +1,8 @@
+{
+  "transaction_id": 317698,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 30.4608,
+  "llm_text": "Why:\n- payment_format_ach (value=1, SHAP=2.82389, direction increase) – The ACH payment method strongly contributes to the flag.\n- amount_paid (7222.58, SHAP=0.810026, direction increase) – A relatively large payment amount increases the risk signal.\n- dayofweek (5, SHAP=0.460643, direction increase) – Transaction occurring on Saturday adds to the risk signal.\n- to_bank (value=14290, SHAP=-0.320203, direction decrease) – Receiving-bank factor provides a decreasing signal, somewhat offsetting the risk.\n\nConclusion:\nOverall, the high-impact drivers indicate elevated AML risk driven by ACH payment, sizable amount, and weekend timing, with a modest offset from the receiving-bank factor. Based on these drivers alone, the transaction should remain flagged for review, acknowledging the negative contribution from to_bank partially mitigating the signal."
+}

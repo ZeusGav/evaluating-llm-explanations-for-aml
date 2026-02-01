@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4723791,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.0579,
+  "llm_text": "Why:\nThe model flagged the transaction primarily because payment_format_ach = 1 (strong positive contribution, SHAP +3.10), indicating an ACH payment format driving the score upward. dayofweek = 6 (Sunday) also increased the score (SHAP +0.69). payment_currency_saudi_riyal = 1 (SHAP +0.54) and amount_received = 37845.1 (SHAP +0.45) further raised the score, suggesting a sizable SAR-denominated ACH credit on a Sunday. Two features partially mitigated the flag: from_bank = 48308 reduced the score (SHAP -0.53) and hour = 5 (early morning) reduced it modestly (SHAP -0.35).\n\nConclusion:\nThe alert is driven mainly by ACH format, Saudi riyal currency, Sunday timing, and a substantial received amount. The specific from_bank and early hour reduced but did not fully offset the model’s positive contributions. If warranted, review ACH payment context and origin details for this SAR-denominated receipt."
+}

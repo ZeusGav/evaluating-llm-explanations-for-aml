@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2184273,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.9801,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.8732, direction: increase): the payment method (ACH) is the single largest positive driver of the flag.\n- amount_received = 13,055.8 (SHAP +1.21042, direction: increase): a mid-five-figure received amount materially increased the score.\n- amount_paid = 13,055.8 (SHAP +0.641277, direction: increase): the paid amount (equal to the received amount) further increased the score.\n- dayofweek = 6 (Sunday) (SHAP +0.505227, direction: increase): transaction occurring on day 6 (Sunday) contributed positively to the flag.\n- receiving_currency_euro = 1 (SHAP -0.445818, direction: decrease): receiving in euro partially reduced the model score but did not offset the positive contributors above.\n\nConclusion:\nThe model flagged this transaction primarily because it is an ACH payment (payment_format_ach) with identical paid and received amounts of 13,055.8 (amount_received and amount_paid) executed on dayofweek = 6 (Sunday); these features together produced a net positive score despite a modest negative contribution from receiving_currency_euro. If ACH transfers of this size or ACH activity on Sundays are atypical for the customer, further review is recommended."
+}

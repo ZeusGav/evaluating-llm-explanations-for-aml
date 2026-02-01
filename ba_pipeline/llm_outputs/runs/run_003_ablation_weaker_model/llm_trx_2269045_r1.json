@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2269045,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 18.8951,
+  "llm_text": "Why:\n- The strongest risk signal comes from payment_format_ach (value=1) with SHAP 3.04928, indicating an ACH-style transfer is a primary driver of the flag.\n- Large, matched transfer amounts drive risk: amount_paid = 12,498.0 (SHAP 0.658808) and amount_received = 12,498.0 (SHAP 0.642949). The near-equal, sizable sums contribute to the concern.\n- Temporal pattern adds to risk: dayofweek = 6 (Sunday) with SHAP 0.547051 increases the signal; hour = 21 carries a negative SHAP (-0.59581), meaning late evening reduces this particular signal but does not negate the other stronger drivers.\n- Currency context aligns with domestic/Saudi Riyal usage: payment_currency_saudi_riyal = 1 (SHAP 0.18344) and receiving_currency_saudi_riyal = 1 (SHAP 0.121871) support the currency context of the transfer, reinforcing the ACH/amount pattern.\n- Sending bank factor slightly reduces the risk signal: from_bank = 148389 has SHAP -0.542885, suggesting this aspect lowers the overall risk contribution relative to the top drivers.\n\nConclusion:\n- The flag is primarily driven by an ACH-format transfer with a large, exact-match amount both paid and received, in Saudi Riyal, occurring on a Sunday. Temporal and currency patterns reinforce the context, while the late hour and the sending-bank factor somewhat dampen the signal. If this pattern is unusual for the customer or aligns with known high-risk ACH activity, escalate for review; otherwise, the signal may reflect a legitimate transfer pattern."
+}

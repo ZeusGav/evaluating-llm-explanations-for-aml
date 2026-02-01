@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2422807,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.6173,
+  "llm_text": "Why: The flag is driven primarily by payment_format_ach=1 (SHAP +2.90659), which strongly increased the score. Large transaction size contributed: amount_paid=10873.2 (SHAP +0.7632) and amount_received=10873.2 (SHAP +0.600271) both increased the score, showing a sizeable, matched transfer. Receiving bank to_bank=20 (SHAP +0.581884) also raised the score. Hour=6 (SHAP -0.272553) modestly reduced the score. payment_currency_euro=1 had a small positive effect (SHAP +0.156075).\n\nConclusion: The model flagged an ACH transfer (payment_format_ach=1) of ~10873.2 in the payment currency (payment_currency_euro=1) with identical paid/received amounts to to_bank=20, producing a net increased risk signal. If ACH transfers of this magnitude to to_bank=20 are atypical for the customer, a focused review is recommended."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1030747,
+  "run_name": "run_002_stability",
+  "repeat": 5,
+  "model": "gpt-5-mini",
+  "latency_s": 17.828,
+  "llm_text": "Why:\n- payment_format_ach = 1 — strong positive contributor (SHAP +2.951). The ACH payment format was the single largest factor increasing the model score.\n- amount_received = 56,984.0 — positive contributor (SHAP +0.746). The relatively large received amount increased the alert likelihood.\n- dayofweek = 6 (Sunday) — positive contributor (SHAP +0.690). The transaction timing (Sunday) raised the model score.\n- payment_currency_saudi_riyal = 1 — positive contributor (SHAP +0.527). Payment in Saudi Riyal increased the score.\n- payment_currency_us_dollar = 0 — positive contributor (SHAP +0.315). The transaction not being in USD (value = 0) also increased the score.\n\nConclusion:\n- The model flagged this transaction primarily because it was an ACH transfer (payment_format_ach=1) in Saudi Riyal involving a relatively large received amount (56,984.0) that settled on a Sunday (dayofweek=6); the combination of those features produced the highest positive SHAP contributions. \n- Conditionally, if one of those high-impact features were different (for example, not ACH or a smaller amount or a different currency), the model score would likely be lower given the positive directions shown for those drivers."
+}

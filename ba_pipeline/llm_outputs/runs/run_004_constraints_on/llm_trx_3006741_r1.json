@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3006741,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 9.6149,
+  "llm_text": "Why:\n- payment_format_ach = 1 was the dominant driver (SHAP increase), so an ACH payment strongly increased the model score.\n- amount_received = 18,120 and amount_paid = 18,120 both contributed positive SHAP effects, indicating the relatively large transaction amounts increased the score.\n- from_bank = 21258 contributed a modest negative SHAP (decrease), partially offsetting risk, while to_bank = 701 had a small positive SHAP (increase).\n\nConclusion:\n- The flag is primarily driven by an ACH transfer (payment_format_ach) combined with substantial equal payment and receipt amounts (amount_received and amount_paid = 18,120). The sending bank reduced the score slightly, and the receiving bank added a small lift. If pursuing review, focus on ACH origin/destination details given these drivers."
+}

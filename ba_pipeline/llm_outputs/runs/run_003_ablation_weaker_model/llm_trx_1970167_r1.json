@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1970167,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 20.4522,
+  "llm_text": "Why:\n- payment_format_ach = 1 -> This ACH payment method strongly increases the flag indicator (SHAP_value = 3.0887; direction: increase).\n- amount_received = 11995.4 -> A relatively large receiving amount contributes to the flag (SHAP_value = 0.8308; direction: increase).\n- amount_paid = 11995.4 -> The matched large paid amount also contributes (SHAP_value = 0.7868; direction: increase).\n- from_bank = 20 -> This sending-bank feature reduces the flag (SHAP_value = -0.7736; direction: decrease).\n- to_bank = 11 -> Receiving bank involvement adds moderate risk (SHAP_value = 0.4499; direction: increase).\n- dayofweek = 5 -> The day-of-week factor adds moderate risk (SHAP_value = 0.3558; direction: increase).\n\nConclusion:\n- The transaction is primarily driven by the ACH payment format (payment_format_ach) with a large positive contribution, complemented by substantial positive signals from the high amount_received and amount_paid. The presence of to_bank and the day of week further reinforce elevated risk, while from_bank provides a mitigating signal. Overall, the driver set indicates a higher likelihood of ML concern associated with an ACH payment with sizable, matched amounts, warranting a closer manual review focused on ACH-related activity and counterparties."
+}

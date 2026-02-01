@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2132656,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.581,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.02863, direction: increase) — the use of ACH is the largest driver increasing the model score.\n- amount_received = 23526.1 (SHAP +0.58315, direction: increase) — a relatively high received amount raises the score.\n- payment_currency_saudi_riyal = 1 (SHAP +0.45397, direction: increase) — payment currency being Saudi Riyal contributes upward.\n- amount_paid = 23526.1 (SHAP +0.44637, direction: increase) — the paid amount (same numeric value) also increases the score.\n- receiving_currency_saudi_riyal = 1 (SHAP +0.25466, direction: increase) — receiving currency being Saudi Riyal further increases the score.\n\nConclusion:\nThe transaction was flagged primarily because it was processed via ACH (payment_format_ach) and involves a comparatively large, matching paid/received amount (amount_paid and amount_received = 23,526.1) denominated in Saudi Riyal (payment_currency_saudi_riyal and receiving_currency_saudi_riyal). Given the dominant SHAP contribution from payment_format_ach, further review should prioritize verifying ACH-origin details and the payment/receipt amounts and currency consistency."
+}

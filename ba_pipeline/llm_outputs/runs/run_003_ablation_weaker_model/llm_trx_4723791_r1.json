@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4723791,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 33.8445,
+  "llm_text": "Why:\n- payment_format_ach (value=1, shap_value=3.10029, direction: increase): The strongest contributor among the drivers. The presence of ACH as the payment format increases the model’s risk signal for this transaction.\n- dayofweek (value=6, shap_value=0.690859, direction: increase): The transaction occurred on day 6 (Sunday), which adds an additional positive risk signal.\n- payment_currency_saudi_riyal (value=1, shap_value=0.539768, direction: increase): The use of Saudi Riyal as the payment currency contributes positively to the risk score.\n- from_bank (value=48308, shap_value=-0.528605, direction: decrease): This factor reduces the risk signal somewhat, acting as a mitigating driver.\n- amount_received (value=37845.1, shap_value=0.449538, direction: increase): A relatively large received amount adds to the risk signal.\n\nConclusion:\nThe flag appears driven by a combination of a high-impact ACH payment format, SAR currency usage for both sending (and receiving, as SAR is indicated for receiving) and a substantial amount received, with a modest mitigating effect from the sending-bank factor. Based on these top drivers, the transaction remains flagged for review; the presence of ACH and SAR currency signals, coupled with the sizable amount, supports continued investigation, while the from_bank factor slightly tempers the overall risk signal."
+}

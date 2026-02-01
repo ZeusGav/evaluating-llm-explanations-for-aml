@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2466813,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.1733,
+  "llm_text": "Why:\n- payment_format_ach (value=1) is the largest positive driver (SHAP +3.14105, direction: increase) — the ACH payment format strongly increased the model's flagging score.\n- amount_received (value=14606.0) is the next positive contributor (SHAP +1.20612, direction: increase) — a received amount of 14,606 increased the score.\n- amount_paid (value=14606.0) also increased the score (SHAP +0.878443, direction: increase) — the paid amount (14,606) contributed to the flag.\n- from_bank (value=12) lowered the score (SHAP −0.906024, direction: decrease) — the sending bank ID 12 partially offset the positive drivers but did not fully negate them.\n- to_bank (value=1) provided a smaller positive contribution (SHAP +0.396424, direction: increase) — the receiving bank ID 1 modestly increased the score.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH transfer (payment_format_ach=1) combined with relatively large equal amounts received and paid (amount_received=14606.0 and amount_paid=14606.0), which together raised the model score. The sending bank (from_bank=12) reduced the score somewhat, but not enough to overcome the strong positive contributions. Conditionally, if the ACH format and the reported amounts remain as stated, the model’s output is consistent with these drivers producing a flagged result."
+}

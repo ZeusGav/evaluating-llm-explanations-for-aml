@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3045598,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.8429,
+  "llm_text": "Why:\n- payment_format_ach = 1 is the dominant driver (SHAP +3.05408, direction = increase); the model places strong upward weight on ACH-format payments.\n- amount_paid = 9880.3 (SHAP +0.518352, direction = increase) and amount_received = 9880.3 (SHAP +0.477397, direction = increase) both raised the score, so the transaction amount materially contributed to the flag.\n- payment_currency_saudi_riyal = 1 (SHAP +0.203492, direction = increase) provided an additional positive contribution.\n- from_bank = 148785 (SHAP −0.356926, direction = decrease) lowered the score and acted as a mitigating factor.\n\nConclusion:\n- The transaction was flagged primarily because it is an ACH payment (payment_format_ach) combined with the payment size (amount_paid and amount_received); payment in Saudi Riyal added smaller upward pressure. The sending bank (from_bank) reduced the model score but did not offset the positive contributions.\n- If proceeding with review, focus on ACH-specific details and the transaction amount/currency, since those are the model drivers of the elevated score (statements conditional on the named features above)."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2200191,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 17.6759,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — largest positive contribution (SHAP=+2.94384). The model raised the score strongly because the payment was sent via ACH.\n- dayofweek (value=6 → Sunday) — positive contribution (SHAP=+0.726712). The transaction occurring on dayofweek=6 increased the model score.\n- amount_paid (value=9853.57) — positive contribution (SHAP=+0.567126). The payment size increased the score.\n- amount_received (value=9853.57) — positive contribution (SHAP=+0.340229). The received amount also pushed the score up.\n- payment_currency_saudi_riyal (value=1) — positive contribution (SHAP=+0.270007). Use of Saudi riyal increased the score.\n- from_bank (value=119) — negative contribution (SHAP=-0.482839). The sending bank ID reduced the model score (partially offsetting the increases above).\n\nConclusion:\nThe alert is primarily driven by an ACH transfer (payment_format_ach=1) occurring on Sunday (dayofweek=6) for a relatively large amount (amount_paid=9853.57 / amount_received=9853.57) in Saudi riyal (payment_currency_saudi_riyal=1); the sending bank (from_bank=119) modestly decreased the score. Conditionally, further review should focus on ACH authorization and sender/receiver relationship given the ACH + weekend + high amount combination."
+}

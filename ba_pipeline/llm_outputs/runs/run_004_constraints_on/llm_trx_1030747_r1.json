@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1030747,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.3681,
+  "llm_text": "Why:\n- The highest driver is payment_format_ach = 1 (SHAP +2.951), so the ACH payment method is the largest contributor to the flag.\n- amount_received = 56984.0 (SHAP +0.746) increases the score, indicating a materially large received amount.\n- dayofweek = 6 (SHAP +0.690) contributes upward, so the transaction occurring on day 6 (Sunday) raised the alert likelihood.\n- payment_currency_saudi_riyal = 1 (SHAP +0.527) and receiving_currency_saudi_riyal = 1 (SHAP +0.272) further increase the score (payment and receipt both in SAR).\n- from_bank (249176, SHAP -0.326) and to_bank (49508, SHAP -0.266) modestly reduce the score and partially offset risk.\n\nConclusion:\nThe model flagged an ACH transfer (payment_format_ach=1) of 56,984 with both payment and receipt in Saudi riyal (payment_currency_saudi_riyal=1, receiving_currency_saudi_riyal=1) that occurred on dayofweek=6; these drivers collectively increased the alert score. The negative SHAPs for from_bank and to_bank slightly mitigated the signal. If SAR-denominated ACH transfers on day 6 are of compliance interest, this record merits review."
+}

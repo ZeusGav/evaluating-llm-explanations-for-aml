@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2269045,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 16.5752,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.049, direction: increase): The model’s largest driver is that the payment was made via ACH; this feature substantially increased the transaction’s risk score.\n- amount_paid = 12498.0 (SHAP +0.659, direction: increase) and amount_received = 12498.0 (SHAP +0.643, direction: increase): The transaction amount (12,498) in both paid and received fields contributed positively to the score; the identical paid/received amounts both increased the flagging likelihood.\n- dayofweek = 6 (SHAP +0.547, direction: increase): Per the feature definition (0=Mon..6=Sun), the transaction occurred on Sunday, which increased the model score.\n- hour = 21 (SHAP -0.596, direction: decrease): The late hour (21:00) reduced the model score and partially offset other increases.\n- from_bank = 148389 (SHAP -0.543, direction: decrease): The sending bank identifier contributed to lowering the score (a negative SHAP effect).\n\nConclusion:\n- The transaction was flagged primarily because it was an ACH transfer (payment_format_ach) combined with a relatively large, identical amount in paid and received fields (amount_paid and amount_received = 12,498), and it occurred on dayofweek = 6 (Sunday); these factors increased the model risk. This increase was partially mitigated by the late hour (hour = 21) and the specific sending bank (from_bank = 148389), which decreased the score.\n- If further review is required, focus on verifying the ACH payment purpose and the relationship with the sending bank, since those features drove the model’s decision."
+}

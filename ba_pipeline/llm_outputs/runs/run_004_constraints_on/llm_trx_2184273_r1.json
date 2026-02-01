@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2184273,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 18.6853,
+  "llm_text": "Why:\nThe alert is driven primarily by payment_format_ach (value=1), which strongly increased the model score (SHAP +2.8732). Large value signals — amount_received (13055.8, SHAP +1.21042) and amount_paid (13055.8, SHAP +0.641277) — further raised the score. Timing also contributed: dayofweek (6, SHAP +0.505227) increased the score. Receiving_currency_euro (value=1, SHAP −0.445818) partially reduced the alert magnitude.\n\nConclusion:\nBased solely on the listed drivers, the transaction was flagged because it is an ACH payment (payment_format_ach=1) for a relatively large, equal paid/received amount (amount_received and amount_paid = 13055.8) occurring on dayofweek=6; receipt in euros (receiving_currency_euro=1) modestly mitigates the signal. If investigated further, prioritize ACH-specific context and corroborating party/bank details."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2192652,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 11.5023,
+  "llm_text": "Why: The flag is driven primarily by payment_format_ach (value=1) which substantially increased the model score. Additional increases came from dayofweek (value=6, i.e., Sunday), amount_received (13786.6), amount_paid (13786.6), and hour (12). These features collectively pushed the score upward. from_bank (2991) had a negative contribution and partially reduced the score but did not offset the positive drivers.\n\nConclusion: The model flagged an ACH payment (payment_format_ach=1) of 13,786.6 occurring at hour=12 on dayofweek=6; these factors dominated the risk signal despite a lowering effect from from_bank=2991. If further review is needed, focus on validating the ACH payment context and the Sunday/noon timing."
+}

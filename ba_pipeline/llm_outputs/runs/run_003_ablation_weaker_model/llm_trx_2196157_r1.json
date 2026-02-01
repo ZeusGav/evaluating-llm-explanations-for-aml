@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2196157,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 29.306,
+  "llm_text": "Why\n\n- payment_format_ach: value=1; SHAP value=3.09803; direction increase. The ACH payment format is the strongest positive driver, indicating this payment method heavily pushes the flag.\n\n- dayofweek: value=6; SHAP value=1.00723; direction increase. Sunday timing contributes to risk per the driver.\n\n- amount_received: value=15373.0; SHAP value=0.966874; direction increase. The inbound amount at this level increases risk.\n\n- from_bank: value=249118; SHAP value=-0.523275; direction decrease. This sender-bank feature reduces risk relative to other drivers, acting as a mitigating factor.\n\n- amount_paid: value=15373.0; SHAP value=0.388332; direction increase. The matched outbound amount aligns with the inbound amount and adds to risk.\n\n- hour: value=12; SHAP value=0.20934; direction increase. Midday hour contributes modestly to risk.\n\n- payment_currency_saudi_riyal: value=1; SHAP value=0.147196; direction increase. Use of Saudi Riyal as the payment currency adds some risk signal.\n\nConclusion\n\nBased on the provided drivers, the flag is driven primarily by ACH usage (payment_format_ach) and the Sunday timing (dayofweek=6) together with a notable inbound/outbound amount (amount_received / amount_paid at 15373.0). The from_bank factor reduces risk somewhat, but the combination of ACH, weekend timing, and currency also contributing signal overall elevated risk. Therefore, the transaction pattern warrants manual review to confirm whether the activity is legitimate or requires further AML investigation."
+}

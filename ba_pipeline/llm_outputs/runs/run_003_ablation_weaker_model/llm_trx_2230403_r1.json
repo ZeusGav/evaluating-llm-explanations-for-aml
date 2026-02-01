@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2230403,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 22.9544,
+  "llm_text": "Why:\n- payment_format_ach: value=1; SHAP_value=2.88704 (increase). The ACH payment format is identified as a strong risk driver, contributing significantly to the flag.\n- dayofweek: value=6; SHAP_value=0.775854 (increase). Weekend timing (day 6) adds to the risk signal.\n- amount_received: value=9736.35; SHAP_value=0.742995 (increase). A relatively large receiving amount contributes to the flag.\n- amount_paid: value=9736.35; SHAP_value=0.741679 (increase). The same large amount paid reinforces the elevated risk signal.\n- to_bank: value=1299; SHAP_value=0.204496 (increase). Receiving bank contributes an additional, albeit smaller, risk signal.\n- from_bank: value=15231; SHAP_value=-0.454028 (decrease). Sending bank contributes a modest risk-reducing signal, partially offsetting other drivers.\n\nConclusion:\n- The transaction is flagged primarily due to the ACH payment format, compounded by weekend timing and a large, symmetric transfer amount, with the receiving bank signal adding to the risk while the sending bank signal modestly reduces it. Based solely on these drivers, there is an elevated risk signal warranting manual review and further corroboration, though no definitive conclusion about illicit activity can be drawn from the provided features alone."
+}

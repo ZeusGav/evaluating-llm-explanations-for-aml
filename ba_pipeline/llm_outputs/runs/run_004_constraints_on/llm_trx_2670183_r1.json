@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2670183,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 11.6804,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (value=1; SHAP=+2.99374; direction=increase) — an ACH payment strongly raised the score. Secondary positive contributors were amount_received (44617.3; SHAP=+0.50560), payment_currency_saudi_riyal (value=1; SHAP=+0.49734), amount_paid (44617.3; SHAP=+0.30421) and receiving_currency_saudi_riyal (value=1; SHAP=+0.29162) — together these indicate a mid‑size transfer denominated in Saudi Riyals modestly increased the score. Offsetting the increase were from_bank (223; SHAP=-0.69020) and to_bank (118; SHAP=-0.13989), which reduced the model score.\n\nConclusion:\nThe alert is chiefly attributable to an ACH transfer (payment_format_ach=1) combined with payment/receiving currency in Saudi Riyals and a ~44,617.3 amount. The negative contribution from from_bank suggests that the sending bank partially offsets risk; if required, review of from_bank (ID 223) and payment purpose may clarify whether the flag is justified."
+}

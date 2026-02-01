@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5019116,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 27.3353,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=2.88898; direction=increase): The strongest contributor, indicating the transaction uses ACH and increases the risk signal.\n- amount_received (16361.5; shap_value=1.08328; direction=increase): A sizable amount received increases risk.\n- amount_paid (16361.5; shap_value=0.76528; direction=increase): The same large amount paid further increases risk.\n- from_bank (113685; shap_value=-0.703155; direction=decrease): A large sending bank factor reduces risk, but its magnitude is still meaningful relative to the other drivers.\n- dayofweek (value=5; shap_value=0.441462; direction=increase): Activity on this day adds to the risk signal.\n\nConclusion:\nThe flag appears driven primarily by an ACH-based transfer with notably large and equal inflow/outflow amounts (amount_received and amount_paid both 16,361.5), with a sizable from_bank factor that modestly offsets risk. The overall pattern suggests elevated risk but is not definitive proof of illicit activity. Manual review focused on the transaction’s counterparties and expected payroll/vendor context is recommended to determine legitimate purpose."
+}

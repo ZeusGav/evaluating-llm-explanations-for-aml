@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1577254,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 17.53,
+  "llm_text": "Why:\n- payment_format_ach (value=1, shap_value=2.92228, direction=increase): The model strongly attributes higher risk to transfers executed via ACH, making this the primary driver of the flag.\n- amount_received (13305.9, shap_value=0.901933, direction=increase): A relatively large amount received contributes to the elevated risk signal.\n- amount_paid (13305.9, shap_value=0.701585, direction=increase): The same large amount paid further adds to the risk signal, reinforcing the concern when paired with ACH.\n- dayofweek (6, shap_value=0.700257, direction=increase): Weekend timing (Sunday) is associated with an increased risk signal in this instance.\n\nNote: These are the top drivers by absolute SHAP value. Other drivers (e.g., to_bank, payment_currency_us_dollar, hour, etc.) have smaller contributions and are not included in this core rationale.\n\nConclusion:\n- The flag appears to be driven primarily by the ACH-based payment method, combined with a large equal amount moving between sender and receiver, and plus weekend timing. This pattern, in the absence of other contextual justification, suggests elevated AML risk and warrants human review to assess for legitimate business purposes (e.g., payroll or vendor payments) or to identify potential illicit activity. If a legitimate explanation exists that aligns with ACH usage and weekend processing, it could mitigate the concern; otherwise, proceed with standard escalation and investigation."
+}

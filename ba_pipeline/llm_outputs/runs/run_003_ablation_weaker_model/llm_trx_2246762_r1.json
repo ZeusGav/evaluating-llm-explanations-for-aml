@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2246762,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 23.0289,
+  "llm_text": "Why:\n- payment_format_ach: The ACH payment format (value=1) carries a large positive SHAP contribution (2.97763, increase), indicating this payment method strongly increases the risk signal driving the flag.\n- amount_paid: The amount paid (7257.05) has a positive SHAP contribution (0.993532, increase), suggesting higher value transactions contribute to the risk.\n- dayofweek: Day of week 6 (Saturday) shows a positive SHAP contribution (0.802643, increase), implying weekend timing elevates the risk signal.\n- hour: The hour (19) has a negative SHAP contribution (-0.405103, decrease), indicating late-evening processing slightly reduces the signal, but it does not offset the stronger positive contributions from the other drivers.\n\nConclusion:\nBased on these drivers, the transaction exhibits elevated money-laundering risk signals driven primarily by ACH payment format, the substantial amount paid, and Saturday timing. The late-hour signal modestly reduces the risk, but the net effect remains elevated, supporting the flag for further review of this transaction (e.g., pattern checks for ACH weekend activity and verification of counterparties)."
+}

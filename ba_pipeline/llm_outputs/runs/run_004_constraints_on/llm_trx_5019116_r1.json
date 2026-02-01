@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5019116,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 18.908,
+  "llm_text": "Why: The model’s top drivers show this payment was flagged primarily because payment_format_ach=1 (strong positive contribution) combined with sizable amounts: amount_received=16361.5 (positive) and amount_paid=16361.5 (positive). These three drivers increased the model score substantially. dayofweek=5 (Saturday) gave a smaller positive contribution. The from_bank=113685 driver had a negative contribution, partially offsetting the increase but not enough to reverse the flag.\n\nConclusion: Net effect = higher risk score driven by ACH settlement plus large identical paid/received amounts, slightly amplified by occurring on dayofweek=5. The negative contribution from from_bank suggests the sender’s bank attributes reduced the score somewhat; if that sender-bank relationship is legitimate, it could mitigate concern, but the ACH + high amounts justify analyst review."
+}

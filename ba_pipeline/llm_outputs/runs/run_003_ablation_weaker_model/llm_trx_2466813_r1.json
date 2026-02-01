@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2466813,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 35.2617,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=3.14105; direction=increase): The strongest driver. ACH-based payments are associated with a higher AML risk signal in this set of features, contributing heavily to the flag.\n- amount_received (value=14606.0; shap_value=1.20612; direction=increase): A large amount received increases the risk signal, reinforcing the concern raised by the ACH format.\n- from_bank (value=12; shap_value=-0.906024; direction=decrease): The sending bank reduces the risk signal, providing some mitigation relative to the ACH/amount signals.\n- amount_paid (value=14606.0; shap_value=0.878443; direction=increase): The same large amount being paid supports the elevated risk, aligning with the substantial received amount and the ACH format.\n\nNote: The top four drivers shown above are the most impactful in driving the flag. Other drivers (e.g., to_bank, payment_currency_us_dollar, etc.) have smaller SHAP contributions and are not referenced here to maintain focus on the primary risk drivers identified by the model.\n\nConclusion:\nBased solely on the provided drivers, the transaction appears risk-elevating due to an ACH-based payment format combined with a large amount both received and paid, with the receiving bank contributing to risk and the sending bank providing some mitigation. If these drivers reflect legitimate business activity (e.g., standard ACH payroll/vendor flows with known counterparties), the risk posture may be lower; otherwise, the combination of ACH and large matched amounts warrants further review of the transaction context and counterparties."
+}

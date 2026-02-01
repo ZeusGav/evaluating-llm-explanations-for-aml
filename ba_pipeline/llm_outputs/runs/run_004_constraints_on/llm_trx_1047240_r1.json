@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1047240,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 16.3202,
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant driver, strongly increasing the model score.\n- amount_received (14737.5) and amount_paid (14737.5) both increased the score, indicating a relatively large, equal-value transfer.\n- dayofweek (5) increased the score, indicating the payment occurred on day 5 (Friday).\nThese features together drove the flag: an ACH payment (payment_format_ach) of ~$14.7k (amount_received / amount_paid) on dayofweek 5 raised the predicted risk.\n\nConclusion:\nThe alert is primarily attributable to the ACH payment method paired with sizable, identical paid/received amounts occurring on day 5. If investigating, prioritize verification of the ACH transaction details and counterparty/payment purpose, as these are the features directly responsible for the elevated signal."
+}

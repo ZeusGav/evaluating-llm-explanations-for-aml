@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2699456,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 9.5122,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach = 1 (SHAP +2.97939), indicating an ACH payment strongly increased the alert score. payment_currency_saudi_riyal = 1 (SHAP +0.773463) and receiving_currency_saudi_riyal = 1 (SHAP +0.277276) further increased the score, reflecting the payment and receipt in Saudi riyal. amount_received = 66965.3 (SHAP +0.311218) contributed positively, indicating the transaction size raised the score. from_bank = 48526 (SHAP -0.500126) acted in the opposite direction and reduced the score.\n\nConclusion: The transaction was flagged mainly because it is an ACH payment (payment_format_ach) in Saudi riyals (payment_currency_saudi_riyal and receiving_currency_saudi_riyal) with a materially positive amount (amount_received). The sending bank (from_bank) modestly reduced the model score. If one is assessing priority, the ACH format and SAR currency combined with the noted amount are the primary drivers to review."
+}

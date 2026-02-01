@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2185587,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 7.6212,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach = 1 (strongly increases score), combined with a high transaction size (amount_received = 16206.4 and amount_paid = 16206.4, both increasing the score). The transaction occurring on dayofweek = 6 (Sunday) also increases the score. These four features are the largest contributors to the model output.\n\nConclusion: The alert is consistent with an ACH transfer of ~16206 (same paid/received amount) executed on a Sunday, which collectively raised the model risk score. Note: to_bank = 25981 had a modest negative contribution (reduced score), which slightly offsets but does not negate the above drivers."
+}

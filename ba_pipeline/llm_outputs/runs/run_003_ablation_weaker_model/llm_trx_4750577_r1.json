@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4750577,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 24.3156,
+  "llm_text": "Why:\n\n- payment_format_ach (value=1; direction: increase; SHAP_value=2.85195): The flag is primarily driven by the ACH payment format, which the model associates with higher risk for this transaction.\n- amount_paid (8884.75; direction: increase; SHAP_value=0.83633): A sizable amount paid contributes to the risk signal.\n- amount_received (8884.75; direction: increase; SHAP_value=0.734996): The identical amount received strengthens the pattern suggested by the paid amount, increasing risk.\n- dayofweek (6, Sunday; direction: increase; SHAP_value=0.716852): Execution on Sunday adds an additional risk signal, as this is a non-standard business day.\n- from_bank (29251; direction: decrease; SHAP_value=-0.513975): This factor reduces risk relative to other drivers, indicating a mitigating influence from the sending bank.\n\nConclusion:\n\nBased on the listed drivers, the transaction carries an elevated risk signal driven primarily by ACH payment format, large symmetric payment amounts, and Sunday timing, with a modest mitigating effect from the sending bank. This suggests the flagged status is warranted for review, but the conclusion should be corroborated with additional context or data before a final determination."
+}

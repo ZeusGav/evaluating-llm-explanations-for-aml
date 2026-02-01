@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1746377,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.3496,
+  "llm_text": "Why:\nThe model flag is driven mainly by payment_format_ach (value=1; SHAP=+2.9112, direction=increase), amount_paid (7052.99; SHAP=+1.1174, increase), and dayofweek (6; SHAP=+0.891227, increase). These three features are the largest positive contributors and together raise the alert score. from_bank (23842; SHAP=-0.391379, decrease) partially offsets the score but is smaller in magnitude. hour (12; SHAP=+0.270811, increase) provides an additional, smaller upward contribution.\n\nConclusion:\nThe transaction was flagged because the strong positive contributions from payment_format_ach, amount_paid, and dayofweek outweighed the modest negative contribution from from_bank. Conditionally, if payment_format_ach were 0 or amount_paid were substantially lower, the model’s score could plausibly fall below the flagging threshold."
+}

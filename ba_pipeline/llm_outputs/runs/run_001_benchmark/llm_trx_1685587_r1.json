@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1685587,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 18.521,
+  "llm_text": "Why:\n- payment_format_ach (value=1) is the dominant driver (SHAP +2.98057, direction: increase) — the use of ACH substantially raised the model score.\n- payment_currency_saudi_riyal (value=1, SHAP +0.574295, increase) and receiving_currency_saudi_riyal (value=1, SHAP +0.232076, increase) both increased the score, i.e., the transaction is in Saudi Riyals on both payment and receiving sides.\n- amount_received (value=28639.8, SHAP +0.40022, increase) contributed positively — the received amount increased the score.\n- dayofweek (value=5, SHAP +0.224767, increase) provided a smaller positive contribution (dayofweek=5 per the fact sheet).\n- Partially offsetting these drivers, from_bank (value=49365, SHAP −0.47449, direction: decrease) reduced the model score.\n\nConclusion:\n- The transaction was flagged primarily because it is an ACH transfer (payment_format_ach=1) in Saudi Riyals (payment_currency_saudi_riyal=1 and receiving_currency_saudi_riyal=1) for a materially sized amount (amount_received=28639.8), with an additional positive contribution from dayofweek=5. The sending bank (from_bank=49365) modestly reduced the score. \n- Conditional note: if ACH payments in SAR of this magnitude occurring on dayofweek=5 are uncommon relative to the model’s baseline, that combination (payment_format_ach=1, payment_currency_saudi_riyal=1, amount_received=28639.8, dayofweek=5) explains why the model produced a higher alert score."
+}

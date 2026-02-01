@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2947913,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 41.887,
+  "llm_text": "Why:\n- payment_format_ach: The transaction uses ACH (payment_format_ach = 1) and this feature shows a high positive SHAP contribution (shap_value = 2.91424) driving the flag (direction: increase).\n- amount_received: The receiving amount is 13431.6 (amount_received), with a notable positive SHAP contribution (shap_value = 1.06366) indicating increased risk (direction: increase).\n- amount_paid: The amount paid is 13431.6 (amount_paid), with a positive SHAP contribution (shap_value = 0.716867) toward the flag (direction: increase).\n- from_bank: Sending from_bank = 214621 contributes positively to the flag (shap_value = 0.569508) (direction: increase).\n- to_bank: Receiving bank (to_bank = 1547) also contributes positively (shap_value = 0.309093) toward the flag (direction: increase).\n\nConclusion:\nBased solely on the named drivers, the model indicates a high-risk signal driven by ACH payment method, a relatively large and exact-match transfer amount (amount_received and amount_paid both 13431.6), and the identified sending/receiving banks. This combination supports an elevated risk assessment and would warrant escalation to a manual review for further investigation."
+}

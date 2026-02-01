@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2278966,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 16.6288,
+  "llm_text": "Why:\n- payment_format_ach = 1 increased the model score (feature: payment_format_ach; SHAP +3.14549) — the ACH payment format was the single largest upward contributor.\n- to_bank = 20 increased the score (feature: to_bank; SHAP +1.06159) — the receiving bank raised the model output.\n- from_bank = 12 decreased the score (feature: from_bank; SHAP −1.02009) — the sending bank partially offset risk.\n- amount_received = 14148.0 (feature: amount_received; SHAP +0.905171) and amount_paid = 14148.0 (feature: amount_paid; SHAP +0.61475) both increased the score — the model raised risk given these specific amounts (note the values are equal).\n\nConclusion:\n- The flag was driven primarily by the ACH payment format (payment_format_ach) and the receiving bank (to_bank), with supporting positive contributions from the transaction amounts (amount_received and amount_paid). The sending bank (from_bank) reduced the score but did not fully offset the increases. \n- (Hedged) If the model treats ACH payments and these magnitude-level amounts as higher-risk signals, then their combination explains why this transaction was flagged."
+}

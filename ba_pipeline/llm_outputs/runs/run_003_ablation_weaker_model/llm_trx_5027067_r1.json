@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5027067,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 22.1709,
+  "llm_text": "Why:\n- payment_format_ach: The feature value is 1 (ACH payment) and has the highest SHAP value (2.90662) with direction \"increase.\" This indicates the ACH payment format is the strongest contributor pushing the transaction toward the flagged outcome.\n- amount_received: The amount received is 11226.2 with SHAP 0.827961 and direction \"increase.\" This positive contribution supports the flag alongside the ACH signal.\n- amount_paid: The amount paid is also 11226.2 with SHAP 0.711713 and direction \"increase.\" This reinforces the risk signal in conjunction with amount_received.\n- from_bank: The sending bank ID value is 117453 and SHAP -0.554066 with direction \"decrease.\" This factor reduces the model’s likelihood of flagging (i.e., it dampens the signal), but it does not fully negate the strongest ACH and amount-based contributions.\n\nConclusion:\n- The flag appears primarily driven by the presence of an ACH payment format with strong positive contributions, complemented by equal/paired transfer amounts (amount_received and amount_paid) that also push risk upward. The sending-bank factor slightly mitigates the signal, but the dominant drivers (payment_format_ach, amount_received, amount_paid) remain supportive of the flagged status. If additional context indicates legitimate ACH usage with this transfer pattern, that context could further offset the risk signal, but such impact is not present in the named drivers."
+}

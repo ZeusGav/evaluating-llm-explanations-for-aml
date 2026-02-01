@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1942237,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 22.2882,
+  "llm_text": "Why:\n- payment_format_ach: The ACH payment format has a large positive SHAP value (2.79569) with direction increase, making payment_format_ach a primary driver pushing the flag.\n- to_bank: The receiving bank indicator (to_bank = 20) shows a positive SHAP value (0.89908) with direction increase, indicating funds are being sent to a bank, contributing to the risk signal.\n- from_bank: The sending bank indicator (from_bank = 410) has a negative SHAP value (-0.840275) with direction decrease, which reduces the risk contribution from this feature relative to the others.\n- amount_received and amount_paid: Both amount indicators are positive contributors (amount_received shap 0.832138, amount_paid shap 0.699686) for a total of 14,460.90 in receiving and paying currency, suggesting a large, round-number transfer which strengthens the risk signal.\n- (Note: Among the top drivers, these five features explain the majority of the model’s flag; other drivers have smaller contributions and are not cited here as they are considered less impactful by the absolute SHAP ranking.)\n\nConclusion:\nBased on the top drivers, the flag appears driven by an ACH-based transfer to a bank with a notably large, round sum, where the sending bank reduces some risk but does not offset the ACH/large-transfer signal. Overall, the model indicates elevated risk for this transaction, warranting a targeted manual review to verify legitimate purpose, counterparties, and controls around ACH transfers of this size."
+}

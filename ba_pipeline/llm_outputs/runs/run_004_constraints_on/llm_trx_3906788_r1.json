@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3906788,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.9041,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+3.09, direction=increase): the payment being ACH is the largest driver raising the alert score.\n- to_bank (value=22; SHAP=+0.98, direction=increase): the receiving bank ID (to_bank=22) contributes meaningfully to the flag.\n- amount_received (value=15526.3; SHAP=+0.88, direction=increase) and amount_paid (value=15526.3; SHAP=+0.55, direction=increase): the relatively large, identical amounts increase risk contribution.\n- payment_currency_euro (value=1; SHAP=+0.44, direction=increase): the payment currency being euro modestly increases the score.\n\nConclusion:\nThe model flagged this transaction mainly because it is an ACH payment (payment_format_ach=1) of ~15,526 (amount_received/amount_paid) routed to to_bank=22, with payment_currency_euro=1. If payment_currency_euro=1 indeed indicates euros, then a high-value ACH euro transfer to to_bank=22 is the primary rationale for the alert. Further review should verify origin/destination and supporting documentation."
+}

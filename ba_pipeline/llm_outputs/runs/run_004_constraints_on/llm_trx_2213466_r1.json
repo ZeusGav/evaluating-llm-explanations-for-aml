@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2213466,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 14.0792,
+  "llm_text": "Why:\n- payment_format_ach = 1 strongly increased the alert score (SHAP +2.934; direction: increase).\n- amount_received = 11226.2 and amount_paid = 11226.2 both increased the score (SHAP +0.762 and +0.664; direction: increase), indicating a relatively large, equal-valued transfer.\n- dayofweek = 6 (Sunday) increased the score (SHAP +0.620; direction: increase).\n- from_bank = 117453 decreased the score (SHAP −0.553; direction: decrease), partially offsetting the increases.\n\nConclusion:\nThe model’s flag is primarily driven by an ACH payment (payment_format_ach) combined with high, identical paid/received amounts (amount_paid/amount_received ≈ 11,226.2) occurring on dayofweek = 6 (Sunday). The sender bank (from_bank) reduced but did not eliminate the alert contribution. If investigating, focus on ACH timing and the large/equal amounts in context of normal customer behavior."
+}

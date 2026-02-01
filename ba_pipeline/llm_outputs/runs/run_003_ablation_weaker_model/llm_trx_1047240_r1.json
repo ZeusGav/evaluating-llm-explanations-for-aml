@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1047240,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 21.3362,
+  "llm_text": "Why:\n- payment_format_ach (value=1) with SHAP value 3.11968 and direction increase: This is the strongest driver. Using ACH as the payment format is a primary contributor pushing the transaction toward the flag.\n- amount_received (value=14737.5) with SHAP value 0.936787 and direction increase: A large amount received adds risk pressure in this event.\n- amount_paid (value=14737.5) with SHAP value 0.662486 and direction increase: A large amount paid further contributes to risk, reinforcing the flag.\n- dayofweek (value=5) with SHAP value 0.35469 and direction increase: The transaction occurring on day 5 (Friday) shows a positive risk signal in the model.\n- from_bank (value=15) with SHAP value -0.327358 and direction decrease: This feature reduces the risk contribution, i.e., it is a mitigating signal.\n- to_bank (value=14099) with SHAP value -0.235791 and direction decrease: This feature also reduces risk, acting as a mitigating signal.\n\nConclusion:\n- Based on the provided drivers, the flag appears driven primarily by the ACH payment format and the large amount involved, with an additional positive signal on a Friday. There are mitigating signals from the sending and receiving banks, but they do not overturn the primary drivers. Overall, the transaction warrants follow-up review to confirm intent and source of funds, given the strong ACH and large-amount signals in this driver set."
+}

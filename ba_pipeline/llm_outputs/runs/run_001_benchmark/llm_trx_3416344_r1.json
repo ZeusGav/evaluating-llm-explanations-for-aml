@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3416344,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 21.9595,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — strong positive driver (SHAP +2.83419): the use of ACH substantially increased the model score.\n- amount_received (value=13014.3) — positive driver (SHAP +1.0451): a relatively large received amount increased the score.\n- amount_paid (value=13014.3) — positive driver (SHAP +0.648652): the paid amount (same magnitude) further increased the score.\n- from_bank (value=214322) — positive driver (SHAP +0.365421): the sending bank ID contributed to increasing the score.\n- to_bank (value=10404) — negative driver (SHAP −0.273788): the receiving bank ID slightly reduced the score.\n\nConclusion:\nThe transaction was flagged primarily because payment_format_ach=1 (strongest driver) combined with sizable amounts (amount_received and amount_paid = 13,014.3) and an elevating contribution from from_bank=214322. The reducing effect of to_bank=10404 did not offset the increases. If ACH transactions or transfers of this magnitude are considered higher-risk in context, then prioritizing a review of the ACH transfer details and the originating bank (from_bank=214322) would be appropriate."
+}

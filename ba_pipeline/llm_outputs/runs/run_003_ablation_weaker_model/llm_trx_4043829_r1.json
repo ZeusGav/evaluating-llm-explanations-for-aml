@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4043829,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 32.5115,
+  "llm_text": "Why:\n- payment_format_ach: value=1; shap_value=2.82631; direction=increase. The transaction used ACH as the payment method, which the model strongly associates with elevated AML risk, contributing the largest single signal.\n- amount_received: value=13839.8; shap_value=0.872715; direction=increase. A relatively large receiving amount increases the risk signal.\n- to_bank: value=22; shap_value=0.756066; direction=increase. The receiving bank indicator adds a notable risk contribution.\n- from_bank: value=1522; shap_value=-0.698028; direction=decrease. The sending bank contributes a counterbalancing (risk-reducing) signal.\n- amount_paid: value=13839.8; shap_value=0.693704; direction=increase. The matching transfer amount paid reinforces the risk signal in conjunction with the large received amount.\n\n(Note: receiving_currency_euro has a negative SHAP (-0.188273) indicating a slight risk-reduction factor, but it is a smaller contributor relative to the top five above.)\n\nConclusion:\nThe flag appears to be driven primarily by the ACH payment format in combination with a large transfer amount (amount_received and amount_paid both 13,839.8), and a notable risk signal from the receiving bank (to_bank=22). The sending bank (from_bank=1522) contributes a mitigating signal. Overall, the top drivers indicate elevated AML risk due to the ACH channel and substantial transfer size, with a modest counterbalance from euro-denominated receiving activity. If these drivers reflect legitimate activity, further enquiry focusing on the counterparties and transaction purpose is advised."
+}

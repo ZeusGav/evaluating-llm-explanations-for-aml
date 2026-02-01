@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2689569,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 11.1825,
+  "llm_text": "Why: The model flagged this transaction primarily because payment_format_ach = 1 (SHAP +3.00401, increases score). Additional contributors increasing the score include payment_currency_saudi_riyal = 1 (SHAP +0.5959) and receiving_currency_saudi_riyal = 1 (SHAP +0.2447), indicating both payment and receipt in Saudi riyal. The transaction amount (amount_received = 77127.4; SHAP +0.2720 and amount_paid = 77127.4; SHAP +0.1531) also modestly increases the score. The absence of USD (payment_currency_us_dollar = 0; SHAP +0.3209) further raises the model score. Partially offsetting these drivers is from_bank = 149340 (SHAP −0.4535), which decreases the score.\n\nConclusion: The flag is driven mainly by ACH routing and SAR currency use combined with a material amount; the sending bank feature reduced but did not nullify the overall risk score. If ACH or SAR indicators were different (per the named features), the model contribution would likely change."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2192652,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 21.2048,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=2.90337; direction=increase): The ACH payment format significantly increases the risk signal, making this a primary driver of the flag.\n- from_bank (value=2991; shap_value=-0.838694; direction=decrease): The sending bank reduces the risk signal, providing a mitigating effect relative to the ACH-driven risk.\n- dayofweek (value=6; shap_value=0.829815; direction=increase): Sunday timing increases risk, contributing meaningfully to the flag.\n- amount_received (value=13786.6; shap_value=0.789179; direction=increase): A large inbound amount adds to the risk signal.\n- amount_paid (value=13786.6; shap_value=0.731417; direction=increase): A large outbound amount adds to the risk signal and reinforces the concern around the transfer.\n- hour (value=12; shap_value=0.281252; direction=increase): Midday hour contributes a smaller but positive risk signal.\n\nNote: The negative effect for payment_currency_us_dollar (not among the top contributors) and the modest positive/negative signals from other smaller drivers are not emphasized here, as the dominant contributors are the ACH format and the large amounts on a Sunday, with a partial offset from the sending bank.\n\nConclusion:\n- The transaction is flagged primarily due to the ACH payment format in combination with large matched amounts and Sunday timing, with a partial mitigating effect from the sending bank. Based on these drivers alone, the overall signal supports a positive risk indication, though not fully negated by the negative from_bank driver."
+}

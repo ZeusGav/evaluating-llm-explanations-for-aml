@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2230412,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 30.7847,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — The model identifies an ACH payment as the strongest driver (SHAP +2.85, direction: increase), which materially raised the alert score.\n- amount_paid (value=9301.71) — A relatively large paid amount (SHAP +0.79, direction: increase) increased the flagging likelihood.\n- dayofweek (value=6) — The transaction occurred on dayofweek=6 (SHAP +0.65, direction: increase), which the model associates with higher risk for this case.\n- amount_received (value=9301.71) — The received amount equals the paid amount and itself contributed positively (SHAP +0.62, direction: increase).\n- receiving_currency_euro (value=1) — Receiving currency = euro modestly reduced the score (SHAP −0.25, direction: decrease), partially offsetting the above increases.\n\nConclusion:\nThe transaction was flagged primarily because it is an ACH payment (payment_format_ach=1) with a comparatively large, matched paid and received amount (amount_paid=9301.71 and amount_received=9301.71) occurring on dayofweek=6 — these features together drove the alert score upward. The fact that receiving_currency_euro=1 slightly decreased the risk contribution. Based solely on these drivers, this transaction warrants analyst review focused on the ACH payment and the high, equal amounts."
+}

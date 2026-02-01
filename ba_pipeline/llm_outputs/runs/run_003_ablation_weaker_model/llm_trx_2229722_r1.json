@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2229722,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 21.9609,
+  "llm_text": "Why:\n- The most influential driver is payment_format_ach (value=1) with SHAP 2.86083 (increase). This indicates the transaction uses ACH, which the model associates with higher risk, contributing strongly to the flag.\n- Next, amount_received (18663) has SHAP 0.946637 (increase). A large incoming amount increases the model’s risk score.\n- The from_bank (11296) shows SHAP -0.853389 (decrease). This negative contribution reduces risk, partially offsetting other drivers.\n- dayofweek (6) has SHAP 0.765607 (increase). The Sunday timing contributes to the risk signal.\n- amount_paid (18663) has SHAP 0.732343 (increase). The identical large paid amount further elevates risk.\n\nIn sum, the flag is driven primarily by ACH usage and large payment amounts, with a still-present but mitigating effect from the sending bank. Minor contributors (e.g., hour, to_bank, payment_currency_us_dollar) have smaller absolute SHAP values and are not cited as primary drivers here.\n\nConclusion:\n- Based on the provided drivers, the transaction exhibits elevated AML risk driven by ACH format and large monetary amounts, with partial mitigation from the sending bank and USD currency indicators. The overall signal supports prioritizing this transaction for review, while recognizing that the negative from_bank reduces risk somewhat. If corroborating information confirms legitimate counterparties and purpose, risk may be lower; otherwise, maintain heightened scrutiny."
+}

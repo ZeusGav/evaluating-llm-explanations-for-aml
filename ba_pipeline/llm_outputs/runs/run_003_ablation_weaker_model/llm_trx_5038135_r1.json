@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5038135,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 13.7327,
+  "llm_text": "Why:\n- payment_format_ach (value=1, direction=increase, shap_value=2.87717): The ACH payment format has the strongest positive contribution, increasing the likelihood of the flag.\n- payment_currency_saudi_riyal (value=1, direction=increase, shap_value=0.638912): The use of Saudi Riyal as the payment currency adds to the risk signal.\n- amount_received (value=60777.8, direction=increase, shap_value=0.606884): A relatively large amount received contributes positively to the flag.\n- from_bank (value=150240, direction=decrease, shap_value=-0.492466): The sending bank value decreases the risk signal, partially offsetting the positives from the other top drivers.\n\nConclusion:\nThe flag is primarily driven by the positive contributions of payment_format_ach, payment_currency_saudi_riyal, and the large amount_received, with a counteracting effect from from_bank. Overall, the strongest drivers push the transaction toward a flag, while the from_bank driver mitigates part of that signal."
+}

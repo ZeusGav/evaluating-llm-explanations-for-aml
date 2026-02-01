@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1030747,
+  "run_name": "run_002_stability",
+  "repeat": 6,
+  "model": "gpt-5-mini",
+  "latency_s": 17.8409,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — SHAP +2.95104 (increase): the payment method being ACH is the single largest positive driver pushing the model toward a flag.\n- amount_received (value=56984.0) — SHAP +0.746488 (increase): the relatively large received amount increased the score.\n- dayofweek (value=6, i.e., Sunday) — SHAP +0.689965 (increase): the transaction occurring on dayofweek=6 contributed to raising the score.\n- payment_currency_saudi_riyal (value=1) — SHAP +0.526883 (increase): payment currency = Saudi Riyal increased the score.\n- from_bank (value=249176) — SHAP −0.325773 (decrease): the sending bank ID reduced the score somewhat, partially offsetting the increases above.\n\nConclusion:\nThe model flagged the transaction mainly because payment_format_ach=1 (strong positive effect), together with a large amount_received=56984.0, occurrence on dayofweek=6 (Sunday), and payment_currency_saudi_riyal=1 — these positive contributions outweigh the modest negative contribution from from_bank=249176. If ACH payments, higher amounts, or SAR-denominated transfers on Sundays are treated as higher risk by the model, that combination explains the flag."
+}

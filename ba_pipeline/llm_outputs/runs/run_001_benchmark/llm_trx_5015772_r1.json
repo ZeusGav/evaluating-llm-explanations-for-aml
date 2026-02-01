@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5015772,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 16.167,
+  "llm_text": "Why:\n- payment_format_ach = 1 — strong positive contribution (SHAP 2.8679, direction: increase). The ACH payment method is the single largest driver increasing the model score.\n- amount_received = 14593.3 — positive contribution (SHAP 1.08238, direction: increase). The received amount materially increased the score.\n- amount_paid = 14593.3 — positive contribution (SHAP 0.577666, direction: increase). The paid amount also raised the score (same numeric value as amount_received).\n- to_bank = 25547 — negative contribution (SHAP -0.484506, direction: decrease). The receiving bank ID reduced the model score modestly.\n- dayofweek = 5 (Saturday per 0=Mon..6=Sun) — positive contribution (SHAP 0.441732, direction: increase). The transaction day added a small upward effect.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH transfer (payment_format_ach=1) combined with a mid‑five‑figure amount (amount_received and amount_paid = 14,593.3), both of which substantially increased the model score. This was partially offset by a lowering effect from the receiving bank (to_bank=25547) and slightly increased by the transaction occurring on dayofweek=5 (Saturday). If the model treats ACH usage and higher amounts as higher risk (as indicated by the positive SHAPs above), those factors together explain why the alert was generated."
+}

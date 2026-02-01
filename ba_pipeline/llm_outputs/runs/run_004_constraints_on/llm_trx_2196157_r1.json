@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2196157,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 14.6469,
+  "llm_text": "Why:\nThe model flagged this transaction primarily because payment_format_ach (value=1; SHAP +3.098) strongly increased risk. dayofweek (value=6; SHAP +1.007) further increased the score, indicating the transaction occurred on the model’s highest-risk day. amount_received (value=15373.0; SHAP +0.967) and amount_paid (value=15373.0; SHAP +0.388) contributed additional upward pressure due to the transaction size. Conversely, from_bank (value=249118; SHAP −0.523) reduced the risk score and partially offset the increases.\n\nConclusion:\nBased solely on the cited drivers, the ACH payment (payment_format_ach=1) executed on dayofweek=6 with amount_received/amount_paid=15373.0 produced a net increase in the model’s risk score despite a mitigating from_bank effect. If model weightings reflect true risk, this transaction merits further review."
+}

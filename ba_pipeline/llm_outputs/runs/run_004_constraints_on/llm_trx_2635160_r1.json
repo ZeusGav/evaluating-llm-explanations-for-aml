@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2635160,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 14.5874,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1; SHAP +2.81086), which strongly increased the score. Elevated transaction size—amount_paid (9226.42; SHAP +0.80825) and amount_received (9226.42; SHAP +0.72233)—further increased the score. Sending bank (from_bank = 233580; SHAP +0.25900) and transaction timing (hour = 17; SHAP +0.22502) also contributed positively. Payment_currency_us_dollar (value=1; SHAP -0.14984) modestly decreased the score but did not offset the positive drivers.\n\nConclusion: Based solely on the listed drivers, the combination of ACH format, the specific amounts (9226.42), the sending bank (233580) and the 17:00 hour produced a net increase in the model score and triggered the alert; USD currency presence slightly reduced the score. For further review, focus on the ACH payment characteristics (payment_format_ach), the identical paid/received amounts, the from_bank (233580), and the time (hour=17)."
+}

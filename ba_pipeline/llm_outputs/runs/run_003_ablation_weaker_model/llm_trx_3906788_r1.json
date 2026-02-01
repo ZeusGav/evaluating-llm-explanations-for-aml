@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3906788,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 28.5068,
+  "llm_text": "Why:\n\n- payment_format_ach = 1 (SHAP_value 3.08672, direction: increase): This is the strongest contributor, indicating the transaction uses the ACH payment format. This pattern is a primary driver of the flag.\n- to_bank = 22 (SHAP_value 0.982698, direction: increase): Receiving bank ID 22 adds to the risk signal alongside the ACH format.\n- amount_received = 15526.3 (SHAP_value 0.883961, direction: increase) and amount_paid = 15526.3 (SHAP_value 0.553201, direction: increase): The substantial transfer amount and the fact that the paid amount equals the received amount contribute to the flag.\n- payment_currency_euro = 1 (SHAP_value 0.44051, direction: increase): Use of euro as the payment currency aligns with the observed risk pattern.\n- dayofweek = 5 (SHAP_value 0.321521, direction: increase): The transaction occurring on Friday adds to the risk signal.\n\nConclusion:\n\nBased on the highest-impact drivers, the transaction exhibits a strong ACH-based transfer to bank 22 for a substantial euro-denominated amount, with the received and paid amounts matching and the transaction occurring on a Friday. These characteristics align with the model’s flagged pattern. While these drivers collectively indicate elevated risk, they do not, by themselves, prove illicit activity. The event warrants further review to determine legitimacy (e.g., cross-checks with counterparties, payer/payee context, and normal business activity)."
+}

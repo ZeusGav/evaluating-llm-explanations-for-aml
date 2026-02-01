@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5011781,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 24.1154,
+  "llm_text": "Why:\n- payment_format_ach (value=1) strongly increased the model score (positive driver).\n- to_bank (value=22) increased the score.\n- amount_received (13338.3) and amount_paid (13338.3) both increased the score.\n- dayofweek (value=6 → Sunday) increased the score.\n- from_bank (value=20) decreased the score (partial offset).\n\nConclusion:\nThe alert is primarily driven by an ACH payment (payment_format_ach=1) on a Sunday (dayofweek=6) for a mid-sized amount (amount_received/amount_paid = 13,338.3) into receiving bank 22; sending bank 20 slightly reduced the score. If one accepts only these features, the combination of ACH + Sunday + this amount to bank 22 explains why the model flagged the transaction, although the decreased contribution from from_bank=20 mitigates risk somewhat."
+}

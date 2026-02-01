@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1152073,
+  "run_name": "run_002_stability",
+  "repeat": 4,
+  "model": "gpt-5-mini",
+  "latency_s": 14.4594,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — largest positive driver (SHAP +2.90216); the model strongly increased the flag score because the payment was an ACH.\n- amount_received (value=15968.2) — positive driver (SHAP +0.89981); a relatively large received amount contributed to increasing the score.\n- dayofweek (value=6) — positive driver (SHAP +0.78160); the transaction occurring on day 6 (Sunday) increased the score.\n- amount_paid (value=15968.2) — positive driver (SHAP +0.76414); the paid amount (same numeric value as received) contributed to the increase.\n- from_bank (value=908) — negative driver (SHAP −0.92244); the sending-bank feature reduced the flag score, partially offsetting the increases above.\n\nConclusion:\nThe model flagged the transaction primarily because it was an ACH transfer (payment_format_ach=1) combined with high amount_received/amount_paid (~15,968.2) and occurring on dayofweek=6 (Sunday), which together raised the score. This increase was partially offset by the from_bank feature (from_bank=908) which lowered the score. If a reviewer focuses on the strongest contributors, they should consider the ACH method, the transaction amount, and the weekend timing as the principal reasons the model labeled this transaction higher risk."
+}

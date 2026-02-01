@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4974365,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 11.1329,
+  "llm_text": "Why:\n- payment_format_ach = 1 had the largest positive contribution (SHAP +2.91302), so the ACH payment method is the primary driver increasing the model score.\n- amount_paid = 12682.5 (SHAP +0.84398) and amount_received = 12682.5 (SHAP +0.78266) both increase the score; the equal mid-five‑figure values are jointly contributing to the flag.\n- to_bank = 12 (SHAP +0.68890) also increases the score, indicating the receiving bank ID raised risk in the model.\n- from_bank = 11157 (SHAP −1.00545) decreases the score and partially offsets the above increases.\n\nConclusion:\nThe transaction was flagged mainly because it is an ACH payment (payment_format_ach) combined with mid-five-figure paid and received amounts (amount_paid and amount_received) and a receiving bank ID that increases the model score (to_bank). This elevated score was partially mitigated by the sending bank feature (from_bank) reducing the score. If further review is needed, focus checks on ACH-related controls and the receiving bank (to_bank = 12), while noting the sending bank (from_bank = 11157) appears to reduce model concern."
+}

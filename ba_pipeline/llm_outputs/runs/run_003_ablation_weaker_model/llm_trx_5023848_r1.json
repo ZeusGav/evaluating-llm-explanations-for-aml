@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5023848,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 18.5847,
+  "llm_text": "Why:\n- Primary driver: payment_format_ach = 1. SHAP_VALUE = 2.90004; direction = increase. This indicates the ACH payment method is the strongest contributor to the flag, per the model.\n- Large monetary exposure via ACH: amount_paid = 12389.8 (SHAP = 0.85718; increase) and amount_received = 12389.8 (SHAP = 0.823461; increase). The model flags these elevated amounts as increasing risk when processed through ACH.\n- Receiving-side signal: to_bank = 20 (SHAP = 0.511779; increase). The receiving-bank indicator adds a positive risk signal.\n- Source-bank signal: from_bank = 23344 (SHAP = -0.633972; decrease). This feature reduces risk in the model’s assessment, partially offsetting the ACH and amount signals.\n- Temporal pattern: dayofweek = 5 (Saturday) (SHAP = 0.44197; increase). The weekend-day signal contributes additional risk pressure per the model.\n\nConclusion:\nBased on the highest-impact drivers, the flagged transaction is primarily driven by the ACH payment method in combination with high amount values (amount_paid and amount_received) and a weekend timestamp (dayofweek = 5), with a mitigating effect from the sending-bank factor (from_bank). The overall signal, dominated by payment_format_ach and the related amounts, supports a elevated risk assessment for this transaction."
+}

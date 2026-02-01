@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4723772,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 12.2296,
+  "llm_text": "Why:\n- The flag is driven primarily by payment_format_ach (value=1), which substantially increased the model score (SHAP +3.04756).\n- Additional positive contributions came from dayofweek (value=6; 0=Mon..6=Sun) which increased the score (SHAP +0.661366), and payment_currency_saudi_riyal (value=1) which increased the score (SHAP +0.481182).\n- amount_received (value=31774.2) also contributed positively (SHAP +0.423898), with receiving_currency_saudi_riyal (value=1) giving a smaller positive contribution (SHAP +0.214484).\n- Partially offsetting these increases was from_bank (value=48308), which reduced the score (SHAP −0.512748).\n\nConclusion:\n- The transaction was flagged mainly because it was an ACH payment (payment_format_ach=1) combined with occurrence on dayofweek=6 (Sunday) and a relatively large received amount (amount_received=31774.2), with both payment and receiving currencies in Saudi Riyal (payment_currency_saudi_riyal=1; receiving_currency_saudi_riyal=1) contributing further to the score.\n- The sending bank (from_bank=48308) lowered the risk signal but did not offset the strong positive drivers.\n- If useful for review, note that the model appears to treat ACH payments (payment_format_ach) and transactions on dayofweek=6 as higher-risk drivers in this case; this is a model-level observation derived from the listed SHAP contributions."
+}

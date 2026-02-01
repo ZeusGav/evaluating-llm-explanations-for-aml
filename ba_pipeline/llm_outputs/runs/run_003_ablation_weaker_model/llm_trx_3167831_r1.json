@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3167831,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 25.0915,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP_value 2.96829, direction: increase) is the strongest driver, indicating the use of ACH as the payment method is the primary contributor to the flag.\n- amount_paid = 6426.47 (SHAP_value 0.963357, direction: increase) shows a relatively large payment amount adding to the risk signal.\n- to_bank = 12 (SHAP_value 0.463956, direction: increase) further elevates risk due to the identified receiving bank factor.\n\nConclusion:\n- Based on the top drivers (payment_format_ach, amount_paid, and to_bank), the transaction is flagged due to ACH usage combined with a sizable payment directed to a specific receiving bank. These drivers collectively push the model toward a higher risk assessment. \n- Other drivers exist but have smaller absolute SHAP contributions and do not change the core conclusion from the three primary factors. If additional context suggests legitimate purposes for ACH payments to this recipient, the risk profile could be reassessed; otherwise, escalation for manual review is advisable."
+}

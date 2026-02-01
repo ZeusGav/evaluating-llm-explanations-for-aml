@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1577254,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 14.7687,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (value=1; SHAP +2.92228, direction=increase), combined with large transaction amounts amount_received (13305.9; SHAP +0.901933, increase) and amount_paid (13305.9; SHAP +0.701585, increase). The dayofweek (6, i.e., Sunday; SHAP +0.700257, increase) further raised the score. These four features contributed the largest positive SHAP effects and collectively pushed the alert above threshold.\n\nConclusion:\nThis alert appears to result mainly from an ACH transaction (payment_format_ach) involving identical sizable pay/receive amounts (amount_received and amount_paid = 13305.9) occurring on dayofweek=6. Note that other features (e.g., to_bank and payment_currency_us_dollar) had modest negative SHAP contributions and partially offset the increase. If pursuing review, prioritize verifying ACH routing and the business rationale for the amount and timing."
+}

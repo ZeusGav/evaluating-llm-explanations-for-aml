@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1392744,
+  "run_name": "run_002_stability",
+  "repeat": 4,
+  "model": "gpt-5-mini",
+  "latency_s": 18.2405,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.87879, direction: increase): The largest positive contributor — the transaction was sent via ACH, which strongly increased the model score.\n- dayofweek = 6 (SHAP +0.621813, direction: increase): Occurred on day 6 (Sunday per feature definition), which increased the score.\n- payment_currency_saudi_riyal = 1 (SHAP +0.606203, direction: increase): Payment currency = Saudi Riyal contributed positively to the flag.\n- from_bank = 119 (SHAP −0.428745, direction: decrease): The sending bank ID reduced the score (negative contribution).\n- to_bank = 49365 (SHAP −0.304935, direction: decrease): The receiving bank ID also reduced the score.\n- amount_received = 31783.0 (SHAP +0.295498, direction: increase): The received amount contributed moderately to increasing the score.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach = 1) in Saudi Riyal (payment_currency_saudi_riyal = 1) occurring on dayofweek = 6 (Sunday), with a moderate positive contribution from the amount_received (31783.0). The sending and receiving bank identifiers (from_bank = 119, to_bank = 49365) reduced the model score but did not offset the strong positive impact of the ACH/SAR/Sunday combination. Conditionally, if ACH payments in SAR on Sundays are atypical for this customer population, that pattern likely drove the alert."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1030747,
+  "run_name": "run_002_stability",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "latency_s": 16.3075,
+  "llm_text": "Why:\n- The model's top driver was payment_format_ach = 1 (feature: payment_format_ach), which strongly increased the flag score (SHAP +2.95104) — the transaction was sent as ACH.  \n- A high received amount (feature: amount_received = 56984.0) contributed to the increase (SHAP +0.746488).  \n- The transaction occurred on dayofweek = 6 (feature: dayofweek), which increased the score (SHAP +0.689965).  \n- The payment currency being Saudi Riyal (feature: payment_currency_saudi_riyal = 1) also increased the score (SHAP +0.526883).  \n- One offsetting factor was the sending bank identifier (feature: from_bank = 249176), which reduced the score (SHAP −0.325773).\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach = 1) of a relatively large received amount (amount_received = 56,984.0), occurring on dayofweek = 6 and denominated in Saudi Riyal (payment_currency_saudi_riyal = 1); the sending bank (from_bank = 249176) partially mitigated the model score. If these feature values are correct, they together explain why the model elevated this transaction for review."
+}

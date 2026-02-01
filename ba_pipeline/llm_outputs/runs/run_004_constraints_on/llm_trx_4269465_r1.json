@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4269465,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 22.7721,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1) which strongly increased the score (SHAP 3.021). Contributing further were a large amount_received (53104.4; SHAP 0.879, increase) and the transaction timing dayofweek (6; SHAP 0.807, increase). Currency signals also increased the score: payment_currency_saudi_riyal (value=1; SHAP 0.459, increase) and payment_currency_us_dollar (value=0; SHAP 0.312, increase — i.e., not USD). The sending bank (from_bank=249176) had a negative SHAP (-0.306), modestly reducing the flagged score.\n\nConclusion: The combination of ACH payment (payment_format_ach=1), high value (amount_received=53104.4), Sunday timing (dayofweek=6), and Saudi Riyal currency (payment_currency_saudi_riyal=1; payment_currency_us_dollar=0) produced the elevated risk signal. The from_bank (from_bank=249176) partially offsets but does not eliminate the flag."
+}

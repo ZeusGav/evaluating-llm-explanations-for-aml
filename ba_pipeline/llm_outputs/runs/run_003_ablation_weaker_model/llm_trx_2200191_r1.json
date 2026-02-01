@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2200191,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 26.4276,
+  "llm_text": "Why:\n- payment_format_ach (value=1) with SHAP_value=2.94384, direction: increase — ACH payment format is the strongest positive contributor to the flag.\n- dayofweek (value=6) with SHAP_value=0.726712, direction: increase — Sunday processing adds risk signal.\n- amount_paid (value=9853.57) with SHAP_value=0.567126, direction: increase — a relatively large payment amount contributes to risk.\n- from_bank (value=119) with SHAP_value=-0.482839, direction: decrease — this sending-bank factor reduces risk, but does not negate the stronger ACH and amount signals.\n- amount_received (value=9853.57) with SHAP_value=0.340229, direction: increase — the same large amount at receipt reinforces the high-amount signal.\n- payment_currency_saudi_riyal (value=1) with SHAP_value=0.270007, direction: increase — use of Saudi Riyal adds another risk signal in this context.\n\nConclusion:\nBased on these top drivers, the transaction is flagged primarily due to the ACH payment format, weekend timing, and a large equal paid/received amount in Saudi Riyal, with a mild mitigating signal from the sending-bank. If these driver signals reflect legitimate activity, the overall risk could still be elevated and warrants further verification (counterparty details, authorization, and pattern checks)."
+}

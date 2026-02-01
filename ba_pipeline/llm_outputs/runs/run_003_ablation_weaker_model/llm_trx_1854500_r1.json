@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1854500,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 15.9374,
+  "llm_text": "Why:\n- payment_format_ach: value=1; shap_value=2.8416; direction=increase. The strongest contributor, indicating the transaction was sent via the ACH payment format, which the model associates with elevated AML risk.\n- amount_received: value=17498.0; shap_value=1.02106; direction=increase. A relatively large amount moving into the recipient increases risk signals.\n- amount_paid: value=17498.0; shap_value=0.650169; direction=increase. The matching large amount paid reinforces the heightened risk signal.\n- to_bank: value=12; shap_value=0.458209; direction=increase. Receiving bank identifier contributes to the elevated risk assessment.\n- (Supporting but smaller) payment_currency_us_dollar: value=1; shap_value=-0.143899; direction=decrease. USD involvement slightly reduces risk contribution in this instance, attenuating the overall signal.\n- from_bank: value=19329; shap_value=0.140189; direction=increase. Sending bank identifier adds a modest risk contribution.\n\nConclusion:\n- The flag is primarily driven by the ACH channel combined with unusually large incoming/outgoing amounts and identifiable banks involved, which together elevate the AML risk score according to the top drivers. USD currency involvement provides a modest, offsetting effect. Based solely on these drivers, the transaction warrants further review and enhanced due diligence to verify legitimate purpose and counterparties."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1970167,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 17.8432,
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant driver (SHAP +3.0887) — the use of ACH strongly increased the model score.\n- amount_received (11995.4) and amount_paid (11995.4) both contributed positively (SHAP +0.8308 and +0.7868) — the relatively large, equal payment and receipt amounts increased the score.\n- from_bank (20) reduced the score (SHAP −0.7736) — the sending bank ID tempered the flagging contribution.\n- to_bank (11) increased the score (SHAP +0.4499) — the receiving bank ID added upward pressure on the score.\n- dayofweek (5) increased the score (SHAP +0.3558) — the transaction occurring on day 5 (fact sheet mapping: day 5 = Saturday) modestly raised the score.\n\nConclusion:\nThe alert is primarily driven by the ACH payment method (payment_format_ach=1) together with sizable, identical payment and receipt amounts (amount_paid/amount_received = 11,995.4), with smaller opposing influence from the sending bank (from_bank=20) and additional upward influence from the receiving bank (to_bank=11) and the weekend timing (dayofweek=5). Based solely on these drivers, targeted review should focus on the ACH payment details, the matching amount values (amount_paid/amount_received), and the involved bank IDs (from_bank/to_bank)."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2150318,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 13.6611,
+  "llm_text": "Why:\n- payment_format_ach = 1 (payment_format_ach) strongly increased the score (SHAP +2.99), indicating the ACH method was the primary driver.\n- to_bank = 12 (to_bank) contributed positively (SHAP +0.78), implicating this specific receiving bank as a risk factor.\n- amount_paid = 10215.3 (amount_paid) and amount_received = 10215.3 (amount_received) both increased risk (SHAP +0.66 and +0.48), indicating a relatively large, equal-value transfer.\n- dayofweek = 6 (dayofweek, Sunday) increased the score (SHAP +0.64), showing timing contributed to the alert.\n- payment_currency_euro = 1 (payment_currency_euro) increased risk (SHAP +0.49); payment_currency_us_dollar = 0 (payment_currency_us_dollar) also increased risk (SHAP +0.44), i.e., non‑USD/euro context influenced the score.\n\nConclusion:\nThe alert is driven mainly by an ACH transfer (payment_format_ach=1) of €10,215.30 (amount_paid/amount_received equal) to bank ID 12 on a Sunday (dayofweek=6). Based solely on these features, further review of the ACH payment and recipient bank 12 is recommended."
+}

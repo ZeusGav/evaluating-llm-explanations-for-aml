@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2422807,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 22.3543,
+  "llm_text": "Why:\n- The top driver is payment_format_ach (value=1) with SHAP 2.90659 and direction: increase. This indicates the ACH payment format materially contributed to the flag.\n- The next strongest contributors are amount_paid (10873.2) with SHAP 0.7632 and amount_received (10873.2) with SHAP 0.600271, both increasing the flag, suggesting a large transfer with equal paid/received amounts.\n- The to_bank feature (value=20) has SHAP 0.581884 with direction: increase, further contributing to the flag via the receiving-bank context.\n- The hour feature (hour=6) has SHAP -0.272553 with direction: decrease, indicating this hour modestly reduces the flag probability (a minor mitigating signal relative to the top drivers).\n\nConclusion:\n- Based on the provided drivers, there is an elevated AML risk signal driven by the ACH payment format, a large, mirrored payment/receiving amount, and a specific receiving bank. The hour factor provides a small mitigating signal. Overall, the transaction should remain flagged for further review, focusing on ACH usage, the legitimacy of counterparties, and confirmation of sender/receiver details."
+}

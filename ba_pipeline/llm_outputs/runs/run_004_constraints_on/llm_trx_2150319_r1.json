@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2150319,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 11.3144,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1) which strongly increased the score (SHAP +3.158). This increase is reinforced by dayofweek (value=6, i.e., Sunday) (SHAP +0.830) and by transaction size: amount_received (11349.2) (SHAP +0.703) and amount_paid (11349.2) (SHAP +0.469) both increasing the score. to_bank (value=11) also contributed to raising the score (SHAP +0.676). Partially offsetting these increases was from_bank (value=12), which decreased the score (SHAP -0.909).\n\nConclusion: The transaction was flagged mainly because it is an ACH transfer (payment_format_ach=1) occurring on dayofweek=6 with a mid‑five‑figure amount (amount_received/amount_paid=11349.2) between specific bank IDs (to_bank=11), although from_bank=12 reduced the signal. If from_bank=12 represents a lower‑risk counterparty, that may have partly mitigated the concern."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2277774,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 19.4661,
+  "llm_text": "Why:\n- payment_format_ach (value=1, SHAP=2.76545, direction=increase): The strongest driver; ACH payments significantly push the model toward flagging this transaction.\n- amount_received (19693.8, SHAP=1.20864, direction=increase) and amount_paid (19693.8, SHAP=0.668071, direction=increase): Large, equalized transfer amounts in the transaction contribute to elevated risk signals.\n- dayofweek (6, SHAP=0.600432, direction=increase): Saturday processing adds to the risk signal.\n- hour (23, SHAP=-0.517064, direction=decrease): Late-hour timing reduces risk slightly, partially offsetting the above drivers.\n\nConclusion:\nThe flag appears driven primarily by the ACH payment format and the high, equal transfer amounts, with weekend timing amplifying risk and late-hour timing providing a modest counterbalance. Based on these drivers alone, the transaction warrants review, though the late hour slightly mitigates the overall risk impression."
+}

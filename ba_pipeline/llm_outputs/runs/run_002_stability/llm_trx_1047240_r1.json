@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1047240,
+  "run_name": "run_002_stability",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 29.1726,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.11968, direction: increase) — the model’s largest driver indicates an ACH payment format strongly raised the risk score.\n- amount_received = 14737.5 (SHAP +0.936787, direction: increase) and amount_paid = 14737.5 (SHAP +0.662486, direction: increase) — the relatively large, equal received/paid amounts materially increased the score.\n- dayofweek = 5 (SHAP +0.35469, direction: increase) — the transaction occurring on day 5 contributed a smaller but positive increase to the score.\n- from_bank = 15 (SHAP −0.327358, direction: decrease) — the sending bank ID partially reduced the model score (offsetting factor).\n\nConclusion:\n- The alert is driven primarily by an ACH-format payment (payment_format_ach) combined with sizeable, identical amount_received and amount_paid (14737.5), with occurrence on dayofweek=5 adding further upward pressure; the sending bank (from_bank=15) partly offsets the signal but does not neutralize it.\n- Conditional / actionable note (hedged): if receiving_currency_us_dollar = 1, then these amounts would be in USD; consider verifying ACH transaction details and the sending/receiving bank identifiers (from_bank and to_bank) as the next review steps."
+}

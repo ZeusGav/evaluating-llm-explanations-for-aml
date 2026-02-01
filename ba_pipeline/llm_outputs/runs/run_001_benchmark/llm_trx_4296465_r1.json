@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4296465,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 18.8602,
+  "llm_text": "Why:\n- payment_format_ach = 1 (feature: payment_format_ach) had the largest positive contribution (SHAP +2.89687), meaning the ACH payment format was the primary driver increasing the alert score.\n- payment_currency_saudi_riyal = 1 (feature: payment_currency_saudi_riyal; SHAP +0.78117) further increased the score, indicating payment currency = Saudi Riyal contributed to the flag.\n- dayofweek = 6 (feature: dayofweek; SHAP +0.61448) also increased the score (transaction occurred on day 6).\n- Offsetting effects came from from_bank = 50528 (feature: from_bank; SHAP −0.62233) and to_bank = 148350 (feature: to_bank; SHAP −0.48254), both of which decreased the model score but with smaller magnitude than the top positive contributors.\n\nConclusion:\n- The transaction was flagged mainly because it was an ACH payment (payment_format_ach=1) in Saudi Riyal (payment_currency_saudi_riyal=1) occurring on dayofweek=6, with those factors collectively outweighing the mitigating (negative) contributions from the identified from_bank and to_bank IDs.\n- If one accepts the model’s SHAP attributions as indicative of risk drivers, the ACH format in SAR on day 6 is the dominant reason to escalate for analyst review; the from_bank and to_bank IDs reduced risk but did not fully offset the increase."
+}

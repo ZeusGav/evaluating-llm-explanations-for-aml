@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3635796,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 24.2223,
+  "llm_text": "Why:\n- payment_format_ach: value=1; SHAP_value=2.87653; direction=increase. Explanation: The transaction used ACH as the payment method, which is a strong contributor to the flag in the model.\n- amount_received: value=15333.3; SHAP_value=0.934122; direction=increase. Explanation: A relatively large amount received increases the risk signal.\n- dayofweek: value=6; SHAP_value=0.766317; direction=increase. Explanation: The transaction occurred on Sunday (day 6), which adds to the risk signal.\n- amount_paid: value=15333.3; SHAP_value=0.711315; direction=increase. Explanation: A large amount paid further drives the flag.\n\nConclusion:\n- The flag is primarily driven by the ACH payment format plus high transfer amounts and Sunday timing, supported by the top SHAP contributors above. Minor signals from other drivers exist but are not as influential. Based on these drivers alone, the transaction presents an elevated AML risk and warrants further review to confirm legitimate purposes."
+}

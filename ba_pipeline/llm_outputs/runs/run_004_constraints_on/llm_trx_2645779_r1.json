@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2645779,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 8.8992,
+  "llm_text": "Why: The model flag is driven primarily by a strong positive contribution from payment_format_ach (value=1, SHAP=+2.94866, direction=increase), indicating an ACH payment drives the score up. Material amounts—amount_paid (13218.8, SHAP=+0.8528, direction=increase) and amount_received (13218.8, SHAP=+0.8304, direction=increase)—further increase the score. to_bank (value=20, SHAP=+0.7041, direction=increase) also raises the score. The feature from_bank (value=4259, SHAP=-0.7677, direction=decrease) partially offsets these increases by lowering the score.\n\nConclusion: The transaction was flagged mainly because it is an ACH transfer (payment_format_ach=1) of a substantial amount (amount_paid/amount_received ≈ 13,218.8) to to_bank=20, with a modest offset from from_bank=4259. If one interprets higher SHAP as higher risk, these drivers collectively explain the elevated alert score."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1566107,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 26.7473,
+  "llm_text": "Why:\n- payment_format_ach (feature: payment_format_ach) – value 1; SHAP value 2.7343; direction increase. This feature is the dominant contributor, indicating the use of ACH as the payment method increases the flag likelihood.\n- amount_paid (feature: amount_paid) – value 16269.7; SHAP value 0.975714; direction increase. A large amount paid contributes to the risk signal.\n- amount_received (feature: amount_received) – value 16269.7; SHAP value 0.91268; direction increase. The same large amount received further increases the risk signal.\n\nConclusion:\n- Based on the top contributing drivers, the flag is principally driven by the ACH payment format combined with a large, mirrored payment amount (both amount_paid and amount_received). This pattern—ACH usage with a substantial, equalized transfer—drives the model’s risk signal. A hedged interpretation could be that if this pattern aligns with typical customer behavior for ACH transfers, it might be legitimate; however, given the strong positive contributions from the listed drivers, a targeted manual review is warranted to confirm intent and counterparties."
+}

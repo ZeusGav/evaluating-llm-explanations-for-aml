@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4723788,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 25.4964,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP 2.926; direction: increase) is the strongest driver. This indicates the ACH payment format is a primary contributor to the flag.\n- payment_currency_saudi_riyal (value=1; SHAP 0.616038; direction: increase) and receiving_currency_saudi_riyal (value=1; SHAP 0.242283; direction: increase) together point to SAR-denominated activity on both ends, which increases the risk signal.\n- from_bank (value=148016; SHAP -0.432102; direction: decrease) reduces risk in this model signal, but the substantial positive contributions from ACH and SAR-related features offset this effect.\n- payment_currency_us_dollar (value=0; SHAP 0.334963; direction: increase) adds a positive risk signal despite the USD indicator being 0, contributing to the overall worry in the model.\n- hour (value=14; SHAP 0.21148; direction: increase) provides a moderate time-of-day risk signal, reinforcing the flag when combined with the above currency and payment-format patterns.\n\nConclusion:\n- The transaction is flagged primarily due to the strong ACH payment format signal and the use of SAR currencies on both sides, with supporting positive signals from USD-related risk contribution and a midday timestamp. The negative contribution from from_bank reduces risk somewhat, but the net signal remains elevated based on the listed drivers. If this SAR/ACH pattern appears in conjunction with other risk indicators in review, escalate for enhanced due diligence or further information gathering; however, no definitive illicit activity can be concluded from these drivers alone."
+}

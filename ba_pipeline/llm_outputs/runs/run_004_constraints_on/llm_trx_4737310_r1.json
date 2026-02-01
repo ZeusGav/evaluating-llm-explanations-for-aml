@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4737310,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 20.9106,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (value=1; SHAP +2.76488), which most strongly increased the score, combined with a relatively large amount_paid (9099.08; SHAP +0.68426) and amount_received (9099.08; SHAP +0.67105) — both values increased the score and are identical. Additional contributors include from_bank (231212; SHAP +0.43306), dayofweek (5; SHAP +0.39696) and payment_currency_euro (value=1; SHAP +0.15656). Each of these features (named as shown) moved the model toward flagging this transaction.\n\nConclusion:\nIn sum, an ACH transfer (payment_format_ach=1) in euros (payment_currency_euro=1) for 9099.08 (paid and received equal) from from_bank=231212 on dayofweek=5 produced a higher model score. If one were to prioritize review, focusing on the ACH/euro amount equality and the sending bank (231212) would be most relevant."
+}

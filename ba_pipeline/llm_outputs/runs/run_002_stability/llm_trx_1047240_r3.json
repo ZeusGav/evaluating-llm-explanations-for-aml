@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1047240,
+  "run_name": "run_002_stability",
+  "repeat": 3,
+  "model": "gpt-5-mini",
+  "latency_s": 14.8645,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP = +3.11968, direction = increase): the model’s largest positive driver — the ACH payment format is the dominant factor raising the flag.\n- amount_received = 14737.5 (SHAP = +0.936787, direction = increase) and amount_paid = 14737.5 (SHAP = +0.662486, direction = increase): relatively large, equal payment and receipt amounts both meaningfully increase the model score.\n- dayofweek = 5 (SHAP = +0.35469, direction = increase): transaction occurring on day index 5 (Friday) contributes a smaller but positive increase.\n- from_bank = 15 (SHAP = −0.327358, direction = decrease) and to_bank = 14099 (SHAP = −0.235791, direction = decrease): these specific sending and receiving bank IDs modestly reduce the model score (partial mitigating factors).\n\nConclusion:\n- The transaction was flagged primarily because it is an ACH transfer (payment_format_ach) combined with sizable amounts (amount_received and amount_paid = 14,737.50), with a smaller additional effect from occurring on dayofweek = 5. The sending and receiving bank IDs (from_bank = 15, to_bank = 14099) partially offset the risk signal but do not outweigh the dominant ACH and amount drivers.\n- Conditional note (hedged): if the model associates ACH payments with higher risk (as indicated by the payment_format_ach SHAP contribution), then that association is the principal rationale for the alert."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2132656,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 10.2577,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (value=1; strong positive SHAP 3.02863), indicating an ACH payment substantially increases the score. Higher amounts also contributed: amount_received (23526.1; SHAP 0.583) and amount_paid (23526.1; SHAP 0.446) both increase the score. Currency indicators payment_currency_saudi_riyal (1; SHAP 0.454) and receiving_currency_saudi_riyal (1; SHAP 0.255) further raise the score, so the model treated a SAR-denominated ACH transfer of 23,526.1 as higher risk.\n\nConclusion:\nBased solely on these drivers, the transaction was flagged because it is an ACH transfer (payment_format_ach) in Saudi Riyals (payment_currency_saudi_riyal and receiving_currency_saudi_riyal) for 23,526.1 (amount_received/amount_paid), which the model associates with elevated risk. It may (conditional) reflect a same-currency, same-amount ACH flow (no apparent FX or fee effect) given identical amount_paid and amount_received."
+}

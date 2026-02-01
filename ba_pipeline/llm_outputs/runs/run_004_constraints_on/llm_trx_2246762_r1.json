@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2246762,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 10.9142,
+  "llm_text": "Why:\nThe model flagged the transaction mainly because payment_format_ach (value=1; SHAP=+2.98; direction=increase) was the dominant positive contributor. That effect is reinforced by a relatively high amount_paid (value=7257.05; SHAP=+0.99; increase) and the transaction occurring on dayofweek (value=6 i.e. Sunday; SHAP=+0.80; increase). Additional upward influence came from to_bank (value=12; SHAP=+0.34; increase). These positive contributions were partly offset by hour (value=19; SHAP=-0.41; decrease) and from_bank (value=23691; SHAP=-0.32; decrease).\n\nConclusion:\nNet model score was elevated primarily by ACH payment (payment_format_ach), the payment size (amount_paid), and Sunday timing (dayofweek). Given these driver contributions, the transaction warrants analyst review; this recommendation is conditional on the named features (payment_format_ach, amount_paid, dayofweek, to_bank, hour, from_bank) being the basis for the alert."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2213466,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 25.6316,
+  "llm_text": "Why:\n- payment_format_ach (value=1) with shap_value 2.93426, direction increase: This is the strongest driver and indicates the ACH payment method substantially pushes the model toward flagging the transaction.\n- amount_received (11226.2) with shap_value 0.762187, direction increase: A relatively large inbound amount contributes to the elevated risk signal.\n- amount_paid (11226.2) with shap_value 0.664321, direction increase: The identical outbound amount also increases risk.\n- dayofweek (6) with shap_value 0.6199, direction increase: The Sunday timing adds to the risk signal.\n- from_bank (117453) with shap_value -0.553129, direction decrease: This sending-bank factor provides a counter-signal that reduces risk, but does not negate the stronger positive contributions above.\n\nConclusion:\nThe transaction is flagged primarily due to ACH usage and sizable equal inbound/outbound amounts, with weekend timing reinforcing the concern. The sending-bank factor provides an offsetting signal but is not sufficient to overturn the top drivers. Overall, there is an elevated AML risk signal that warrants further review focused on ACH patterns, source/destination accounts, and weekend timing."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2230403,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 14.0976,
+  "llm_text": "Why:\n- payment_format_ach = 1 (payment_format_ach) strongly increased the flag (SHAP +2.887), indicating ACH method was the dominant driver.\n- dayofweek = 6 (dayofweek) increased the score (SHAP +0.776), i.e., transaction occurred on Sunday.\n- amount_received = 9736.35 (amount_received) and amount_paid = 9736.35 (amount_paid) both increased the score (SHAP +0.743 and +0.742) and are equal, showing a high-value, same-amount movement.\n- from_bank = 15231 (from_bank) slightly reduced the score (SHAP −0.454), partially offsetting other drivers.\n\nConclusion:\nThe model flagged this transaction primarily because it is an ACH transfer (payment_format_ach) occurring on dayofweek=6 with a relatively large, identical amount received and paid (9736.35). The sending bank (from_bank) slightly lowered the signal but did not negate the strong ACH and amount effects. If further review is needed, focus on ACH origin/beneficiary details and timing (Sunday) given the above."
+}

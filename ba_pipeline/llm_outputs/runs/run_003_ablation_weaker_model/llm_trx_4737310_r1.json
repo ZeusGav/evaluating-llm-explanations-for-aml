@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4737310,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 22.8852,
+  "llm_text": "Why:\n- payment_format_ach = 1 (ACH payment) with the largest SHAP value (2.76488) and direction increase. This indicates the flagged activity is associated with an ACH bank transfer, which the model treats as a high-risk channel.\n- amount_paid = 9099.08 and amount_received = 9099.08, both with positive SHAP values (0.684259 and 0.671048). The sizeable, equal-outward/inward amounts contribute to the risk signal by showing a large transfer amount in both directions.\n- from_bank = 231212 with SHAP 0.433064. The sending bank identity appears to drive risk in this transaction, per the model.\n- dayofweek = 5 (Friday) with SHAP 0.396962. The timing on a Friday adds incremental risk in this feature set.\n- payment_currency_euro = 1 (Euro) with SHAP 0.15656. This context factor may interact with the above drivers but is a secondary contributor.\n\nConclusion:\nThe flag is predominantly driven by an ACH transfer method (payment_format_ach) coupled with a large, symmetric transfer amount (amount_paid and amount_received) originating from a specific sending bank (from_bank), with an additional timing signal (dayofweek on Friday). The euro currency indicator provides contextual support but is a weaker driver. Based on these drivers alone, the transaction is flagged due to the combination of ACH usage and substantial transfer size from a particular sender, with a Friday timing contributing modest additional risk."
+}

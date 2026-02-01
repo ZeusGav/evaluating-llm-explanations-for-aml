@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1566107,
+  "run_name": "run_002_stability",
+  "repeat": 2,
+  "model": "gpt-5-mini",
+  "latency_s": 15.5917,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.7343, direction: increase): the model’s largest contributor; the transaction being an ACH payment strongly increased the flag score.\n- amount_paid = 16,269.7 (SHAP +0.9757, direction: increase): a relatively large payment amount that materially raised the score.\n- amount_received = 16,269.7 (SHAP +0.9127, direction: increase): the received amount matches the paid amount and also materially raised the score.\n- dayofweek = 4 (SHAP −0.4583, direction: decrease): occurring on day index 4 (Friday, per feature definition) modestly reduced the score.\n- to_bank = 10 (SHAP +0.4243, direction: increase): routing to receiving bank ID 10 contributed to increasing the score.\n\nConclusion:\nThe transaction was flagged primarily because it is an ACH payment (payment_format_ach = 1) combined with a relatively large amount_paid and amount_received (~16,269.7), and because routing to to_bank = 10 further increased the model score. The timing (dayofweek = 4) slightly offset the score. If your program treats ACH and high-value ACH transfers as higher risk, these driver contributions explain why the model flagged this item."
+}

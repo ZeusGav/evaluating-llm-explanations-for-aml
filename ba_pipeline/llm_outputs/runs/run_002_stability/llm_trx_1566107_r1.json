@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1566107,
+  "run_name": "run_002_stability",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 18.8302,
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the single largest positive contributor (SHAP +2.7343), so the ACH payment format materially increased the model score.  \n- amount_paid (16269.7, SHAP +0.9757) and amount_received (16269.7, SHAP +0.9127) both meaningfully increased the score, indicating the transaction magnitude contributed to the flag.  \n- to_bank (value=10, SHAP +0.4243) also increased the score, so the receiving bank ID 10 contributed to the alert.  \n- dayofweek (value=4, SHAP −0.4583) reduced the score and thus partially offset the increases above.\n\nConclusion:\n- The alert is primarily driven by the combination of payment_format_ach=1 together with high amount_paid and amount_received (both 16269.7), with additional upward contribution from to_bank=10; dayofweek=4 provided a modest mitigating effect.  \n- Hedged assumption: if ACH payments (payment_format_ach=1) at similar amounts into to_bank=10 persist, the model is likely to continue flagging them unless other strong mitigating features are present."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1577254,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 18.2499,
+  "llm_text": "Why:\n- payment_format_ach (value=1, SHAP=2.92228, direction=increase): The ACH payment format is the single largest driver raising the model score.\n- amount_received (value=13305.9, SHAP=0.901933, direction=increase): The receiving amount (13305.9) materially increased the alert score.\n- amount_paid (value=13305.9, SHAP=0.701585, direction=increase): The paid amount (13305.9) also contributed to a higher score.\n- dayofweek (value=6, SHAP=0.700257, direction=increase): The transaction occurring on dayofweek=6 (Sunday) increased the score.\n\nConclusion:\nThe model flagged this transaction primarily because it is an ACH payment (payment_format_ach=1) combined with relatively large matched amounts (amount_received and amount_paid = 13305.9) and timing on dayofweek=6 (Sunday). These four features together produced the strongest positive contributions to the alert score. If escalating, focus initial review on the ACH payment details and the timing of the transfer given these drivers."
+}

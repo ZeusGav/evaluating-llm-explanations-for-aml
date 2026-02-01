@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2104211,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 18.0638,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.04848, direction: increase): The use of ACH is the single largest driver increasing the model score.\n- dayofweek = 6 (SHAP +0.734021, direction: increase): Occurrence on day 6 (Sunday per 0=Mon..6=Sun) contributed positively to the flag.\n- amount_received = 53835.2 (SHAP +0.655381, direction: increase): The reported received amount increased the score.\n- hour = 1 (SHAP −0.606192, direction: decrease): The early-hour timestamp (01:00) reduced the score (mitigating factor).\n- from_bank = 48211 (SHAP −0.515331, direction: decrease): The sending bank ID lowered the score (mitigating factor).\n- payment_currency_saudi_riyal = 1 (SHAP +0.467758, direction: increase): Payment currency being Saudi Riyal added to the score.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH transfer (payment_format_ach) in Saudi Riyal (payment_currency_saudi_riyal) that occurred on dayofweek 6 (Sunday) and involved a relatively large amount_received (53,835.2); these features collectively produced a net increase in the model score. This increase was partially offset by hour = 1 and from_bank = 48211, which reduced the score but not enough to negate the stronger positive drivers. If further review is needed, focus on validating the ACH payment context, the sender (from_bank = 48211), and the rationale for a high SAR payment occurring on day 6."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3906788,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 17.0316,
+  "llm_text": "Why:\n- payment_format_ach=1 (SHAP +3.08672, direction: increase): the ACH payment format is the single largest contributor to the alert.\n- to_bank=22 (SHAP +0.982698, direction: increase): the receiving bank identifier (to_bank=22) materially increased the score.\n- amount_received=15526.3 (SHAP +0.883961, direction: increase) and amount_paid=15526.3 (SHAP +0.553201, direction: increase): the transaction amounts in both receiving and payment currency increased the model output.\n- payment_currency_euro=1 (SHAP +0.44051, direction: increase): use of euro as the payment currency contributed to the flag.\n\nConclusion:\nThe model flagged the transaction principally because it is an ACH payment (payment_format_ach=1) of 15,526.3 (amount_received and amount_paid), sent in euros (payment_currency_euro=1) to receiving bank ID 22 (to_bank=22). Given these drivers increased the score, a manual review focusing on the ACH payment, the euro-denominated amount, and the receiving bank (to_bank=22) is recommended."
+}

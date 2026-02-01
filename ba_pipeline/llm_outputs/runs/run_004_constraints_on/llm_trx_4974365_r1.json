@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4974365,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 14.4647,
+  "llm_text": "Why: The model flagged this transaction primarily because payment_format_ach = 1 strongly increased the model score (SHAP +2.91302). High transaction size — amount_paid = 12682.5 (SHAP +0.84398) and amount_received = 12682.5 (SHAP +0.78266) — further increased the score. The receiving institution (to_bank = 12) also contributed positively (SHAP +0.68890). The sending institution (from_bank = 11157) produced a negative contribution (SHAP -1.00545), partially offsetting the increases.\n\nConclusion: Net effect of the dominant drivers (ACH method + large amounts + to_bank = 12 versus a mitigating from_bank effect) led the model to flag the transaction. If needing next steps, consider verifying ACH routing/details and recipient bank (to_bank = 12) relative to the payment amounts, given the positive contributions noted above."
+}

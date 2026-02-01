@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1030747,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 21.2552,
+  "llm_text": "Why:\n- payment_format_ach (value=1, shap_value=2.95104, direction=increase): The strongest signal comes from the ACH payment method being used. This feature pushes the model toward flagging the transaction, indicating the ACH format is a primary risk driver here.\n- amount_received (56984.0, shap_value=0.746488, direction=increase): A relatively large receiving amount contributes to risk, reinforcing the flag when paired with an ACH payment.\n- dayofweek (6, shap_value=0.689965, direction=increase): The transaction occurs on Sunday, which the model associates with elevated risk in this context.\n- payment_currency_saudi_riyal (value=1, shap_value=0.526883, direction=increase): The payment is in Saudi Riyal, a currency feature that increases the likelihood of the flag within the given driver set.\n\nConclusion:\nElevated risk signal driven by a combination of ACH payment method, a large SAR-denominated amount received, and weekend timing, with SAR as the payment currency contributing to the flag. Based solely on these drivers, the transaction warrants further review to assess context (e.g., purpose, counterparties, and settlement patterns) and confirm whether this aligns with expected activity."
+}

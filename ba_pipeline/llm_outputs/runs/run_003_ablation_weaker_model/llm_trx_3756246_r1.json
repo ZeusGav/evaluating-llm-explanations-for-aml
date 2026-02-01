@@ -1,0 +1,8 @@
+{
+  "transaction_id": 3756246,
+  "run_name": "run_003_ablation_weaker_model",
+  "repeat": 1,
+  "model": "gpt-5-nano",
+  "latency_s": 31.4106,
+  "llm_text": "Why:\n- payment_format_ach (value = 1) has the strongest risk signal, with SHAP = 2.89419 and direction increasing. This indicates the ACH payment format is a major driver of the flag.\n- amount_received (15710.5) increases risk (SHAP = 0.801179), suggesting notable money inflow aligned with the flag.\n- amount_paid (15710.5) increases risk (SHAP = 0.770454), indicating a substantial outflow of equal amount, contributing to the signal.\n- dayof_week (value = 5) increases risk (SHAP = 0.430062), implying time-of-week context contributes to flag likelihood.\n- to_bank (value = 1674) decreases risk (SHAP = -0.267278), providing a modest mitigating effect in the overall signal.\n\nConclusion:\nBased solely on the named drivers, the transaction exhibits a strong risk signal driven by ACH payment method and sizeable, matched transfer amounts with a timing pattern, tempered by a modest mitigating factor from the receiving bank. The transaction should remain flagged for further investigation given these top drivers."
+}

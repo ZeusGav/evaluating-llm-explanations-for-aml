@@ -1,0 +1,8 @@
+{
+  "transaction_id": 5011781,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 17.2773,
+  "llm_text": "Why:\n- The strongest contributor was payment_format_ach = 1 (SHAP +3.10473), meaning the ACH payment format materially increased the model score.\n- The sending bank (from_bank = 20) reduced the score (SHAP -0.981696), partially offsetting other drivers.\n- The receiving bank (to_bank = 22) increased the score (SHAP +0.90173), adding to the flag reason.\n- Both amount_received = 13338.3 (SHAP +0.871392) and amount_paid = 13338.3 (SHAP +0.781259) increased the score — the identical, mid-size amounts contributed positively to the flag.\n- Transaction timing on dayofweek = 6 (Sunday) further increased the score (SHAP +0.730569).\n\nConclusion:\n- The model flagged the transaction primarily because it is an ACH payment (payment_format_ach) combined with mid-sized, identical paid/received amounts (amount_paid and amount_received) and a receiving-bank effect (to_bank), with additional upward pressure from a Sunday execution (dayofweek). The sending bank (from_bank) exerted a downward effect but did not fully offset the other positive contributors. Summing these driver contributions yields an overall positive net effect (approx. +5.4 SHAP from the cited drivers), explaining the flag.\n- If the model treats ACH payments and weekend activity as higher risk (as reflected above), then those characteristics likely drove the alert."
+}

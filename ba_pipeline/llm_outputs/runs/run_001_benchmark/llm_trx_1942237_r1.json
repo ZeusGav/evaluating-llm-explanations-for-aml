@@ -1,0 +1,8 @@
+{
+  "transaction_id": 1942237,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 21.6721,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — largest positive contributor (SHAP +2.79569). The payment being an ACH (payment_format_ach=1) strongly increased the model score.\n- to_bank (value=20) — positive contributor (SHAP +0.89908). Routing to receiving bank ID 20 increased the score.\n- amount_received (value=14460.9) — positive contributor (SHAP +0.83214). The received amount of 14,460.9 increased the score.\n- amount_paid (value=14460.9) — positive contributor (SHAP +0.69969). The paid amount of 14,460.9 also increased the score.\n- from_bank (value=410) — negative contributor (SHAP -0.84028). The sending bank ID 410 reduced the model score (partial offset).\n\nConclusion:\nThe model flagged this transaction primarily because it is an ACH payment (payment_format_ach=1) of a relatively large, identical amount (amount_received and amount_paid = 14,460.9) routed to receiving bank ID 20 (to_bank=20); these features produced the largest positive SHAP contributions. The sending bank (from_bank=410) had a notable negative SHAP contribution that partially offset those increases. If ACH format plus these amount and receiving-bank characteristics are present, the model score is elevated; conversely, the presence of from_bank=410 reduced that elevation."
+}

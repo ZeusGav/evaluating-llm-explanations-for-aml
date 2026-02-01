@@ -1,0 +1,8 @@
+{
+  "transaction_id": 2265303,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 15.7681,
+  "llm_text": "Why:\n- payment_format_ach = 1 strongly increased the model score (SHAP +2.80486), so the ACH payment format is the primary driver of the flag.\n- amount_received = 16586.3 increased the score (SHAP +1.14535), indicating the relatively large received amount contributed to the alert.\n- dayofweek = 6 (Sunday) increased the score (SHAP +0.71330), so timing on a Sunday was a positive contributor.\n- amount_paid = 16586.3 also increased the score (SHAP +0.67415), reinforcing the impact of the transaction size.\n- to_bank = 12 increased the score (SHAP +0.45132), meaning the receiving bank ID contributed positively.\n- Partially offsetting these, from_bank = 11471 decreased the score (SHAP −0.80765) and hour = 21 (9 PM) decreased the score (SHAP −0.60794), so the originating bank ID and the late-hour timing reduced the model’s suspicion.\n\nConclusion:\nThe alert is driven mainly by the transaction being an ACH payment (payment_format_ach) of a relatively large value (amount_received/amount_paid = 16586.3) occurring on a Sunday (dayofweek = 6), with the receiving bank (to_bank = 12) adding further upward contribution. These upward contributions were partly offset by the originating bank (from_bank = 11471) and the late hour (hour = 21). If further review is required, focus checks on the ACH payment details and the receiving bank (to_bank = 12), given those drivers’ positive contributions to the model score."
+}

@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4941711,
+  "run_name": "run_001_benchmark",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 19.2338,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.88242, direction: increase) — the transaction being sent via ACH is the single largest driver increasing the model score.\n- payment_currency_saudi_riyal = 1 (SHAP +0.614287, direction: increase) and receiving_currency_saudi_riyal = 1 (SHAP +0.321576, direction: increase) — both payment and receiving currency indicators are SAR, which add further upward pressure on the score.\n- amount_received = 43845.9 (SHAP +0.435789, direction: increase) — the monetary magnitude in the receiving currency contributes to the increase.\n- to_bank = 49508 (SHAP -0.373065, direction: decrease) and from_bank = 249176 (SHAP -0.352082, direction: decrease) — these sending/receiving bank identifiers reduce the model score and partially offset other increasing drivers.\n\nConclusion:\nThe model flagged this transaction primarily because it was sent by ACH (payment_format_ach=1) and involves Saudi riyal as both payment and receiving currency (payment_currency_saudi_riyal=1 and receiving_currency_saudi_riyal=1), with a non‑trivial amount received (amount_received=43845.9). The sending and receiving bank identifiers (from_bank=249176 and to_bank=49508) modestly decrease the score, but do not fully offset the ACH and SAR-related increases. If further review is needed, confirm ACH routing details and the reason for SAR denomination given the amount."
+}

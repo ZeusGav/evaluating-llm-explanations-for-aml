@@ -1,0 +1,8 @@
+{
+  "transaction_id": 4803021,
+  "run_name": "run_004_constraints_on",
+  "repeat": 1,
+  "model": "gpt-5-mini",
+  "latency_s": 10.8006,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (value=1) which strongly increased the score (SHAP=+2.92227). Large transaction size contributed: amount_received (14222.2) increased risk (SHAP=+1.05686) and amount_paid (14222.2) also increased risk (SHAP=+0.69309). Timing also raised the score: dayofweek (value=6, i.e., Sunday) increased the score (SHAP=+0.59246). Offsetting effects were smaller: from_bank (225215) slightly decreased the score (SHAP=-0.37123) and receiving_currency_euro (value=1) had a small negative effect (SHAP=-0.14556).\n\nConclusion:\nThe alert is mainly due to ACH payment method and high, equal paid/received amounts executed on dayofweek=6. The sending bank and euro currency modestly reduced the model score. If ACH transfers of this size on Sundays are expected for this customer, the risk driver may be explainable; otherwise these feature combinations justify further review."
+}
