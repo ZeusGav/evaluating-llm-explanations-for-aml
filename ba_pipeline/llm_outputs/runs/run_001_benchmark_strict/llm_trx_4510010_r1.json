@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4510010,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most strong indicators lower the suspiciousness score: the payment is a large cheque in Saudi riyal between specific banks on a weekday, which collectively reduce concern. One countervailing signal\u2014the absence of US dollar as the payment currency\u2014slightly raises suspicion and could reflect alternative routing or currency use. \nkey_factors:\n- payment_format_cheque=1 (lowers suspicion) \u2014 a cheque payment could be consistent with formal, documented settlement processes. \n- amount_paid=511713 (lowers suspicion) \u2014 a single large payment may align with bona fide commercial settlement rather than fragmented structuring. \n- receiving_currency_saudi_riyal=1 (lowers suspicion) \u2014 funds received in Saudi riyal may reflect routine regional business or domestic transactions. \n- payment_currency_us_dollar=0 (raises suspicion) \u2014 absence of US dollar use could indicate alternative routing or currency-management patterns that merit contextual interpretation. \n- payment_format_ach=0 (lowers suspicion) \u2014 not using ACH may indicate a non-electronic channel consistent with cheque settlement. \ninvestigation_context: If reviewed in context, the pattern of a large cheque in Saudi riyal with no US dollar usage could be consistent with regional commercial activity or may indicate alternative routing or currency-management practices."
-}

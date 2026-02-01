@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1970067,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: High score is driven by ACH use and large identical paid/received amounts, while a known sending bank and USD reduce concern. The Friday timing adds to the raising signals that collectively outweigh the modest lowering factors.\nkey_factors:\n- payment_format_ach (raises suspicion): ACH could be consistent with rapid electronic fund movement that might facilitate layering.\n- amount_received (raises suspicion): a large amount_received could warrant scrutiny as a high-value transfer.\n- amount_paid (raises suspicion): the identical amount_paid may suggest a direct or mirrored transfer pattern.\n- dayofweek (raises suspicion): dayofweek=5 (Friday) could reflect end-of-week timing that may affect movement patterns.\n- from_bank (lowers suspicion): the specific from_bank may reflect a known sender and could modestly reduce immediate concern.\ninvestigation_context: If verified, these combined attributes could be consistent with rapid movement or potential layering of funds."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1984624,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because multiple indicators\u2014an ACH payment in Saudi riyal for a large amount, occurring on a Sunday at midday\u2014collectively raise concern, while the specific sending and receiving bank identifiers moderately reduce it. These mixed signals could be consistent with expedited electronic movement of funds and may merit closer context-based review.\n\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with rapid electronic transfers that may move large sums quickly.\n- amount_received (raises suspicion): a relatively large received amount could be consistent with higher-value transfers that attract scrutiny.\n- dayofweek (raises suspicion): occurrence on dayofweek=6 (Sunday) could indicate timing outside typical business days and might warrant attention.\n- from_bank (lowers suspicion): the specific sending bank ID (from_bank=118) moderately lowers concern, which could reflect known counterparty characteristics.\n- to_bank (lowers suspicion): the receiving bank ID (to_bank=48308) moderately lowers concern, which may reflect expected routing for this counterparty.\n\ninvestigation_context: If corroborating details (counterparty identity or transaction purpose) align with these indicators, the pattern could be consistent with rapid, high-value electronic transfers worth contextual review."
-}

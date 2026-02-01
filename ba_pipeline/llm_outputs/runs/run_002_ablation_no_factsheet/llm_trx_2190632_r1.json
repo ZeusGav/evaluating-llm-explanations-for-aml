@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2190632,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high suspiciousness score reflects several factors that raise concern\u2014an ACH payment format, occurrence on day 6, and a substantial amount received paid around midday\u2014while some signals such as the originating bank and euro currency indicators reduce concern. Overall, the raising factors appear to outweigh the mitigating signals, producing the elevated score.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with automated bank transfers that sometimes warrant closer scrutiny. \n- dayofweek=6 (raises suspicion) \u2014 timing on day 6 may indicate transaction patterns that merit attention. \n- amount_received=10726.8 (raises suspicion) \u2014 the reported value could be consistent with significant value movement that increases risk in some contexts. \n- from_bank=27241 (lowers suspicion) \u2014 the originating bank identifier may, in some contexts, reduce concern relative to unknown sources. \n- receiving_currency_euro=1 (lowers suspicion) \u2014 use of euros may, depending on context, be a mitigating factor.\n\ninvestigation_context: If account history or counterparty information aligns with these attributes, the combination of ACH timing and amount may indicate a pattern worth closer contextual review."
-}

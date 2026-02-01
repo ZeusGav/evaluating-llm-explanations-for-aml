@@ -1,7 +1,0 @@
-{
-  "transaction_id": 585477,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score is driven by an ACH payment format and sizable, matching incoming and outgoing amounts, along with timing that raises concern. Some attributes \u2014 the sender bank identifier and euro currency use \u2014 modestly lower suspicion, but they do not offset the stronger indicators.\n\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 could be consistent with automated bank transfers used to move funds quickly.\n- amount_received (raises suspicion) \u2014 the sizable incoming amount may indicate significant value being transferred.\n- amount_paid (raises suspicion) \u2014 the matching outgoing amount may suggest pass-through or rapid onward movement of funds.\n- from_bank (lowers suspicion) \u2014 the sender bank identifier reduces concern relative to others and might reflect a known banking relationship.\n- receiving_currency_euro (lowers suspicion) \u2014 euro transactions could be consistent with legitimate cross-border business activity.\n\ninvestigation_context: If these signals are accurate, the pattern could reflect either routine cash management for legitimate business or potential layering that merits contextual review."
-}

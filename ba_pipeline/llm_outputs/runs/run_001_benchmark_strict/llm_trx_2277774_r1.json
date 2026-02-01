@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2277774,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Several strong raising signals \u2014 payment_format_ach, large identical amount_received and amount_paid, and a Sunday transaction \u2014 outweigh modest lowering signals such as a late-night hour and a specific sending bank, producing a high suspiciousness score. Individually these factors could be consistent with rapid, high-value transfers or pass-through behavior while some timing and bank features mildly reduce concern.  \nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with bank-to-bank electronic transfers that enable rapid movement of funds.\n- amount_received (raises suspicion): a large amount received could be consistent with high-value transfers that warrant scrutiny.\n- amount_paid (raises suspicion): an identical large amount paid could be consistent with pass-through or mirroring of funds.\n- dayofweek (raises suspicion): occurrence on dayofweek=6 (Sunday) could be consistent with atypical timing for business activity.\n- hour (lowers suspicion): a late-hour transaction (hour=23) might lower concern if it reflects end-of-day processing patterns.\ninvestigation_context: If these signals are confirmed, they could be consistent with rapid, high-value ACH activity rather than routine retail payments."
-}

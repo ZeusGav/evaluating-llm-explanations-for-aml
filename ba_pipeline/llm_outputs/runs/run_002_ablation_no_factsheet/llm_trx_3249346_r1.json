@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3249346,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The suspiciousness score is low because multiple attributes \u2014 including sender bank, payment formats, local currency, destination bank and timing \u2014 push suspicion down while a relatively large received amount and the absence of USD as payment currency modestly push suspicion up. Overall the downward signals outweigh the upward ones, resulting in a low score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion), which could be consistent with routine non-ACH processing.\n- from_bank=112212 (lowers suspicion), which may indicate an expected or known sending institution.\n- amount_received=68810.1 (raises suspicion), which could reflect higher-value activity that attracts scrutiny.\n- receiving_currency_shekel=1 (lowers suspicion), which might reflect local currency settlement.\n- payment_currency_us_dollar=0 (raises suspicion), which could indicate alternative currency routing or payment patterns.\n\ninvestigation_context: If these attributes are accurate, the mix of a high amount with otherwise routine bank and currency signals could be consistent with legitimate high-value transfers or, alternatively, reflect patterns needing further contextual interpretation."
-}

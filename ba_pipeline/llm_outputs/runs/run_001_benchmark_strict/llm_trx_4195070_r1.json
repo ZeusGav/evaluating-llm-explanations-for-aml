@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4195070,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very low suspiciousness score reflects that all top contributing features point toward lower risk\u2014payment formats, amounts, timing and currency indicators reduce concern. No top factors in the provided list increase suspicion, so the overall signal favors routine activity rather than obvious red flags.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with non-ACH or cash/local settlement patterns.\n- payment_format_cash=1 (lowers suspicion): presence of cash payments may indicate small in-person or routine cash activity.\n- amount_received=1484.92 (lowers suspicion): a mid-range received amount might reflect ordinary transaction size for the customer.\n- receiving_currency_shekel=1 (lowers suspicion): use of local currency could be consistent with domestic, expected operations.\n- hour=22 (lowers suspicion): late-evening activity may align with normal after-hours consumer behavior.\n\ninvestigation_context: If these indicators are accurate, the mix of cash/local currency, typical amount and timing could be consistent with routine, low-risk transactions."
-}

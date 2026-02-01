@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3035808,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because the transaction is an ACH transfer for a sizable amount and timing indicators add to the concern. Some factors, like the sending bank identifier and payment in US dollars, reduce the level of suspicion.\nkey_factors:\n- payment_format_ach (raises suspicion): The use of ACH indicates an electronic transfer method that could be used to move funds quickly.\n- amount_received (raises suspicion): An amount of 12843.2 could be consistent with notable fund movement that may warrant scrutiny.\n- dayofweek (raises suspicion): Occurring on day 5 could align with end-of-week timing patterns that might reflect batch or deliberate scheduling.\n- from_bank (lowers suspicion): The specific sending bank ID here contributes to a lower score, which could indicate a less concerning origin in this context.\n- payment_currency_us_dollar (lowers suspicion): Payment in US dollars could reduce concern if USD is the account's expected currency.\ninvestigation_context: If these patterns match the customer's normal behavior they may be benign; if not, they could be consistent with attempts to move sizable funds electronically."
-}

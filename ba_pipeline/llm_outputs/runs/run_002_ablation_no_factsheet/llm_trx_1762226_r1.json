@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1762226,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most top factors push the score down \u2014 a near\u2011one amount_ratio, very small amount_paid/amount_received amounts, and specified banks are associated with lower suspicion. A couple of signals (amount_received present and payment_currency_us_dollar = 0) slightly raise suspicion but are outweighed by the lowering factors.\n\nkey_factors:\n- amount_ratio=0.99954 (lowers suspicion): could indicate the sent and expected amounts nearly match, which may be consistent with routine settlements.\n- amount_paid=0.002172 (lowers suspicion): might reflect a very small transfer amount, which could be consistent with low\u2011risk activity.\n- from_bank=220 (lowers suspicion): may reflect a specified origin bank, which could align with expected counterparties.\n- amount_received=0.002172 (raises suspicion): could indicate funds were received despite the small payment and may reflect an unusual flow that warrants context.\n- payment_currency_us_dollar=0 (raises suspicion): may indicate a non\u2011USD currency, which could be relevant depending on jurisdiction or client profile.\n\ninvestigation_context: If the near\u2011matching amounts, minimal payment size, and bank indicators align with normal operations, the low score could be consistent with benign activity, while the non\u2011USD indicator and received amount could still require contextual explanation."
-}

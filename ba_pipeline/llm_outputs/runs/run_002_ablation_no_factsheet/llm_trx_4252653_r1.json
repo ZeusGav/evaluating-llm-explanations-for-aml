@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4252653,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The low suspiciousness score reflects that several transaction attributes lower concern while a smaller number raise it. The ACH payment format and the paid amount raise suspicion, but rupee currency, the received amount, and the originating bank reduce it.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could indicate an electronic ACH transfer that may enable rapid fund movement and thus attract scrutiny.\n- amount_paid=2457.66 (raises suspicion) \u2014 could reflect a payment size that, in context, may suggest purposeful disbursement patterns.\n- receiving_currency_rupee=1 (lowers suspicion) \u2014 may be consistent with routine activity conducted in the account's local currency.\n- amount_received=2457.66 (lowers suspicion) \u2014 could be consistent with a moderate transaction amount that reduces immediate concern.\n- from_bank=113304 (lowers suspicion) \u2014 may reflect an expected or regular originating bank relationship that lowers risk.\ninvestigation_context: If the ACH flag coincides with other unusual indicators it might warrant closer review, otherwise the rupee currency and moderate amounts could indicate routine local activity."
-}

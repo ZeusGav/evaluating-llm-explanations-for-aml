@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4497245,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The overall score is shaped by multiple signals that lower suspicion (not using ACH, typical sending bank, modest amount received) offset by small signals that raise suspicion (same amount paid as received, absence of credit card). The result is a very low suspiciousness score.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 If ACH is not used, this lowers suspicion as a non-ACH channel reduces risk signals.\n- from_bank=48910 (lowers suspicion) \u2014 If the sending bank ID is typical, this lowers suspicion.\n- amount_received=3624.7 (lowers suspicion) \u2014 If the received amount aligns with typical transfers, this lowers suspicion.\n- amount_paid=3624.7 (raises suspicion) \u2014 The same amount paid as received could raise suspicion under a single-transaction pattern.\n- payment_format_credit_card=0 (raises suspicion) \u2014 Not using credit cards may raise suspicion if card payments are expected.\ninvestigation_context: This could be explained by a mix of lowering signals offset by small increases, yielding a very low overall suspicion score."
-}

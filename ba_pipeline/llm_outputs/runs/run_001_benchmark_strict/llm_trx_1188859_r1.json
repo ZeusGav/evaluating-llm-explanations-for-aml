@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1188859,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because several strong lowering signals \u2014 including the sending bank ID, large transaction amounts in Australian dollars, and timing indicators \u2014 outweigh the modest increasing signals. A small increase is driven by the ACH payment format and the absence of US dollar payment, which could be consistent with cross\u2011currency ACH activity but do not offset the lowering factors. \nkey_factors:\n- from_bank=6 (lowers suspicion): the sending bank ID being 6 may reflect a known or routine counterparty, which could reduce concern.\n- amount_received=1.20317e+06 (lowers suspicion): a large received amount in the stated currency may align with expected business-sized flows.\n- payment_currency_australian_dollar=1 (lowers suspicion): payment in Australian dollars may match expected local currency operations.\n- payment_format_ach=1 (raises suspicion): use of ACH could be consistent with low\u2011cost transfer methods that sometimes warrant additional context.\n- payment_currency_us_dollar=0 (raises suspicion): absence of USD might indicate cross\u2011currency routing, which could merit contextual review.\ninvestigation_context: If these ACH transactions in Australian dollars involve regular counterparties and consistent business patterns, the low score may reflect routine activity."
-}

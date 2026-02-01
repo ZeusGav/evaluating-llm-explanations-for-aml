@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2150318,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score is driven by several features that raise concern \u2014 an ACH payment in euros to receiving bank 12 for a large single amount on dayofweek 6 could be consistent with an atypical high-value transfer pattern. One factor lowers the score: the transaction occurring at hour 7 might indicate routine early-morning processing and could be less indicative of concealment.\n\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could reflect direct bank-to-bank transfer behavior that may support large-value movement.\n- to_bank (raises suspicion): destination bank 12 may concentrate risk if consistent with other flagged flows.\n- amount_paid (raises suspicion): a large payment amount could be consistent with high-value or single-lump transfers.\n- payment_currency_euro (raises suspicion): euro-denominated movement may indicate cross-currency or cross-border activity.\n- hour (lowers suspicion): an early hour (7) may reflect routine processing rather than urgent or evasive timing.\n\ninvestigation_context: If corroborated with account history or beneficiary information, these patterns could be consistent with high-value cross-border transfers and merit contextual review."
-}

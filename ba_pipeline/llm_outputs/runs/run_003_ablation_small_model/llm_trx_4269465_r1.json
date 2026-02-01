@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4269465,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The high suspiciousness score is driven by several factors that raise suspicion, notably payment_format_ach, amount_received, dayofweek, and payment/receiving Saudi Riyal currencies. The from_bank factor lowers suspicion, slightly tempering the overall signal.\n\nkey_factors:\n- payment_format_ach (raises suspicion) when ACH is used, which may indicate non-standard payment routing.\n- amount_received (raises suspicion) at 53104.4, suggesting a large incoming transfer.\n- dayofweek (raises suspicion) on Sunday, indicating unusual processing timing.\n- payment_currency_saudi_riyal (raises suspicion) used in the payment, pointing to non-US currency involvement.\n- from_bank (lowers suspicion) since the sending bank ID could reflect legitimate sourcing.\n\ninvestigation_context: If these indicators occur together, they could indicate a higher-risk pattern deserving review."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3075650,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score is driven mainly by use of ACH payments, large identical paid/received amounts, and routing to a specific receiving bank, all of which raise suspicion; smaller contributing signals include the weekday and receiving currency. These factors together increase concern while no listed factor in this set lowers the score.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with fast electronic transfers or account-to-account flows that may merit attention.\n- amount_received=17441.1 (raises suspicion) \u2014 a high received amount could indicate a significant single transfer that might reflect structuring or high-value activity.\n- amount_paid=17441.1 (raises suspicion) \u2014 the equal paid amount may suggest pass-through or single-leg movement that could require contextual explanation.\n- to_bank=1467 (raises suspicion) \u2014 concentration to receiving bank 1467 may be notable and could reflect routing patterns worth noting.\n- receiving_currency_us_dollar=1 (raises suspicion) \u2014 receipt in US dollars could be consistent with cross-border settlement or currency choice that may be relevant.\n\ninvestigation_context: If these inputs are correct, the pattern could be consistent with high-value ACH transfers into bank 1467 in US dollars and may reflect pass-through or cross-border activity."
-}

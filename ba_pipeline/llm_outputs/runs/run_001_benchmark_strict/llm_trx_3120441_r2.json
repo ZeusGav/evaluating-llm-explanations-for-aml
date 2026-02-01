@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3120441,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The overall score is low because several factors lower concern \u2014 notably the payment is not ACH, the currencies involved are yen for both payment and receipt, and the format is cheque. These lowering signals are partly offset by the transaction amounts and the absence of credit card payment, which mildly raise suspicion.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): non\u2011ACH could be consistent with manual or local clearing and reduce automated-payment risk.\n- payment_currency_yen=1 (lowers suspicion): use of yen may indicate domestic currency flow, which can be consistent with routine local transactions.\n- payment_format_cheque=1 (lowers suspicion): cheque format could reflect traditional settlement methods, lowering automated-fraud concerns.\n- amount_received=17788.2 (raises suspicion): a sizeable received amount may warrant attention depending on customer profile and source.\n- payment_format_credit_card=0 (raises suspicion): absence of credit card use could, in context, indicate non-card funding that slightly increases review interest.\n\ninvestigation_context: If these reported payment formats, currencies, and amounts are correct, the pattern could be consistent with routine local yen cheque settlement while the transaction size and funding type might still merit contextual consideration."
-}

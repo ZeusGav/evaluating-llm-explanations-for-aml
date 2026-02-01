@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2724133,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The score reflects a mix of signals that raise suspicion due to payment format and currency handling, balanced by factors that lower suspicion. Not using US dollars and matching paid/received amounts provide context that could temper concerns.\nkey_factors:\n- payment_format_ach (raises suspicion): If ACH is used (payment_format_ach=1), this could reflect batch-style transfers that warrant scrutiny.\n- payment_currency_us_dollar (raises suspicion): Not using US dollars (payment_currency_us_dollar=0) raises suspicion when USD would be expected.\n- payment_format_credit_card (raises suspicion): Not using credit cards (payment_format_credit_card=0) raises suspicion if card payments are typical for this profile.\n- amount_paid (lowers suspicion): The amount paid is 101.98, which matches the amount received, lowering suspicion.\n- amount_received (lowers suspicion): The amount received is 101.98, matching the amount paid, lowering suspicion.\ninvestigation_context: If these conditions are observed, the overall assessment could be tempered by the matching amounts and standard bank patterns."
-}

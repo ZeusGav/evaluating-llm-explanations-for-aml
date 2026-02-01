@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4974365,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because several factors raise concern \u2014 notably an ACH payment format, large equal paid and received amounts, a specific destination bank, and receipt in euros \u2014 which could be consistent with automated or cross-border same-amount transfers. The single lowering factor, the originating bank (from_bank=11157), reduces concern and could be consistent with a routine source, but does not offset the other signals.  \nkey_factors:\n- payment_format_ach (raises suspicion): ACH format could be consistent with automated or batch transfers that may warrant attention.\n- amount_paid (raises suspicion): a payment of 12682.5 could be consistent with a high-value transfer that might require scrutiny.\n- amount_received (raises suspicion): the matching received amount of 12682.5 could indicate a same-amount flow pattern of interest.\n- to_bank=12 (raises suspicion): funds routed to this destination bank could be consistent with targeted transfers worth review.\n- from_bank=11157 (lowers suspicion): originating from this bank may be consistent with expected customer activity and reduces concern.\ninvestigation_context: If accurate, the combination of ACH format, mirrored high-value amounts, destination bank, and euro receipt could be consistent with automated cross-border same-amount transfers and might merit contextual review."
-}

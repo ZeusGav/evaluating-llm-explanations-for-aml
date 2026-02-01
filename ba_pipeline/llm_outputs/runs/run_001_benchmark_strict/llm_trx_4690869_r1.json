@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4690869,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very low suspiciousness score is driven mainly by several strong lowering signals \u2014 notably no ACH, a specific sending bank, and a cash payment \u2014 which outweigh modest raising signals such as the paid amount and absence of credit card usage. The smaller raising factors could be worth monitoring but do not overcome the dominant lowering indicators here. \nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with routine non-ACH or manual payment flows. \n- from_bank=5175 (lowers suspicion): this sending bank ID decreases the score and may reflect a familiar or expected counterparty. \n- payment_format_cash=1 (lowers suspicion): cash payment indicator reduces suspicion and could indicate in-person or non-bank funding. \n- amount_paid=3570.06 (raises suspicion): the payment amount increases suspicion and might be notable relative to typical transaction sizes. \n- payment_format_credit_card=0 (raises suspicion): lack of credit card usage slightly raises suspicion and could point to alternative channels in use. \ninvestigation_context: If additional account history or customer profile is reviewed, these lowering and raising signals could be evaluated together to assess whether the modest elevated elements are meaningful."
-}

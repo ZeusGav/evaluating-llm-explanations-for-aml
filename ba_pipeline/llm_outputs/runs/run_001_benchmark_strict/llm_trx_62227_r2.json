@@ -1,7 +1,0 @@
-{
-  "transaction_id": 62227,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because multiple features lower suspicion \u2014 same sending and receiving bank, a small paid amount, reinvestment payment format, hour-of-day, and US dollar currency all reduce concern. One feature, the amount_received, raises a small concern but it is outweighed by the lowering indicators.  \nkey_factors:\n- from_bank=3698 (lowers suspicion) \u2014 same sending bank could indicate an internal transfer and might reflect routine routing.  \n- to_bank=3698 (lowers suspicion) \u2014 same receiving bank could indicate intra-bank movement that could be normal account activity.  \n- amount_paid=12.62 (lowers suspicion) \u2014 the small paid amount could be consistent with routine micro-payments or fee adjustments.  \n- amount_received=12.62 (raises suspicion) \u2014 the received amount aligning with the paid amount may, in some contexts, reflect passthrough activity or rounding artifacts that could merit attention.  \n- payment_format_reinvestment=1 (lowers suspicion) \u2014 a reinvestment format could be consistent with automated portfolio activity rather than manual structuring.  \ninvestigation_context: If reviewed further, the isolated increase for amount_received could be consistent with benign settlement or passthrough behavior but may warrant contextual confirmation."
-}

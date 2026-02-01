@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2724133,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The suspiciousness score is moderately elevated because the payment was sent via ACH and the payment is not in U.S. dollars, which could be consistent with alternative routing or cross\u2011currency movement. At the same time, the relatively small amount paid, the specific sending bank ID, and that the receiving currency is euro reduce the overall concern and may reflect lower\u2011risk transactional characteristics.\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with bank-transfer routing or non-card settlement paths.\n- payment_currency_us_dollar (raises suspicion): payment is not in USD, which could indicate cross\u2011currency or alternative settlement.\n- amount_paid (lowers suspicion): the modest payment amount could be consistent with lower\u2011value, routine transfers.\n- from_bank (lowers suspicion): the sending bank ID contributes to lower concern and could reflect a traceable institutional source.\n- receiving_currency_euro (lowers suspicion): receipt in euros reduces concern and could align with ordinary euro\u2011denominated flows.\ninvestigation_context: If this pattern is atypical for the customer, the ACH method and non\u2011USD payment could be consistent with unusual routing and merit contextual comparison."
-}

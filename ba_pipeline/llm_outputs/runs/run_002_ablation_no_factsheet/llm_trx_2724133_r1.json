@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2724133,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score reflects that the payment_format_ach flag and the non\u2011USD / non\u2011credit-card routing raise concern, while the modest payment size and bank/currency/time attributes lower overall suspicion. Together these opposing signals produce a moderate suspiciousness level rather than a clear-cut alert.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with account-to-account rails that might warrant closer scrutiny.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 not being in USD could indicate cross-currency routing that may require attention.\n- payment_format_credit_card=0 (raises suspicion) \u2014 absence of credit card routing could reflect non-card payment channels with different risk characteristics.\n- amount_paid=101.98 (lowers suspicion) \u2014 the modest, matched amount_paid/amount_received could be consistent with routine, low-value transfers.\n- from_bank=4600 (lowers suspicion) \u2014 the originating bank identifier here contributes a downward signal and could reflect known banking relationships.\ninvestigation_context: If reviewed in context, the ACH and non\u2011USD indicators could be consistent with automated cross-border transfers while the small amount and bank/currency/time attributes might reduce immediate concern."
-}

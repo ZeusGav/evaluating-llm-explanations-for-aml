@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2132656,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Several rising indicators drive the high suspiciousness score, notably ACH payments, large amounts received and paid, and Saudi Riyal currency usage. Timing signals (dayofweek, hour) and the known sending bank provide some lowering context.\nkey_factors:\n- payment_format_ach (raises suspicion) if ACH is used, this pattern could indicate non-cash transfer activity.\n- amount_received (raises suspicion) a large amount received may reflect unusual inflow requiring scrutiny.\n- payment_currency_saudi_riyal (raises suspicion) use of Saudi Riyal could reflect region-specific activity.\n- hour (lowers suspicion) the time of 18:00 may be less indicative of high risk.\n- from_bank (lowers suspicion) a known sending bank reduces uncertainty about the source.\ninvestigation_context: If ACH usage and large inflows in Saudi Riyal co-occur with timing and bank source patterns, the high score is explained by the combination of raised and lowered signals."
-}

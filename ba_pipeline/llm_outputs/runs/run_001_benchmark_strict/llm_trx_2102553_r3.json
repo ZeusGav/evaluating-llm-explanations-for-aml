@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2102553,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because several transaction attributes \u2014 credit card funding, absence of ACH, the specific sending bank, and euro currency \u2014 push suspicion downward while timing (Sunday) and the paid amount exert modest upward pressure. Overall, the lowering factors outweigh the modest increases, producing a very low suspiciousness score.\n\nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion): a credit-card-funded payment could be consistent with consumer-style or card-processed activity.\n- payment_format_ach=0 (lowers suspicion): absence of ACH may indicate non-bank rails and could reduce typical bank-transfer signals.\n- dayofweek=6 (raises suspicion): occurring on Sunday could reflect unusual timing that may warrant contextual attention.\n- amount_paid=8522.89 (raises suspicion): a sizable paid amount could be notable depending on customer profile and may increase scrutiny.\n- receiving_currency_euro=1 (lowers suspicion): euro-denominated receipt could be consistent with routine business or consumer payments in that currency.\n\ninvestigation_context: If these attributes are accurate, they may indicate a routine euro card-funded transfer occurring on a Sunday, though the transaction size might merit contextual review."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 666019,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The overall score is driven by multiple signals that lower suspicion, with two modest signals that raise suspicion, resulting in a very low overall assessment. The balance of decreases outweighs the increases.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) When ACH is not used, this lowers suspicion because the method reflects routine domestic payment activity.\n- amount_paid=1513.95 (raises suspicion) The amount paid matches the amount received, which could indicate a self-payment or circular flow, modestly raising suspicion.\n- payment_format_credit_card=0 (raises suspicion) Not using credit card raises suspicion since credit cards are a common method for many transactions.\n- dayofweek=3 (lowers suspicion) A Wednesday timing can align with regular business activity, lowering suspicion.\n- hour=10 (lowers suspicion) A mid-morning hour is typical for transfers, lowering suspicion.\n\ninvestigation_context: If the combination of multiple lowering indicators persists with only the modest increases, the overall suspiciousness could remain low unless the increases align with a known risk scenario."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2063268,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high suspiciousness score reflects strong raising signals such as an ACH payment format and a sizable amount paid, while several other factors pull the score down. Specifically, the sender bank, the late hour, and the fact that the received amount matches the paid amount act as lowering signals that partially offset the risk indicators.\nkey_factors:\n- payment_format_ach=1 (raises suspicion): If the payment is ACH, it could be consistent with rapid account-to-account transfers that may merit attention.\n- amount_paid=3377.08 (raises suspicion): If this is a relatively large single payment, it could indicate meaningful value movement worth closer scrutiny.\n- from_bank=221279 (lowers suspicion): If the originator bank is known or trusted, that context may reduce apparent risk.\n- hour=22 (lowers suspicion): If the transaction occurred late (22), it might reflect routine after-hours processing rather than atypical timing.\n- dayofweek=5 (raises suspicion): If the transaction falls on day 5, that timing could align with patterns that sometimes correspond to higher risk.\ninvestigation_context: If these combined signals are accurate, they may indicate a payment that warrants contextual review to determine whether the ACH and amount patterns are expected."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 854696,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The low suspiciousness score is driven mainly by multiple lowering factors \u2014 amount_paid and amount_received being equal/moderate, a single recipient bank, daytime weekday timing, and receiving_currency_euro all lower concern. Two elements raise attention (payment_format_ach and payment_currency_euro), but their effect is smaller than the combined lowering signals.\n\nkey_factors:\n- amount_paid (lowers suspicion), the payment amount is moderate and could be consistent with routine activity.\n- amount_received (lowers suspicion), the received amount matches the paid amount which might reflect a straightforward transfer.\n- payment_format_ach (raises suspicion), use of ACH could be consistent with regular clearing yet may also appear in certain misuse patterns.\n- to_bank (lowers suspicion), the recipient bank count suggests a single destination which could indicate standard behavior.\n- payment_currency_euro (raises suspicion), the euro denomination may be notable depending on the expected currency profile.\n\ninvestigation_context: If these factor patterns reflect the true transaction context, the profile may be consistent with routine euro-denominated ACH movement despite a couple of elements that raise attention."
-}

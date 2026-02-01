@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4043829,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Several rising indicators\u2014such as ACH usage, large incoming amount, and weekend timing\u2014drive high suspicion. The sending bank pattern slightly lowers suspicion, contributing to the overall high score.\nkey_factors:\n- payment_format_ach raises suspicion: The use of ACH could reflect routine transfers, but when seen with a large amount and timing on a weekend, this combination may warrant closer scrutiny.\n- amount_received raises suspicion: An amount of 13839.8 may indicate substantial funds movement, especially if paired with a matching amount_paid, signaling potential unusual liquidity flow.\n- to_bank raises suspicion: Receiving into bank ID 22, in conjunction with other indicators, could reflect routing patterns that increase risk.\n- from_bank lowers suspicion: Sending bank ID 1522 may be consistent with typical counterparty activity, potentially reducing concern when other signals are present.\n- dayofweek raises suspicion: Activity on a Saturday could be unusual timing that raises suspicion in the context of other indicators.\ninvestigation_context: If these conditions are observed together, they could be consistent with elevated risk and merit further review."
-}

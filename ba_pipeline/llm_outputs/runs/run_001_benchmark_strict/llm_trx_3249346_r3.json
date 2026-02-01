@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3249346,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The overall score is low because several payment and currency attributes lower concern while a large received amount and non\u2011USD payment raise it. Lowering signals include no ACH, cheque usage, shekel as payment/receiving currency, and bank/day/hour codes despite the sizable incoming amount.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): If ACH was not used, the payment may reflect routine non\u2011electronic processing.\n- amount_received=68810.1 (raises suspicion): A large incoming amount could be consistent with higher exposure or unusual value.\n- receiving_currency_shekel=1 (lowers suspicion): Receiving in shekels may align with expected local currency flows and reduce concern.\n- payment_format_cheque=1 (lowers suspicion): Cheque payment format could indicate traditional, more traceable settlement.\n- payment_currency_us_dollar=0 (raises suspicion): Non\u2011USD payment may indicate alternative routing or conversion that raises a small concern.\n\ninvestigation_context: If these factors are accurate, the transaction may be lower priority for escalation despite the elevated amount."
-}

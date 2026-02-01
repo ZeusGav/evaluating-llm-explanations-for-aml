@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2132656,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score reflects several transaction attributes that raise concern, chiefly the ACH payment format combined with substantial paid/received amounts denominated in Saudi riyal. Timing and origin attributes (day of week, hour, sending bank) push the score down somewhat but do not outweigh the raising factors.\n\nkey_factors:\n- payment_format_ach (raises suspicion): Use of ACH could be consistent with higher\u2011risk electronic transfers depending on counterparty relationships.\n- amount_received (raises suspicion): A large received amount could indicate higher monetary exposure if not explained by normal business activity.\n- payment_currency_saudi_riyal (raises suspicion): Payments denominated in Saudi riyal could be relevant if currency use is atypical for the customer.\n- dayofweek (lowers suspicion): The transaction occurring on dayofweek=2 could be less unusual for routine business timing.\n- hour (lowers suspicion): The hour=18 timing may align with normal end\u2011of\u2011day activity and slightly reduce concern.\n\ninvestigation_context: If other account or counterparty information aligns, this combination could be consistent with high\u2011value ACH transfers in Saudi riyal that warrant contextual assessment."
-}

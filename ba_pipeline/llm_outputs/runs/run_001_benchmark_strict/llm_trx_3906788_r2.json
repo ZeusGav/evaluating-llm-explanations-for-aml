@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3906788,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because multiple factors raise concern: payment_format_ach=1, to_bank=22, payment_currency_euro=1, and a sizeable amount_received of 15,526.3 point toward a significant inbound ACH transfer. from_bank=1 and hour=16 lower suspicion somewhat, but they are outweighed by the stronger increasing factors.\n\nkey_factors:\n- payment_format_ach (raises suspicion): an ACH payment could be consistent with automated or account-to-account movement if unexpected.\n- amount_received (raises suspicion): the received amount of 15,526.3 could indicate a significant single inflow that may merit scrutiny.\n- payment_currency_euro (raises suspicion): payment in euros could be notable if it differs from the account\u2019s usual currency profile.\n- to_bank (raises suspicion): destination bank 22 may be relevant if that recipient bank is associated with higher-risk connections.\n- from_bank (lowers suspicion): sending bank 1 slightly reduces concern and could reflect a familiar or lower-risk origin if known.\n\ninvestigation_context: If these attributes are accurate, they might reflect a high-value ACH inflow to bank 22 that could be consistent with account-to-account layering or another notable transfer pattern."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2150318,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Several high-impact factors raise suspicion: the payment_format_ach, a large identical amount paid and received, routing to bank 12, payment in euros, and occurrence on dayofweek 6; only the early hour (7) modestly lowers concern. Overall, the combination of multiple strong raising factors outweighs the small lowering effect, producing a very high suspiciousness score.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 an ACH method could be consistent with large electronic transfers that merit scrutiny.\n- to_bank=12 (raises suspicion) \u2014 routing to bank 12 may be notable in the context of high-value movement.\n- amount_paid=10215.3 (raises suspicion) \u2014 a sizeable payment amount could be consistent with higher-risk transactions.\n- amount_received=10215.3 (raises suspicion) \u2014 the identical received amount may indicate pass-through or immediate onward movement.\n- hour=7 (lowers suspicion) \u2014 an early morning transaction time slightly reduces but does not negate other concerns.\n\ninvestigation_context: If these factors are accurate, they could be consistent with a high-value ACH euro transfer to bank 12 on day 6 that may warrant further contextual review."
-}

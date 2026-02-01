@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1577254,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very high suspiciousness score is driven by use of ACH, a large incoming amount, and a Sunday timing, which could raise concern about high-value automated transfers outside normal business days. At the same time, the specific recipient bank identifier and payment in US dollars lower concern, though the combined signal remains strongly elevated.\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with large automated bank transfers that may warrant scrutiny.\n- amount_received (raises suspicion): a substantial incoming amount could indicate a high-value transaction pattern that may be atypical for the account.\n- dayofweek (raises suspicion): occurrence on dayofweek=6 (Sunday) could reflect activity outside normal business days and be notable.\n- to_bank (lowers suspicion): the receiving bank identifier in this case lowers concern relative to other recipients and could indicate a routine counterparty relationship.\n- payment_currency_us_dollar (lowers suspicion): payment in US dollars could align with routine domestic settlement and thus reduce immediate concern.\ninvestigation_context: If confirmed, this mix of high-value ACH activity on a weekend could be consistent with atypical transaction behavior that might warrant contextual review."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2233432,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because multiple factors raise suspicion, notably payment_format_ach=1, large amount_received and amount_paid values, and dayofweek=6 indicating a weekend timing. These signals are partly offset by lowering factors such as from_bank=111443 and payment_currency_us_dollar=1, which could reflect an expected banking relationship or routine currency usage.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 an ACH format could be consistent with high-value electronic transfers that merit scrutiny.\n- amount_received=14011.4 (raises suspicion) \u2014 a sizeable inbound amount could be consistent with atypical or high-value activity.\n- dayofweek=6 (raises suspicion) \u2014 a transaction on day 6 (Saturday) could indicate timing outside normal business patterns.\n- from_bank=111443 (lowers suspicion) \u2014 funds originating from this bank may reflect a known counterparty relationship and reduce immediate concern.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 use of USD could align with routine settlement conventions and partially mitigate risk.\ninvestigation_context: If these characteristics hold, they could be consistent with a large weekend ACH transfer that may warrant further contextual review."
-}

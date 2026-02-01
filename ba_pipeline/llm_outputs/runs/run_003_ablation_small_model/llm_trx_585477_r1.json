@@ -1,7 +1,0 @@
-{
-  "transaction_id": 585477,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Overall, the factors indicate heightened suspicion driven by ACH usage, matched amounts, and Sunday timing. However, the sender bank and euro-denominated receiving side help lower the level of concern.\nkey_factors:\n- payment_format_ach raises suspicion: the use of ACH could reflect electronic transfers that warrant closer review.\n- amount_received raises suspicion: 14962.8 matches the amount_paid, which may indicate a round-trip or mirrored transfer.\n- dayofweek raises suspicion: activity on Sunday can be unusual for typical business timing.\n- from_bank lowers suspicion: the sending bank being identified may reduce concern if it aligns with expected counterparties.\n- receiving_currency_euro lowers suspicion: euro as the receiving currency might reduce risk if it aligns with expected corridors.\ninvestigation_context: If these patterns persist, they could be consistent with particular transaction flows, justifying closer scrutiny."
-}

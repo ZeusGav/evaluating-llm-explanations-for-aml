@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2947913,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very high because the transaction is an ACH transfer, involves a large amount that is both received and paid for the same value, and is linked to a specific originating bank \u2014 all of which raise concern. One factor (receiving_currency_euro) slightly lowers concern, but its effect is small compared with the other raising factors.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): an ACH transfer could be consistent with rapid electronic movement of funds between accounts.\n- amount_received=13431.6 (raises suspicion): a comparatively large incoming amount may indicate significant fund flows that merit attention.\n- amount_paid=13431.6 (raises suspicion): an identical paid amount could reflect pass-through activity or simple layering patterns.\n- from_bank=214621 (raises suspicion): linkage to this originating bank could be notable if it is unexpected or higher-risk in context.\n- receiving_currency_euro=1 (lowers suspicion): the use of euros as the receiving currency may reduce concern in some business-aligned scenarios.\n\ninvestigation_context: If these attributes are accurate, the pattern could be consistent with rapid cross-bank fund movement and possible layering."
-}

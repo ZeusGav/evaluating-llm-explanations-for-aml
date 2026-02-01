@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3120441,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Multiple strong reducing signals\u2014non\u2011ACH payment, yen as both payment and receiving currency, cheque format, and specific sending/receiving bank identifiers\u2014drive the score very low. Smaller increasing signals from the transaction amount and the absence of credit card use modestly raise concern but do not outweigh the lowering factors.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): non\u2011ACH payment could be consistent with lower\u2011risk settlement methods for this corridor.\n- payment_currency_yen=1 (lowers suspicion): denomination in yen may indicate routine domestic or currency\u2011matched activity.\n- payment_format_cheque=1 (lowers suspicion): cheque payment could reflect conventional invoicing patterns rather than atypical channels.\n- amount_received=17788.2 (raises suspicion): a notable received amount may warrant contextual review if atypical for the customer.\n- payment_format_credit_card=0 (raises suspicion): absence of credit card usage in this case slightly increases scrutiny as a differing payment characteristic.\ninvestigation_context: If the currency, payment formats, and bank IDs align with the customer's normal profile, these features may reflect routine business activity rather than illicit behavior."
-}

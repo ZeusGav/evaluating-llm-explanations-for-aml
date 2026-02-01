@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4195070,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: All listed factors decrease suspicion, with none indicating unusual activity. This combination explains the very low suspiciousness score of 0.000070.\nkey_factors:\n- payment_format_ach (lowers suspicion): The ACH indicator is 0, which could reflect a non-electronic transfer route and may lower suspicion.\n- from_bank (lowers suspicion): The sending bank ID is present, which could reflect a standard transfer path and may lower suspicion.\n- payment_format_cash (lowers suspicion): Cash is used in this case, which may align with ordinary transactions and may lower suspicion.\n- hour (lowers suspicion): The transaction occurs at 22:00, which in some patterns could be typical, possibly lowering suspicion.\n- amount_received (lowers suspicion): The amount received is modest, which may align with normal activity and may lower suspicion.\ninvestigation_context: If these indicators align with routine payment patterns, the overall suspicion would remain very low."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2284945,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most strong indicators lower suspicion \u2014 factors such as payment_format_ach=0, from_bank=1198, receiving_currency_shekel=1 and payment_format_cheque=1 point toward routine characteristics, while dayofweek=6 and payment_currency_us_dollar=0 provide modest opposing signals. The net result is a very low suspiciousness score because the lowering factors dominate the smaller increases in concern.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of an ACH format could be consistent with non-electronic or standard settlement methods.\n- from_bank=1198 (lowers suspicion): origin from bank 1198 may reflect a regular or expected counterparty and reduce concern.\n- receiving_currency_shekel=1 (lowers suspicion): receipt in shekel could be consistent with normal local currency flows.\n- dayofweek=6 (raises suspicion): occurring on dayofweek=6 may indicate timing outside typical patterns and warrant contextual attention.\n- payment_currency_us_dollar=0 (raises suspicion): not being in US dollar may be notable if USD would normally be used and could affect risk interpretation.\ninvestigation_context: If reviewed further, the predominance of lowering indicators alongside a couple of timing/currency flags could suggest limited concern but may benefit from contextual review."
-}

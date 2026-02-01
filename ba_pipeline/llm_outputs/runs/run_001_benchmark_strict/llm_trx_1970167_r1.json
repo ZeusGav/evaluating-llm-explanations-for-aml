@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1970167,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high suspiciousness score is driven primarily by an ACH payment of the full matched amount to a specific receiving bank, which raises concern about large electronic fund movement. At the same time, the identified sending bank and receipt in euros lower the relative concern and could indicate routine routing or regional settlement instead of outright illicit activity.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with rapid electronic transfers that concentrate risk in account-to-account movement.\n- amount_received=11995.4 (raises suspicion) \u2014 the payment size could be consistent with high-value transfers that merit attention.\n- to_bank=11 (raises suspicion) \u2014 routing to this receiving bank ID may reflect a destination pattern that increases concern.\n- from_bank=20 (lowers suspicion) \u2014 the sending bank ID reduces relative concern and may reflect a familiar or established source.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 receipt in euros could reflect normal regional settlement and slightly tempers overall risk.\n\ninvestigation_context: If corroborated by account history or counterparty information, these patterns could be consistent with either routine ACH settlement or with activity that may indicate elevated risk."
-}

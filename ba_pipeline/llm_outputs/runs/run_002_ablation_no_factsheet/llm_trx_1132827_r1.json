@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1132827,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The overall suspiciousness is low because multiple transaction attributes lower concern (amount_diff, amount_ratio, from_bank, payment_currency_us_dollar, hour), though a couple of attributes raise it (payment_format_ach and amount_paid). This mix of lowering and raising factors leads to a low combined score reflecting limited cause for alarm. \nkey_factors:\n- amount_diff (lowers suspicion) \u2014 a positive difference could be consistent with expected rounding, fees, or settlement timing. \n- amount_ratio (lowers suspicion) \u2014 a ratio near parity may indicate consistency between sent and received values. \n- from_bank (lowers suspicion) \u2014 the originating bank identifier may reflect routine routing rather than unusual counterparties. \n- payment_format_ach (raises suspicion) \u2014 ACH format (raises suspicion) could be associated with automated bulk flows that sometimes merit attention. \n- amount_paid (raises suspicion) \u2014 the paid amount (raises suspicion) may increase notice if it is larger than typical activity. \ninvestigation_context: If taken together, these indicators may be consistent with routine ACH activity that includes a few attributes warranting closer contextual review."
-}

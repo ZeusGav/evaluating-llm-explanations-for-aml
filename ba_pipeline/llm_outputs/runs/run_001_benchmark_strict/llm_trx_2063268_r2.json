@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2063268,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because certain attributes raise concern (notably ACH as the payment format and a substantial amount paid), while other attributes reduce concern (the sending bank, the late hour, and a matched received amount). Overall, the mix of strong raising signals and offsetting lowering signals results in a high suspiciousness score but could also be consistent with routine transfers in some cases.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 use of ACH could be consistent with rapid electronic movement that may warrant attention.\n- amount_paid=3377.08 (raises suspicion) \u2014 a sizable outgoing payment could be consistent with structuring or high-value transfer patterns.\n- from_bank=221279 (lowers suspicion) \u2014 the identified sending bank may indicate a known/expected origin that reduces concern.\n- hour=22 (lowers suspicion) \u2014 a late-evening timestamp may align with normal customer timing and thus lower concern.\n- amount_received=3377.08 (lowers suspicion) \u2014 identical received amount may indicate no currency discrepancy and thereby reduce suspicion.\ninvestigation_context: If the ACH payment at this size recurs without clear business rationale, it could be consistent with activity deserving further review."
-}

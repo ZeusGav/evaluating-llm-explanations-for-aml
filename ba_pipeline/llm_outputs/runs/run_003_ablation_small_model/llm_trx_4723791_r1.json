@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4723791,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Several signals in the factors presented point toward elevated concern, notably ACH payments, Sunday timing, Saudi Riyal currencies, and a relatively large amount received. Together, these raise suspicion and largely drive the high suspiciousness score of 0.997252.\nkey_factors:\n- payment_format_ach raises suspicion: when ACH is used (payment_format_ach=1), this increases suspicion.\n- dayofweek raises suspicion: on Sunday (dayofweek=6), this increases suspicion.\n- payment_currency_saudi_riyal raises suspicion: using Saudi Riyal for payment (payment_currency_saudi_riyal=1) increases suspicion.\n- amount_received raises suspicion: a sizable amount received (amount_received=37845.1) increases suspicion.\n- receiving_currency_saudi_riyal raises suspicion: receiving in Saudi Riyal (receiving_currency_saudi_riyal=1) increases suspicion.\ninvestigation_context: If these conditions hold (ACH, Sunday timing, Saudi Riyal currencies, and a sizable amount), they could contribute to the high level of suspiciousness."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2328769,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The low suspiciousness score reflects that several transaction attributes (payment formats, currencies, timing, and amounts) lower concern while a specific sending bank and the paid amount modestly raise concern. Overall, the lowering factors outweigh the raising factors, producing a low overall score.\n\nkey_factors:\n- from_bank (raises suspicion): the transaction originates from this sending bank, which could warrant closer attention depending on the sender's profile.\n- amount_paid (raises suspicion): the payment amount might be notable relative to normal activity and could merit context-sensitive review.\n- payment_format_ach (lowers suspicion): absence of ACH may be consistent with non-ACH settlement methods and lower automated-transfer risk.\n- receiving_currency_shekel (lowers suspicion): receiving in shekel may align with expected local currency activity and reduce cross-currency routing concerns.\n- payment_format_cheque (lowers suspicion): use of cheque as payment method could indicate traditional settlement patterns that might be less indicative of rapid electronic layering.\n\ninvestigation_context: If additional details about the sender, counterparty relationships, or historical transaction patterns are available, they may clarify whether the sending bank and payment amount are meaningful."
-}

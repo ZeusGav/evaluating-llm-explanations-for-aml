@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4043829,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Multiple attributes raise concern\u2014an ACH format, high identical paid/received amounts, and timing indicators point toward higher-risk activity, while the sending bank ID and euro currency indicators slightly reduce concern. The strong raising factors outweigh the lowering ones, resulting in a very high suspiciousness assessment.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 the use of ACH could be consistent with account-to-account transfers that may require closer scrutiny.\n- amount_received=13839.8 (raises suspicion) \u2014 a comparatively large received amount could indicate higher-value movement warranting attention.\n- amount_paid=13839.8 (raises suspicion) \u2014 identical paid and received amounts might reflect rapid pass-through or routing that could be concerning.\n- from_bank=1522 (lowers suspicion) \u2014 the sending bank indicator reduces concern and might reflect a familiar or lower-risk origin.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 receipt in euros lowers concern and could suggest standard intra-currency settlement.\n\ninvestigation_context: If these factor patterns are confirmed, they could be consistent with rapid, high-value ACH routing across banks while some currency and origin-bank signals point toward routine settlement."
-}

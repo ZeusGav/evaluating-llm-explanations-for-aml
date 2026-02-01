@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1847922,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most top factors point to lower-risk attributes \u2014 examples include credit card payment, moderate identical paid/received amount in euros, late-hour timing, and specific sending/receiving bank IDs \u2014 and none of the listed factors raise concern. Together these lowering signals explain the very small suspiciousness score, although isolated contextual information could still change the assessment.\n\nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion) \u2014 use of a credit card could be consistent with consumer or card-processed activity rather than high-risk wire transfers.\n- amount_received=863.89 (lowers suspicion) \u2014 a moderate transaction amount may align with routine commercial or personal payments.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 receiving funds in euros could be consistent with normal cross-border or domestic euro-denominated activity.\n- hour=23 (lowers suspicion) \u2014 a late-hour timestamp might reflect typical customer behavior rather than clearly anomalous timing.\n- from_bank=1490 (lowers suspicion) \u2014 a specific sending-bank identifier could indicate a known correspondent relationship that may reduce concern.\n\ninvestigation_context: If additional context is available, these features might be consistent with routine euro credit-card payments of moderate size rather than inherently suspicious activity."
-}

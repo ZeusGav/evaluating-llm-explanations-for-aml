@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4039580,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is elevated primarily because the payment used the ACH format and the reported paid amount, which together raise concern about fund movement. This is moderated by the specific sending bank, the received amount, the US dollar currency and timing elements that lower the overall level of concern.\nkey_factors:\n- payment_format_ach (raises suspicion): Use of ACH could be consistent with electronic transfers that may warrant closer contextual review.\n- amount_paid (raises suspicion): The paid amount could reflect movement of funds that increases concern depending on counterparty and purpose.\n- from_bank (lowers suspicion): The specific sending bank might reflect a counterparty profile that reduces concern in this instance.\n- amount_received (lowers suspicion): The received amount could indicate a size or flow that lessens concern given the transaction context.\n- payment_currency_us_dollar (lowers suspicion): Payment in US dollar may align with expected currency norms and thus lower suspicion depending on origin/destination.\ninvestigation_context: If these factor patterns hold, they could reflect a mix of routine ACH activity alongside elements that both raise and lower concern."
-}

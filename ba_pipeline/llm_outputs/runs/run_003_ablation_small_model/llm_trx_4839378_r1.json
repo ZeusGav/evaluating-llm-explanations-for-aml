@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4839378,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Most indicators reduce suspicion (ACH not used, from a known bank, cash payment, and late hour), while a small counter-signal comes from not using US dollars. The overall, very low score results from the balance of these effects.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) absence of ACH could reflect routine processing in this pattern.\n- from_bank=13157 (lowers suspicion) using a single known sending bank may indicate normal activity.\n- payment_format_cash=1 (lowers suspicion) cash payment indicator could align with ordinary customer behavior.\n- hour=22 (lowers suspicion) late-hour timing could occur in routine operations.\n- payment_currency_us_dollar=0 (raises suspicion) not using US dollars could signal a non-US currency element.\n\ninvestigation_context: If the observed pattern aligns with typical customer activity, the overall low suspicion score is consistent."
-}

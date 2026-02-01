@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5018226,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score is driven by an ACH payment that carries a large received amount and occurs on a weekday, which together raise concern about substantial electronic inflows. The receiving bank identifier and the fact the payment is in US dollars modestly lower concern, but do not outweigh the stronger raising signals.\n\nkey_factors:\n- payment_format_ach (raises suspicion): receipt via ACH could be consistent with rapid electronic transfers that may obscure origin or routing.\n- amount_received (raises suspicion): a large received amount may indicate an unusually high inflow relative to typical activity.\n- dayofweek (raises suspicion): occurrence on a weekday could align with business\u2011hour transfers that might be used to move high\u2011value funds.\n- to_bank (lowers suspicion): the specific receiving bank identifier mildly reduces concern, which may reflect routine routing to a known institution.\n- payment_currency_us_dollar (lowers suspicion): payment in US dollars slightly lowers concern, as it may match expected currency usage for the corridor.\n\ninvestigation_context: If corroborated by counterparty history or additional transaction details, this mix of ACH, high amount, and timing may indicate structured or high\u2011value electronic inflows."
-}

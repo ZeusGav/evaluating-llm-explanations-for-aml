@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2102553,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very low suspiciousness score is driven mainly by several lowering signals such as payment_format_ach=0, payment_format_credit_card=1, from_bank=20861 and receiving_currency_euro=1. These decreases outweigh modest increases tied to dayofweek=6 and amount_paid=8522.89, resulting in the low overall score. \nkey_factors:\n- payment_format_ach=0 (lowers suspicion): could reflect a non-ACH route that aligns with expected payment channels. \n- payment_format_credit_card=1 (lowers suspicion): may indicate a card-based receipt consistent with routine consumer transactions. \n- from_bank=20861 (lowers suspicion): may reflect an expected originating bank or established counterparty. \n- dayofweek=6 (raises suspicion): could indicate weekend timing that might be atypical for some business flows. \n- amount_paid=8522.89 (raises suspicion): might reflect a relatively large outgoing amount that could merit contextual review. \ninvestigation_context: If more context is available, the prevailing lowering signals could be consistent with routine card and bank activity, although the weekend timing and sizable paid amount might warrant attention."
-}

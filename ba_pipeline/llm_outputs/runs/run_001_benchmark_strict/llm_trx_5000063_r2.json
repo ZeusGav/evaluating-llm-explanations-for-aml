@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5000063,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very high suspiciousness score (0.996942) is driven by strong raising signals such as ACH payment method, the large amount received/paid, the receiving bank, and timing indicators. These are partly offset by the sending bank identifier and the receiving currency being euro, which lower the signal and could be consistent with routine or jurisdictional factors.\n\nkey_factors:\n- payment_format_ach (raises suspicion): ACH usage could be consistent with rapid bank-to-bank movement that increases scrutiny.\n- amount_received (raises suspicion): the sizable received amount could be consistent with high-value transfers that attract attention.\n- to_bank (raises suspicion): the receiving bank ID contributes to the elevated signal and might reflect concentration to that bank.\n- from_bank (lowers suspicion): the sending bank ID reduces the signal and could indicate a routine or known source.\n- receiving_currency_euro (lowers suspicion): euro as the receiving currency lowers the signal and may reflect routine cross-border or euro-denominated activity.\n\ninvestigation_context: If interpreted, this pattern could be consistent with ACH transfers of this size to the receiving bank raising concern while the sending bank and euro currency may mitigate that concern."
-}

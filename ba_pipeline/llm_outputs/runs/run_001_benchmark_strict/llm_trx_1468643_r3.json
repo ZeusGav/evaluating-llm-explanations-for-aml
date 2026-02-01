@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1468643,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most features point toward routine, low-risk characteristics \u2014 a small payment amount, credit-card funding, Swiss franc receipt, and specific sending/receiving banks all lower concern and drive the very low suspiciousness score. One feature (payment_currency_us_dollar=0) slightly raises suspicion, but its effect is minimal compared with the stronger lowering factors. \nkey_factors:\n- from_bank=139793 (lowers suspicion): if the sender is this bank ID, the origin may reflect a familiar payment source. \n- payment_format_credit_card=1 (lowers suspicion): credit-card funding could be consistent with ordinary consumer or merchant transactions. \n- amount_paid=40.18 (lowers suspicion): a small payment amount may indicate routine, low-value activity. \n- receiving_currency_swiss_franc=1 (lowers suspicion): receipt in Swiss francs might reflect normal local or cross-border settlement. \n- payment_currency_us_dollar=0 (raises suspicion): not being in USD is associated here with a slight increase in risk and may warrant contextual review. \ninvestigation_context: If viewed together, the listed attributes could be consistent with routine consumer payments, though the non-USD indicator might slightly elevate risk in context."
-}

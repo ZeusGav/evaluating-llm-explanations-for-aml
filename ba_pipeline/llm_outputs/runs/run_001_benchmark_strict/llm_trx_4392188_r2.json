@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4392188,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Several clear lowering signals \u2014 including the absence of ACH, specific sending/receiving bank indicators, and cheque/USD payment indicators \u2014 outweigh modest raising signals such as the relatively large paid/received amounts and early-hour timing. Consequently, the overall suspiciousness is low despite some attributes that could attract attention in context.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with non-electronic or expected payment handling.\n- from_bank=11157 (lowers suspicion) \u2014 the sending bank indicator may align with known counterparties or routine flows.\n- payment_format_cheque=1 (lowers suspicion) \u2014 cheque payment could reflect documented, lower-velocity activity.\n- amount_paid=10792.6 (raises suspicion) \u2014 a larger single payment could be consistent with elevated risk or legitimate large transactions.\n- hour=6 (raises suspicion) \u2014 early-morning timing might reflect atypical timing or benign timezone differences.\n\ninvestigation_context: If accurate, the combination of higher amount and early timing might merit contextual review given mitigating bank and payment-method indicators."
-}

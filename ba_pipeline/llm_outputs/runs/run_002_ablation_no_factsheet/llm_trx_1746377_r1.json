@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1746377,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Several transaction attributes raise concern\u2014notably the ACH format, the payment size, and weekend timing\u2014while some account and currency details reduce concern. Because more indicators point toward heightened risk than mitigation, the combined assessment yields a high suspiciousness score.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): use of ACH could be consistent with rapid electronic transfer behavior that may be used to move funds quickly.\n- amount_paid=7052.99 (raises suspicion): this payment amount could represent a substantial transfer that might be inconsistent with expected activity for the counterparty.\n- dayofweek=6 (raises suspicion): occurring on day 6 (Saturday) may reflect timing patterns that could be used to avoid normal weekday scrutiny.\n- from_bank=23842 (lowers suspicion): the originating bank identifier reduces concern, which could indicate a source bank assessed as lower risk in available indicators.\n- payment_currency_us_dollar=1 (lowers suspicion): use of USD decreases concern and could be consistent with standard domestic settlement conventions.\n\ninvestigation_context: If confirmed, this pattern could be consistent with an ACH settlement of a sizable USD amount on a weekend and may indicate atypical timing or value that merits contextual review."
-}

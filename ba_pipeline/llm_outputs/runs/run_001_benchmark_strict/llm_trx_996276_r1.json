@@ -1,7 +1,0 @@
-{
-  "transaction_id": 996276,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is low because multiple transaction attributes\u2014cash payment format, receiving currency in Swiss francs, known sending and receiving bank identifiers, evening hour, and a moderate received amount\u2014collectively lower suspicion. Only the indicator showing the payment is not in US dollars raises suspicion slightly, so overall the score remains very low.\n\nkey_factors:\n- payment_format_cash=1 (lowers suspicion) \u2014 if the transfer was cash-formatted, that characteristic could be consistent with routine cash settlement patterns.\n- receiving_currency_swiss_franc=1 (lowers suspicion) \u2014 receipt in Swiss francs may align with a normal currency corridor for this counterparty.\n- from_bank=118 (lowers suspicion) \u2014 the identified sending bank ID could indicate a familiar or expected origin for this activity.\n- to_bank=240304 (lowers suspicion) \u2014 the receiving bank ID may reflect a regular counterparty relationship rather than an anomalous destination.\n- payment_currency_us_dollar=0 (raises suspicion) \u2014 the absence of US dollar as the payment currency could, in some contexts, warrant closer attention.\n\ninvestigation_context: If these factors are considered together, they could point more toward routine cross-currency activity than clear illicit behavior, though context-specific details may alter that interpretation."
-}

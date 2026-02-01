@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4252653,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Although ACH usage and a notable amount paid could raise some concern, several signals point to routine activity, resulting in a low overall score. The lower-risk indicators include a known sending bank, local currency payments, and a late-night/early-morning timing that temper the higher-risk signals.\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 ACH usage could indicate non-cheque channels, which may raise suspicion.\n- amount_paid (raises suspicion) \u2014 A notable payment amount could indicate higher risk in this context.\n- from_bank (lowers suspicion) \u2014 Funds from a known sending bank ID can lower suspicion.\n- payment_currency_rupee (lowers suspicion) \u2014 Payment in local rupees aligns with expected currency, lowering suspicion.\n- hour (lowers suspicion) \u2014 Hour 0 may reflect routine overnight processing, lowering suspicion.\ninvestigation_context: If these conditions occur together, the overall suspiciousness could be considered low."
-}

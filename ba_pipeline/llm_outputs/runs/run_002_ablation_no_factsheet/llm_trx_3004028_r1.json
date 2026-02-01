@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3004028,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Multiple listed attributes lower concern \u2014 for example the small amount, matching paid/received amounts, and domestic wire details \u2014 producing a very low suspiciousness score. None of the top contributing factors increase suspicion among the provided signals, so the overall evidence points toward low apparent risk. \nkey_factors:\n- amount_paid=17.75 (lowers suspicion) \u2014 a low transaction value that could be consistent with routine small payments.\n- amount_received=17.75 (lowers suspicion) \u2014 identical received amount that may indicate no value mismatch.\n- amount_ratio=1 (lowers suspicion) \u2014 a one-to-one ratio that could reflect a straightforward single-leg transfer.\n- payment_format_wire=1 (lowers suspicion) \u2014 a wire payment attribute that might reflect a standard bank transfer method.\n- from_bank=220504 (lowers suspicion) \u2014 a domestic bank identifier that could be consistent with local banking activity.\ninvestigation_context: If these recorded attributes are accurate, they may indicate a routine, low-value domestic wire with matched amounts rather than activity that raises immediate concern."
-}

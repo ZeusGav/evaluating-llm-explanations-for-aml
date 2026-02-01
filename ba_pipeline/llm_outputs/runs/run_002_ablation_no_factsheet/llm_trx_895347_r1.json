@@ -1,7 +1,0 @@
-{
-  "transaction_id": 895347,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The overall suspiciousness is very low because multiple factors lower concern, including ACH and credit card payment formats, the originating bank, and Swiss franc currency indicators. One factor \u2014 the amount paid \u2014 raises suspicion modestly and may reflect a payment size that needs contextual interpretation.\n\nkey_factors:\n- payment_format_ach (lowers suspicion): could indicate an ACH transfer pattern consistent with routine bank-to-bank settlement.\n- payment_format_credit_card (lowers suspicion): may reflect card-based activity that often aligns with ordinary consumer or merchant payments.\n- from_bank (lowers suspicion): may reflect an originating bank profile consistent with expected counterparties.\n- receiving_currency_swiss_franc (lowers suspicion): could be consistent with normal CHF-denominated settlement for the relationship.\n- amount_paid (raises suspicion): might reflect a payment magnitude that, in context, could warrant further review.\n\ninvestigation_context: If reviewed, the predominance of lowering factors suggests routine activity, though the raised amount-paid factor may merit contextual verification."
-}

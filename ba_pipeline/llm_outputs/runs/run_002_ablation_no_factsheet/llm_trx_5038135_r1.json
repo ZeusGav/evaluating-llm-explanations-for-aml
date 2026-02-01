@@ -1,7 +1,0 @@
-{
-  "transaction_id": 5038135,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because use of ACH payments in Saudi riyals combined with a large received/paid amount substantially raises concern. Specific origin and destination bank identifiers provide some lowering effect, but not enough to offset the strong raising signals.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 ACH format may indicate automated or high-volume transfers that could be consistent with unusual payment routing.\n- payment_currency_saudi_riyal=1 (raises suspicion) \u2014 Use of Saudi riyal may reflect currency routing patterns that warrant attention in this context.\n- amount_received=60777.8 (raises suspicion) \u2014 A comparatively large amount may increase risk if the source or purpose is unclear.\n- from_bank=150240 (lowers suspicion) \u2014 The originating bank identifier reduces the score, which could reflect a known or lower-risk source in context.\n- to_bank=48309 (lowers suspicion) \u2014 The destination bank identifier also reduces the score, which might indicate a routine receiving party.\ninvestigation_context: If account purpose, customer profile, or transaction justification remain unclear, this mix of ACH in riyals and large amounts could be consistent with atypical cross-border payment activity."
-}

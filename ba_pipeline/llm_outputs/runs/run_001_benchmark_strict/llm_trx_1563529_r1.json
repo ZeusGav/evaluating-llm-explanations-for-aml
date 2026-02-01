@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1563529,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because the top contributing factors all decrease suspicion: a small identical paid/received amount in US dollars, a cheque payment instead of ACH, specific sending and receiving bank IDs, and a weekday timing. No listed factor increases suspicion.  \nkey_factors:\n- from_bank=220 (lowers suspicion): the sending bank identifier may be consistent with a standard bank-to-bank transfer.  \n- amount_paid=30.14 (lowers suspicion): the low payment amount could be consistent with routine small-value activity.  \n- payment_format_ach=0 (lowers suspicion): absence of ACH may indicate the payment was not an automated clearing-house transfer.  \n- payment_format_cheque=1 (lowers suspicion): presence of a cheque payment could be consistent with traditional paper-based settlement.  \n- dayofweek=4 (lowers suspicion): occurring on day 4 may align with normal weekday business timing.  \ninvestigation_context: If this pattern holds, it could reflect routine, small-dollar cheque payments in US dollars between the listed banks and may indicate normal commercial activity."
-}

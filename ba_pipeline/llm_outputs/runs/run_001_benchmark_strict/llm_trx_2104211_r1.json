@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2104211,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score reflects several strong raising signals such as payment_format_ach=1, dayofweek=6 (Sunday), a large amount_received, and Saudi riyal currency indicators suggesting a high-value ACH transfer at an unusual time; absence of credit card usage also contributes to raised concern. Partially offsetting this are lowering signals like hour=1 and a specific from_bank ID that might reflect overnight processing or a familiar sender, which reduce but do not eliminate the overall concern.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with a non-card bank transfer format that often involves large movements.\n- dayofweek=6 (raises suspicion) \u2014 a Sunday timing may indicate activity outside typical business hours.\n- amount_received=53835.2 (raises suspicion) \u2014 a substantial received amount could be consistent with high-value transfer activity.\n- hour=1 (lowers suspicion) \u2014 activity at 1 AM might reflect routine overnight processing and thus lowers concern.\n- from_bank=48211 (lowers suspicion) \u2014 a specific sending bank ID could indicate a known or expected source and thus lowers concern.\n\ninvestigation_context: If these feature patterns are accurate, they could be consistent with a high-value ACH receipt occurring overnight on a Sunday that combines concerning and mitigating signals."
-}

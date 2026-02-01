@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2726995,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most signals point toward lower concern \u2014 notably the transaction used a credit card rather than ACH, involved specific sending/receiving banks, occurred in Australian dollars, and falls in a standard hour/day window. However, the paid amount is relatively large and slightly raises concern that could be explained by legitimate high-value activity.  \nkey_factors:\n- payment_format_credit_card=1 (lowers suspicion): use of a credit card could be consistent with routine consumer or merchant payments.  \n- payment_format_ach=0 (lowers suspicion): absence of ACH routing might indicate a simpler card-based flow rather than bank transfer patterns of concern.  \n- from_bank=220541 (lowers suspicion): the identified sending bank may align with expected counterparties and therefore reduce immediate concern.  \n- receiving_currency_australian_dollar=1 (lowers suspicion): receiving in AUD could be consistent with domestic settlement and common business activity.  \n- amount_paid=8919.28 (raises suspicion): the relatively large payment amount might indicate higher-value activity that warrants contextual interpretation.  \ninvestigation_context: If this combination reflects the customer\u2019s normal behavior or known business activity, it could be consistent with legitimate card-based AUD transactions, though the payment size might merit contextual review."
-}

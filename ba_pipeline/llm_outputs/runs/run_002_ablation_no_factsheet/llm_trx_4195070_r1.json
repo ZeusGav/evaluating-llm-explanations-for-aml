@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4195070,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The top contributing factors all lower the suspiciousness score, driven by non-ACH format and cash payment indicators, specific originating and receiving banks, an evening hour, and matching paid/received amounts. No listed factors increase suspicion, so the combined signal yields a very low score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): could indicate the payment was not processed via ACH and might reflect an alternative settlement method consistent with routine flows.\n- payment_format_cash=1 (lowers suspicion): could reflect a cash-related transaction that may be consistent with immediate, uncomplicated settlement.\n- from_bank=23833 (lowers suspicion): could suggest the origin bank aligns with expected counterparty behavior rather than anomalous routing.\n- hour=22 (lowers suspicion): an evening timestamp could be consistent with normal customer activity patterns.\n- amount_received=1484.92 (lowers suspicion): a single, matched amount received and paid may indicate a straightforward transfer rather than apparent structuring.\n\ninvestigation_context: If these recorded features are correct, they might reflect routine transactional behavior rather than indicators of illicit activity."
-}

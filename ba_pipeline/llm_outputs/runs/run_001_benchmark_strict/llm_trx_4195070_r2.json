@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4195070,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Multiple top contributors lower the suspiciousness score \u2014 notably payment formats, amounts, timing, currency, and bank identifiers \u2014 resulting in a very low score. No listed factor increases suspicion, so these attributes could be consistent with routine, expected activity rather than anomalous behavior.  \nkey_factors:\n- payment_format_ach (lowers suspicion): transaction not using ACH could be consistent with an alternative, ordinary payment channel.  \n- payment_format_cash (lowers suspicion): presence of a cash indicator may reflect a cash-based transaction pattern that could be expected for this customer.  \n- amount_received (lowers suspicion): the received amount falls within a range that may align with normal customer activity.  \n- hour (lowers suspicion): the transaction hour (22) may reflect typical end-of-day processing rather than unusual timing.  \n- receiving_currency_shekel (lowers suspicion): use of shekel as the receiving currency could be consistent with routine local currency activity.  \ninvestigation_context: If account history and customer profile align with these attributes, the low score may indicate routine behavior rather than suspicious activity."
-}

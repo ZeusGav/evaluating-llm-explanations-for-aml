@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4252653,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The low suspiciousness score reflects that several strong signals lower concern (rupee denomination, the modest received amount, midnight timing and specific bank identifiers) while a smaller set of features raise concern (ACH usage and the payment amount). Overall, the lowering factors outweigh the raising ones, producing a low score. \nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with automated electronic transfers that sometimes merit closer attention. \n- amount_paid (raises suspicion): the reported amount_paid could indicate a substantive transfer that may require context to assess risk. \n- payment_format_cheque=0 (raises suspicion): absence of a cheque payment could suggest a non-paper electronic channel, which might prompt scrutiny. \n- receiving_currency_rupee (lowers suspicion): receiving in rupee could be consistent with routine domestic-currency activity that lowers immediate concern. \n- amount_received (lowers suspicion): the modest amount_received may be more consistent with routine transactions and thus reduce suspicion. \ninvestigation_context: If corroborated by case details, the mix of ACH usage with rupee-denominated, modest-value transfers at hour 0 might be consistent with routine payroll or settlement activity rather than illicit behavior."
-}

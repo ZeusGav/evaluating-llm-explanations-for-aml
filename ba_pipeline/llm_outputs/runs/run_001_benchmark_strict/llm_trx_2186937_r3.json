@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2186937,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Most indicators lower suspicion \u2014 cash payments, yuan as both payment and receiving currency, matched paid/received amounts, and the sending bank/day signal reduce the overall concern and produce a very low score. The only notable countervailing signal is the absence of US dollar usage (payment_currency_us_dollar=0), which slightly raises suspicion but does not override the lowering factors.\n\nkey_factors:\n- payment_format_cash=1 (lowers suspicion): could be consistent with on\u2011hand or domestic cash disbursement.\n- payment_currency_yuan=1 (lowers suspicion): could reflect local currency settlement patterns.\n- receiving_currency_yuan=1 (lowers suspicion): may support a single-currency domestic flow.\n- payment_currency_us_dollar=0 (raises suspicion): absence of USD could, in some contexts, indicate avoidance of dollar clearing or cross-border scrutiny.\n- amount_received=137448 (lowers suspicion): matched large received amount may indicate a straightforward settlement rather than complex layering.\n\ninvestigation_context: If more contextual information is available, these patterns could be consistent with routine domestic yuan cash settlements rather than illicit activity."
-}

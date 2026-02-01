@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4298034,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The suspiciousness score is extremely low because the top factors all reduce the assessed risk \u2014 for example, the sender bank, cash payment format, moderate amount, and USD usage point away from concern. No top factor increases suspicion, so the transaction profile appears consistent with lower-risk characteristics if the recorded details are accurate.\n\nkey_factors:\n- from_bank=3932 (lowers suspicion) \u2014 could reflect a familiar or non-flagged sending institution and might indicate routine origin.\n- payment_format_cash=1 (lowers suspicion) \u2014 could be consistent with an expected cash payout pattern in this context.\n- amount_paid=385.14 (lowers suspicion) \u2014 could indicate a moderate transaction size that may not trigger threshold-based alarms.\n- hour=2 (lowers suspicion) \u2014 could reflect activity during an off-peak hour that, in context, might not imply malicious intent.\n- payment_currency_us_dollar=1 (lowers suspicion) \u2014 could be consistent with standard USD-denominated business or personal payments.\n\ninvestigation_context: If these reported attributes are correct, they may indicate the transaction is consistent with routine, lower-risk behavior."
-}

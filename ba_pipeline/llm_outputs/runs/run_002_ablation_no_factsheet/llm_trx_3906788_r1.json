@@ -1,7 +1,0 @@
-{
-  "transaction_id": 3906788,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very high because several features \u2014 notably an ACH payment format, a large matched paid/received amount, and the destination bank \u2014 substantially increase concern. A couple of features, specifically the originating bank and the late-afternoon hour, exert modest downward pressure and may partially temper but do not offset the overall signal.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 an ACH payment could be consistent with high-value transfers between banks and thus increase scrutiny.\n- amount_received=15526.3 (raises suspicion) \u2014 a sizable received amount may indicate significant value movement that raises concern.\n- to_bank=22 (raises suspicion) \u2014 routing to this destination bank could be associated with heightened risk in this context.\n- from_bank=1 (lowers suspicion) \u2014 the originating bank may represent a known/expected source that reduces immediate concern.\n- hour=16 (lowers suspicion) \u2014 a late-afternoon timestamp might reflect routine business-hour activity and slightly reduces suspicion.\n\ninvestigation_context: If these feature patterns reflect the actual payment activity, they may indicate a high-value ACH transfer to another bank that could warrant closer review."
-}

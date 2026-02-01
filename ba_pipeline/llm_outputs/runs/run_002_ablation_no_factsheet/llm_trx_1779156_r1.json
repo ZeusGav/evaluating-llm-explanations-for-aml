@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1779156,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very low suspiciousness score reflects that most listed factors lower concern while one factor raises it. A large amount received increases potential concern, but origin/destination banks, payment formats, timing, and currency indicators collectively lower overall suspicion.\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 the absence of an ACH format could be consistent with routine non-ACH channels.\n- from_bank=2454 (lowers suspicion) \u2014 the originating bank identifier is associated with lower concern and may reflect an expected banking relationship.\n- payment_format_cash=1 (lowers suspicion) \u2014 a cash payment format present may indicate direct cash handling consistent with known cash activity.\n- amount_received (raises suspicion) \u2014 a large received amount could indicate significant inflows that warrant contextual explanation.\n- payment_format_credit_card=0 (raises suspicion) \u2014 absence of a credit-card payment might be atypical in some contexts and could raise questions.\ninvestigation_context: If the large incoming amount represents a single transfer, it could be notable in context despite the prevailing lowering indicators."
-}

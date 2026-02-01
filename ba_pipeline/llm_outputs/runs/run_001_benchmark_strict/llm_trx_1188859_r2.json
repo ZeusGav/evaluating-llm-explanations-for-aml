@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1188859,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: Several strong lowering factors \u2014 including the sending bank ID (from_bank=6), large reported amounts, and Australian dollar as both payment and receiving currency \u2014 reduce the overall suspicion, while two smaller raising signals (ACH format and absence of USD) work against that. Overall, the lowering indicators outweigh the increases, so the activity could be consistent with routine AUD\u2011settled transfers, although the ACH method and lack of USD may merit contextual review.\n\nkey_factors:\n- from_bank=6 (lowers suspicion): the sending bank identifier could reflect an expected counterparty and thus reduce concern.\n- amount_received=1.20317e+06 (lowers suspicion): the sizable received amount may be consistent with routine large settlements in context.\n- payment_currency_australian_dollar=1 (lowers suspicion): payment in AUD aligning with receiving currency may lower cross\u2011currency risk.\n- payment_format_ach=1 (raises suspicion): use of ACH could be consistent with automated transfer channels that sometimes require closer scrutiny.\n- payment_currency_us_dollar=0 (raises suspicion): absence of USD payments may indicate non\u2011USD routing that could be notable in some AML contexts.\n\ninvestigation_context: If ACH is used and USD is absent while amounts and AUD currencies align, this pattern might reflect ordinary AUD settlements rather than illicit activity."
-}

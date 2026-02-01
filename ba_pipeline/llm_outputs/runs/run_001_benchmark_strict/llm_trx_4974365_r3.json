@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4974365,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because the transaction is an ACH payment of a large, identical paid and received amount going to bank 12, while the sending bank 11157 slightly reduces concern. These elements could be consistent with an unusual cross\u2011bank transfer into euros and, if corroborated, may indicate elevated AML risk.\n\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 ACH as the payment method could be consistent with rapid electronic movement between accounts.\n- amount_paid (raises suspicion) \u2014 a large payment amount may indicate substantial value transfer worth attention.\n- amount_received (raises suspicion) \u2014 the identical received amount reinforces the prominence of the transfer value.\n- to_bank (raises suspicion) \u2014 routing funds to bank 12 may concentrate incoming flows that merit scrutiny.\n- from_bank (lowers suspicion) \u2014 originating from bank 11157 reduces the score and may reflect a known or less concerning source.\n\ninvestigation_context: If transaction purpose, account history, or beneficiary details align with these factors, they could suggest layering or rapid cross\u2011border movement."
-}

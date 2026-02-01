@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2102553,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Overall, the score reflects a mix of signals that raise and lower suspicion. Sunday timing and the amount paid increase concern, while the from_bank, amount_received, and euro-receiving context lower concern.\nkey_factors:\n- dayofweek=6 (raises suspicion) \u2013 could indicate unusual activity for Sunday, warranting review.\n- amount_paid=8522.89 (raises suspicion) \u2013 could reflect an atypical payment size requiring review against expected profile.\n- from_bank=20861 (lowers suspicion) \u2013 sending from this bank may align with known customer activity.\n- amount_received=8522.89 (lowers suspicion) \u2013 receiving this amount might reflect a regular transfer pattern.\n- receiving_currency_euro=1 (lowers suspicion) \u2013 receiving in euros could align with standard cross-border activity.\ninvestigation_context: If Sunday activity coincides with the payment profile, this mix of signals could influence the overall risk assessment."
-}

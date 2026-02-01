@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2300247,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: amount_paid increases suspicion slightly, but this signal is offset by several lowering indicators. Taken together, the overall suspiciousness remains very low because non-ACH, cheque payments, familiar banks, and routine timing suggest normal activity.\nkey_factors:\n- amount_paid (raises suspicion) when the paid amount is notable relative to expected patterns.\n- payment_format_ach (lowers suspicion) because ACH not used reduces risk.\n- from_bank (lowers suspicion) sending bank ID present reduces risk.\n- payment_format_cheque (lowers suspicion) cheque payments reduce risk.\n- dayofweek (lowers suspicion) activity on Monday reduces risk.\ninvestigation_context: If the small positive signal from amount_paid is offset by non-ACH, cheque payments, familiar banks, and Monday timing, the overall suspiciousness remains very low."
-}

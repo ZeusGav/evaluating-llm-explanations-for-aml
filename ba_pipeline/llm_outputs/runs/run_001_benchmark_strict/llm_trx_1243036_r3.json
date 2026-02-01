@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1243036,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The low suspiciousness score reflects offsetting signals: the sending bank and the received amount raise concern, while matching paid/received amounts, credit-card payment, and destination bank/hour reduce concern. Together these raising and lowering factors lead to a low overall indication of suspicious activity.  \nkey_factors:\n- from_bank (raises suspicion) \u2014 funds originate from sending bank ID 70, which could be notable if that origin is unexpected.  \n- amount_received (raises suspicion) \u2014 the received amount of 1.22 may be concerning if repeated or structured small inflows occur.  \n- amount_paid (lowers suspicion) \u2014 the payment amount of 1.22 could be consistent with low-risk, routine transactions in the absence of other alerts.  \n- amount_ratio (lowers suspicion) \u2014 the payment equals the amount received, which may indicate no obvious diversion of funds.  \n- payment_format_credit_card (lowers suspicion) \u2014 payment by credit card may be more traceable and could reduce immediate concern.  \ninvestigation_context: If similar patterns recur with the same sending bank or small amounts, further review may be warranted to determine intent."
-}

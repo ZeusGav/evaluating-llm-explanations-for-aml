@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1746377,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The high score is driven by an ACH payment of a sizable amount occurring on a Sunday around midday, with several payment-format flags and the received amount also pointing toward elevated concern; conversely, the sending bank identifier and the use of US dollars modestly reduce the signal. Overall, the combination of payment method, timing, and amount raises potential indicators of unusual activity while a familiar sending bank and USD currency slightly offset risk.\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with large electronic transfers that may require scrutiny.\n- amount_paid (raises suspicion): a payment of 7052.99 could indicate a high-value transfer that might reflect elevated risk.\n- dayofweek (raises suspicion): transaction occurring on day 6 (Sunday) could be atypical timing and may indicate unusual behavior.\n- from_bank (lowers suspicion): the sending bank ID is associated with a reduction in concern, which could reflect a known or lower-risk source.\n- payment_currency_us_dollar (lowers suspicion): payment in US dollars modestly reduces the signal and may indicate a standard currency route.\ninvestigation_context: If these factors are accurate, they could be consistent with a sizable weekend ACH transfer that may indicate elevated risk and benefit from contextual review."
-}

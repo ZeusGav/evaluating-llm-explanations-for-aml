@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1854500,
-  "run_name": "run_001_benchmark",
-  "repeat": 3,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because several factors\u2014use of ACH, large and matching amounts received and paid, and bank identifiers\u2014collectively raise concern about substantial electronic movement between specific banks. The payment being in US dollars slightly lowers suspicion, though the absence of cheque payments and other non-electronic formats contributes to the elevated score.\n\nkey_factors:\n- payment_format_ach (raises suspicion): use of ACH could be consistent with rapid electronic transfers that may warrant closer scrutiny.\n- amount_received (raises suspicion): a relatively large amount received could indicate notable fund movement that may be unusual for the customer.\n- amount_paid (raises suspicion): an identical large amount paid may suggest immediate onward transfer or layering-like movement.\n- payment_currency_us_dollar (lowers suspicion): payment in US dollars could reduce concern if USD is expected for this relationship, though context matters.\n- payment_format_cheque=0 (raises suspicion): absence of cheque payments may reflect reliance on electronic channels which, combined with other factors, elevates risk.\n\ninvestigation_context: If accurate, this pattern could be consistent with significant electronic transfers between the identified banks and limited use of cheque payments."
-}

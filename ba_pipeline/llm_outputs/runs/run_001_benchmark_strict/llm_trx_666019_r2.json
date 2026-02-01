@@ -1,7 +1,0 @@
-{
-  "transaction_id": 666019,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is low because several strong lowering indicators\u2014absence of ACH, presence of cheque payments, and a moderate received amount\u2014suggest routine bank/cheque activity, while only small raising signals are present. A slightly higher paid amount and the non-credit-card flag provide marginal upward pressure but do not overcome the lowering factors, producing an overall low suspiciousness score.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with use of non-ACH channels and reduces concern.\n- payment_format_cheque=1 (lowers suspicion): cheque payments may indicate manual or conventional settlement and lower suspicion.\n- amount_received=1513.95 (lowers suspicion): this moderate received amount could be consistent with routine transfers and lowers concern.\n- amount_paid=1513.95 (raises suspicion): the paid amount slightly raises suspicion as a value-related signal that may warrant attention.\n- payment_format_credit_card=0 (raises suspicion): not being a credit-card payment marginally raises suspicion, possibly indicating alternative payment flows.\n\ninvestigation_context: If these attributes are stable across this customer or counterparty history, they could be consistent with lower-risk cheque/bank transfer behavior rather than credit-card-driven patterns."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1030747,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The high score is driven by multiple increase-based indicators\u2014ACH payments, Sunday timing, and Saudi currency usage; a decrease signal from the sending bank slightly lowers the score. This combination suggests elevated risk, tempered somewhat by the bank-level signal.\n\nkey_factors:\n- payment_format_ach (raises suspicion) could be consistent with higher-risk activity when observed with other indicators.\n- dayofweek=6 (raises suspicion) Sunday timing might indicate unusual scheduling when paired with additional risk signals.\n- payment_currency_saudi_riyal (raises suspicion) use of Saudi Riyal could reflect cross-border activity and adds to concern.\n- receiving_currency_saudi_riyal (raises suspicion) receiving in Saudi Riyal could indicate related patterns and raises suspicion.\n- from_bank=249176 (lowers suspicion) in some cases this could indicate a more legitimate origin, lowering suspicion.\n\ninvestigation_context: If this pattern persists in similar transactions, the overall risk could remain elevated."
-}

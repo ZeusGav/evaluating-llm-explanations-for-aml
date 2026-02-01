@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2184310,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The very high suspiciousness score is driven mainly by ACH usage and the large, equal amounts paid and received, which raise concern; several bank and currency indicators also push the score up. The early transaction hour (hour=4) modestly lowers suspicion but does not outweigh the other increasing factors.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion): Use of ACH could be consistent with large bank-to-bank transfers that may facilitate rapid value movement.\n- amount_received=15756 (raises suspicion): A substantial received amount could indicate significant value transfer that may attract scrutiny.\n- amount_paid=15756 (raises suspicion): The identical paid amount could be consistent with passthrough or immediate onward transfer behavior.\n- hour=4 (lowers suspicion): The early morning hour may reduce immediacy of concern in some contexts but does not eliminate other risk signals.\n- from_bank=238845 (raises suspicion): Routing from a specific sending bank may reflect particular correspondent relationships that could be relevant.\n\ninvestigation_context: If these attributes reflect a single large ACH in-and-out through the named banks and currencies, it may be consistent with passthrough or layering activity."
-}

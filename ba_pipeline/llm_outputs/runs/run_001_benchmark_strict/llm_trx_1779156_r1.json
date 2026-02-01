@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1779156,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The overall score is very low because multiple factors lower the assessment while only one factor raises concern. A very large amount_received could indicate significant funds movement, but the absence of ACH, presence of cash payments, matching amount_paid, and use of US dollars collectively lower the transaction's suspiciousness in this profile.\nkey_factors:\n- amount_received (raises suspicion): a very large received amount could be consistent with significant fund movement that may need contextual explanation.\n- payment_format_ach (lowers suspicion): absence of ACH could be consistent with use of other channels that, here, reduce the profile's suspiciousness.\n- payment_format_cash (lowers suspicion): presence of cash payments could, depending on context, align with routine cash-based activity that lowers concern.\n- amount_paid (lowers suspicion): the paid amount matching the received amount could, if truly equivalent, suggest a straightforward pass-through that lowers the signal.\n- payment_currency_us_dollar (lowers suspicion): use of US dollars could be consistent with normal domestic or common international flows that lower this score.\ninvestigation_context: If the large received amount represents a single transfer, it could be consistent with legitimate large transactions or, alternatively, indicate unusual fund movement depending on supporting documentation and context."
-}

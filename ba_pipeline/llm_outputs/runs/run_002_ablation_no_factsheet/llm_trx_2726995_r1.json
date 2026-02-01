@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2726995,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because multiple top factors lower suspicion \u2014 for example non\u2011ACH and credit\u2011card payment formats, the specified sending bank, and AUD as the receiving currency. Only the exact amount_paid increases suspicion, which could indicate an unusual single transfer pattern that may merit contextual review.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of ACH could be consistent with non\u2011ACH payment rails rather than automated clearing patterns.\n- payment_format_credit_card=1 (lowers suspicion) \u2014 a credit_card format could be consistent with consumer card-funded activity.\n- from_bank=220541 (lowers suspicion) \u2014 this originating bank could be consistent with an expected institutional source.\n- receiving_currency_australian_dollar=1 (lowers suspicion) \u2014 receiving in AUD may reflect domestic settlement behavior.\n- amount_paid=8919.28 (raises suspicion) \u2014 an identical paid amount could be consistent with a notable or structured single transfer.\n\ninvestigation_context: If reviewed further, the mix of several lowering indicators and one raising indicator could be consistent with routine card-funded AUD transfers rather than illicit activity."
-}

@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4567047,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because this is an ACH transfer of a substantial amount processed at midday, which raises suspicion; however, identifiable sending and receiving banks and use of US dollars lower the overall concern. The combination of several raising and lowering signals produces the elevated but not definitive score.  \nkey_factors:\n- payment_format_ach=1 (raises suspicion): ACH format could be consistent with quick bank-to-bank transfers that may warrant closer scrutiny.  \n- amount_paid=4540.12 (raises suspicion): a relatively large payment amount could be consistent with higher-value activity that attracts attention.  \n- hour=12 (raises suspicion): midday timing could reflect business-hour transfers potentially used to move funds promptly.  \n- to_bank=231004 (lowers suspicion): a specific receiving bank ID could indicate a known counterparty or expected destination, reducing concern.  \n- payment_currency_us_dollar=1 (lowers suspicion): payment in US dollars could lower currency-conversion risk and therefore reduce suspicion.  \ninvestigation_context: If the ACH method and payment size are atypical for this customer, they could indicate increased risk even though bank IDs and USD usage mitigate concern."
-}

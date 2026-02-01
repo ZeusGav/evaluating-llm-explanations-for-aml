@@ -1,7 +1,0 @@
-{
-  "transaction_id": 695448,
-  "run_name": "run_001_benchmark",
-  "repeat": 2,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because several attributes raise concern \u2014 use of ACH, large paid/received amounts, Sunday timing, and a midday hour all push suspicion upward. Some factors lower the signal, notably the sending/receiving bank identifiers and the transaction being received in euros, but they do not fully offset the raising factors.\n\nkey_factors:\n- payment_format_ach (raises suspicion) \u2014 use of ACH could be consistent with rapid electronic movement that may warrant closer attention.\n- amount_received (raises suspicion) \u2014 a relatively large received amount could be consistent with higher-value activity needing scrutiny.\n- dayofweek (raises suspicion) \u2014 occurring on a Sunday could be consistent with atypical timing for routine business.\n- from_bank (lowers suspicion) \u2014 the specific sending bank ID lowers the signal and could indicate a routine or expected source.\n- receiving_currency_euro (lowers suspicion) \u2014 receiving_currency_euro lowers the signal and could reflect settlement in an expected currency.\n\ninvestigation_context: If these combined attributes are unexpected for the customer profile, they could be consistent with anomalous activity."
-}

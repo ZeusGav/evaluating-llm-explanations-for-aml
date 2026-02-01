@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2046274,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is driven upward because the payment was an ACH transfer of a substantial amount routed to the specified receiving bank, which raises concern. Some factors lower the score slightly \u2014 the late hour and the originating bank identifier could indicate contextual features that temper risk.\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with rapid electronic transfers that enable large-value movement.\n- amount_received=16450.3 (raises suspicion) \u2014 could indicate a high-value incoming payment that warrants closer attention.\n- to_bank=14804 (raises suspicion) \u2014 could reflect concentration toward this receiving bank which may be notable.\n- hour=20 (lowers suspicion) \u2014 could indicate an evening timing that might reflect benign customer behavior in some cases.\n- from_bank=243254 (lowers suspicion) \u2014 could suggest the originating bank profile reduces apparent risk relative to other sources.\ninvestigation_context: If reviewed further, these combined signals could be consistent with a high-value ACH flow to the receiving bank while timing and origin details might mitigate or explain the pattern."
-}

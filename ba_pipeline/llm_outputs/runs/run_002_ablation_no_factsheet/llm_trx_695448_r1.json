@@ -1,7 +1,0 @@
-{
-  "transaction_id": 695448,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is high because this is an ACH payment of a large identical amount paid and received, occurring on day 6 around midday, which together raise concern about the transaction pattern. These concerns are partially offset by the originating bank, the receiving currency being euro, and the destination bank, which lower the overall suspicion compared with the raising factors.\n\nkey_factors:\n- payment_format_ach=1 (raises suspicion) \u2014 could be consistent with automated electronic transfers that merit closer review.\n- amount_received=12481.9 (raises suspicion) \u2014 the large value could indicate significant movement that may warrant scrutiny.\n- dayofweek=6 (raises suspicion) \u2014 occurring on day 6 might reflect atypical timing for routine business activity.\n- from_bank=211 (lowers suspicion) \u2014 originating from this bank may mitigate concern depending on its normal customer profile.\n- receiving_currency_euro=1 (lowers suspicion) \u2014 being received in euros could be consistent with normal cross-border or EUR-denominated business flows.\n\ninvestigation_context: If these factors hold true, they could be consistent with either legitimate high-value ACH activity or patterns worth further contextual review."
-}

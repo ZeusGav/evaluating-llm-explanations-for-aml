@@ -1,7 +1,0 @@
-{
-  "transaction_id": 977920,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: All observed factors point to lowered risk. Because every listed factor reduces suspicion, the overall score remains very low.\nkey_factors:\n- from_bank=15 (lowers suspicion) \u2014 could be consistent with routine, legitimate counterparties in normal business activity.\n- payment_format_ach=0 (lowers suspicion) \u2014 may indicate non-ACH payment method in this case, reducing risk for this transaction.\n- hour=19 (lowers suspicion) \u2014 could reflect timing in routine operations or standard processing windows.\n- to_bank=228009 (lowers suspicion) \u2014 may indicate transfer to a commonly used recipient bank in ordinary activity.\n- amount_paid=173.9 (lowers suspicion) \u2014 the payment amount may be consistent with typical small-value transactions in this context.\ninvestigation_context: If these factors reflect routine, legitimate activity, the low score may be appropriate; if not, further review may be warranted."
-}

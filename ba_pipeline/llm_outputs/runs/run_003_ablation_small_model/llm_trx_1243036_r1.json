@@ -1,7 +1,0 @@
-{
-  "transaction_id": 1243036,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: Overall, a very small net signal emerges: the from_bank indicator raises suspicion while several other indicators lower suspicion, producing a minimal overall score. The amount_received signal adds a slight raise, but factors like amount_paid, hour, and payment_format_credit_card temper that concern.\n\nkey_factors:\n- from_bank=70 (raises suspicion) could reflect an unfamiliar sending bank ID, increasing concern about provenance.\n- amount_received=1.22 (raises suspicion) could indicate incoming funds of the same amount, which may raise suspicion depending on context.\n- amount_paid=1.22 (lowers suspicion) matching the paid amount could indicate a standard payment flow, reducing concern.\n- hour=3 (lowers suspicion) transaction occurring at 3 am could reflect off-hours activity, reducing suspicion in this context.\n- payment_format_credit_card=1 (lowers suspicion) credit card payment format may be less typical for this transfer, reducing suspicion.\n\ninvestigation_context: This combination of rising and falling indicators could be interpreted as a very small net risk depending on counterparty context."
-}

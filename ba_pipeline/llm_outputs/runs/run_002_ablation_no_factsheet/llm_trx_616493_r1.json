@@ -1,7 +1,0 @@
-{
-  "transaction_id": 616493,
-  "run_name": "run_002_factsheet_off",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is low because several strong factors lower concern \u2014 a specific originating bank, a cheque payment format (not ACH), and a small equal amount paid and received all point away from high risk. A modest increase in suspicion comes from the receiving bank and the 9am transaction hour, but these are smaller effects compared with the lowering factors.\nkey_factors:\n- from_bank=7478 (lowers suspicion) \u2014 could be consistent with a familiar or expected origin bank for this account.\n- payment_format_ach=0 (lowers suspicion) \u2014 absence of an ACH format could be consistent with routine non-ACH routing.\n- amount_paid=164.18 (lowers suspicion) \u2014 a small, matched payment amount could be consistent with benign retail or internal transfers.\n- to_bank=1420 (raises suspicion) \u2014 the receiving bank increases concern and may indicate attention to that counterparty.\n- hour=9 (raises suspicion) \u2014 the transaction hour raises concern and might reflect atypical timing for this activity.\ninvestigation_context: If viewed together, these factors could indicate routine small-value cheque activity overall, although the recipient bank and timing might warrant contextual review."
-}

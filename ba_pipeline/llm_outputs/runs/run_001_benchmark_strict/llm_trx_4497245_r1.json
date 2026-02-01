@@ -1,7 +1,0 @@
-{
-  "transaction_id": 4497245,
-  "run_name": "run_001_benchmark",
-  "repeat": 1,
-  "model": "gpt-5-mini",
-  "llm_text": "short_explanation: The score is very low because several strong lowering indicators are present, notably non-ACH payment, a cheque payment flag, and receiving in Saudi riyal. Small raising signals from the reported amount paid and the lack of a credit-card payment flag modestly increase concern but do not outweigh the lowering factors.\n\nkey_factors:\n- payment_format_ach=0 (lowers suspicion): absence of ACH could be consistent with non-electronic cheque workflows.\n- payment_format_cheque=1 (lowers suspicion): a cheque payment indicator could be consistent with routine paper-based settlements.\n- receiving_currency_saudi_riyal=1 (lowers suspicion): receiving in Saudi riyal may align with ordinary local currency activity.\n- amount_paid=3624.7 (raises suspicion): the reported paid amount could, in some contexts, warrant attention depending on expected profile.\n- payment_format_credit_card=0 (raises suspicion): lack of a credit-card flag combined with the paid amount might suggest an atypical funding method for this amount.\n\ninvestigation_context: If these factors reflect the account's usual behavior, they might indicate routine cheque receipts in local currency rather than a high-risk event."
-}

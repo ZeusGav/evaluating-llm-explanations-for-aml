@@ -1,7 +1,0 @@
-{
-  "transaction_id": 2230412,
-  "run_name": "run_003_model_nano",
-  "repeat": 1,
-  "model": "gpt-5-nano",
-  "llm_text": "short_explanation: The score is driven by factors that raise suspicion, notably the use of ACH, large paid/received amounts, and Sunday timing, and is tempered by factors that lower suspicion, including euro-denominated receipt and a balanced amount ratio. \nkey_factors:\n- payment_format_ach raises suspicion: If payment is ACH, this could indicate higher-risk transfer.\n- amount_paid raises suspicion: A payment of 9301.71 could reflect unusual activity.\n- dayofweek raises suspicion: Sunday activity (dayofweek=6) could indicate timing concerns.\n- receiving_currency_euro lowers suspicion: Euro receipt may reflect standard cross-border activity.\n- amount_ratio lowers suspicion: A 1:1 ratio between paid and received amounts could indicate symmetry.\ninvestigation_context: If these factors apply, the overall risk may be elevated."
-}
