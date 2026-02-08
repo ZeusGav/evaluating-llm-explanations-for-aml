@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Major issue: it contradicts SHAP (to_bank is shown as decreasing risk) and also invents incorrect feature values (amount_paid, to_bank) not supported by the provided drivers."
+}

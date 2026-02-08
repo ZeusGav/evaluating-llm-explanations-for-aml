@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is unsupported/inaccurate specifics (e.g., amounts and bank IDs not matching SHAP_JSON and 'Saturday' mapping) despite otherwise clear, well-structured coverage of key drivers."
+}

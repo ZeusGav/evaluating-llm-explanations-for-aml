@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: the narrative contradicts SHAP on hour (claims it decreases at 20:00, but SHAP shows hour=12 increases) and includes multiple incorrect feature values.",
+  "transaction_id": 2046274,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 158,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

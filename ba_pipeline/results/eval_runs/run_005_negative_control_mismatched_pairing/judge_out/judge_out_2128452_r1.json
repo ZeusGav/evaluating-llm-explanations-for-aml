@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it introduces non-provided/incorrect drivers and values (hour, dayofweek, from_bank) and makes AML-context claims (e.g., “SAR-related”) not supported by the SHAP features."
+}

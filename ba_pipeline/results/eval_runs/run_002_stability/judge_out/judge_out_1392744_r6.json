@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, directionally correct narrative, but it omits several provided positive drivers (amount_received, receiving_currency_saudi_riyal, and the 0-valued payment-format/currency indicators), limiting coverage."
+}

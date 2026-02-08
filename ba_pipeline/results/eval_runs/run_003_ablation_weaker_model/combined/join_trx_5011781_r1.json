@@ -1,0 +1,71 @@
+{
+  "transaction_id": 5011781,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_5011781.json",
+  "model_proba": 0.9987717270851135,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.1047284603118896,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 20.0,
+      "shap_value": -0.9816964268684387,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 22.0,
+      "shap_value": 0.9017297029495239,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13338.33,
+      "shap_value": 0.8713915348052979,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13338.33,
+      "shap_value": 0.7812585234642029,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7305692434310913,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.2087833285331726,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.14815936982631683,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13039371371269226,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11327368021011353,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+3.10473; direction: increase): This is the dominant driver pushing the flag, indicating the transaction uses ACH as the payment method.\n- to_bank (value=22; SHAP=+0.90173; direction: increase): Funds are being sent to another bank, contributing to the flag signal.\n- amount_received (13338.3; SHAP=+0.871392; direction: increase) and amount_paid (13338.3; SHAP=+0.781259; direction: increase): Both receiving and paying amounts are high and equal, adding to the model’s concern through positive contributions.\n- dayofweek (6; SHAP=+0.730569; direction: increase): The transaction occurs on Sunday, which is a contributing timing signal.\n- from_bank (value=20; SHAP=-0.981696; direction: decrease): This feature reduces the risk signal, acting as a mitigating factor relative to the top positive drivers.\n\nConclusion:\nBased on the strongest drivers, the flag appears driven by ACH usage to a different bank with substantially matched incoming/outgoing amounts and Sunday timing, with a mitigating signal from the sending bank. While the from_bank effect lowers risk somewhat, the combination of ACH, to_bank destination, and matching amounts justifies a manual review of this transaction under AML scrutiny.",
+  "llm_file": "llm_trx_5011781_r1.json"
+}

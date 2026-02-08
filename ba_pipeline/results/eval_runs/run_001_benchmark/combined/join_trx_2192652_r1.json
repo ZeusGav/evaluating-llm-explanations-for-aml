@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2192652,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2192652.json",
+  "model_proba": 0.9968183040618896,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9033701419830322,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 2991.0,
+      "shap_value": -0.838694155216217,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8298149704933167,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13786.65,
+      "shap_value": 0.7891790270805359,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13786.65,
+      "shap_value": 0.731416642665863,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.28125181794166565,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.15738503634929657,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14079549908638,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1124.0,
+      "shap_value": 0.10089335590600967,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.10047042369842529,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) is the dominant positive driver (SHAP +2.903): the model strongly increased the score because the transaction used ACH.\n- dayofweek (value=6) is a material positive driver (SHAP +0.8298): execution on dayofweek=6 (Sunday) increased the score.\n- amount_received (value=13786.6) and amount_paid (value=13786.6) are both positive drivers (SHAP +0.7892 and +0.7314): the relatively large amounts (and the fact amount_received equals amount_paid) increased the score.\n- from_bank (value=2991) is a notable negative driver (SHAP −0.8387): the sending bank reduced the score but did not fully offset the above increases.\n\nConclusion:\n- The model flagged this transaction primarily because payment_format_ach=1 combined with sizable amounts (amount_paid and amount_received = 13,786.6) occurring on dayofweek=6 raised the risk score; from_bank=2991 partially mitigated the score but was insufficient to prevent the flag.\n- Conditional/hedged note: if payment_format_ach=1 denotes an ACH transfer in this dataset, then the model treated ACH transfers (in this context) as higher-risk contributors, particularly when coupled with the noted amount and weekend timing.",
+  "llm_file": "llm_trx_2192652_r1.json"
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3035908,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_3035908.json",
+  "model_proba": 0.9966235160827637,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0331785678863525,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.5716762542724609,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 48308.0,
+      "shap_value": -0.4167006313800812,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 30072.76,
+      "shap_value": 0.3229050636291504,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.25755947828292847,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.18726804852485657,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.1726071536540985,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.14031213521957397,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13605687022209167,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": 0.09903677552938461,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 was the dominant driver (SHAP +3.03318, direction: increase), so the model raised the score primarily because this is an ACH payment.\n- payment_currency_saudi_riyal = 1 (SHAP +0.571676, increase) and receiving_currency_saudi_riyal = 1 (SHAP +0.257559, increase) further increased the score, i.e., the payment being in Saudi riyal contributed to the flag.\n- amount_received = 30072.8 (SHAP +0.322905, increase) also pushed the score upward, indicating the transaction magnitude contributed.\n- from_bank = 48308 (SHAP -0.416701, decrease) partially offset the increase (the sending bank feature reduced the model score).\n\nConclusion:\nThe transaction was flagged mainly because it is an ACH payment in Saudi riyal for ~30,072.8 (features: payment_format_ach, payment_currency_saudi_riyal, receiving_currency_saudi_riyal, amount_received). The specific sending bank (from_bank) reduced the model’s concern but not enough to prevent the flag. If ACH payments in SAR at this magnitude are treated as higher-risk by the model, that pattern explains the alert.",
+  "llm_file": "llm_trx_3035908_r1.json"
+}

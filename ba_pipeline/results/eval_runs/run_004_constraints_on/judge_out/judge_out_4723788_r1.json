@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Strong, SHAP-tethered explanation covering the dominant drivers (ACH and SAR/non-USD) with correct directionality and no extra unsupported facts."
+}

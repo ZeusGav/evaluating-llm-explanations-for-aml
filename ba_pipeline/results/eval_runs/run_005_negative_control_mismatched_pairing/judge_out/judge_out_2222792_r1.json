@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 3,
+  "note": "The narrative includes multiple unsupported/mismatched drivers (e.g., mentions from_bank and receiving_currency_euro, and wrong feature naming/values) and also contradicts SHAP directions."
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is multiple unsupported/mismatched driver references (e.g., payment_currency_euro and incorrect feature values/banks) that are not in the provided SHAP list."
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it asserts an “identical amount paid reinforces the pattern” even though no provided feature captures the match (e.g., amount_ratio/amount_diff are not in SHAP_JSON)."
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 2,
+  "note": "Biggest issue is multiple contradictions/unsupported specifics: dayofweek and from_bank directions are wrong vs SHAP, and several feature values/SHAP magnitudes (e.g., banks, amounts) are invented."
+}

@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2104211,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 5019116,
+  "shap_file": "shap_trx_5019116.json",
+  "model_proba": 0.99595707654953,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8889846801757812,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16361.52,
+      "shap_value": 1.0832833051681519,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16361.52,
+      "shap_value": 0.7652799487113953,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 113685.0,
+      "shap_value": -0.7031548023223877,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.44146159291267395,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 2454.0,
+      "shap_value": -0.19298477470874786,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": 0.15344209969043732,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.11393067985773087,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.09817133098840714,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09797730296850204,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.04848, direction: increase): The use of ACH is the single largest driver increasing the model score.\n- dayofweek = 6 (SHAP +0.734021, direction: increase): Occurrence on day 6 (Sunday per 0=Mon..6=Sun) contributed positively to the flag.\n- amount_received = 53835.2 (SHAP +0.655381, direction: increase): The reported received amount increased the score.\n- hour = 1 (SHAP −0.606192, direction: decrease): The early-hour timestamp (01:00) reduced the score (mitigating factor).\n- from_bank = 48211 (SHAP −0.515331, direction: decrease): The sending bank ID lowered the score (mitigating factor).\n- payment_currency_saudi_riyal = 1 (SHAP +0.467758, direction: increase): Payment currency being Saudi Riyal added to the score.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH transfer (payment_format_ach) in Saudi Riyal (payment_currency_saudi_riyal) that occurred on dayofweek 6 (Sunday) and involved a relatively large amount_received (53,835.2); these features collectively produced a net increase in the model score. This increase was partially offset by hour = 1 and from_bank = 48211, which reduced the score but not enough to negate the stronger positive drivers. If further review is needed, focus on validating the ACH payment context, the sender (from_bank = 48211), and the rationale for a high SAR payment occurring on day 6.",
+  "llm_file": "llm_trx_2104211_r1.json"
+}

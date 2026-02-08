@@ -1,0 +1,72 @@
+{
+  "transaction_id": 1733219,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2729292,
+  "shap_file": "shap_trx_2729292.json",
+  "model_proba": 0.9959419369697571,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.7762274742126465,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17441.08,
+      "shap_value": 0.9667733311653137,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1467.0,
+      "shap_value": 0.5100181698799133,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 22.0,
+      "shap_value": -0.45551797747612,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17441.08,
+      "shap_value": 0.44970056414604187,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21611.0,
+      "shap_value": -0.18195536732673645,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.16594956815242767,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10801881551742554,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": 0.07996947318315506,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.07631915807723999,
+      "direction": "decrease"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) — strong positive driver (SHAP +2.87562, direction: increase). The ACH payment method is the single largest contributor to the flag.\n- amount_received (value=14776.6) — positive driver (SHAP +1.07446, direction: increase). The received amount materially increases the model score.\n- amount_paid (value=14776.6) — positive driver (SHAP +0.864685, direction: increase). The payment amount also increases the score.\n- to_bank (value=1) — positive driver (SHAP +0.324661, direction: increase). The recipient bank contributed to a higher score.\n- dayofweek (value=4) — negative driver (SHAP −0.456042, direction: decrease). The day-of-week reduced the score modestly.\n\nConclusion:\n- The transaction was flagged mainly because it is an ACH payment (payment_format_ach=1) combined with relatively large amounts (amount_received and amount_paid ≈ 14,776.6), with additional upward contribution from the recipient bank (to_bank=1). The day-of-week (dayofweek=4) slightly offset the risk. Net contribution of these primary drivers is strongly positive (aggregate SHAP ≈ +4.68), explaining the alert.\n- Hedged note: if ACH transfers of this magnitude to this recipient bank are routine for the customer, the model’s signal may reflect expected activity; conversely, if atypical, further review is warranted. (This assumption is based only on the named features above.)",
+  "llm_file": "llm_trx_1733219_r1.json"
+}

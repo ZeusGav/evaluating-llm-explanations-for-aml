@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it makes unsupported claims by concluding a “high value” driver without mentioning amount_paid (also positive) and by interpreting dayofweek=6 as Sunday (not provided in the fact sheet)."
+}

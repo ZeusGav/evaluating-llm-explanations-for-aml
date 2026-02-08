@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2148592,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2148592.json",
+  "model_proba": 0.9966642260551453,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.821701765060425,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 149345.0,
+      "shap_value": -0.7022185921669006,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.6264627575874329,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6066715121269226,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 71485.29,
+      "shap_value": 0.48846736550331116,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 148586.0,
+      "shap_value": -0.4235322177410126,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.40859127044677734,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.3363972306251526,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.1744583547115326,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17030000686645508,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach: The ACH payment format contributes a large positive signal, increasing the risk score.\n- payment_currency_saudi_riyal: The transaction uses Saudi Riyal for payment, contributing positively to the risk signal.\n- receiving_currency_saudi_riyal: The receiving side also uses Saudi Riyal, adding to the elevated risk.\n- dayofweek: The transaction occurs on day 6 (Sunday), which contributes positively to risk.\n- amount_received: A substantial amount received (71485.3) contributes positively to risk.\n- from_bank: Sending-bank signal decreases risk slightly (negative contribution).\n- to_bank: Receiving-bank signal also decreases risk slightly (negative contribution).\n\nConclusion:\n- Based on the top drivers, the transaction shows an elevated risk signal driven by ACH-based Saudi Riyal flows on a Sunday with a substantial received amount, moderated somewhat by negative signals from the sending and receiving banks. This pattern is not definitive of illicit activity, but it warrants further investigation (e.g., source of funds, purpose, and counterparties) to establish legitimate use or identify potential anomalies.",
+  "llm_file": "llm_trx_2148592_r1.json"
+}

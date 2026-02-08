@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "The main issue is an unsupported claim mapping dayofweek=4 to “Friday,” which is incorrect given the fact sheet (0=Mon..6=Sun, so 4=Friday is wrong: it is Friday only if 4=Fri? actually 4=Fri is correct; but the fact sheet defines 0=Mon so 4=Fri is supported—so instead the unsupported part is “received amount matches the paid amount” without referencing amount_ratio/amount_diff features."
+}

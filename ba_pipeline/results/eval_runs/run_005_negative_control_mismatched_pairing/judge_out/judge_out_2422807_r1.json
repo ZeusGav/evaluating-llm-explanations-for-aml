@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Well-structured and directionally consistent, but it introduces unsupported specifics (e.g., “pass-through” inference) and misses several notable SHAP drivers like dayofweek and from_bank."
+}

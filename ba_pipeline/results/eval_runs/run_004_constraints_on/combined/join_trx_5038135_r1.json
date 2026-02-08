@@ -1,0 +1,71 @@
+{
+  "transaction_id": 5038135,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_5038135.json",
+  "model_proba": 0.9972099661827087,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8771677017211914,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.6389123201370239,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 60777.8,
+      "shap_value": 0.6068843603134155,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 150240.0,
+      "shap_value": -0.49246644973754883,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.31724855303764343,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 60777.8,
+      "shap_value": 0.29713600873947144,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.28906041383743286,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 48309.0,
+      "shap_value": -0.17301695048809052,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.13811077177524567,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13772061467170715,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) is the dominant driver increasing the score (shap=2.87717).\n- payment_currency_saudi_riyal (value=1, shap=0.638912) and receiving_currency_saudi_riyal (value=1, shap=0.317249) further increase the score.\n- amount_received (60777.8) contributes positively (shap=0.606884).\n- from_bank (150240) has a negative effect (shap=-0.492466), partially offsetting the increases.\n\nConclusion:\nThe alert is primarily driven by an ACH payment in Saudi Riyals combined with a sizable received amount (60777.8) — these features (payment_format_ach, payment_currency_saudi_riyal, receiving_currency_saudi_riyal, amount_received) raised the model score despite a dampening effect from from_bank. If one is assessing risk operationally, one may (conditionally) consider the ACH+SAR+high-amount pattern as the core rationale for review, noting the sending bank feature reduced but did not eliminate the model’s signal.",
+  "llm_file": "llm_trx_5038135_r1.json"
+}

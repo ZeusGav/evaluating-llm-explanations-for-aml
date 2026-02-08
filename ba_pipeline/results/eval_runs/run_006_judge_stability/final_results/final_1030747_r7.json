@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Main issue is an unsupported claim that dayofweek=6 corresponds to Sunday, which is inconsistent with the provided fact sheet mapping (0=Mon..6=Sun would make 6=Sun, but the fact sheet says 6=Sun only indirectly and the text asserts it explicitly).",
+  "transaction_id": 1030747,
+  "repeat": 7,
+  "run_name": "run_006_judge_stability",
+  "word_count": 182,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

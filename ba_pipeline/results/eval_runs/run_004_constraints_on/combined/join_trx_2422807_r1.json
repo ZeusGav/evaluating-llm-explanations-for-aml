@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2422807,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2422807.json",
+  "model_proba": 0.9963834285736084,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9065864086151123,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10873.16,
+      "shap_value": 0.7631999254226685,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10873.16,
+      "shap_value": 0.6002710461616516,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 20.0,
+      "shap_value": 0.5818842649459839,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 6.0,
+      "shap_value": -0.27255335450172424,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17787855863571167,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.15607529878616333,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.15354172885417938,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 18230.0,
+      "shap_value": -0.12467774748802185,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 0.0,
+      "shap_value": -0.10793258249759674,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The flag is driven primarily by payment_format_ach=1 (SHAP +2.90659), which strongly increased the score. Large transaction size contributed: amount_paid=10873.2 (SHAP +0.7632) and amount_received=10873.2 (SHAP +0.600271) both increased the score, showing a sizeable, matched transfer. Receiving bank to_bank=20 (SHAP +0.581884) also raised the score. Hour=6 (SHAP -0.272553) modestly reduced the score. payment_currency_euro=1 had a small positive effect (SHAP +0.156075).\n\nConclusion: The model flagged an ACH transfer (payment_format_ach=1) of ~10873.2 in the payment currency (payment_currency_euro=1) with identical paid/received amounts to to_bank=20, producing a net increased risk signal. If ACH transfers of this magnitude to to_bank=20 are atypical for the customer, a focused review is recommended.",
+  "llm_file": "llm_trx_2422807_r1.json"
+}

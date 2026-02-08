@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong coverage and correct directionality, but it introduces unsupported AML-risk assertions (e.g., that weekend timing/currency choice are inherently concerning and calls for specific follow-ups) without those being evidenced by the provided drivers."
+}

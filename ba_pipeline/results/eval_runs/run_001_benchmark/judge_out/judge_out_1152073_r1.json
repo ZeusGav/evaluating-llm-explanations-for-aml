@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately ties the main uplift to ACH and higher amounts with correct directions and strong coverage, but provides limited AML interpretation beyond restating model drivers."
+}

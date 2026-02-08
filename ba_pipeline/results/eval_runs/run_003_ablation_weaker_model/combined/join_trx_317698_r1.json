@@ -1,0 +1,71 @@
+{
+  "transaction_id": 317698,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_317698.json",
+  "model_proba": 0.9961482286453247,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8238868713378906,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 7222.58,
+      "shap_value": 0.8100258708000183,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.4606425166130066,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 14290.0,
+      "shap_value": -0.32020309567451477,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 7222.58,
+      "shap_value": 0.26045116782188416,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.1588827222585678,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.1272396296262741,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11755185574293137,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.11100868880748749,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 213737.0,
+      "shap_value": 0.08838806301355362,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1, SHAP=2.82389, direction increase) – The ACH payment method strongly contributes to the flag.\n- amount_paid (7222.58, SHAP=0.810026, direction increase) – A relatively large payment amount increases the risk signal.\n- dayofweek (5, SHAP=0.460643, direction increase) – Transaction occurring on Saturday adds to the risk signal.\n- to_bank (value=14290, SHAP=-0.320203, direction decrease) – Receiving-bank factor provides a decreasing signal, somewhat offsetting the risk.\n\nConclusion:\nOverall, the high-impact drivers indicate elevated AML risk driven by ACH payment, sizable amount, and weekend timing, with a modest offset from the receiving-bank factor. Based on these drivers alone, the transaction should remain flagged for review, acknowledging the negative contribution from to_bank partially mitigating the signal.",
+  "llm_file": "llm_trx_317698_r1.json"
+}

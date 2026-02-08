@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Strong coverage and directionally correct explanation that stays tightly grounded in the provided SHAP drivers."
+}

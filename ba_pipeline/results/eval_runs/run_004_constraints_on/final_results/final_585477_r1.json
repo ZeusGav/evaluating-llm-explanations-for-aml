@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue is an unsupported claim about “Sunday execution” for dayofweek=6, since the day mapping isn’t provided in the fact sheet.",
+  "transaction_id": 585477,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 121,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2947913,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2947913.json",
+  "model_proba": 0.9988365769386292,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.914236545562744,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13431.63,
+      "shap_value": 1.0636574029922485,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13431.63,
+      "shap_value": 0.7168673276901245,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 214621.0,
+      "shap_value": 0.5695084929466248,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1547.0,
+      "shap_value": 0.3090933561325073,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1314639449119568,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.10500264167785645,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09738694876432419,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_rupee",
+      "value": 0.0,
+      "shap_value": 0.08064523339271545,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.07606125622987747,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 — strong positive contributor (SHAP +2.91424, direction: increase). The ACH payment format is the single largest driver raising the model score.\n- amount_received = 13431.6 — positive contributor (SHAP +1.06366, direction: increase). The receiving amount materially increases the score.\n- amount_paid = 13431.6 — positive contributor (SHAP +0.716867, direction: increase). The payment amount also increases the score (note: amounts received and paid are equal in the provided features).\n- from_bank = 214621 — positive contributor (SHAP +0.569508, direction: increase). The sending bank ID increased the score.\n- to_bank = 1547 — positive contributor (SHAP +0.309093, direction: increase). The receiving bank ID also increased the score.\n\nConclusion:\nThe model flagged this transaction mainly because it is an ACH transfer (payment_format_ach) and because both the received and paid amounts (amount_received and amount_paid = 13,431.6) meaningfully increased the prediction, with additional upward contributions from the specific sending and receiving bank IDs (from_bank, to_bank). Based solely on these drivers, the transaction produces a higher model score; if further review is required, investigators should focus on the ACH nature and the amounts and consider any bank-related context.",
+  "llm_file": "llm_trx_2947913_r1.json"
+}

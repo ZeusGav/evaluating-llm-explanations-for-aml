@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1733219,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_1733219.json",
+  "model_proba": 0.9967898726463318,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.875617027282715,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14776.65,
+      "shap_value": 1.0744582414627075,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14776.65,
+      "shap_value": 0.86468505859375,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 4.0,
+      "shap_value": -0.45604217052459717,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1.0,
+      "shap_value": 0.3246607482433319,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -0.3057262897491455,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21611.0,
+      "shap_value": 0.25968897342681885,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1645529717206955,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.1583608090877533,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12176164239645004,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- The strongest driver is payment_format_ach (value=1) with SHAP value 2.87562 and direction increase, indicating that the ACH payment format is a primary contributor to the flag.\n- The next two top drivers are amount_received (value=14776.6) with SHAP 1.07446 and amount_paid (value=14776.6) with SHAP 0.864685, both in the direction increase. These show a large, equal amount in receiving and paying legs, which the model associates with the flag.\n- These three drivers together explain the core rationale for the flag. Other drivers (e.g., dayofweek, hour, to_bank, from_bank) have smaller absolute SHAP values and are not central to the justification.\n\nConclusion:\n- Based on the provided drivers, the transaction is flagged primarily due to the ACH payment format and the large, equal amounts in both receiving and paying directions. This pattern warrants AML review to confirm legitimate purpose and counterparties.",
+  "llm_file": "llm_trx_1733219_r1.json"
+}

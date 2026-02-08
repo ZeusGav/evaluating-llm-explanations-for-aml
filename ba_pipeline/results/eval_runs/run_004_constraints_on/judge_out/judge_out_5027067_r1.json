@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, direction-consistent explanation that covers the main SHAP drivers, though it omits several smaller contributors (e.g., to_bank and non-credit-card/cheque/cash indicators)."
+}

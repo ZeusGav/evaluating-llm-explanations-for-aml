@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4296465,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_4296465.json",
+  "model_proba": 0.9965922236442566,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8968706130981445,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.7811666131019592,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 50528.0,
+      "shap_value": -0.6223302483558655,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6144785284996033,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 148350.0,
+      "shap_value": -0.4825364053249359,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.34273838996887207,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.2974454462528229,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 66793.17,
+      "shap_value": 0.2848365604877472,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.23033112287521362,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14751191437244415,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- Primary driver: payment_format_ach (value=1) with SHAP_value=2.89687 and direction increase. This is the strongest contributor and directly elevates risk due to ACH as the payment method.\n- Strong currency-related driver: payment_currency_saudi_riyal (value=1) SHAP_value=0.781167 with direction increase. This indicates the payment uses Saudi Riyal, supporting higher risk signals in combination with other SAR-related indicators.\n- Supporting but offsetting factor: from_bank (value=50528) SHAP_value=-0.62233 with direction decrease. This negative contribution reduces risk, partially countering the ACH/SAR signals from the top driver.\n- Additional risk signal: dayofweek (value=6) SHAP_value=0.614479 with direction increase. Weekend timing adds incremental risk in AML patterns.\n\nNote: Other drivers (e.g., to_bank with negative SHAP, receiving_currency_saudi_riyal, etc.) are present but have smaller absolute contributions and are not emphasized here as primary drivers.\n\nConclusion:\nOverall, the top contributors suggest elevated risk driven primarily by an ACH payment in Saudi Riyal (SAR) and weekend timing, with some mitigating signal from the sending bank. Based on these drivers, the transaction should be escalated for manual review and request for additional context (purpose, source of funds, recipient details). If further information strongly supports legitimate activity, risk may be mitigated, but current driver signals indicate a non-negligible AML concern.",
+  "llm_file": "llm_trx_4296465_r1.json"
+}

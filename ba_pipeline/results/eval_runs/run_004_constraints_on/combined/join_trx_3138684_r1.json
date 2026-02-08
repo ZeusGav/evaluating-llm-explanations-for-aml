@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3138684,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_3138684.json",
+  "model_proba": 0.9962700605392456,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8189642429351807,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10066.54,
+      "shap_value": 1.001551866531372,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10066.54,
+      "shap_value": 0.7697842717170715,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 218897.0,
+      "shap_value": -0.27616727352142334,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 27288.0,
+      "shap_value": -0.21695438027381897,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 18.0,
+      "shap_value": 0.167972594499588,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.144307941198349,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": 0.11258720606565475,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.1049971878528595,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1035461276769638,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model flagged this transaction primarily because payment_format_ach (value=1) strongly increases risk (SHAP +2.81896, direction: increase). Large monetary values also contributed: amount_received (10066.5) increased score (SHAP +1.00155) and amount_paid (10066.5) increased score (SHAP +0.769784). The identical amount_received and amount_paid (both 10066.5) is a notable model input driving the increase.\n\nConclusion:\nBased solely on these drivers, the flag is driven mainly by an ACH payment method plus relatively large, matching payment/receipt amounts. from_bank (SHAP −0.276167) and to_bank (SHAP −0.216954) slightly decreased the score, partially offsetting risk. If further review is needed, focus on ACH details and the rationale for the matching ~10,066.5 amount.",
+  "llm_file": "llm_trx_3138684_r1.json"
+}

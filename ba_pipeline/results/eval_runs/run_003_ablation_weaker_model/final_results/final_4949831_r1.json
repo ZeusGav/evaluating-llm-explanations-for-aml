@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, well-structured explanation with correct directions, though it omits several smaller drivers (hour and currency/payment-format negatives) that could add context.",
+  "transaction_id": 4949831,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 134,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

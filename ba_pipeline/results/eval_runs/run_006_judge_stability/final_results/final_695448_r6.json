@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, direction-consistent summary with strong coverage; it could be more useful by briefly addressing the remaining smaller drivers (hour/currencies/to_bank) without inventing new facts.",
+  "transaction_id": 695448,
+  "repeat": 6,
+  "run_name": "run_006_judge_stability",
+  "word_count": 182,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

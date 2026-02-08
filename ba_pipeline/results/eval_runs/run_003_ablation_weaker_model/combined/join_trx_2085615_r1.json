@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2085615,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2085615.json",
+  "model_proba": 0.9967384934425354,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.826533317565918,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16655.71,
+      "shap_value": 1.1986643075942993,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 20.0,
+      "shap_value": 0.8673977851867676,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.834764301776886,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 0.0,
+      "shap_value": -0.7918686270713806,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 12513.0,
+      "shap_value": -0.7093325257301331,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16655.71,
+      "shap_value": 0.5199809670448303,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.2725934386253357,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.16128858923912048,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.08283407986164093,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach increases risk with SHAP value 2.82653 (value=1), indicating ACH as the payment method is a strong contributor to the flag.\n- amount_received increases risk (SHAP value 1.19866; value=16655.7), suggesting the relatively large receipt in the transaction raises concern.\n- to_bank increases risk (SHAP value 0.867398; value=20), implicating the receiving bank ID as a contributing factor.\n- dayofweek increases risk (SHAP value 0.834764; value=6), meaning the transaction occurring on Sunday adds to the risk signal.\n- hour decreases risk (SHAP value -0.791869; value=0), indicating the hour (0) reduces the risk signal.\n\nConclusion:\nBased on the top drivers, the transaction shows an elevated risk signal driven by ACH payment format, a relatively large amount received, and the receiving bank and day of week contributing to the flag. The hour factor partially mitigates the signal. Overall, the driver pattern supports a flagged assessment and warrants further review utilising additional context.",
+  "llm_file": "llm_trx_2085615_r1.json"
+}

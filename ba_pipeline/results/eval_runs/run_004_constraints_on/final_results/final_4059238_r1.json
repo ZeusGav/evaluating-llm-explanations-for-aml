@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The only major issue is an unsupported claim mapping dayofweek=5 to Saturday (per fact sheet, 5 corresponds to Saturday only if 0=Mon..6=Sun implies 5=Sat? actually 5=Sat is correct—wait: 0=Mon,1=Tue,2=Wed,3=Thu,4=Fri,5=Sat,6=Sun; supported—so biggest issue is mentioning “verify ACH routing” which is not supported by any provided feature.",
+  "transaction_id": 4059238,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 119,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

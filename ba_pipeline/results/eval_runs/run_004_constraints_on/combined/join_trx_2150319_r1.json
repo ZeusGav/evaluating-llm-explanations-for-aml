@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2150319,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2150319.json",
+  "model_proba": 0.9983207583427429,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.158522367477417,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 12.0,
+      "shap_value": -0.90904700756073,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.829542875289917,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11349.2,
+      "shap_value": 0.7025678157806396,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 11.0,
+      "shap_value": 0.6763107180595398,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11349.2,
+      "shap_value": 0.46873730421066284,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15437079966068268,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1325238198041916,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 11.0,
+      "shap_value": 0.11654270440340042,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.11306623369455338,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1) which strongly increased the score (SHAP +3.158). This increase is reinforced by dayofweek (value=6, i.e., Sunday) (SHAP +0.830) and by transaction size: amount_received (11349.2) (SHAP +0.703) and amount_paid (11349.2) (SHAP +0.469) both increasing the score. to_bank (value=11) also contributed to raising the score (SHAP +0.676). Partially offsetting these increases was from_bank (value=12), which decreased the score (SHAP -0.909).\n\nConclusion: The transaction was flagged mainly because it is an ACH transfer (payment_format_ach=1) occurring on dayofweek=6 with a mid‑five‑figure amount (amount_received/amount_paid=11349.2) between specific bank IDs (to_bank=11), although from_bank=12 reduced the signal. If from_bank=12 represents a lower‑risk counterparty, that may have partly mitigated the concern.",
+  "llm_file": "llm_trx_2150319_r1.json"
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately matches SHAP directions and covers the dominant drivers, but provides limited AML-specific investigative context beyond restating model contributions.",
+  "transaction_id": 2466813,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 186,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

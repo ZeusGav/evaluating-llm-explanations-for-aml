@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it makes unsupported assertions (e.g., “sent to a bank” and “large, round-number transfer”) and includes a direction mismatch by implying the negative from_bank “reduces risk contribution relative to the others.”"
+}

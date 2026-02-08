@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is multiple contradictions/unsupported drivers (e.g., to_bank stated as increasing with different value while SHAP shows to_bank decreases, and from_bank is mentioned though not in SHAP_JSON)."
+}

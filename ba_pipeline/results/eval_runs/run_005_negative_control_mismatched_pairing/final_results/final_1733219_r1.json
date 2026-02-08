@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is referencing a non-provided driver (dayofweek) and using incorrect feature values, which makes parts of the explanation unsupported despite clear structure.",
+  "transaction_id": 1733219,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 191,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

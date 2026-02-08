@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Strong alignment and coverage: it accurately reflects all major SHAP drivers (ACH, SAR currencies, Sunday, amount, and bank offsets) without adding unsupported facts."
+}

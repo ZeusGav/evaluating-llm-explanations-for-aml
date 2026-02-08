@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2230412,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 3756246,
+  "shap_file": "shap_trx_3756246.json",
+  "model_proba": 0.9965117573738098,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8941879272460938,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15710.55,
+      "shap_value": 0.8011788725852966,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15710.55,
+      "shap_value": 0.7704539895057678,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.4300616979598999,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1674.0,
+      "shap_value": -0.26727813482284546,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.22955867648124695,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21258.0,
+      "shap_value": -0.20429380238056183,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.11899252980947495,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1166076809167862,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.08536326885223389,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) — The model identifies an ACH payment as the strongest driver (SHAP +2.85, direction: increase), which materially raised the alert score.\n- amount_paid (value=9301.71) — A relatively large paid amount (SHAP +0.79, direction: increase) increased the flagging likelihood.\n- dayofweek (value=6) — The transaction occurred on dayofweek=6 (SHAP +0.65, direction: increase), which the model associates with higher risk for this case.\n- amount_received (value=9301.71) — The received amount equals the paid amount and itself contributed positively (SHAP +0.62, direction: increase).\n- receiving_currency_euro (value=1) — Receiving currency = euro modestly reduced the score (SHAP −0.25, direction: decrease), partially offsetting the above increases.\n\nConclusion:\nThe transaction was flagged primarily because it is an ACH payment (payment_format_ach=1) with a comparatively large, matched paid and received amount (amount_paid=9301.71 and amount_received=9301.71) occurring on dayofweek=6 — these features together drove the alert score upward. The fact that receiving_currency_euro=1 slightly decreased the risk contribution. Based solely on these drivers, this transaction warrants analyst review focused on the ACH payment and the high, equal amounts.",
+  "llm_file": "llm_trx_2230412_r1.json"
+}

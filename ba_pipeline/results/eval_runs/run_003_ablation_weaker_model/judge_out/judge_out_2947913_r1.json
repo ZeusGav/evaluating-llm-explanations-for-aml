@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and clear structure; biggest gap is it omits several smaller SHAP drivers (e.g., currency/payment-format one-hots) that slightly affect the score."
+}

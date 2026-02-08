@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 2,
+  "note": "The narrative introduces multiple non-existent SHAP drivers/values (e.g., SAR currency features and different bank/amount values) and also misstates to_bank’s SHAP direction versus the provided SHAP_JSON."
+}

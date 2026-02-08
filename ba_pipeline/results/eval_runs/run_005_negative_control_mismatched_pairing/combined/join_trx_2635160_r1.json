@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2635160,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 1984624,
+  "shap_file": "shap_trx_1984624.json",
+  "model_proba": 0.9977466464042664,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.945861339569092,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 19753.45,
+      "shap_value": 0.8061840534210205,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6857200860977173,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.4588778018951416,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 118.0,
+      "shap_value": -0.45185112953186035,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 19753.45,
+      "shap_value": 0.35909348726272583,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 48308.0,
+      "shap_value": -0.23512573540210724,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.16106726229190826,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1592380553483963,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.14777927100658417,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 had the largest positive SHAP (2.81086) and therefore is the primary driver increasing the model score.\n- amount_paid = 9226.42 (SHAP +0.808249) and amount_received = 9226.42 (SHAP +0.722327) both materially increased the score, indicating the transaction value contributed to the flag.\n- from_bank = 233580 (SHAP +0.259003) contributed further to an increased score based on the sender bank identifier.\n- hour = 17 (SHAP +0.225023) contributed positively to the score (transaction occurred at hour 17).\n- payment_currency_us_dollar = 1 had a negative SHAP (-0.149836) and therefore slightly decreased the overall score (partial offset).\n\nConclusion:\nThe model flagged this transaction mainly because it was an ACH payment (payment_format_ach) combined with a payment/receipt amount of 9,226.42 (amount_paid and amount_received) plus contributing effects from the sending bank (from_bank = 233580) and the transaction hour (hour = 17). The fact that the payment currency is US dollar (payment_currency_us_dollar = 1) slightly reduced the model score but did not offset the larger positive contributions. If any of the primary drivers (e.g., payment_format_ach or the payment amounts) were different, the model score would likely be lower.",
+  "llm_file": "llm_trx_2635160_r1.json"
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately ties the main uplift drivers (ACH, Sunday, SAR, amount) and the one mitigating factor (from_bank) to their SHAP directions, though it omits several smaller one-hot drivers (non-USD/non-cheque/non-credit-card/non-euro)."
+}

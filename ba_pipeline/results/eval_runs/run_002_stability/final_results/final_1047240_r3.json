@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it incorrectly asserts dayofweek=5 is Friday, which is unsupported by the provided day-of-week mapping (5=Sat).",
+  "transaction_id": 1047240,
+  "repeat": 3,
+  "run_name": "run_002_stability",
+  "word_count": 210,
+  "word_limit": 200,
+  "word_limit_pass": 0
+}

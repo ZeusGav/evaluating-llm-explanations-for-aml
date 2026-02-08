@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it asserts the amounts are “relatively large” and “identical,” which is not supported by any provided feature/driver such as amount_ratio or amount_diff.",
+  "transaction_id": 1942237,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 169,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

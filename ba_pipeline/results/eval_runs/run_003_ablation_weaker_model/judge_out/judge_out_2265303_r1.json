@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, well-structured explanation covering the dominant SHAP drivers with correct directions; it could be more actionable by briefly referencing the remaining minor drivers (e.g., hour/to_bank/currency) or what specific follow-up checks to prioritize."
+}

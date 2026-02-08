@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it adds unsupported implications (e.g., “elevated AML risk” and “euro-denominated receiving activity”) that are not directly supported by the provided features beyond model contribution direction."
+}

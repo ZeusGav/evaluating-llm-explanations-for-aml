@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Main issue is an unsupported implication that “large mirrored value” is a meaningful suspicious pattern beyond what the SHAP drivers explicitly justify."
+}

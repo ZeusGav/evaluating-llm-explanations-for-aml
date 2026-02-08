@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, directionally correct explanation with strong coverage, but it omits several smaller drivers (hour, currencies, to_bank, credit_card indicator) that could add a bit more investigative context."
+}

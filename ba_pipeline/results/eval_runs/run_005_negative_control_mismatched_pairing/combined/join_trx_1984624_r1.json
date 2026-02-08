@@ -1,0 +1,72 @@
+{
+  "transaction_id": 1984624,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2150319,
+  "shap_file": "shap_trx_2150319.json",
+  "model_proba": 0.9983207583427429,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.158522367477417,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 12.0,
+      "shap_value": -0.90904700756073,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.829542875289917,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11349.2,
+      "shap_value": 0.7025678157806396,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 11.0,
+      "shap_value": 0.6763107180595398,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11349.2,
+      "shap_value": 0.46873730421066284,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15437079966068268,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1325238198041916,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 11.0,
+      "shap_value": 0.11654270440340042,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.11306623369455338,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) — largest positive contributor (SHAP +2.94586); the model increased the score because the payment was sent via ACH.\n- amount_received (19753.5) — positive contributor (SHAP +0.80618); the relatively high received amount increased the score.\n- dayofweek (6) — positive contributor (SHAP +0.68572); the transaction occurring on day 6 (Sunday) increased the score.\n- payment_currency_saudi_riyal (value=1) — positive contributor (SHAP +0.45888); payment in Saudi riyal increased the score.\n- amount_paid (19753.5) — positive contributor (SHAP +0.35909); the paid amount also increased the score.\n- from_bank (118) — negative contributor (SHAP −0.45185); the sending bank ID reduced the model score (partially offsetting the increases).\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH transfer (payment_format_ach=1) of a sizable amount (amount_received/amount_paid = 19,753.5) in Saudi riyals (payment_currency_saudi_riyal=1) occurring on day 6 (dayofweek=6), all of which increased the model risk score. This increase was partially mitigated by a negative contribution from the sending bank (from_bank=118). If one interprets amount_paid and amount_received being equal combined with payment_currency_saudi_riyal=1, it could suggest a same‑currency ACH movement (no visible conversion), which may be relevant for further review.",
+  "llm_file": "llm_trx_1984624_r1.json"
+}

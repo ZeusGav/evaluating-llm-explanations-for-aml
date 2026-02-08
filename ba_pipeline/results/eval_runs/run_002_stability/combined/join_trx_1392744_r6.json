@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1392744,
+  "run_name": "run_002_stability",
+  "shap_file": "shap_trx_1392744.json",
+  "model_proba": 0.9960130453109741,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.878791093826294,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6218125224113464,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.6062032580375671,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 119.0,
+      "shap_value": -0.4287448823451996,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 49365.0,
+      "shap_value": -0.3049345314502716,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 31783.03,
+      "shap_value": 0.2954976558685303,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.2686663568019867,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.16876398026943207,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1660454124212265,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15633831918239594,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 6,
+  "llm_text": "Why:\n- The model's score was driven primarily by the payment being ACH: payment_format_ach = 1 (SHAP +2.87879 → increases score).  \n- Timing contributed: dayofweek = 6 (SHAP +0.621813 → increases score).  \n- Currency contributed positively: payment_currency_saudi_riyal = 1 (SHAP +0.606203 → increases score).  \n- Two bank identifiers partially offset the increase: from_bank = 119 (SHAP -0.428745 → decreases score) and to_bank = 49365 (SHAP -0.304935 → decreases score).\n\nConclusion:\n- The elevated flag is mainly attributable to an ACH payment (payment_format_ach) in Saudi Riyals (payment_currency_saudi_riyal) that occurred on dayofweek = 6; these three features together produced the largest positive contributions. The sending and receiving bank IDs (from_bank, to_bank) reduced the model score but did not fully offset the positive drivers.  \n- Conditional/hedged observation: if ACH transfers in SAR on dayofweek = 6 are atypical for the profile under review, that combination likely explains the flag (based solely on the named features).",
+  "llm_file": "llm_trx_1392744_r6.json"
+}

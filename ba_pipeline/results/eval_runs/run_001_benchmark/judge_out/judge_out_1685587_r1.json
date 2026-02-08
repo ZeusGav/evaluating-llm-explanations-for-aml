@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strongly aligned to SHAP drivers with clear structure; utility is slightly limited by minimal AML interpretation beyond restating feature impacts."
+}

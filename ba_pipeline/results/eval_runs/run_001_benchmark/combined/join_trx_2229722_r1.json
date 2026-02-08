@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2229722,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2229722.json",
+  "model_proba": 0.9974950551986694,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.860833168029785,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 18663.0,
+      "shap_value": 0.9466368556022644,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 11296.0,
+      "shap_value": -0.8533885478973389,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7656073570251465,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 18663.0,
+      "shap_value": 0.7323427796363831,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1457.0,
+      "shap_value": 0.32519111037254333,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12328023463487625,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 17.0,
+      "shap_value": 0.10309850424528122,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.08680042624473572,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.08184255659580231,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+2.86083, direction=increase): The use of ACH strongly increased the model score and is the single largest driver of the flag.\n- amount_received (value=18663; SHAP=+0.946637, direction=increase): A relatively large received amount materially increased the score.\n- amount_paid (value=18663; SHAP=+0.732343, direction=increase): The paid amount also increased the score and equals amount_received (18663), reinforcing the magnitude contribution.\n- dayofweek (value=6 (Sunday); SHAP=+0.765607, direction=increase): Occurrence on dayofweek=6 (Sunday) contributed to a higher score.\n- from_bank (value=11296; SHAP=−0.853389, direction=decrease): The sending bank identifier decreased the score, partially offsetting other increases.\n\nConclusion:\n- The transaction was flagged mainly because it is an ACH transfer (payment_format_ach=1) involving a sizable amount (amount_received=18663 and amount_paid=18663) occurring on dayofweek=6 (Sunday); these factors increased the model score substantially, despite a risk-lowering contribution from from_bank=11296.\n- Conditional/hypothesis (hedged): If equal amount_received and amount_paid (both 18663) reflect no net adjustment, this could indicate no conversion or net fee impact on the transfer, which is relevant to review.",
+  "llm_file": "llm_trx_2229722_r1.json"
+}

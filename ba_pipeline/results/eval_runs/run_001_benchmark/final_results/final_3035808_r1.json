@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, well-structured explanation with full driver-direction consistency; it could be more investigator-useful by briefly interpreting why ACH/amount size/timing are risky rather than mainly restating features.",
+  "transaction_id": 3035808,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 209,
+  "word_limit": 200,
+  "word_limit_pass": 0
+}

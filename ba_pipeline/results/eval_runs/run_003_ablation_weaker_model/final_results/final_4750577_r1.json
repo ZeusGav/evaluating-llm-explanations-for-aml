@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue is an unsupported claim: it asserts Sunday is a “non-standard business day,” which is not supported by any provided feature semantics/driver.",
+  "transaction_id": 4750577,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 165,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

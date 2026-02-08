@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Covers the dominant SHAP drivers with correct directionality and a clear, investigator-friendly rationale without adding unsupported facts."
+}

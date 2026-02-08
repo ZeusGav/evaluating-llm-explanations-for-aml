@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2466813,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2466813.json",
+  "model_proba": 0.9974180459976196,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.141047477722168,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14606.03,
+      "shap_value": 1.2061222791671753,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 12.0,
+      "shap_value": -0.9060243964195251,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14606.03,
+      "shap_value": 0.8784427046775818,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1.0,
+      "shap_value": 0.39642417430877686,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.15289799869060516,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.11179528385400772,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10304921865463257,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06783098727464676,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_ratio",
+      "value": 0.9999999999315352,
+      "shap_value": -0.05358882620930672,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=3.14105; direction=increase): The strongest driver. ACH-based payments are associated with a higher AML risk signal in this set of features, contributing heavily to the flag.\n- amount_received (value=14606.0; shap_value=1.20612; direction=increase): A large amount received increases the risk signal, reinforcing the concern raised by the ACH format.\n- from_bank (value=12; shap_value=-0.906024; direction=decrease): The sending bank reduces the risk signal, providing some mitigation relative to the ACH/amount signals.\n- amount_paid (value=14606.0; shap_value=0.878443; direction=increase): The same large amount being paid supports the elevated risk, aligning with the substantial received amount and the ACH format.\n\nNote: The top four drivers shown above are the most impactful in driving the flag. Other drivers (e.g., to_bank, payment_currency_us_dollar, etc.) have smaller SHAP contributions and are not referenced here to maintain focus on the primary risk drivers identified by the model.\n\nConclusion:\nBased solely on the provided drivers, the transaction appears risk-elevating due to an ACH-based payment format combined with a large amount both received and paid, with the receiving bank contributing to risk and the sending bank providing some mitigation. If these drivers reflect legitimate business activity (e.g., standard ACH payroll/vendor flows with known counterparties), the risk posture may be lower; otherwise, the combination of ACH and large matched amounts warrants further review of the transaction context and counterparties.",
+  "llm_file": "llm_trx_2466813_r1.json"
+}

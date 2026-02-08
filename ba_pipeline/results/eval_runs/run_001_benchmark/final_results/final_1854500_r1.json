@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, direction-faithful summary of the dominant ACH and amount drivers with no extraneous claims, though it could add a bit more investigative context beyond restating SHAP impacts.",
+  "transaction_id": 1854500,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 144,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

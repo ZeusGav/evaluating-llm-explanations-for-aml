@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and coverage of the main SHAP drivers, but it adds unsupported investigative suggestions about counterparty legitimacy and confirming sender/receiver details that are not grounded in the provided features.",
+  "transaction_id": 2422807,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 162,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

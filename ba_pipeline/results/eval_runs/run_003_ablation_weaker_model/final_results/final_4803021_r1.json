@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strongly aligned and well-structured, but it makes an unsupported claim about “precisely matched receive/pay amount” (implying amount_diff/ratio) which is not provided as a driver.",
+  "transaction_id": 4803021,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 167,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2466813,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2466813.json",
+  "model_proba": 0.9974180459976196,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.141047477722168,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14606.03,
+      "shap_value": 1.2061222791671753,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 12.0,
+      "shap_value": -0.9060243964195251,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14606.03,
+      "shap_value": 0.8784427046775818,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1.0,
+      "shap_value": 0.39642417430877686,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.15289799869060516,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.11179528385400772,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10304921865463257,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06783098727464676,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_ratio",
+      "value": 0.9999999999315352,
+      "shap_value": -0.05358882620930672,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The flag is driven primarily by payment_format_ach=1 (SHAP 3.14105, direction: increase) — the ACH method is the strongest positive contributor. Large transaction size also increases the score: amount_received=14606.0 (SHAP 1.20612, increase) and amount_paid=14606.0 (SHAP 0.878443, increase). from_bank=12 (SHAP -0.906024, direction: decrease) reduces the score and partially offsets risk, while to_bank=1 (SHAP 0.396424, increase) provides a smaller upward effect.\n\nConclusion: The model flagged the transaction mainly because it is an ACH transfer (payment_format_ach) combined with sizable amounts (amount_received and amount_paid at 14,606), with a modest additional contribution from to_bank; the from_bank feature lowers the score but does not fully negate the increase.",
+  "llm_file": "llm_trx_2466813_r1.json"
+}

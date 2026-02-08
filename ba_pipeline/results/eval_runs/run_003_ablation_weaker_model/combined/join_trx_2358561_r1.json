@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2358561,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2358561.json",
+  "model_proba": 0.9961884617805481,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8860366344451904,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13966.47,
+      "shap_value": 0.7570273876190186,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13966.47,
+      "shap_value": 0.6610953211784363,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1547.0,
+      "shap_value": 0.31414005160331726,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.2715240716934204,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.2541736662387848,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21884.0,
+      "shap_value": -0.22805556654930115,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12939825654029846,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.07131267338991165,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.07118550688028336,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- Highest impact driver: payment_format_ach (value=1, shap_value=2.88604, direction increase) — ACH as the payment method contributed strongly to the flag.\n- Strong follow-on signals: amount_received (13966.5, shap_value=0.757027, direction increase) and amount_paid (13966.5, shap_value=0.661095, direction increase) — large exchange amounts associated with the flag.\n- Supporting signal: to_bank (value=1547, shap_value=0.31414, direction increase) — the receiving bank indicator adds to the risk signal.\n- Risk-reducing signal (modest): receiving_currency_euro (value=1, shap_value=-0.271524, direction decrease) — euro receiving currency reduces risk contribution slightly.\n\nConclusion:\nBased on the above drivers, the transaction exhibits elevated AML risk driven primarily by ACH payment method and large, mirrored transfer amounts, with the receiving bank contributing to the concern. The euro receiving currency dampens the risk modestly. Review is warranted given these driver signals.",
+  "llm_file": "llm_trx_2358561_r1.json"
+}

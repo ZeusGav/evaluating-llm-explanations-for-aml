@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strongly aligned to the main SHAP drivers with clear directions, but it omits several smaller listed drivers (e.g., to_bank and receiving-currency indicators).",
+  "transaction_id": 1030747,
+  "repeat": 3,
+  "run_name": "run_002_stability",
+  "word_count": 159,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

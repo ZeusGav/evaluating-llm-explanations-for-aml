@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 2,
+  "note": "The explanation introduces multiple drivers and directions (Saudi Riyal currencies, amount_received increasing) that are not in SHAP_JSON and even contradict provided directions, making it unreliable despite clear structure."
+}

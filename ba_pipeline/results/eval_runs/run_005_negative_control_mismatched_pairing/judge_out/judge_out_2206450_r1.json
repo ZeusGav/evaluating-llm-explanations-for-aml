@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The text introduces and relies on non-provided/mismatched drivers and values (e.g., dayofweek, to_bank=20, amount_received decreasing), causing direction mismatch and unsupported claims."
+}

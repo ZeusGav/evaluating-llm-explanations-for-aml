@@ -1,0 +1,71 @@
+{
+  "transaction_id": 5018226,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_5018226.json",
+  "model_proba": 0.9973401427268982,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.82993745803833,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17462.31,
+      "shap_value": 1.2830201387405396,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17462.31,
+      "shap_value": 0.6187801957130432,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12979.0,
+      "shap_value": -0.18900567293167114,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.17161493003368378,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 0.0,
+      "shap_value": 0.1310025453567505,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10416458547115326,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 235509.0,
+      "shap_value": 0.08228650689125061,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06299548596143723,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 17.0,
+      "shap_value": 0.0613396130502224,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=2.82994; direction=increase): The dominant driver indicates the transaction used ACH as the payment method, which strongly increases the flag.\n- amount_received (value=17462.3; shap_value=1.28302; direction=increase): A very large inflow amount contributes significantly to the flag.\n- amount_paid (value=17462.3; shap_value=0.61878; direction=increase): The same large outflow amount adds further signal when paired with the ACH method.\n- Together, these top drivers imply an ACH-based transfer with a large value and a matching inflow/outflow amount, which is the core rationale for the flag.\n\nConclusion:\nThe strongest signals come from payment_format_ach and the large, matching amounts (amount_received and amount_paid), indicating a high-risk ACH transfer pattern. Minor drivers do exist but do not override the primary signal. Based on these drivers, the transaction presents a strong risk signal warranting further review.",
+  "llm_file": "llm_trx_5018226_r1.json"
+}

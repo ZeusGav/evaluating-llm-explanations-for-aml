@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "It incorrectly asserts dayofweek=6 is the model’s highest-risk day and omits several listed drivers (hour, to_bank, and the 0-valued payment_format indicators)."
+}

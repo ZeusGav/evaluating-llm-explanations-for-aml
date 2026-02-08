@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong coverage and clear structure, but it introduces unsupported assumptions about ACH/to_bank/day risk and also cites several feature values/SHAP magnitudes that don’t match the provided SHAP_JSON.",
+  "transaction_id": 2166062,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 210,
+  "word_limit": 200,
+  "word_limit_pass": 0
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1152073,
+  "run_name": "run_002_stability",
+  "shap_file": "shap_trx_1152073.json",
+  "model_proba": 0.9970992803573608,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.90216064453125,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 908.0,
+      "shap_value": -0.9224379658699036,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15968.23,
+      "shap_value": 0.8998066186904907,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7816022634506226,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15968.23,
+      "shap_value": 0.7641443610191345,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1420.0,
+      "shap_value": 0.23143066465854645,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": 0.20711490511894226,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.16433247923851013,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1395576000213623,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.08807489275932312,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 7,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.90216, direction: increase): the use of ACH is the single largest contributor raising the model score.\n- amount_received = 15968.2 (SHAP +0.899807, direction: increase) and amount_paid = 15968.2 (SHAP +0.764144, direction: increase): the transaction value (~15,968.2) increases the score.\n- dayofweek = 6 (SHAP +0.781602, direction: increase): occurrence on day 6 (Sunday per the fact sheet) increases the score.\n- from_bank = 908 (SHAP -0.922438, direction: decrease): the sending bank (ID 908) partially reduces the model score.\n\nConclusion:\n- The model flagged this transaction primarily because it is an ACH transfer (payment_format_ach = 1) of a relatively large amount (~15,968.2) that occurred on dayofweek = 6 (Sunday); these drivers together raised the flag despite a lowering contribution from from_bank = 908.\n- If further review is needed, focus checks on the ACH payment details, the high payment/receipt amounts, and the timing (dayofweek = 6) to determine whether these factors are consistent with expected customer behavior.",
+  "llm_file": "llm_trx_1152073_r7.json"
+}

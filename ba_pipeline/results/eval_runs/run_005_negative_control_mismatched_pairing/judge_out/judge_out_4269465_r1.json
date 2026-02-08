@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 2,
+  "note": "Biggest issue: it invents/misstates multiple drivers and values (e.g., amount_received, dayofweek, SAR currency, from_bank direction), contradicting the provided SHAP_JSON."
+}

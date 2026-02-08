@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The biggest issue is multiple contradictions with the provided SHAP (wrong feature directions/values and extra claims like dayofweek being negative), which also introduces unsupported facts.",
+  "transaction_id": 1566107,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 188,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

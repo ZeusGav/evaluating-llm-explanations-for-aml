@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1942237,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_1942237.json",
+  "model_proba": 0.9967901110649109,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.7956857681274414,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 20.0,
+      "shap_value": 0.8990795016288757,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 410.0,
+      "shap_value": -0.8402747511863708,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14460.93,
+      "shap_value": 0.8321384787559509,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14460.93,
+      "shap_value": 0.6996858716011047,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.40295442938804626,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 7.0,
+      "shap_value": -0.21312959492206573,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1705520898103714,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.12881138920783997,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.1024838536977768,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — largest positive contributor (SHAP +2.79569). The payment being an ACH (payment_format_ach=1) strongly increased the model score.\n- to_bank (value=20) — positive contributor (SHAP +0.89908). Routing to receiving bank ID 20 increased the score.\n- amount_received (value=14460.9) — positive contributor (SHAP +0.83214). The received amount of 14,460.9 increased the score.\n- amount_paid (value=14460.9) — positive contributor (SHAP +0.69969). The paid amount of 14,460.9 also increased the score.\n- from_bank (value=410) — negative contributor (SHAP -0.84028). The sending bank ID 410 reduced the model score (partial offset).\n\nConclusion:\nThe model flagged this transaction primarily because it is an ACH payment (payment_format_ach=1) of a relatively large, identical amount (amount_received and amount_paid = 14,460.9) routed to receiving bank ID 20 (to_bank=20); these features produced the largest positive SHAP contributions. The sending bank (from_bank=410) had a notable negative SHAP contribution that partially offset those increases. If ACH format plus these amount and receiving-bank characteristics are present, the model score is elevated; conversely, the presence of from_bank=410 reduced that elevation.",
+  "llm_file": "llm_trx_1942237_r1.json"
+}

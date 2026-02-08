@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is referencing a non-provided driver (dayofweek) and using incorrect feature values, which makes parts of the explanation unsupported despite clear structure."
+}

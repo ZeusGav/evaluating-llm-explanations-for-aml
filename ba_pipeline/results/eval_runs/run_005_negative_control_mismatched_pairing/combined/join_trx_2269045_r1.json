@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2269045,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2213466,
+  "shap_file": "shap_trx_2213466.json",
+  "model_proba": 0.9959732890129089,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.934264659881592,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11226.25,
+      "shap_value": 0.7621866464614868,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11226.25,
+      "shap_value": 0.6643211245536804,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6199004054069519,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 117453.0,
+      "shap_value": -0.5531288981437683,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15061186254024506,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.14797431230545044,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11594361811876297,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 29404.0,
+      "shap_value": 0.11051692813634872,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 15.0,
+      "shap_value": -0.0997602716088295,
+      "direction": "decrease"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.049, direction: increase): The model’s largest driver is that the payment was made via ACH; this feature substantially increased the transaction’s risk score.\n- amount_paid = 12498.0 (SHAP +0.659, direction: increase) and amount_received = 12498.0 (SHAP +0.643, direction: increase): The transaction amount (12,498) in both paid and received fields contributed positively to the score; the identical paid/received amounts both increased the flagging likelihood.\n- dayofweek = 6 (SHAP +0.547, direction: increase): Per the feature definition (0=Mon..6=Sun), the transaction occurred on Sunday, which increased the model score.\n- hour = 21 (SHAP -0.596, direction: decrease): The late hour (21:00) reduced the model score and partially offset other increases.\n- from_bank = 148389 (SHAP -0.543, direction: decrease): The sending bank identifier contributed to lowering the score (a negative SHAP effect).\n\nConclusion:\n- The transaction was flagged primarily because it was an ACH transfer (payment_format_ach) combined with a relatively large, identical amount in paid and received fields (amount_paid and amount_received = 12,498), and it occurred on dayofweek = 6 (Sunday); these factors increased the model risk. This increase was partially mitigated by the late hour (hour = 21) and the specific sending bank (from_bank = 148389), which decreased the score.\n- If further review is required, focus on verifying the ACH payment purpose and the relationship with the sending bank, since those features drove the model’s decision.",
+  "llm_file": "llm_trx_2269045_r1.json"
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2196157,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2196157.json",
+  "model_proba": 0.9989773035049438,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0980336666107178,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 1.0072312355041504,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15372.95,
+      "shap_value": 0.9668744206428528,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 249118.0,
+      "shap_value": -0.5232752561569214,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15372.95,
+      "shap_value": 0.3883320689201355,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.2093401849269867,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 222.0,
+      "shap_value": 0.1826399862766266,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.16525547206401825,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.14719566702842712,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.12247030436992645,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model flagged this transaction primarily because payment_format_ach (value=1; SHAP +3.098) strongly increased risk. dayofweek (value=6; SHAP +1.007) further increased the score, indicating the transaction occurred on the model’s highest-risk day. amount_received (value=15373.0; SHAP +0.967) and amount_paid (value=15373.0; SHAP +0.388) contributed additional upward pressure due to the transaction size. Conversely, from_bank (value=249118; SHAP −0.523) reduced the risk score and partially offset the increases.\n\nConclusion:\nBased solely on the cited drivers, the ACH payment (payment_format_ach=1) executed on dayofweek=6 with amount_received/amount_paid=15373.0 produced a net increase in the model’s risk score despite a mitigating from_bank effect. If model weightings reflect true risk, this transaction merits further review.",
+  "llm_file": "llm_trx_2196157_r1.json"
+}

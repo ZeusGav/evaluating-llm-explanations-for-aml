@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 0,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 1,
+  "note": "The explanation mostly discusses features not present in SHAP_JSON (Saudi riyal, USD=0, different from_bank), causing unsupported claims and poor coverage/alignment with the provided drivers."
+}

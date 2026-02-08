@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2128452,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2128452.json",
+  "model_proba": 0.9966801404953003,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0573890209198,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8801000714302063,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.7917742729187012,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 119.0,
+      "shap_value": -0.568106472492218,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 4.0,
+      "shap_value": -0.5526627898216248,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.27887779474258423,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.26463526487350464,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1616513878107071,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.13906872272491455,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.10443633049726486,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model’s largest positive contributor is payment_format_ach (value=1) — SHAP +3.06 — indicating ACH format strongly increased the score. Additional increasing drivers were dayofweek (value=6, i.e., Sunday) — SHAP +0.88 — and payment_currency_saudi_riyal (value=1) — SHAP +0.79. receiving_currency_saudi_riyal (value=1) also modestly increased the score (SHAP +0.28). Partially offsetting these were from_bank (value=119) — SHAP −0.57 — and hour (value=4) — SHAP −0.55, which decreased the score.\n\nConclusion: The alert is primarily driven by an ACH payment (payment_format_ach=1) occurring on dayofweek=6 and involving Saudi riyal as payment and receiving currency. These factors collectively raised the model score despite mitigating contributions from from_bank=119 and hour=4. If ACH activity in SAR on dayofweek=6 is atypical for this customer or channel, further review is warranted.",
+  "llm_file": "llm_trx_2128452_r1.json"
+}

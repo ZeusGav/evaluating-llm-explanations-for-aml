@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4296465,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_4296465.json",
+  "model_proba": 0.9965922236442566,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8968706130981445,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.7811666131019592,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 50528.0,
+      "shap_value": -0.6223302483558655,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6144785284996033,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 148350.0,
+      "shap_value": -0.4825364053249359,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.34273838996887207,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.2974454462528229,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 66793.17,
+      "shap_value": 0.2848365604877472,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.23033112287521362,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14751191437244415,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flag is primarily driven by the payment method and currency: payment_format_ach = 1 (SHAP +2.89687, direction: increase) and payment_currency_saudi_riyal = 1 (SHAP +0.78117, direction: increase). These strongly raise the score. A weekend execution (dayofweek = 6; SHAP +0.61448, increase) further increases the signal. Two bank identifiers partially offset risk: from_bank = 50528 (SHAP -0.62233, decrease) and to_bank = 148350 (SHAP -0.48254, decrease), which reduce the overall contribution.\n\nConclusion: Net effect is elevated risk driven mainly by ACH format (payment_format_ach), Saudi riyal currency (payment_currency_saudi_riyal), and Sunday timing (dayofweek). The sending and receiving bank features (from_bank, to_bank) mitigate but do not fully counterbalance those increases. If one assumes the relative SHAP magnitudes reflect importance, the ACH + SAR + weekend combination explains why the transaction was flagged.",
+  "llm_file": "llm_trx_4296465_r1.json"
+}

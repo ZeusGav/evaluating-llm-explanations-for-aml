@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3138684,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_3138684.json",
+  "model_proba": 0.9962700605392456,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8189642429351807,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10066.54,
+      "shap_value": 1.001551866531372,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10066.54,
+      "shap_value": 0.7697842717170715,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 218897.0,
+      "shap_value": -0.27616727352142334,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 27288.0,
+      "shap_value": -0.21695438027381897,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 18.0,
+      "shap_value": 0.167972594499588,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.144307941198349,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": 0.11258720606565475,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.1049971878528595,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1035461276769638,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) has the strongest positive contribution (SHAP_value=2.81896, direction=increase). This indicates the ACH payment method is a primary driver elevating the risk signal.\n- amount_received (value=10066.5) contributes with SHAP_value=1.00155 (direction=increase), meaning the sizable incoming amount is a notable risk factor in this flag.\n- amount_paid (value=10066.5) contributes with SHAP_value=0.769784 (direction=increase), so the substantial outgoing amount also increases the risk signal.\n\nConclusion:\nThe flag appears to be driven primarily by the ACH payment format and large transfer amounts (both received and paid). These top drivers together suggest elevated risk associated with ACH payments of substantial value. Minor drivers like from_bank and to_bank have smaller, negative contributions (slightly reducing risk), but they do not offset the strong signals from payment_format_ach and the large amount values. Based on these drivers alone, this warrants escalation for manual review, with attention to corroborating transaction context.",
+  "llm_file": "llm_trx_3138684_r1.json"
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is unsupported/mismatched drivers (mentions amount_received and from_bank, and misstates amount_paid equality) which also causes a direction mismatch vs the provided SHAP.",
+  "transaction_id": 2229722,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 158,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

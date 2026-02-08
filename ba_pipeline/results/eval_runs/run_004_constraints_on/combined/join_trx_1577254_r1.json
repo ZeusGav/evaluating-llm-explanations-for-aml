@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1577254,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_1577254.json",
+  "model_proba": 0.9975314140319824,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9222829341888428,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13305.86,
+      "shap_value": 0.9019328951835632,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13305.86,
+      "shap_value": 0.7015852928161621,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7002566456794739,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 15723.0,
+      "shap_value": -0.28026890754699707,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.15064465999603271,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12928758561611176,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 11.0,
+      "shap_value": 0.11362779140472412,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09415484964847565,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.06703060865402222,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (value=1; SHAP +2.92228, direction=increase), combined with large transaction amounts amount_received (13305.9; SHAP +0.901933, increase) and amount_paid (13305.9; SHAP +0.701585, increase). The dayofweek (6, i.e., Sunday; SHAP +0.700257, increase) further raised the score. These four features contributed the largest positive SHAP effects and collectively pushed the alert above threshold.\n\nConclusion:\nThis alert appears to result mainly from an ACH transaction (payment_format_ach) involving identical sizable pay/receive amounts (amount_received and amount_paid = 13305.9) occurring on dayofweek=6. Note that other features (e.g., to_bank and payment_currency_us_dollar) had modest negative SHAP contributions and partially offset the increase. If pursuing review, prioritize verifying ACH routing and the business rationale for the amount and timing.",
+  "llm_file": "llm_trx_1577254_r1.json"
+}

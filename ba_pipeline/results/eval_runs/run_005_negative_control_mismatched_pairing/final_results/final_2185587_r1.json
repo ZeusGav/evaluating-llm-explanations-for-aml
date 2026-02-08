@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The narrative invents/uses multiple drivers (amount_received, dayofweek, to_bank) and SHAP values not present in SHAP_JSON, including a direction mismatch on amount_paid.",
+  "transaction_id": 2185587,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 162,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

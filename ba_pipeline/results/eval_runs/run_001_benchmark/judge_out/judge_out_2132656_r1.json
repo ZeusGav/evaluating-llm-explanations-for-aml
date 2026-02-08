@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it adds an unsupported rationale about “currency consistency/matching” without citing amount_ratio/amount_diff or other drivers that evidence this as a risk factor."
+}

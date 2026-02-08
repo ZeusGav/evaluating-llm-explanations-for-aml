@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2278966,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2278966.json",
+  "model_proba": 0.9970563650131226,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.1454920768737793,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 20.0,
+      "shap_value": 1.0615934133529663,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 12.0,
+      "shap_value": -1.0200949907302856,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14148.02,
+      "shap_value": 0.905171275138855,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14148.02,
+      "shap_value": 0.6147497296333313,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14562612771987915,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.13452717661857605,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11296595633029938,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.0790926143527031,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": -0.06621819734573364,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 increased the model score (feature: payment_format_ach; SHAP +3.14549) — the ACH payment format was the single largest upward contributor.\n- to_bank = 20 increased the score (feature: to_bank; SHAP +1.06159) — the receiving bank raised the model output.\n- from_bank = 12 decreased the score (feature: from_bank; SHAP −1.02009) — the sending bank partially offset risk.\n- amount_received = 14148.0 (feature: amount_received; SHAP +0.905171) and amount_paid = 14148.0 (feature: amount_paid; SHAP +0.61475) both increased the score — the model raised risk given these specific amounts (note the values are equal).\n\nConclusion:\n- The flag was driven primarily by the ACH payment format (payment_format_ach) and the receiving bank (to_bank), with supporting positive contributions from the transaction amounts (amount_received and amount_paid). The sending bank (from_bank) reduced the score but did not fully offset the increases. \n- (Hedged) If the model treats ACH payments and these magnitude-level amounts as higher-risk signals, then their combination explains why this transaction was flagged.",
+  "llm_file": "llm_trx_2278966_r1.json"
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and high driver coverage; utility is slightly limited because smaller drivers (to_bank/hour/currency/payment-format zeros) are not discussed."
+}

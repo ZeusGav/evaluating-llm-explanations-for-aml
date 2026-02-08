@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4421689,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_4421689.json",
+  "model_proba": 0.9991680383682251,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0263831615448,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 12249.73,
+      "shap_value": 0.8399993181228638,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 12249.73,
+      "shap_value": 0.7673541307449341,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1490.0,
+      "shap_value": 0.49708616733551025,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.4797377586364746,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.38179728388786316,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 10.0,
+      "shap_value": -0.22749283909797668,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.16317187249660492,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.12435197085142136,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1143561452627182,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why\n- The strongest contributor is payment_format_ach (value=1) with SHAP=3.02638, direction: increase. This indicates the ACH payment format is a primary factor driving the flag.\n- Large positive contributions from amount_paid (12249.7, SHAP=0.84) and amount_received (12249.7, SHAP=0.767). The notable transfer size in both the payer and recipient sides is contributing to the risk signal.\n- to_bank (value=1490, SHAP=0.497, direction increase) adds to the risk signal by indicating a specific receiving bank is involved.\n- payment_currency_euro is active (value=1, SHAP=0.4797, direction increase), meaning the transaction is euro-denominated while the primary payment format is ACH. This currency pattern is a notable driver in this flag.\n- Other currency-related drivers with smaller SHAP values (e.g., payment_currency_us_dollar=0, SHAP=0.381797; receiving_currency_us_dollar=0, SHAP=0.163172) are present but contribute less to the overall risk signal.\n- The hour driver has a negative SHAP (-0.227493), suggesting the time of day slightly reduces risk, but this effect is smaller than the top drivers and does not negate the primary risk signal.\n\nConclusion\n- Based on the provided drivers, the transaction is flagged primarily due to the ACH payment format combined with a euro-denominated transfer of a substantial amount to a specific bank, which together contribute the strongest risk signal. The relative symmetry in amount_paid and amount_received reinforces the model’s concern, with the euro currency indicator strengthening the driver set. The time of day slightly mitigates risk, but not sufficiently to overturn the overall signal.\n- Therefore, this transaction warrants manual review for AML purposes to verify legitimate origin and destination, assess the counterparties and beneficiary details, and confirm the business justification for euro-denominated ACH activity.",
+  "llm_file": "llm_trx_4421689_r1.json"
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Covers all provided drivers with correct SHAP directions and a clear, investigation-oriented summary without adding unsupported facts.",
+  "transaction_id": 4941711,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 156,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

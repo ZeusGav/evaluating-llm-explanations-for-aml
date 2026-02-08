@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it cites and relies on drivers/values not present in SHAP_JSON (amount_paid, and mismatched amounts/bank IDs/SHAP magnitudes), making parts of the explanation unsupported."
+}

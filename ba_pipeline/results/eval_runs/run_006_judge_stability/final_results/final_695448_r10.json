@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately ties the main SHAP drivers to the conclusion with correct directions, but omits several smaller drivers (hour/to_bank/currency/credit_card) that could add context.",
+  "transaction_id": 695448,
+  "repeat": 10,
+  "run_name": "run_006_judge_stability",
+  "word_count": 182,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

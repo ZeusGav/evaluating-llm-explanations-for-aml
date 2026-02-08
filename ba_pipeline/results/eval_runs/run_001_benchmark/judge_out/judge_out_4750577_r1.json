@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, well-structured explanation with correct directions and strong coverage of the dominant SHAP drivers, but it omits smaller listed drivers (e.g., to_bank, hour, and currency/payment-format zeros)."
+}

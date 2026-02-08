@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2246762,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2246762.json",
+  "model_proba": 0.9962131977081299,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.977628469467163,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 7257.05,
+      "shap_value": 0.9935322403907776,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8026426434516907,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -0.40510308742523193,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.33797869086265564,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 23691.0,
+      "shap_value": -0.3167397379875183,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1770593225955963,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.15908406674861908,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 7257.05,
+      "shap_value": 0.11004917323589325,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.0889413058757782,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) produced the largest positive contribution (SHAP=+2.97763, direction=increase), so the model’s strongest driver for flagging is that the payment was sent as ACH.\n- amount_paid (value=7257.05) contributed positively (SHAP=+0.993532, direction=increase), indicating the payment size increased the flag score.\n- dayofweek (value=6 — Sunday) contributed positively (SHAP=+0.802643, direction=increase), so the transaction occurring on day 6 raised the score.\n- to_bank (value=12) had a smaller positive effect (SHAP=+0.337979, direction=increase), meaning the receiving bank ID modestly increased the score.\n- hour (value=19) had a negative contribution (SHAP=–0.405103, direction=decrease), and from_bank (value=23691) also lowered the score (SHAP=–0.31674, direction=decrease); these partially offset the positive drivers but did not outweigh them.\n\nConclusion:\n- The model flagged the transaction primarily because it was an ACH payment (payment_format_ach=1) of 7,257.05 (amount_paid) occurring on day 6 (Sunday), with an additional positive contribution from to_bank=12. Although hour=19 and from_bank=23691 reduced the score, the net SHAP contributions remain positive, producing the alert.\n- If prioritizing review steps, focus first on the payment method (payment_format_ach=1), the payment amount (amount_paid=7257.05), the day of week (dayofweek=6), and the receiving bank (to_bank=12), since these are the strongest model drivers.",
+  "llm_file": "llm_trx_2246762_r1.json"
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 2,
+  "note": "The explanation introduces a major unsupported driver (to_bank) and multiple incorrect SHAP/value attributions, causing direction and factual alignment failures."
+}

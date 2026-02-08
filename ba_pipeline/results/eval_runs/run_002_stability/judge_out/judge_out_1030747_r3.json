@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strongly aligned to the main SHAP drivers with clear directions, but it omits several smaller listed drivers (e.g., to_bank and receiving-currency indicators)."
+}

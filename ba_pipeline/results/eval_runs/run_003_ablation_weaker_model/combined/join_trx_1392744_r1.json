@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1392744,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_1392744.json",
+  "model_proba": 0.9960130453109741,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.878791093826294,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6218125224113464,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.6062032580375671,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 119.0,
+      "shap_value": -0.4287448823451996,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 49365.0,
+      "shap_value": -0.3049345314502716,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 31783.03,
+      "shap_value": 0.2954976558685303,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.2686663568019867,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.16876398026943207,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1660454124212265,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15633831918239594,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (feature: payment_format_ach) has the largest positive SHAP contribution (2.87879) with direction \"increase,\" indicating that the use of ACH as the payment method is the strongest factor pushing the transaction toward a flag.\n- dayofweek (feature: dayofweek) contributes positively (SHAP 0.621813, direction increase) with value 6 (Sunday), suggesting weekend timing is elevating the risk signal.\n- payment_currency_saudi_riyal (feature: payment_currency_saudi_riyal) contributes positively (SHAP 0.606203, direction increase), indicating involvement of Saudi Riyal as the payment currency increases risk.\n- from_bank (feature: from_bank) contributes negatively (SHAP -0.428745, direction decrease), which reduces the risk signal from the banks involved.\n- to_bank (feature: to_bank) contributes negatively (SHAP -0.304935, direction decrease), similarly reducing the risk signal associated with the receiving bank.\n\nConclusion:\nBased on the top drivers, the flag is primarily driven by ACH as the payment method, weekend timing, and Saudi Riyal currency involvement, with notable but opposing signals from the sending and receiving banks reducing the overall risk signal. The positive drivers collectively outweigh the negative bank-related drivers, supporting the flag for review. Potentially helpful follow-up: verify transaction intent and counterparties given the ACH format and Saudi Riyal/Currency setup, while noting the bank signals mitigate some risk.",
+  "llm_file": "llm_trx_1392744_r1.json"
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1566107,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_1566107.json",
+  "model_proba": 0.9958776235580444,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.734300136566162,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16269.7,
+      "shap_value": 0.9757144451141357,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16269.7,
+      "shap_value": 0.9126797318458557,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 4.0,
+      "shap_value": -0.45828962326049805,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 10.0,
+      "shap_value": 0.4243406355381012,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 23833.0,
+      "shap_value": -0.28619804978370667,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 14.0,
+      "shap_value": 0.16330327093601227,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.1566728949546814,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12483295798301697,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11453524231910706,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (feature: payment_format_ach) – value 1; SHAP value 2.7343; direction increase. This feature is the dominant contributor, indicating the use of ACH as the payment method increases the flag likelihood.\n- amount_paid (feature: amount_paid) – value 16269.7; SHAP value 0.975714; direction increase. A large amount paid contributes to the risk signal.\n- amount_received (feature: amount_received) – value 16269.7; SHAP value 0.91268; direction increase. The same large amount received further increases the risk signal.\n\nConclusion:\n- Based on the top contributing drivers, the flag is principally driven by the ACH payment format combined with a large, mirrored payment amount (both amount_paid and amount_received). This pattern—ACH usage with a substantial, equalized transfer—drives the model’s risk signal. A hedged interpretation could be that if this pattern aligns with typical customer behavior for ACH transfers, it might be legitimate; however, given the strong positive contributions from the listed drivers, a targeted manual review is warranted to confirm intent and counterparties.",
+  "llm_file": "llm_trx_1566107_r1.json"
+}

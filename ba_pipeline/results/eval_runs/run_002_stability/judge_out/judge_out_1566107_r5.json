@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it asserts “dayofweek=4 — Friday,” which is unsupported because 4 maps to Friday only under an unstated convention (fact sheet defines only 0=Mon..6=Sun)."
+}

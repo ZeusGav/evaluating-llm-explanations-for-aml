@@ -1,0 +1,72 @@
+{
+  "transaction_id": 4737310,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 1970067,
+  "shap_file": "shap_trx_1970067.json",
+  "model_proba": 0.9972822666168213,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9191606044769287,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13573.33,
+      "shap_value": 1.1527025699615479,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13573.33,
+      "shap_value": 0.8272976875305176,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.41900426149368286,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 8623.0,
+      "shap_value": -0.39904606342315674,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.12099749594926834,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.10885109752416611,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10647939145565033,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.08087611943483353,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yen",
+      "value": 0.0,
+      "shap_value": 0.05757210776209831,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 increased the score substantially (SHAP 2.76488, direction: increase) — the model strongly associates the ACH payment format (feature: payment_format_ach) with flagging.\n- amount_paid = 9099.08 (SHAP 0.684259, increase) and amount_received = 9099.08 (SHAP 0.671048, increase) — the equal, relatively large payment and receipt amounts (features: amount_paid, amount_received) both increased the model score.\n- from_bank = 231212 (SHAP 0.433064, increase) — the sending bank identifier (feature: from_bank) contributed positively to the flag.\n- dayofweek = 5 (SHAP 0.396962, increase) — the transaction occurred on day index 5 (feature: dayofweek), which the model treats as increasing risk.\n- payment_currency_euro = 1 (SHAP 0.15656, increase) — the payment being in euros (feature: payment_currency_euro) modestly increased the score.\n\nConclusion:\nThe transaction was flagged primarily because it is an ACH transfer (payment_format_ach) in euros (payment_currency_euro) for a matching amount paid/received of 9,099.08 (amount_paid, amount_received) originating from from_bank 231212 and occurring on dayofweek 5 — each of these features increased the model score. If prioritizing review, focus on verifying the ACH payment details, the origin bank (from_bank), and the justification for the equal amounts in this euro-denominated transfer occurring on day index 5.",
+  "llm_file": "llm_trx_4737310_r1.json"
+}

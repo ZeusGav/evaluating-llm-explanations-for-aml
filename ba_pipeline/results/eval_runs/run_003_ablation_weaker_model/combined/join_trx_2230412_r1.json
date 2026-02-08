@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2230412,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2230412.json",
+  "model_proba": 0.9968562126159668,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.850907802581787,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 9301.71,
+      "shap_value": 0.785189688205719,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6450406908988953,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 9301.71,
+      "shap_value": 0.6216855645179749,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.2543656527996063,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1335388571023941,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 17.0,
+      "shap_value": 0.10077041387557983,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.07638803124427795,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_ratio",
+      "value": 0.9999999998924928,
+      "shap_value": -0.052330851554870605,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 15231.0,
+      "shap_value": -0.04767701029777527,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why (core explanation grounded in the drivers and their directions)\n- payment_format_ach: value=1, shap_value=2.85091, direction=increase. The transaction uses ACH as the payment format, which the model assigns a strong positive contribution to risk.\n- amount_paid: amount=9301.71, shap_value=0.78519, direction=increase. A relatively high amount paid contributes to the flag.\n- dayofweek: value=6, shap_value=0.645041, direction=increase. The transaction occurs on day 6 (Sunday), contributing to risk.\n- amount_received: amount=9301.71, shap_value=0.621686, direction=increase. The receiving amount matches the paid amount and also drives risk signals.\n- (Contextual, moderating factors) receiving_currency_euro: value=1, shap_value=-0.254366, direction=decrease. Receiving in euros slightly lowers the risk signal.\n- (Additional, smaller contributors) hour: value=17, shap_value=0.10077, direction=increase; payment_format_credit_card: value=0, shap_value=0.133539, direction=increase; amount_ratio: value=1.0, shap_value=-0.0523309, direction=decrease; to_bank: value=15231, shap_value=-0.047677, direction=decrease. These provide minor context but are less influential compared to the top four drivers above.\n\nConclusion\n- The model flags this transaction primarily due to payment_format_ach (ACH), the high amount_paid and amount_received, and the Sunday timing (dayofweek=6), with these four drivers showing the strongest positive contributions. The euro receiving indicator (receiving_currency_euro) and the large to_bank value provide mild mitigations. Overall, the pattern indicates elevated risk according to the listed drivers, but does not establish illicit activity on its own; this should be routed for human AML review with the above drivers in mind.",
+  "llm_file": "llm_trx_2230412_r1.json"
+}

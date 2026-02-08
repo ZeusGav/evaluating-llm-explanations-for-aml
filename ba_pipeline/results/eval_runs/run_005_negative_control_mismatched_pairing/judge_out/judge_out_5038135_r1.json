@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 2,
+  "note": "The explanation introduces multiple non-existent SHAP drivers (Saudi Riyal features/values) and also conflicts with the provided SHAP for payment_currency_us_dollar, making key claims unsupported and directionally inconsistent."
+}

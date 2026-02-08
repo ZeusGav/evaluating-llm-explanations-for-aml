@@ -1,0 +1,71 @@
+{
+  "transaction_id": 5018226,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_5018226.json",
+  "model_proba": 0.9973401427268982,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.82993745803833,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17462.31,
+      "shap_value": 1.2830201387405396,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17462.31,
+      "shap_value": 0.6187801957130432,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12979.0,
+      "shap_value": -0.18900567293167114,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.17161493003368378,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 0.0,
+      "shap_value": 0.1310025453567505,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10416458547115326,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 235509.0,
+      "shap_value": 0.08228650689125061,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06299548596143723,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 17.0,
+      "shap_value": 0.0613396130502224,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model signal is driven primarily by payment_format_ach = 1 (strongly increases score), combined with large transaction values: amount_received = 17462.3 (increases) and amount_paid = 17462.3 (increases). These three features together produced the largest positive SHAP contributions and explain why the probability of a flag rose.\n\nConclusion: The alert is principally due to an ACH payment (payment_format_ach) of about 17,462.3 in the transaction currency (amount_received / amount_paid). Given these drivers, the transaction merits manual review focused on the ACH movement and the high amount; note that payment_currency_us_dollar = 1 had a small decreasing effect but did not offset the ACH and amount drivers.",
+  "llm_file": "llm_trx_5018226_r1.json"
+}

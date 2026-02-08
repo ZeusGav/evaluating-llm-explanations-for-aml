@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Well-structured and directionally consistent, but it adds unsupported policy/context claims (e.g., “Sunday,” “relatively large,” and “ACH high-risk policy”) and omits several non-trivial drivers like to_bank and currency features."
+}

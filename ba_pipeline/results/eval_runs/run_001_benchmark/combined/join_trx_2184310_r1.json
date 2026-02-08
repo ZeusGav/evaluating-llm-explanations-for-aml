@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2184310,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2184310.json",
+  "model_proba": 0.9968812465667725,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8985300064086914,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15756.01,
+      "shap_value": 0.9146668910980225,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15756.01,
+      "shap_value": 0.6902109384536743,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 4.0,
+      "shap_value": -0.3005788028240204,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15280315279960632,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.1129467561841011,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 238845.0,
+      "shap_value": 0.0860937088727951,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 19535.0,
+      "shap_value": 0.08607161790132523,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_swiss_franc",
+      "value": 0.0,
+      "shap_value": 0.08600982278585434,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_swiss_franc",
+      "value": 0.0,
+      "shap_value": 0.07926186174154282,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (payment_format_ach) was the dominant contributor, increasing the model score substantially (+2.90 SHAP), i.e., an ACH payment format strongly drove the flag.\n- amount_received = 15,756 (amount_received) increased the score (+0.91 SHAP); amount_paid = 15,756 (amount_paid) also increased the score (+0.69 SHAP). Both equal high-value amounts contributed positively to the flag.\n- hour = 4 (hour) had a small negative effect (-0.30 SHAP), slightly reducing the model score but not offsetting the above increases.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach = 1) combined with relatively large and identical payment and receipt amounts (amount_received = 15,756 and amount_paid = 15,756), which together raised the model score; the early-hour timestamp (hour = 4) marginally lowered the score. If one is assessing priority, the ACH payment format and the two high/identical amount features are the most relevant drivers to investigate further.",
+  "llm_file": "llm_trx_2184310_r1.json"
+}

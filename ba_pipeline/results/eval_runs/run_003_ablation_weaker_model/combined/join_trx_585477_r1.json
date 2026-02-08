@@ -1,0 +1,71 @@
+{
+  "transaction_id": 585477,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_585477.json",
+  "model_proba": 0.9982796907424927,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8815298080444336,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14962.84,
+      "shap_value": 0.8308278322219849,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14962.84,
+      "shap_value": 0.7600811123847961,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7407539486885071,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21174.0,
+      "shap_value": -0.29131805896759033,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1547.0,
+      "shap_value": 0.2665441632270813,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.18468846380710602,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.16968558728694916,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14943677186965942,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.06675083935260773,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1, SHAP_value=2.88153, direction: increase): Use of ACH as the payment format is the strongest driver increasing the flag risk in the model.\n- amount_received (14962.8, SHAP_value=0.830828, direction: increase): A relatively large amount received contributes to elevated risk.\n- amount_paid (14962.8, SHAP_value=0.760081, direction: increase): The identical amount paid reinforces the pattern driving risk higher.\n- dayofweek (6, SHAP_value=0.740754, direction: increase): Transaction occurring on Sunday is associated with increased risk signal.\n- from_bank (21174, SHAP_value=-0.291318, direction: decrease): Sending-bank factor reduces the model’s risk signal, partially offsetting the above drivers.\n\nConclusion:\nBased on the top drivers, the flag is driven primarily by ACH payment format and the notable match between amount received and amount paid, occurring on a Sunday, with the sending-bank factor slightly mitigating risk. Overall, the risk signal remains elevated due to the dominant ACH and amount/datetime drivers, even though the from_bank factor reduces it somewhat.",
+  "llm_file": "llm_trx_585477_r1.json"
+}

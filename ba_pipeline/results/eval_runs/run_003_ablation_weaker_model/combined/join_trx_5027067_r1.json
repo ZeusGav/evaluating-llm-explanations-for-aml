@@ -1,0 +1,71 @@
+{
+  "transaction_id": 5027067,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_5027067.json",
+  "model_proba": 0.9959233999252319,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9066195487976074,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11226.25,
+      "shap_value": 0.8279614448547363,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11226.25,
+      "shap_value": 0.7117131948471069,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 117453.0,
+      "shap_value": -0.5540661215782166,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.43206578493118286,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 29404.0,
+      "shap_value": 0.18055300414562225,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.1390361338853836,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.125226229429245,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.08867424726486206,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.054556261748075485,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach: The feature value is 1 (ACH payment) and has the highest SHAP value (2.90662) with direction \"increase.\" This indicates the ACH payment format is the strongest contributor pushing the transaction toward the flagged outcome.\n- amount_received: The amount received is 11226.2 with SHAP 0.827961 and direction \"increase.\" This positive contribution supports the flag alongside the ACH signal.\n- amount_paid: The amount paid is also 11226.2 with SHAP 0.711713 and direction \"increase.\" This reinforces the risk signal in conjunction with amount_received.\n- from_bank: The sending bank ID value is 117453 and SHAP -0.554066 with direction \"decrease.\" This factor reduces the model’s likelihood of flagging (i.e., it dampens the signal), but it does not fully negate the strongest ACH and amount-based contributions.\n\nConclusion:\n- The flag appears primarily driven by the presence of an ACH payment format with strong positive contributions, complemented by equal/paired transfer amounts (amount_received and amount_paid) that also push risk upward. The sending-bank factor slightly mitigates the signal, but the dominant drivers (payment_format_ach, amount_received, amount_paid) remain supportive of the flagged status. If additional context indicates legitimate ACH usage with this transfer pattern, that context could further offset the risk signal, but such impact is not present in the named drivers.",
+  "llm_file": "llm_trx_5027067_r1.json"
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately ties the main SHAP drivers to the flag with correct directions and good structure, but investigatory guidance remains somewhat generic given no additional context beyond model drivers.",
+  "transaction_id": 1566107,
+  "repeat": 7,
+  "run_name": "run_002_stability",
+  "word_count": 184,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

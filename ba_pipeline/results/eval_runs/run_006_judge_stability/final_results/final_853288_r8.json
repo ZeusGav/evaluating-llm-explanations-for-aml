@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately reflects the main SHAP drivers and directions with clear structure, but provides limited investigative context beyond restating model contributions.",
+  "transaction_id": 853288,
+  "repeat": 8,
+  "run_name": "run_006_judge_stability",
+  "word_count": 155,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

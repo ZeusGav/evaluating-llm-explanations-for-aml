@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strongly aligned to the SHAP drivers with clear structure, but it omits several smaller contributors (e.g., from_bank, hour, and the non-credit-card/cheque indicators) that could add investigative context.",
+  "transaction_id": 1566107,
+  "repeat": 6,
+  "run_name": "run_002_stability",
+  "word_count": 175,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

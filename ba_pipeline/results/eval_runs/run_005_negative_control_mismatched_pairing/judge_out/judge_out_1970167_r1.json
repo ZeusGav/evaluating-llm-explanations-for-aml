@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is direction errors and extra factual assertions (e.g., to_bank said to increase though SHAP shows decrease, plus incorrect day-of-week mapping and invented amount_ratio/value details)."
+}

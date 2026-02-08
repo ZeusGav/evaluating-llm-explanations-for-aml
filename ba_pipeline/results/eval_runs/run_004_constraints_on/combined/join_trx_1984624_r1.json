@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1984624,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_1984624.json",
+  "model_proba": 0.9977466464042664,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.945861339569092,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 19753.45,
+      "shap_value": 0.8061840534210205,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6857200860977173,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.4588778018951416,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 118.0,
+      "shap_value": -0.45185112953186035,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 19753.45,
+      "shap_value": 0.35909348726272583,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 48308.0,
+      "shap_value": -0.23512573540210724,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.16106726229190826,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1592380553483963,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.14777927100658417,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flagged this transaction primarily because payment_format_ach (value=1) strongly increased the score (SHAP +2.94586). Larger transaction size—amount_received (19753.5) —also increased the score (SHAP +0.806184). The payment occurred on dayofweek (6 = Sunday), which raised the score (SHAP +0.68572), and the payment_currency_saudi_riyal (value=1) further increased risk (SHAP +0.458878). Partially offsetting these was from_bank (118) which decreased the score (SHAP −0.451851).\n\nConclusion: The model’s rationale is that an ACH payment (payment_format_ach=1) in Saudi Riyals of ~19,753.5 on day 6 drove the alert, with the sending bank (from_bank=118) reducing but not eliminating the signal. If ACH payments of this currency/amount on day 6 are atypical for this profile, further manual review is warranted.",
+  "llm_file": "llm_trx_1984624_r1.json"
+}

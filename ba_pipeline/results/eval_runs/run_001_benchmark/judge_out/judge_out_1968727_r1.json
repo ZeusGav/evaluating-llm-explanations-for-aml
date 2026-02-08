@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it asserts dayofweek=5 is Saturday, but the fact sheet defines 0=Mon..6=Sun so 5 corresponds to Saturday only if 6=Sunday (it does) — actually 5=Saturday is supported; instead the only unsupported claim is the conditional statement about additive SHAP aggregation not being evidenced by the provided drivers."
+}

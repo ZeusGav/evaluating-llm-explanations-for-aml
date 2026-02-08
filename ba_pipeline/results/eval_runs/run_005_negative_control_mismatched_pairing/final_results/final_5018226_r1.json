@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and well-structured, but it omits several smaller SHAP drivers and gives limited AML-specific interpretive context beyond “large amounts + ACH.”",
+  "transaction_id": 5018226,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 143,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2213466,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2645779,
+  "shap_file": "shap_trx_2645779.json",
+  "model_proba": 0.9968369007110596,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.948659896850586,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13218.75,
+      "shap_value": 0.8527507781982422,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13218.75,
+      "shap_value": 0.8304260969161987,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 4259.0,
+      "shap_value": -0.7677465677261353,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 20.0,
+      "shap_value": 0.7041458487510681,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15325142443180084,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.14244875311851501,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11343315988779068,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.07206782698631287,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.06138511747121811,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach: The model shows a strong positive contribution (SHAP 2.93426, direction=increase) for payment_format_ach = 1, indicating the ACH payment method is the primary driver of the flag.\n- amount_received and amount_paid: Both amount_received = 11226.2 (SHAP 0.762187, increase) and amount_paid = 11226.2 (SHAP 0.664321, increase) contributed positively, so the transaction magnitude is a secondary driver increasing the score.\n- dayofweek: dayofweek = 6 (SHAP 0.6199, increase) also increases the score, so occurrence on day 6 (Sunday) contributed to the flag.\n- from_bank: from_bank = 117453 (SHAP -0.553129, direction=decrease) partially offsets the above drivers, i.e., this sending-bank feature reduced the model score.\n\nConclusion:\nThe transaction was flagged primarily because it is an ACH payment (payment_format_ach) with relatively large mirrored amounts (amount_received and amount_paid ≈ 11,226.2) and it occurred on dayofweek = 6, all of which increased the model score; the sending bank (from_bank) provided a moderating (decreasing) effect. Conditionally, if ACH method and the reported amounts remain as shown, the model’s high contribution from payment_format_ach combined with the amount features explains the alert.",
+  "llm_file": "llm_trx_2213466_r1.json"
+}

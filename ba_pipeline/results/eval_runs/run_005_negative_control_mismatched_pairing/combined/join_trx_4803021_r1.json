@@ -1,0 +1,72 @@
+{
+  "transaction_id": 4803021,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 5038135,
+  "shap_file": "shap_trx_5038135.json",
+  "model_proba": 0.9972099661827087,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8771677017211914,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.6389123201370239,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 60777.8,
+      "shap_value": 0.6068843603134155,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 150240.0,
+      "shap_value": -0.49246644973754883,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.31724855303764343,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 60777.8,
+      "shap_value": 0.29713600873947144,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.28906041383743286,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 48309.0,
+      "shap_value": -0.17301695048809052,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.13811077177524567,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13772061467170715,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.92227, direction: increase) — the ACH payment format is the dominant positive driver and substantially raised the model score.\n- amount_received = 14222.2 (SHAP +1.05686, direction: increase) — the relatively large received amount materially increased the score.\n- amount_paid = 14222.2 (SHAP +0.693091, direction: increase) — the paid amount (same value) further increased the score.\n- dayofweek = 6 (SHAP +0.592461, direction: increase) — the transaction occurring on day 6 (Sunday) contributed additional upward pressure on the score.\n- from_bank = 225215 (SHAP -0.371229, direction: decrease) — this sending-bank feature modestly reduced the score (a mitigating factor).\n\nConclusion:\nThe transaction was flagged mainly because it is an ACH transfer (payment_format_ach) with relatively large matching amounts (amount_received and amount_paid = 14222.2) that occurred on dayofweek = 6, producing the largest SHAP contributions. The sending bank (from_bank = 225215) modestly offset the risk signal but did not outweigh the positive contributors. Recommended review focus: ACH payment context and the rationale for the large, equal payment/receipt on day 6. (All statements above are derived only from the named driver features.)",
+  "llm_file": "llm_trx_4803021_r1.json"
+}

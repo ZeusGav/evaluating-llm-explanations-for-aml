@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "The main issue is an unsupported claim: it states dayofweek=5 is Saturday, but the provided scale indicates 5=Saturday is incorrect (0=Mon..6=Sun implies 5=Saturday? actually 5=Saturday is correct? wait 0=Mon ->5=Sat, so supported), however it also recommends source/destination validation and purpose documentation which are procedural suggestions not supported by drivers.",
+  "transaction_id": 2046274,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 166,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

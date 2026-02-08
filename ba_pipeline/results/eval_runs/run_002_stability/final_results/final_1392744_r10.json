@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately aligns directions and covers most SHAP weight, but provides limited AML interpretive context beyond restating model drivers.",
+  "transaction_id": 1392744,
+  "repeat": 10,
+  "run_name": "run_002_stability",
+  "word_count": 157,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1854500,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_1854500.json",
+  "model_proba": 0.9981770515441895,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8415958881378174,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17498.02,
+      "shap_value": 1.0210603475570679,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17498.02,
+      "shap_value": 0.650169312953949,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.45820868015289307,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.14389868080615997,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 19329.0,
+      "shap_value": 0.14018888771533966,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.13886097073554993,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13305845856666565,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.10300321877002716,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06672387570142746,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.8416): the payment being ACH was the single largest positive driver of the flag.\n- amount_received = 17498.0 (SHAP +1.02106): the received amount materially increased the score.\n- amount_paid = 17498.0 (SHAP +0.650169): the paid amount, equal to amount_received, further increased the score.\n- to_bank = 12 (SHAP +0.458209): routing to receiving bank ID 12 contributed to the increase.\n\nConclusion:\n- The model flagged this transaction primarily because it is an ACH transfer (payment_format_ach) combined with identical amount_paid and amount_received (17,498.0) and routing to to_bank = 12, which together raised the alert score. \n- If one accepts the model signals, the ACH method plus matching paid/received amounts appears to be the key pattern driving the alert.",
+  "llm_file": "llm_trx_1854500_r1.json"
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, well-structured explanation that aligns with SHAP directions and covers most driver weight, but it omits several smaller drivers (e.g., from_bank, hour, currencies) that could add nuance.",
+  "transaction_id": 2190632,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 171,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

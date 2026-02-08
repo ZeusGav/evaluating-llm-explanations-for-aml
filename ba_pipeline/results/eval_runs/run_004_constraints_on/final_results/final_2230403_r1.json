@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Covers the dominant SHAP drivers with correct directions and clear structure, but omits several smaller contributors (e.g., to_bank, currency, credit_card/cash, hour) that could add investigative context.",
+  "transaction_id": 2230403,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 136,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

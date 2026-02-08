@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Strong coverage of the highest-impact drivers with correctly aligned directions and no extra facts beyond what the SHAP features support.",
+  "transaction_id": 3640921,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 197,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

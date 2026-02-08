@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Biggest issue: it claims the paid/received amounts are “equal,” which is not supported by any provided driver (no amount_ratio/amount_diff)."
+}

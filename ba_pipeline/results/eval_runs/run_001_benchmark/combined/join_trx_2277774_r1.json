@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2277774,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2277774.json",
+  "model_proba": 0.9968398809432983,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.765446901321411,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 19693.8,
+      "shap_value": 1.2086377143859863,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 19693.8,
+      "shap_value": 0.6680705547332764,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.600432276725769,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 23.0,
+      "shap_value": -0.5170638561248779,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 111443.0,
+      "shap_value": -0.34961509704589844,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14613288640975952,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.14379280805587769,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.09883754700422287,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": 0.08825113624334335,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant driver, increasing the model score by SHAP=+2.76545 — the model raised risk because this is an ACH payment.\n- amount_received (19693.8) increased the score by SHAP=+1.20864 — the relatively large received amount contributed to the flag.\n- amount_paid (19693.8) also increased the score by SHAP=+0.66807 — the paid amount reinforced the effect of the large transaction.\n- dayofweek (6) increased the score by SHAP=+0.60043 — the transaction occurring on day 6 (Sunday) further raised the score.\n- hour (23) decreased the score by SHAP=-0.51706 — the late hour partially offset the above increases.\n\nConclusion:\n- The model flagged this transaction primarily because it is an ACH transfer (payment_format_ach=1) involving a relatively large amount (amount_received and amount_paid = 19,693.8) and occurring on dayofweek=6; these features together raised the risk score, with hour=23 providing a modest downward effect.\n- If investigating, prioritize verification related to the ACH payment and the large, weekend-timed amount (these are the features driving the flag).",
+  "llm_file": "llm_trx_2277774_r1.json"
+}

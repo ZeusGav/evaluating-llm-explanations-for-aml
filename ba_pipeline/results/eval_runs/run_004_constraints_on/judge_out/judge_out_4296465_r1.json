@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and directionally correct, but it omits several smaller provided drivers (e.g., receiving_currency_saudi_riyal, payment_currency_us_dollar=0, amount_received) which limits coverage."
+}

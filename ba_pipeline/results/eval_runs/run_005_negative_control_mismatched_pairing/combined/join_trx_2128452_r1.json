@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2128452,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 1685587,
+  "shap_file": "shap_trx_1685587.json",
+  "model_proba": 0.9958742260932922,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9805681705474854,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.5742946267127991,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 49365.0,
+      "shap_value": -0.47449028491973877,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 28639.76,
+      "shap_value": 0.40021952986717224,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.2320759892463684,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.22476674616336823,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1712903529405594,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1433388739824295,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.12404008954763412,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.08912353217601776,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 (feature: payment_format_ach) had the largest positive contribution (SHAP +3.057), so the model flagged the transaction primarily because it is an ACH payment.\n- dayofweek = 6 (feature: dayofweek; 0=Mon..6=Sun) increased the score (SHAP +0.880), indicating the transaction occurred on Sunday, which contributed to the alert.\n- payment_currency_saudi_riyal = 1 (feature: payment_currency_saudi_riyal) increased the score (SHAP +0.792); receiving_currency_saudi_riyal = 1 (feature: receiving_currency_saudi_riyal) also increased the score (SHAP +0.279). Together these currency flags (both payment and receiving in Saudi riyal) meaningfully raised the model risk estimate.\n- Partially offsetting effects: from_bank = 119 (feature: from_bank) decreased the score (SHAP −0.568), and hour = 4 (feature: hour) decreased the score (SHAP −0.553), reducing the overall flagged risk.\n\nConclusion:\n- The alert is driven mainly by the combination of an ACH payment (payment_format_ach = 1), occurrence on Sunday (dayofweek = 6), and both payment and receiving currencies being Saudi riyal (payment_currency_saudi_riyal = 1 and receiving_currency_saudi_riyal = 1). These factors increased the model score enough to trigger the flag despite lowering contributions from from_bank = 119 and hour = 4.\n- Conditional note: if further triage is needed, prioritize reviewing ACH details and SAR-related payment context (given the named features) since they are the principal drivers of the flag.",
+  "llm_file": "llm_trx_2128452_r1.json"
+}

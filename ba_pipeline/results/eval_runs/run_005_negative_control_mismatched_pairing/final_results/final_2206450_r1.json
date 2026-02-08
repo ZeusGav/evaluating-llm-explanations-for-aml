@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The text introduces and relies on non-provided/mismatched drivers and values (e.g., dayofweek, to_bank=20, amount_received decreasing), causing direction mismatch and unsupported claims.",
+  "transaction_id": 2206450,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 181,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

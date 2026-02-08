@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is an unsupported claim that the amounts are “equal/matched,” which is not a provided feature (no amount_ratio/amount_diff driver)."
+}

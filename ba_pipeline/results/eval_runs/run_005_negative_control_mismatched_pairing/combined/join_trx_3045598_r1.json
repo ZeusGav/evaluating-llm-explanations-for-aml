@@ -1,0 +1,72 @@
+{
+  "transaction_id": 3045598,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 1968727,
+  "shap_file": "shap_trx_1968727.json",
+  "model_proba": 0.9958003163337708,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.6841602325439453,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 19426.84,
+      "shap_value": 1.0767951011657715,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 19426.84,
+      "shap_value": 0.5313646793365479,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.4734882712364197,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 23402.0,
+      "shap_value": -0.3459492325782776,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 21940.0,
+      "shap_value": 0.2231615036725998,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 10.0,
+      "shap_value": -0.1724998950958252,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.14245471358299255,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12517164647579193,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.05362844467163086,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 is the dominant driver (SHAP +3.05408, direction = increase); the model places strong upward weight on ACH-format payments.\n- amount_paid = 9880.3 (SHAP +0.518352, direction = increase) and amount_received = 9880.3 (SHAP +0.477397, direction = increase) both raised the score, so the transaction amount materially contributed to the flag.\n- payment_currency_saudi_riyal = 1 (SHAP +0.203492, direction = increase) provided an additional positive contribution.\n- from_bank = 148785 (SHAP −0.356926, direction = decrease) lowered the score and acted as a mitigating factor.\n\nConclusion:\n- The transaction was flagged primarily because it is an ACH payment (payment_format_ach) combined with the payment size (amount_paid and amount_received); payment in Saudi Riyal added smaller upward pressure. The sending bank (from_bank) reduced the model score but did not offset the positive contributions.\n- If proceeding with review, focus on ACH-specific details and the transaction amount/currency, since those are the model drivers of the elevated score (statements conditional on the named features above).",
+  "llm_file": "llm_trx_3045598_r1.json"
+}

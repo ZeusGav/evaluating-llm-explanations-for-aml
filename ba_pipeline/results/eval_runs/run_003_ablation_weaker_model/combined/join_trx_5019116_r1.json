@@ -1,0 +1,71 @@
+{
+  "transaction_id": 5019116,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_5019116.json",
+  "model_proba": 0.99595707654953,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8889846801757812,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16361.52,
+      "shap_value": 1.0832833051681519,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16361.52,
+      "shap_value": 0.7652799487113953,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 113685.0,
+      "shap_value": -0.7031548023223877,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.44146159291267395,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 2454.0,
+      "shap_value": -0.19298477470874786,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": 0.15344209969043732,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.11393067985773087,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.09817133098840714,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09797730296850204,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=2.88898; direction=increase): The strongest contributor, indicating the transaction uses ACH and increases the risk signal.\n- amount_received (16361.5; shap_value=1.08328; direction=increase): A sizable amount received increases risk.\n- amount_paid (16361.5; shap_value=0.76528; direction=increase): The same large amount paid further increases risk.\n- from_bank (113685; shap_value=-0.703155; direction=decrease): A large sending bank factor reduces risk, but its magnitude is still meaningful relative to the other drivers.\n- dayofweek (value=5; shap_value=0.441462; direction=increase): Activity on this day adds to the risk signal.\n\nConclusion:\nThe flag appears driven primarily by an ACH-based transfer with notably large and equal inflow/outflow amounts (amount_received and amount_paid both 16,361.5), with a sizable from_bank factor that modestly offsets risk. The overall pattern suggests elevated risk but is not definitive proof of illicit activity. Manual review focused on the transaction’s counterparties and expected payroll/vendor context is recommended to determine legitimate purpose.",
+  "llm_file": "llm_trx_5019116_r1.json"
+}

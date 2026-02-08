@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The biggest issue is an unsupported claim: it maps dayofweek=5 to Saturday, which contradicts the provided 0=Mon..6=Sun mapping (5=Saturday is incorrect)."
+}

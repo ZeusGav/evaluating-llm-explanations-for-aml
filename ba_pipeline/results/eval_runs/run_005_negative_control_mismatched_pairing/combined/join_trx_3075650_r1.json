@@ -1,0 +1,72 @@
+{
+  "transaction_id": 3075650,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 1970167,
+  "shap_file": "shap_trx_1970167.json",
+  "model_proba": 0.9970476031303406,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0886967182159424,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11995.36,
+      "shap_value": 0.8307732939720154,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11995.36,
+      "shap_value": 0.7868212461471558,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 20.0,
+      "shap_value": -0.7735604643821716,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 11.0,
+      "shap_value": 0.4499165415763855,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.35576626658439636,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.1393255740404129,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.13434983789920807,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.13282600045204163,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12653900682926178,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.8279, direction: increase): the model’s largest contributor indicates an ACH payment method strongly raised the risk score.\n- amount_received = 17441.1 (SHAP +0.9197, direction: increase) and amount_paid = 17441.1 (SHAP +0.5926, direction: increase): relatively large, identical paid/received amounts contributed further to the higher score.\n- to_bank = 1467 (SHAP +0.2931, direction: increase): the specific receiving bank ID increased the score as well.\n\nConclusion:\n- The transaction was flagged primarily because it is an ACH payment (payment_format_ach) combined with sizable, matching amount_received and amount_paid (17441.1) and a receiving bank (to_bank=1467); these features collectively raised the model score.\n- Conditional note: if these feature values represent a single ACH credit of 17441.1 to to_bank=1467, then, based on the named drivers above, the model’s output is consistent with an elevated-risk ACH transfer and warrants further review.",
+  "llm_file": "llm_trx_3075650_r1.json"
+}

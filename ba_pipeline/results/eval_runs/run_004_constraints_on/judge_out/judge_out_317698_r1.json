@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and directionally consistent with strong coverage, but it adds an unsupported generalization about “mid-range amounts” and how the model weights them."
+}

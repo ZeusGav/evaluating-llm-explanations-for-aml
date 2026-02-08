@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it adds an unsupported assumption about what is “atypical for this customer population,” which is not evidenced by the provided SHAP drivers.",
+  "transaction_id": 1392744,
+  "repeat": 4,
+  "run_name": "run_002_stability",
+  "word_count": 198,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

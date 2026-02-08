@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2200191,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2200191.json",
+  "model_proba": 0.9958937168121338,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9438421726226807,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7267115116119385,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 9853.57,
+      "shap_value": 0.5671257972717285,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 119.0,
+      "shap_value": -0.4828392267227173,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 9853.57,
+      "shap_value": 0.34022894501686096,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.27000734210014343,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 48309.0,
+      "shap_value": -0.25046107172966003,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.16393592953681946,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.15966950356960297,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.11516278237104416,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model’s top driver was payment_format_ach (value=1; SHAP=+2.94384, direction=increase) — an ACH payment strongly raised the score. Additional positive contributors were dayofweek (value=6, i.e. Sunday; SHAP=+0.7267, direction=increase), amount_paid (9853.57; SHAP=+0.5671, direction=increase), amount_received (9853.57; SHAP=+0.3402, direction=increase), and payment_currency_saudi_riyal (value=1; SHAP=+0.2700, direction=increase). A partial offset came from from_bank (119; SHAP=-0.4828, direction=decrease), which lowered the score.\n\nConclusion:\nThe transaction was flagged mainly because it is an ACH transfer (payment_format_ach=1) executed on Sunday (dayofweek=6) in SAR for ~9,853.57 (amount_paid/amount_received), with ACH and timing producing the largest SHAP increases. The sending bank (from_bank=119) modestly reduced risk. If one accepts these feature effects, the model’s flag is attributable primarily to ACH format, weekend timing, currency, and transaction size.",
+  "llm_file": "llm_trx_2200191_r1.json"
+}

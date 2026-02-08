@@ -1,0 +1,71 @@
+{
+  "transaction_id": 5019116,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_5019116.json",
+  "model_proba": 0.99595707654953,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8889846801757812,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16361.52,
+      "shap_value": 1.0832833051681519,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16361.52,
+      "shap_value": 0.7652799487113953,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 113685.0,
+      "shap_value": -0.7031548023223877,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.44146159291267395,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 2454.0,
+      "shap_value": -0.19298477470874786,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": 0.15344209969043732,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.11393067985773087,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.09817133098840714,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09797730296850204,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model’s top drivers show this payment was flagged primarily because payment_format_ach=1 (strong positive contribution) combined with sizable amounts: amount_received=16361.5 (positive) and amount_paid=16361.5 (positive). These three drivers increased the model score substantially. dayofweek=5 (Saturday) gave a smaller positive contribution. The from_bank=113685 driver had a negative contribution, partially offsetting the increase but not enough to reverse the flag.\n\nConclusion: Net effect = higher risk score driven by ACH settlement plus large identical paid/received amounts, slightly amplified by occurring on dayofweek=5. The negative contribution from from_bank suggests the sender’s bank attributes reduced the score somewhat; if that sender-bank relationship is legitimate, it could mitigate concern, but the ACH + high amounts justify analyst review.",
+  "llm_file": "llm_trx_5019116_r1.json"
+}

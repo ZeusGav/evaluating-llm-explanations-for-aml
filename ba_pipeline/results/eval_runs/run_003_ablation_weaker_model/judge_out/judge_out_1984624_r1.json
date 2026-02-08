@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and coverage with clear linkage to top SHAP drivers; could be more operationally specific about why Sunday/ACH/SAR are risky beyond restating them."
+}

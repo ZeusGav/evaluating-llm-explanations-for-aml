@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it asserts dayofweek=6 is Sunday, which is unsupported because the fact sheet defines 6 as Sunday only if 0=Mon..6=Sun is applied, but the narrative treats it as a certainty without referencing that mapping.",
+  "transaction_id": 2213466,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 174,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately ties the main SHAP drivers to the flag with clear directionality, though it leaves several smaller drivers unmentioned.",
+  "transaction_id": 317698,
+  "repeat": 8,
+  "run_name": "run_006_judge_stability",
+  "word_count": 138,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2670183,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 3035908,
+  "shap_file": "shap_trx_3035908.json",
+  "model_proba": 0.9966235160827637,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0331785678863525,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.5716762542724609,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 48308.0,
+      "shap_value": -0.4167006313800812,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 30072.76,
+      "shap_value": 0.3229050636291504,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.25755947828292847,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.18726804852485657,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.1726071536540985,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.14031213521957397,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13605687022209167,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": 0.09903677552938461,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 was the dominant driver (SHAP +2.99374); the ACH payment format strongly increased the model score.\n- amount_received = 44617.3 contributed positively (SHAP +0.50560); the size of the received amount increased the score.\n- payment_currency_saudi_riyal = 1 also increased the score (SHAP +0.49734); the transaction being in Saudi Riyal contributed to flagging.\n- from_bank = 223 contributed a decrease (SHAP -0.69020), partially offsetting the increases from the other features.\n\nConclusion:\n- The transaction was flagged primarily because it is an ACH incoming payment (payment_format_ach = 1) in Saudi Riyals (payment_currency_saudi_riyal = 1) for a relatively large amount (amount_received = 44617.3); the sending bank (from_bank = 223) reduced the score but did not fully negate the elevated signal.\n- Conditional suggestion (derived from named drivers): if ACH payments in SAR of this magnitude are atypical for this customer or counterparty, this pattern may warrant manual review of payment purpose and sender details.",
+  "llm_file": "llm_trx_2670183_r1.json"
+}

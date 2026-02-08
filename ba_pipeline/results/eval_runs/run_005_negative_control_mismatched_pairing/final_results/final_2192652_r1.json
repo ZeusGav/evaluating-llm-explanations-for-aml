@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it introduces unsupported drivers (amount_received/amount_paid and incorrect from_bank value) that are not present in the provided SHAP feature list.",
+  "transaction_id": 2192652,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 162,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3075650,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_3075650.json",
+  "model_proba": 0.9973649382591248,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.82790207862854,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17441.08,
+      "shap_value": 0.919704258441925,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17441.08,
+      "shap_value": 0.592573344707489,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1467.0,
+      "shap_value": 0.2930598855018616,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": 0.0998745858669281,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09567248076200485,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.0956583172082901,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.07351510226726532,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.0612824410200119,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": 0.05543696507811546,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1; SHAP=2.8279; direction=increase), indicating use of an ACH payment was the single largest contributor. Secondary contributors were amount_received (17441.1; SHAP=0.9197; increase) and amount_paid (17441.1; SHAP=0.5926; increase), so relatively large and equal paid/received amounts raised the score. Additional upward contributors were to_bank (1467; SHAP=0.2931; increase) and dayofweek (1; SHAP=0.0999; increase).\n\nConclusion: Based only on the named drivers, the transaction was flagged mainly because it is an ACH transfer (payment_format_ach=1) involving matching high amounts (amount_received and amount_paid = 17441.1) routed to to_bank=1467 on dayofweek=1. If further review is warranted, consider verifying ACH originator/authentication and details for to_bank=1467, as these factors directly increased the model score.",
+  "llm_file": "llm_trx_3075650_r1.json"
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it incorrectly asserts dayofweek=5 is Friday (given 0=Mon, 5=Sat), which is an unsupported/incorrect fact."
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Strong: it accurately reflects SHAP directions and covers the dominant drivers without adding unsupported facts.",
+  "transaction_id": 585477,
+  "repeat": 9,
+  "run_name": "run_006_judge_stability",
+  "word_count": 160,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

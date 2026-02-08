@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2277774,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2277774.json",
+  "model_proba": 0.9968398809432983,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.765446901321411,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 19693.8,
+      "shap_value": 1.2086377143859863,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 19693.8,
+      "shap_value": 0.6680705547332764,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.600432276725769,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 23.0,
+      "shap_value": -0.5170638561248779,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 111443.0,
+      "shap_value": -0.34961509704589844,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14613288640975952,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.14379280805587769,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.09883754700422287,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": 0.08825113624334335,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model flagged the transaction mainly because payment_format_ach = 1 (SHAP +2.765), which strongly increased the score, together with elevated amounts: amount_received = 19693.8 (SHAP +1.209) and amount_paid = 19693.8 (SHAP +0.668), both pushing the prediction upward. Dayofweek = 6 (SHAP +0.600) also increased risk contribution. Offsetting factors with negative contributions were hour = 23 (SHAP -0.517) and from_bank = 111443 (SHAP -0.350), which reduced the overall score.\n\nConclusion:\nThe alert is driven principally by ACH payment format and identical, sizable payment/receipt amounts on dayofweek = 6. Given the net positive SHAP contributions from payment_format_ach and the amounts, the model flagged the transaction despite partial reductions from hour and from_bank. If further review is needed, focus on ACH context and the specific amount values cited above.",
+  "llm_file": "llm_trx_2277774_r1.json"
+}

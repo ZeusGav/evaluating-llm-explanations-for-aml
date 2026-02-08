@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2222792,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2150318,
+  "shap_file": "shap_trx_2150318.json",
+  "model_proba": 0.9995651841163635,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9889745712280273,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.7753599882125854,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10215.28,
+      "shap_value": 0.6557506322860718,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6350468397140503,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.4889634847640991,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10215.28,
+      "shap_value": 0.47994232177734375,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.43776458501815796,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 7.0,
+      "shap_value": -0.2165587991476059,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17788119614124298,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.1337752342224121,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant driver (SHAP=+2.93191, direction=increase): the model’s top positive contributor is that this is an ACH payment.\n- dayofweek (value=6) contributed positively (SHAP=+0.660885, direction=increase): the transaction occurring on dayofweek=6 (Sunday) increased the flag score.\n- amount_received (value=15563.9) and amount_paid (value=15563.9) both contributed positively (SHAP=+0.643854 and +0.591814, directions=increase): the transaction amounts (~15,563.9) increased the model’s risk signal.\n- receiving_currency_euro (value=1) contributed negatively (SHAP=-0.333862, direction=decrease): the fact the receiving currency is euro reduced the score somewhat.\n- from_bank (value=21749) had a small negative contribution (SHAP=-0.250224, direction=decrease): this sending bank ID lowered the score slightly.\n\nConclusion:\n- The model flagged the transaction principally because it is an ACH payment (payment_format_ach=1), executed on dayofweek=6 (Sunday), with relatively large amounts (amount_received and amount_paid ≈ 15,563.9). Those positive contributors outweighed modest negative contributions from receiving_currency_euro=1 and from_bank=21749. \n- If further review is needed, focus checks on the ACH payment characteristics, timing (dayofweek=6), and the transaction amount, since these are the strongest model drivers.",
+  "llm_file": "llm_trx_2222792_r1.json"
+}

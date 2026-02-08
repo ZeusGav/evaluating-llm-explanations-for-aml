@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 2,
+  "note": "The biggest issue is multiple references to features/values/SHAP signs not present in SHAP_JSON (e.g., payment_currency_saudi_riyal, from_bank, and dayofweek value/SHAP), creating direction mismatches and unsupported claims."
+}

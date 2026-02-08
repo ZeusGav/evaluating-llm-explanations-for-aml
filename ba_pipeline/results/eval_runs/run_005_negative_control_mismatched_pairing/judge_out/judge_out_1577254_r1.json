@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and well-structured, but it contains unsupported specifics (e.g., Sunday/day=6 and exact amounts) and omits several material SHAP drivers like to_bank and from_bank."
+}

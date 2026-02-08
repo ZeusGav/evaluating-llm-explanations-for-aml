@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2222792,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2222792.json",
+  "model_proba": 0.9957566857337952,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9319112300872803,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6608848571777344,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15563.94,
+      "shap_value": 0.6438535451889038,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15563.94,
+      "shap_value": 0.591814398765564,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.33386197686195374,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21749.0,
+      "shap_value": -0.2502243220806122,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": 0.19082026183605194,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 14650.0,
+      "shap_value": -0.16008184850215912,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1354834884405136,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.0867428183555603,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach: The transaction uses an ACH payment format (payment_format_ach = 1) and has the largest positive SHAP contribution (shap_value = 2.93191, direction increase), indicating the model strongly associates ACH-based transfers with the flagged pattern in this case.\n- dayofweek: Day of week is 6 (Sunday) with a positive SHAP (shap_value = 0.660885, direction increase), suggesting weekend timing adds risk per the model’s logic.\n- amount_received and amount_paid: Both amounts are 15563.9, with positive SHAP contributions (amount_received = 0.643854, amount_paid = 0.591814, both direction increase). The simultaneous receipt and payment of identical amounts can be interpreted by the model as a pattern often seen in matched or offsetting transfers, contributing to the flag.\n\nConclusion:\nBased on the top drivers, the flag appears driven by an ACH payment on a Sunday with a matched transfer amount. This combination is interpreted by the model as elevated risk. A manual review is recommended to determine legitimate business reasons (e.g., standard payroll or settlement timing) and to assess for potential AML concerns.",
+  "llm_file": "llm_trx_2222792_r1.json"
+}

@@ -1,0 +1,72 @@
+{
+  "transaction_id": 1970167,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 1936551,
+  "shap_file": "shap_trx_1936551.json",
+  "model_proba": 0.9961405396461487,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.859596014022827,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17065.82,
+      "shap_value": 0.9219563603401184,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17065.82,
+      "shap_value": 0.8737912178039551,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6704650521278381,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 24963.0,
+      "shap_value": -0.5329598784446716,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 8771.0,
+      "shap_value": -0.26516613364219666,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14512960612773895,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.09954026341438293,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.06907165050506592,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.05698498338460922,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant driver (SHAP +3.0887) — the use of ACH strongly increased the model score.\n- amount_received (11995.4) and amount_paid (11995.4) both contributed positively (SHAP +0.8308 and +0.7868) — the relatively large, equal payment and receipt amounts increased the score.\n- from_bank (20) reduced the score (SHAP −0.7736) — the sending bank ID tempered the flagging contribution.\n- to_bank (11) increased the score (SHAP +0.4499) — the receiving bank ID added upward pressure on the score.\n- dayofweek (5) increased the score (SHAP +0.3558) — the transaction occurring on day 5 (fact sheet mapping: day 5 = Saturday) modestly raised the score.\n\nConclusion:\nThe alert is primarily driven by the ACH payment method (payment_format_ach=1) together with sizable, identical payment and receipt amounts (amount_paid/amount_received = 11,995.4), with smaller opposing influence from the sending bank (from_bank=20) and additional upward influence from the receiving bank (to_bank=11) and the weekend timing (dayofweek=5). Based solely on these drivers, targeted review should focus on the ACH payment details, the matching amount values (amount_paid/amount_received), and the involved bank IDs (from_bank/to_bank).",
+  "llm_file": "llm_trx_1970167_r1.json"
+}

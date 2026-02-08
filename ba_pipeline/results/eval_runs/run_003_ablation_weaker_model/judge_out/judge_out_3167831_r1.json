@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and accurate on the top drivers, but coverage is only moderate because it omits several non-trivial contributors (e.g., non-credit-card/non-cheque/cash indicators and time/currency effects)."
+}

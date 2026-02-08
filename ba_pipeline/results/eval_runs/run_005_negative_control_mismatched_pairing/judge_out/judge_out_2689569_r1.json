@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 0,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 1,
+  "note": "The explanation mostly cites features/currencies/amounts not present in SHAP_JSON (and even misstates a provided feature’s direction), making it largely unsupported."
+}

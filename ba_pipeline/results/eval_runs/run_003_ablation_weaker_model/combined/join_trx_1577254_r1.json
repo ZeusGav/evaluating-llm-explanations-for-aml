@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1577254,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_1577254.json",
+  "model_proba": 0.9975314140319824,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9222829341888428,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13305.86,
+      "shap_value": 0.9019328951835632,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13305.86,
+      "shap_value": 0.7015852928161621,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7002566456794739,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 15723.0,
+      "shap_value": -0.28026890754699707,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.15064465999603271,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12928758561611176,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 11.0,
+      "shap_value": 0.11362779140472412,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09415484964847565,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.06703060865402222,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1, shap_value=2.92228, direction=increase): The model strongly attributes higher risk to transfers executed via ACH, making this the primary driver of the flag.\n- amount_received (13305.9, shap_value=0.901933, direction=increase): A relatively large amount received contributes to the elevated risk signal.\n- amount_paid (13305.9, shap_value=0.701585, direction=increase): The same large amount paid further adds to the risk signal, reinforcing the concern when paired with ACH.\n- dayofweek (6, shap_value=0.700257, direction=increase): Weekend timing (Sunday) is associated with an increased risk signal in this instance.\n\nNote: These are the top drivers by absolute SHAP value. Other drivers (e.g., to_bank, payment_currency_us_dollar, hour, etc.) have smaller contributions and are not included in this core rationale.\n\nConclusion:\n- The flag appears to be driven primarily by the ACH-based payment method, combined with a large equal amount moving between sender and receiver, and plus weekend timing. This pattern, in the absence of other contextual justification, suggests elevated AML risk and warrants human review to assess for legitimate business purposes (e.g., payroll or vendor payments) or to identify potential illicit activity. If a legitimate explanation exists that aligns with ACH usage and weekend processing, it could mitigate the concern; otherwise, proceed with standard escalation and investigation.",
+  "llm_file": "llm_trx_1577254_r1.json"
+}

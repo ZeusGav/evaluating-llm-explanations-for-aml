@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4737310,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_4737310.json",
+  "model_proba": 0.9983127117156982,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.7648801803588867,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 9099.08,
+      "shap_value": 0.6842588782310486,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 9099.08,
+      "shap_value": 0.6710477471351624,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 231212.0,
+      "shap_value": 0.4330635368824005,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.39696186780929565,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.15655957162380219,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12730446457862854,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1502.0,
+      "shap_value": 0.10331422090530396,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_mexican_peso",
+      "value": 0.0,
+      "shap_value": 0.06899936497211456,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.05759967863559723,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (ACH payment) with the largest SHAP value (2.76488) and direction increase. This indicates the flagged activity is associated with an ACH bank transfer, which the model treats as a high-risk channel.\n- amount_paid = 9099.08 and amount_received = 9099.08, both with positive SHAP values (0.684259 and 0.671048). The sizeable, equal-outward/inward amounts contribute to the risk signal by showing a large transfer amount in both directions.\n- from_bank = 231212 with SHAP 0.433064. The sending bank identity appears to drive risk in this transaction, per the model.\n- dayofweek = 5 (Friday) with SHAP 0.396962. The timing on a Friday adds incremental risk in this feature set.\n- payment_currency_euro = 1 (Euro) with SHAP 0.15656. This context factor may interact with the above drivers but is a secondary contributor.\n\nConclusion:\nThe flag is predominantly driven by an ACH transfer method (payment_format_ach) coupled with a large, symmetric transfer amount (amount_paid and amount_received) originating from a specific sending bank (from_bank), with an additional timing signal (dayofweek on Friday). The euro currency indicator provides contextual support but is a weaker driver. Based on these drivers alone, the transaction is flagged due to the combination of ACH usage and substantial transfer size from a particular sender, with a Friday timing contributing modest additional risk.",
+  "llm_file": "llm_trx_4737310_r1.json"
+}

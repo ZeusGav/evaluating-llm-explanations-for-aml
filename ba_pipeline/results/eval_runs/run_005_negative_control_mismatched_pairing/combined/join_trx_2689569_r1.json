@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2689569,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2422807,
+  "shap_file": "shap_trx_2422807.json",
+  "model_proba": 0.9963834285736084,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9065864086151123,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10873.16,
+      "shap_value": 0.7631999254226685,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10873.16,
+      "shap_value": 0.6002710461616516,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 20.0,
+      "shap_value": 0.5818842649459839,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 6.0,
+      "shap_value": -0.27255335450172424,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17787855863571167,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.15607529878616333,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.15354172885417938,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 18230.0,
+      "shap_value": -0.12467774748802185,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 0.0,
+      "shap_value": -0.10793258249759674,
+      "direction": "decrease"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) — largest positive driver (SHAP +3.00401). The model strongly increased the flag score because the transaction used ACH.\n- payment_currency_saudi_riyal (value=1) — positive driver (SHAP +0.595907). Payment currency being Saudi Riyal contributed to a higher score.\n- payment_currency_us_dollar (value=0) — positive driver (SHAP +0.320932). The absence of USD (payment_currency_us_dollar = 0) increased the model score.\n- amount_received (value=77127.4) — positive driver (SHAP +0.27204). The reported received amount increased the score.\n- receiving_currency_saudi_riyal (value=1) — positive driver (SHAP +0.244702). The receiving currency being Saudi Riyal contributed upward.\n- from_bank (value=149340) — negative driver (SHAP −0.45353). The specific from_bank value reduced the overall score (a mitigating influence).\n\nConclusion:\nThe alert is primarily driven by use of ACH (payment_format_ach = 1) combined with Saudi Riyal as both payment and receiving currency (payment_currency_saudi_riyal = 1, receiving_currency_saudi_riyal = 1), plus a sizable amount_received (77127.4), and the absence of USD (payment_currency_us_dollar = 0). These factors increased the model score enough to flag the transaction despite a partial mitigating effect from the from_bank feature (from_bank = 149340). If further review is needed, focus checks on the ACH routing and the SAR-denominated payment/receipt details, since those are the strongest drivers identified.",
+  "llm_file": "llm_trx_2689569_r1.json"
+}

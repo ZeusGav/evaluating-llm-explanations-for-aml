@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, directionally correct summary that covers the dominant drivers; it could be slightly more useful by briefly interpreting why the non-USD and non-EUR indicators (value=0 features) contribute without adding new facts.",
+  "transaction_id": 1030747,
+  "repeat": 2,
+  "run_name": "run_002_stability",
+  "word_count": 208,
+  "word_limit": 200,
+  "word_limit_pass": 0
+}

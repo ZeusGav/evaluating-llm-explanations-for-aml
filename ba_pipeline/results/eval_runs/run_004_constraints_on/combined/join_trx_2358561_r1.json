@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2358561,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2358561.json",
+  "model_proba": 0.9961884617805481,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8860366344451904,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13966.47,
+      "shap_value": 0.7570273876190186,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13966.47,
+      "shap_value": 0.6610953211784363,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1547.0,
+      "shap_value": 0.31414005160331726,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.2715240716934204,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.2541736662387848,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21884.0,
+      "shap_value": -0.22805556654930115,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12939825654029846,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.07131267338991165,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.07118550688028336,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The flag is driven primarily by payment_format_ach = 1 (SHAP +2.88604, direction: increase), meaning an ACH payment strongly raised the score. Large transaction size also increased risk: amount_received = 13966.5 (SHAP +0.757027, increase) and amount_paid = 13966.5 (SHAP +0.661095, increase). Receiving bank (to_bank = 1547, SHAP +0.31414, increase) further pushed the score up. Receiving_currency_euro = 1 had a mitigating effect (SHAP -0.271524, direction: decrease).\n\nConclusion: The model flagged this transaction mainly because it is an ACH transfer (payment_format_ach) with relatively large, equal amount_received and amount_paid into to_bank 1547; the euro receiving currency slightly reduced the signal. If proceeding, prioritize review of the ACH payment details and beneficiary bank (to_bank = 1547) given the elevated model contribution from those features.",
+  "llm_file": "llm_trx_2358561_r1.json"
+}

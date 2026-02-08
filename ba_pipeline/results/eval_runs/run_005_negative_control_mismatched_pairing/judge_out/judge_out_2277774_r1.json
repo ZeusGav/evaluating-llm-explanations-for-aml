@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is multiple unsupported/mismatched references (dayofweek not in SHAP list and several values/directions like hour and amounts don’t match the provided SHAP_JSON)."
+}

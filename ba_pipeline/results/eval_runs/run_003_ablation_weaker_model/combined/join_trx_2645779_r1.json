@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2645779,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2645779.json",
+  "model_proba": 0.9968369007110596,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.948659896850586,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13218.75,
+      "shap_value": 0.8527507781982422,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13218.75,
+      "shap_value": 0.8304260969161987,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 4259.0,
+      "shap_value": -0.7677465677261353,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 20.0,
+      "shap_value": 0.7041458487510681,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15325142443180084,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.14244875311851501,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11343315988779068,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.07206782698631287,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.06138511747121811,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why\n- payment_format_ach (value=1; shap_value=2.94866; direction=increase): The ACH payment format is the strongest driver increasing the flag, indicating the transaction used ACH as the payment method.\n- amount_paid (13218.8; shap_value=0.852751; direction=increase): A large amount paid contributes to the risk signal.\n- amount_received (13218.8; shap_value=0.830426; direction=increase): The same large amount received adds to the risk signal, reinforcing a high-value transfer pattern.\n- from_bank (4259; shap_value=-0.767747; direction=decrease): This sending-bank factor reduces risk, partially mitigating the overall signal.\n- to_bank (20; shap_value=0.704146; direction=increase): The receiving-bank indicator (despite a low numeric value) increases risk, adding to the overall concern.\n\nConclusion\n- The flag is driven primarily by the ACH payment format and the large, equal paid/received amounts, with the sending-bank factor reducing risk and the receiving-bank factor increasing risk. Based on these drivers alone, the transaction exhibits a high-risk pattern that warrants manual review to determine legitimate purpose.",
+  "llm_file": "llm_trx_2645779_r1.json"
+}

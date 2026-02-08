@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2222792,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2222792.json",
+  "model_proba": 0.9957566857337952,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9319112300872803,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6608848571777344,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15563.94,
+      "shap_value": 0.6438535451889038,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15563.94,
+      "shap_value": 0.591814398765564,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.33386197686195374,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21749.0,
+      "shap_value": -0.2502243220806122,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": 0.19082026183605194,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 14650.0,
+      "shap_value": -0.16008184850215912,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1354834884405136,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.0867428183555603,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The flag is driven primarily by payment_format_ach = 1 (strong positive contribution; SHAP ≈ +2.93, direction = increase). Secondary contributors increasing the score are dayofweek = 6 (Sunday; SHAP ≈ +0.66, increase), amount_received = 15563.9 (SHAP ≈ +0.64, increase) and amount_paid = 15563.9 (SHAP ≈ +0.59, increase). These features together raised the model score. This increase was partially offset by receiving_currency_euro = 1 (SHAP ≈ −0.33, direction = decrease).\n\nConclusion: The transaction was flagged chiefly because it is an ACH transfer (payment_format_ach) involving relatively large, equal received/paid amounts on dayofweek = 6. The fact that the receiving currency is euro slightly lowers the alert score. If ACH transfers of this size and timing are atypical for the counterparty, further review would be reasonable (conditional on available account- or customer-context).",
+  "llm_file": "llm_trx_2222792_r1.json"
+}

@@ -1,0 +1,72 @@
+{
+  "transaction_id": 3906788,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 1566107,
+  "shap_file": "shap_trx_1566107.json",
+  "model_proba": 0.9958776235580444,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.734300136566162,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16269.7,
+      "shap_value": 0.9757144451141357,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16269.7,
+      "shap_value": 0.9126797318458557,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 4.0,
+      "shap_value": -0.45828962326049805,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 10.0,
+      "shap_value": 0.4243406355381012,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 23833.0,
+      "shap_value": -0.28619804978370667,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 14.0,
+      "shap_value": 0.16330327093601227,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.1566728949546814,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12483295798301697,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11453524231910706,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach=1 (SHAP +3.08672, direction: increase): the ACH payment format is the single largest contributor to the alert.\n- to_bank=22 (SHAP +0.982698, direction: increase): the receiving bank identifier (to_bank=22) materially increased the score.\n- amount_received=15526.3 (SHAP +0.883961, direction: increase) and amount_paid=15526.3 (SHAP +0.553201, direction: increase): the transaction amounts in both receiving and payment currency increased the model output.\n- payment_currency_euro=1 (SHAP +0.44051, direction: increase): use of euro as the payment currency contributed to the flag.\n\nConclusion:\nThe model flagged the transaction principally because it is an ACH payment (payment_format_ach=1) of 15,526.3 (amount_received and amount_paid), sent in euros (payment_currency_euro=1) to receiving bank ID 22 (to_bank=22). Given these drivers increased the score, a manual review focusing on the ACH payment, the euro-denominated amount, and the receiving bank (to_bank=22) is recommended.",
+  "llm_file": "llm_trx_3906788_r1.json"
+}

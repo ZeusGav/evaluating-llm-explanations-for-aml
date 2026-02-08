@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3640921,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_3640921.json",
+  "model_proba": 0.9961549639701843,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.873241662979126,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13325.48,
+      "shap_value": 1.0940178632736206,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 230257.0,
+      "shap_value": 0.6672874093055725,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13325.48,
+      "shap_value": 0.6496484279632568,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 25309.0,
+      "shap_value": -0.5825059413909912,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 2.0,
+      "shap_value": -0.2841194272041321,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -0.2462163269519806,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.14760304987430573,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13182641565799713,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.08923949301242828,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) is the dominant driver raising the model score (SHAP +2.87324).  \n- amount_received (13325.5) materially increases the score (SHAP +1.09402).  \n- from_bank (230257) contributes further to an increased score (SHAP +0.667287).  \n- amount_paid (13325.5) also increases the score (SHAP +0.649648); note amount_paid equals amount_received (both 13325.5).  \n- to_bank (25309) partially offsets the score (SHAP −0.582506) but its negative contribution is smaller in magnitude than the combined positive drivers above.\n\nConclusion:\n- The transaction was flagged primarily because it is an ACH payment (payment_format_ach=1) combined with a relatively large payment/receipt (amount_received=13325.5 and amount_paid=13325.5) and a sending bank profile (from_bank=230257) that the model associates with higher risk. The receiving bank (to_bank=25309) reduces the model score somewhat, but not enough to negate the positive contributions.  \n- If the model generally weights ACH payments and transfers at this amount level toward higher risk, this transaction matches that pattern (statement hedged and derived from the named drivers only).",
+  "llm_file": "llm_trx_3640921_r1.json"
+}

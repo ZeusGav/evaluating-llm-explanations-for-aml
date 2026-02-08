@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, direction-consistent explanation with strong SHAP grounding, but it omits several smaller listed drivers (e.g., hour, to_bank, non-credit-card/cheque, USD) and gives limited AML-specific interpretation beyond SHAP effects."
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1968727,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_1968727.json",
+  "model_proba": 0.9958003163337708,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.6841602325439453,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 19426.84,
+      "shap_value": 1.0767951011657715,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 19426.84,
+      "shap_value": 0.5313646793365479,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.4734882712364197,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 23402.0,
+      "shap_value": -0.3459492325782776,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 21940.0,
+      "shap_value": 0.2231615036725998,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 10.0,
+      "shap_value": -0.1724998950958252,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.14245471358299255,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12517164647579193,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.05362844467163086,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach = 1 (SHAP +2.68416), indicating an ACH payment strongly increased the score. Large monetary size also contributed: amount_received = 19426.8 (SHAP +1.0768) and amount_paid = 19426.8 (SHAP +0.531365) both increase the score. Dayofweek = 5 (SHAP +0.473488) further pushed the score up (transaction occurred on day index 5).\n\nConclusion: The transaction was flagged mainly because it is an ACH payment of relatively high value (equal amount received/paid) occurring on dayofweek = 5. Note: from_bank = 23402 has a negative contribution (SHAP −0.345949), which partially offsets risk but is insufficient to overcome the positive drivers.",
+  "llm_file": "llm_trx_1968727_r1.json"
+}

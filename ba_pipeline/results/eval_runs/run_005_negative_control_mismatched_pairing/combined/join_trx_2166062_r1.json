@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2166062,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2196157,
+  "shap_file": "shap_trx_2196157.json",
+  "model_proba": 0.9989773035049438,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0980336666107178,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 1.0072312355041504,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15372.95,
+      "shap_value": 0.9668744206428528,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 249118.0,
+      "shap_value": -0.5232752561569214,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15372.95,
+      "shap_value": 0.3883320689201355,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.2093401849269867,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 222.0,
+      "shap_value": 0.1826399862766266,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.16525547206401825,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.14719566702842712,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.12247030436992645,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- The primary contributor is payment_format_ach (value=1), which has the largest positive SHAP (2.74815, direction=increase). This payment method drove the model score up most strongly.\n- amount_paid (value=10148.7) contributed positively (SHAP=0.916798, direction=increase), indicating the transaction size increased the score.\n- dayofweek (value=6, i.e., Sunday) also increased the score (SHAP=0.882412, direction=increase), so the transaction occurring on day 6 contributed to the flag.\n- to_bank (value=22) contributed positively (SHAP=0.79381, direction=increase), indicating that transfers to bank 22 increased the score.\n- amount_received (value=10148.7) contributed positively as well (SHAP=0.578354, direction=increase), i.e., the received amount increases the score consistent with the paid amount.\n- from_bank (value=24850) had a negative SHAP (−0.813136, direction=decrease), meaning the sending bank ID 24850 reduced the model score (partially offsetting other increases).\n\nConclusion:\n- The model flagged this transaction principally because it is an ACH transfer (payment_format_ach=1) of ~10,148.7 (amount_paid and amount_received = 10148.7) on dayofweek=6 (Sunday) to to_bank=22; these features had the largest positive SHAP contributions. The sending bank (from_bank=24850) reduced the score somewhat (negative SHAP).\n- If one assumes the model treats payment_format_ach as higher-risk (implied by its large positive SHAP) and that transfers to to_bank=22 and transactions on dayofweek=6 are associated with higher scores, then those combined with the transaction amount explain why this item was flagged.",
+  "llm_file": "llm_trx_2166062_r1.json"
+}

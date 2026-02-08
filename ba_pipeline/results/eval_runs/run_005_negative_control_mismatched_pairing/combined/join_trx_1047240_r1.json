@@ -1,0 +1,72 @@
+{
+  "transaction_id": 1047240,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 5011781,
+  "shap_file": "shap_trx_5011781.json",
+  "model_proba": 0.9987717270851135,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.1047284603118896,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 20.0,
+      "shap_value": -0.9816964268684387,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 22.0,
+      "shap_value": 0.9017297029495239,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13338.33,
+      "shap_value": 0.8713915348052979,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13338.33,
+      "shap_value": 0.7812585234642029,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7305692434310913,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.2087833285331726,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.14815936982631683,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13039371371269226,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11327368021011353,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 increased the model score strongly (feature: payment_format_ach; direction: increase; SHAP contribution highest).  \n- amount_received = 14737.5 (feature: amount_received; direction: increase) and amount_paid = 14737.5 (feature: amount_paid; direction: increase) both contributed positively to the flag — the transaction amounts are a primary risk driver.  \n- dayofweek = 5 (feature: dayofweek; direction: increase; per fact sheet 0=Mon..6=Sun → Saturday) also increased the score.  \n- Partially offsetting these increases were feature contributions from the sending and receiving banks: from_bank = 15 (feature: from_bank; direction: decrease) and to_bank = 14099 (feature: to_bank; direction: decrease), which reduced the overall risk score.\n\nConclusion:\nThe transaction was flagged primarily because it is an ACH payment (payment_format_ach=1) with relatively large, equal paid/received amounts (amount_received and amount_paid = 14737.5), occurring on dayofweek=5 (Saturday) — these features raised the model score. However, the specific from_bank and to_bank feature values (from_bank=15 and to_bank=14099) reduced the score somewhat. If further review is required, focus first on verifying the ACH payment details and the context for the amounts given the Saturday timing.",
+  "llm_file": "llm_trx_1047240_r1.json"
+}

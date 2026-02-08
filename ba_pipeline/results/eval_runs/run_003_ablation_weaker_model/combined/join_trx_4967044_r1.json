@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4967044,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_4967044.json",
+  "model_proba": 0.9963183403015137,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.697395086288452,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17945.66,
+      "shap_value": 1.095291256904602,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17945.66,
+      "shap_value": 0.4864721894264221,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.47003573179244995,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21813.0,
+      "shap_value": -0.27319571375846863,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 21940.0,
+      "shap_value": 0.2595389783382416,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 10.0,
+      "shap_value": -0.17240595817565918,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.16171395778656006,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12045182287693024,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.09338941425085068,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach: The transaction uses ACH (payment_format_ach = 1) and carries the largest SHAP contribution (+2.6974) among the drivers, indicating ACH payments strongly increase the flag risk in this case.\n- amount_received: The received amount is 17945.7 with SHAP +1.09529, meaning a relatively large inbound amount contributes meaningfully to the flag signal.\n- amount_paid: The paid amount is 17945.7 with SHAP +0.486472, reinforcing that a large, matching payout amount also increases the flag signal.\n- dayofweek: dayofweek = 5 (Saturday) with SHAP +0.470036, suggesting the transaction occurring on a weekend day adds to the model’s suspicion.\n- to_bank: to_bank = 21940 with SHAP +0.259539, indicating the transfer to the specified receiving bank further increases the likelihood of flagging.\n\nConclusion:\nBased on the top drivers, the transaction shows elevated AML risk driven primarily by the ACH payment format and large, matched received/paid amounts, with a weekend timing and a transfer to the specified bank contributing additional risk. While some negative signals (e.g., from_bank) and other smaller positive signals exist, the dominant SHAP contributions point toward a flagged pattern warranting escalation for review.",
+  "llm_file": "llm_trx_4967044_r1.json"
+}

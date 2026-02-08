@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Well-structured and directionally consistent, but it makes an unsupported claim by interpreting equal paid/received amounts as a “direct transfer” (amount_ratio/amount_diff not provided as drivers).",
+  "transaction_id": 1047240,
+  "repeat": 6,
+  "run_name": "run_002_stability",
+  "word_count": 171,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

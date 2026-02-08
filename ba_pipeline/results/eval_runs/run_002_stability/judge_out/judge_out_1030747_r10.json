@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Well-structured and directionally consistent, but it adds unsupported context by asserting the amount is “relatively large” and implying atypicality without any driver evidence."
+}

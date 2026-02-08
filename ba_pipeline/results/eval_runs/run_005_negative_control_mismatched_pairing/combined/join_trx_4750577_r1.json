@@ -1,0 +1,72 @@
+{
+  "transaction_id": 4750577,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2046274,
+  "shap_file": "shap_trx_2046274.json",
+  "model_proba": 0.9968884587287903,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8588743209838867,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16450.28,
+      "shap_value": 0.9940911531448364,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16450.28,
+      "shap_value": 0.6147741675376892,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.40222635865211487,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 20.0,
+      "shap_value": -0.3643019199371338,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 14804.0,
+      "shap_value": 0.22065429389476776,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 243254.0,
+      "shap_value": -0.20251086354255676,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12576010823249817,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_swiss_franc",
+      "value": 0.0,
+      "shap_value": 0.08375371992588043,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.07510329782962799,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 — this feature had the largest positive contribution (SHAP +2.85195) and therefore strongly increased the model’s predicted risk/alert score.\n- amount_paid = 8884.75 (SHAP +0.83633) — the payment size contributed positively to the alert.\n- amount_received = 8884.75 (SHAP +0.734996) — the received amount also contributed positively and is consistent with the paid amount driving the score upward.\n- dayofweek = 6 (Sunday) (SHAP +0.716852) — transaction timing on Sunday increased the model score.\n- from_bank = 29251 (SHAP −0.513975) — this sending bank ID reduced the model score, partially offsetting the increases above.\n\nConclusion:\n- The transaction was flagged primarily because it is an ACH payment (payment_format_ach=1) of ~8,884.75 (amount_paid and amount_received) that occurred on a Sunday (dayofweek=6); these features increased the model’s alert score. The sending bank (from_bank=29251) lowered the score somewhat but did not fully offset the positive contributions.\n- If the model treats ACH method and Sunday timing as higher-risk signals, their presence here likely explains the alert.",
+  "llm_file": "llm_trx_4750577_r1.json"
+}

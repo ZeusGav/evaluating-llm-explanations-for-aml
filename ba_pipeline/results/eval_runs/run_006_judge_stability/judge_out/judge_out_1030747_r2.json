@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Strong alignment and coverage: it correctly explains the main positive drivers (ACH, amount, day, SAR) and the main negative offset (from_bank) without adding unsupported facts."
+}

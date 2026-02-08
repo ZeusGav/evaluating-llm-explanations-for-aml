@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, well-structured explanation that correctly ties the main SHAP drivers (ACH and SAR-related features) to the model signal, though it could have briefly incorporated the remaining smaller drivers instead of labeling them omitted.",
+  "transaction_id": 2670183,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 235,
+  "word_limit": 200,
+  "word_limit_pass": 0
+}

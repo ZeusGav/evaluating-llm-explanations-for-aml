@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2150319,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2150319.json",
+  "model_proba": 0.9983207583427429,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.158522367477417,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 12.0,
+      "shap_value": -0.90904700756073,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.829542875289917,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11349.2,
+      "shap_value": 0.7025678157806396,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 11.0,
+      "shap_value": 0.6763107180595398,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11349.2,
+      "shap_value": 0.46873730421066284,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15437079966068268,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1325238198041916,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 11.0,
+      "shap_value": 0.11654270440340042,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.11306623369455338,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) has the highest absolute SHAP contribution (3.15852) and direction increase. This indicates that the transaction’s ACH payment format strongly elevates the model’s risk score.\n- dayofweek (value=6) shows SHAP 0.829543 with direction increase. The Sunday timing contributes positively to the flag, suggesting weekend behavior may be associated with higher risk in this context.\n- amount_received (11349.2) has SHAP 0.702568 with direction increase. A relatively large incoming amount increases the flag score.\n- to_bank (11) has SHAP 0.676311 with direction increase. The receiving bank ID contributes to the elevated risk signal.\n- amount_paid (11349.2) has SHAP 0.468737 with direction increase. The matching outgoing amount reinforces the pattern of a large, symmetrical transfer, elevating risk.\n- from_bank (12) has SHAP -0.909047 with direction decrease. This feature reduces the score (i.e., the sending bank appears less risky in this model run), but the dominant ACH-driven signal remains.\n\nConclusion:\n- The transaction is flagged primarily due to the ACH payment format, with additional contributing signals from Sunday timing, large transfer amounts (incoming and outgoing), and the receiving bank. The sending bank, by contrast, reduces risk in this instance, but the net signal remains elevated due to the ACH driver and other positive contributors.\n- If there is a documented legitimate rationale for ACH usage to bank 11 on a Sunday for approximately 11,349.20 in both directions, risk could be moderated; otherwise, this pattern warrants further investigation and review of the counterparties and purpose of the transfer.",
+  "llm_file": "llm_trx_2150319_r1.json"
+}

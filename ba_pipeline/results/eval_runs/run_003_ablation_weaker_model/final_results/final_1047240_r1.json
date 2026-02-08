@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, well-structured explanation aligned with SHAP directions and covering the main drivers; it is somewhat generic on investigative next steps beyond “review source of funds.”",
+  "transaction_id": 1047240,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 212,
+  "word_limit": 200,
+  "word_limit_pass": 0
+}

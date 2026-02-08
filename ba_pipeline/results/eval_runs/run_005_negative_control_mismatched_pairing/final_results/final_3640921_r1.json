@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it states from_bank increases risk, but SHAP shows from_bank is a decreasing driver, and it also includes several unsupported/incorrect numeric values not present in the provided drivers.",
+  "transaction_id": 3640921,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 156,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

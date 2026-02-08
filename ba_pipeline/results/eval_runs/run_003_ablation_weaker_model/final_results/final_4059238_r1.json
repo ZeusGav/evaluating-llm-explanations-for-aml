@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it adds an unsupported fact by asserting dayofweek=5 is Saturday (the fact sheet defines 0=Mon..6=Sun, so 5 is Saturday is not supported).",
+  "transaction_id": 4059238,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 165,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

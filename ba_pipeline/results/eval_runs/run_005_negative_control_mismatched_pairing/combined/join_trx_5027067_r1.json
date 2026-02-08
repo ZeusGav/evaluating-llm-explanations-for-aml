@@ -1,0 +1,72 @@
+{
+  "transaction_id": 5027067,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2192652,
+  "shap_file": "shap_trx_2192652.json",
+  "model_proba": 0.9968183040618896,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9033701419830322,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 2991.0,
+      "shap_value": -0.838694155216217,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8298149704933167,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13786.65,
+      "shap_value": 0.7891790270805359,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13786.65,
+      "shap_value": 0.731416642665863,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.28125181794166565,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.15738503634929657,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14079549908638,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1124.0,
+      "shap_value": 0.10089335590600967,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.10047042369842529,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1, SHAP=+2.90662, direction=increase): the model’s top driver — the ACH payment format strongly increased the risk score.\n- amount_received (value=11226.2, SHAP=+0.827961, direction=increase) and amount_paid (value=11226.2, SHAP=+0.711713, direction=increase): both sizable and equal values meaningfully increased the score.\n- dayofweek (value=5, SHAP=+0.432066, direction=increase): the transaction occurred on day 5 (per feature mapping), which contributed to a higher score.\n- from_bank (value=117453, SHAP=-0.554066, direction=decrease): the sending bank ID reduced the score somewhat, partially offsetting the increases above.\n\nConclusion:\nThe model flagged this transaction primarily because it was an ACH transfer (payment_format_ach) combined with relatively large, equal amounts received and paid (amount_received and amount_paid = 11226.2), with timing (dayofweek=5) adding additional upward pressure; the sending bank (from_bank) reduced the score but did not negate the flag. If one accepts these features as material, further review should focus on the ACH nature and the large/equal amounts.",
+  "llm_file": "llm_trx_5027067_r1.json"
+}

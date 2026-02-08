@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, direction-consistent summary of the main SHAP drivers, though the investigative rationale is somewhat generic beyond restating the top factors."
+}

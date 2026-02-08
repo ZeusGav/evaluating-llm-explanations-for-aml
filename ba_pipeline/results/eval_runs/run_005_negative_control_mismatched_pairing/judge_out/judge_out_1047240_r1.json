@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 3,
+  "note": "Biggest issue: it contradicts SHAP directions/values for to_bank (stated decrease vs SHAP increase) and includes multiple incorrect feature values (amounts, dayofweek, bank IDs), making several claims unsupported."
+}

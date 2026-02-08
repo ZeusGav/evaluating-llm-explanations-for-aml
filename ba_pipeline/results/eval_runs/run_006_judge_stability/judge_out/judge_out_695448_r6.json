@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, direction-consistent summary with strong coverage; it could be more useful by briefly addressing the remaining smaller drivers (hour/currencies/to_bank) without inventing new facts."
+}

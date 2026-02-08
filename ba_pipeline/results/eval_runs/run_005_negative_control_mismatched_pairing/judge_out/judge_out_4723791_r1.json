@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 2,
+  "note": "The narrative introduces multiple drivers not present in SHAP_JSON (dayofweek, hour) and also misstates/omits some provided drivers, creating unsupported claims and direction risk."
+}

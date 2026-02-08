@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2148592,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2466813,
+  "shap_file": "shap_trx_2466813.json",
+  "model_proba": 0.9974180459976196,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.141047477722168,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14606.03,
+      "shap_value": 1.2061222791671753,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 12.0,
+      "shap_value": -0.9060243964195251,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14606.03,
+      "shap_value": 0.8784427046775818,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1.0,
+      "shap_value": 0.39642417430877686,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.15289799869060516,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.11179528385400772,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10304921865463257,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06783098727464676,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_ratio",
+      "value": 0.9999999999315352,
+      "shap_value": -0.05358882620930672,
+      "direction": "decrease"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP +2.8217, direction=increase) was the single largest driver — the model flagged the transaction primarily because it was sent via ACH.\n- payment_currency_saudi_riyal (value=1; SHAP +0.626) and receiving_currency_saudi_riyal (value=1; SHAP +0.409) both increased the score — the payment and receipt are in Saudi riyal.\n- dayofweek (value=6; SHAP +0.607, direction=increase) contributed positively — the transaction occurred on day 6 (Sunday), which raised the model score.\n- amount_received (value=71485.3; SHAP +0.488) provided an additional moderate increase — the received amount materially increased the predicted risk.\n- Offsetting the above, from_bank (value=149345; SHAP -0.702, direction=decrease) and to_bank (value=148586; SHAP -0.424, direction=decrease) reduced the model’s predicted risk.\n\nConclusion:\nThe model flagged this transaction mainly because it was an ACH transfer (payment_format_ach=1) in Saudi riyal (payment_currency_saudi_riyal=1 and receiving_currency_saudi_riyal=1), executed on day 6 (Sunday) with a non‑trivial received amount (71485.3) — these factors increased the score. However, the sending and receiving bank IDs (from_bank=149345 and to_bank=148586) produced negative SHAP contributions that partially offset the increase. If pursuing review, focus on verifying the purpose and source/beneficiary relationship for an ACH SAR payment on day 6 for ~71,485.3, noting that bank identifiers reduced but did not eliminate the model’s concern.",
+  "llm_file": "llm_trx_2148592_r1.json"
+}

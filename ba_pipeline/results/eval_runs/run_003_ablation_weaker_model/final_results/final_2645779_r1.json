@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it asserts a “high-value transfer pattern” and “high-risk pattern” from equal amounts, which isn’t directly supported by any provided feature beyond the amounts themselves.",
+  "transaction_id": 2645779,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 144,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

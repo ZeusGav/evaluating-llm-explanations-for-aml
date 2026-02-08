@@ -1,0 +1,72 @@
+{
+  "transaction_id": 5018226,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 5027067,
+  "shap_file": "shap_trx_5027067.json",
+  "model_proba": 0.9959233999252319,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9066195487976074,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11226.25,
+      "shap_value": 0.8279614448547363,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11226.25,
+      "shap_value": 0.7117131948471069,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 117453.0,
+      "shap_value": -0.5540661215782166,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.43206578493118286,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 29404.0,
+      "shap_value": 0.18055300414562225,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.1390361338853836,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.125226229429245,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.08867424726486206,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.054556261748075485,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.82994, direction: increase) — the model’s largest positive contributor is that the transaction used ACH as the payment format, which substantially raised the alert score.\n- amount_received = 17462.3 (SHAP +1.28302, direction: increase) — a relatively large received amount further increased the model score.\n- amount_paid = 17462.3 (SHAP +0.61878, direction: increase) — the paid amount (equal to the received amount) also raised the score, though to a lesser degree than the two drivers above.\n\nConclusion:\nThe flag was driven primarily by the combination of an ACH payment (payment_format_ach=1) together with sizable amounts (amount_received and amount_paid ≈ 17,462.3), which collectively raised the model’s risk score. (If one accepts the model’s learned associations, these three features are sufficient to explain the alert; other listed features had much smaller effects and are not required to account for the flag.)",
+  "llm_file": "llm_trx_5018226_r1.json"
+}

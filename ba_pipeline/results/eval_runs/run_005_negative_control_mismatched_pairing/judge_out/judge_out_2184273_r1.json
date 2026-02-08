@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is citing a non-provided feature (receiving_currency_euro) with a decreasing effect, which is unsupported and also breaks direction alignment against the given SHAP drivers."
+}

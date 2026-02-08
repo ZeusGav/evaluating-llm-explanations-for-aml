@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4723788,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_4723788.json",
+  "model_proba": 0.9965607523918152,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9259986877441406,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.61603844165802,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 148016.0,
+      "shap_value": -0.4321020543575287,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.3349631130695343,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.24228274822235107,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 14.0,
+      "shap_value": 0.2114797979593277,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.16313819587230682,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15649427473545074,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.12032550573348999,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 74628.48,
+      "shap_value": 0.11144252866506577,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) — largest contributor: SHAP +2.926 (increase). The model’s score rose primarily because the payment was made via ACH.\n- payment_currency_saudi_riyal (value=1) — SHAP +0.616 (increase). The payment currency being Saudi riyal contributed to increasing the flag score.\n- payment_currency_us_dollar (value=0) — SHAP +0.335 (increase). The payment not being in US dollars increases the score (the model attributes higher score when payment_currency_us_dollar = 0).\n- receiving_currency_saudi_riyal (value=1) — SHAP +0.242 (increase). The receiving currency being Saudi riyal further increased the score.\n- from_bank (value=148016) — SHAP -0.432 (decrease). The sending bank ID reduced the model score (partially offsetting the increases above).\n\nConclusion:\nThe transaction was flagged mainly because it is an ACH payment (payment_format_ach=1) denominated in Saudi riyal (payment_currency_saudi_riyal=1 and receiving_currency_saudi_riyal=1), with the absence of USD (payment_currency_us_dollar=0) also increasing the score. This upward pressure was partially offset by a negative contribution from the sending bank (from_bank = 148016). If the positive contributions from the ACH and Saudi riyal features outweigh the sending-bank decrease (as indicated by the SHAP magnitudes), the net model score led to the alert.",
+  "llm_file": "llm_trx_4723788_r1.json"
+}

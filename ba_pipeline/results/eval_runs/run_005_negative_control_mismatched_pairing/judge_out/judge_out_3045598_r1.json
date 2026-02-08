@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is unsupported/incorrect driver references (e.g., Saudi riyal currency and mismatched amounts/SHAPs) that are not present in the provided SHAP list."
+}

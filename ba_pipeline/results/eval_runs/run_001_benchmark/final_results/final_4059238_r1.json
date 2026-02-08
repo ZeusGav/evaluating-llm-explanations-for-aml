@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "It makes an unsupported claim by mapping dayofweek=5 to Saturday (FACT_SHEET defines 5 as Saturday only if 0=Mon..6=Sun, but the text asserts the mapping without tying it back to provided drivers).",
+  "transaction_id": 4059238,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 170,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

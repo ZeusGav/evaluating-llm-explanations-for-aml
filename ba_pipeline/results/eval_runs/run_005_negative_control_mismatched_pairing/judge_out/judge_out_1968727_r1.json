@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it introduces unsupported/non-provided features and wrong values (e.g., amount_paid) and omits several substantial SHAP drivers like hour and currency indicators, reducing fidelity to SHAP_JSON."
+}

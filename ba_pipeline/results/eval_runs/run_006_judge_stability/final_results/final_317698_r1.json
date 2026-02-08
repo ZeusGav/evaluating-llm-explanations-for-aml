@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, directionally correct write-up, but it adds an unsupported claim by interpreting amount_paid as “mid-large” (not supported by any provided feature semantics).",
+  "transaction_id": 317698,
+  "repeat": 1,
+  "run_name": "run_006_judge_stability",
+  "word_count": 138,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

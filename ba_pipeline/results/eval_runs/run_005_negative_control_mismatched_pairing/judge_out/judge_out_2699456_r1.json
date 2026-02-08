@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 0,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 1,
+  "note": "The explanation is largely unsupported and directionally inconsistent because it cites non-existent SAR currency features and misstates from_bank as decreasing when SHAP shows it increases."
+}

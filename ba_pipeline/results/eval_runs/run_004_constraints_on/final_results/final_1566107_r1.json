@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Accurately reflects the main SHAP drivers and their directions with clear, investigator-useful framing and no extra unsupported facts.",
+  "transaction_id": 1566107,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 124,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

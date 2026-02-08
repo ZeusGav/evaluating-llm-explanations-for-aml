@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2166062,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2166062.json",
+  "model_proba": 0.998119056224823,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.7481510639190674,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10148.7,
+      "shap_value": 0.9167976975440979,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8824121952056885,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 24850.0,
+      "shap_value": -0.8131362199783325,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 22.0,
+      "shap_value": 0.7938103675842285,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10148.7,
+      "shap_value": 0.578353762626648,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1704486906528473,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.15329912304878235,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 9.0,
+      "shap_value": 0.0915684774518013,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.08771967142820358,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (value=1) which strongly increases the score, combined with a mid five‑figure payment amount (amount_paid = 10,148.7; increases) that is fully mirrored in amount_received (10,148.7; increases). The transaction timing (dayofweek = 6, i.e., Sunday) also increases the score. Receiving bank (to_bank = 22) contributes to an increased score, while sending bank (from_bank = 24850) contributes a decreased score.\n\nConclusion:\nThe alert is mainly due to an ACH transfer (payment_format_ach=1) of 10,148.7 on dayofweek=6 to to_bank=22, with amount_received matching amount_paid. The negative contribution from from_bank=24850 slightly offsets risk but does not outweigh the strong positive drivers. If further review is needed, focus on the ACH nature, the Sunday timing, the comparable paid/received amounts, and the receiving bank ID (to_bank=22).",
+  "llm_file": "llm_trx_2166062_r1.json"
+}

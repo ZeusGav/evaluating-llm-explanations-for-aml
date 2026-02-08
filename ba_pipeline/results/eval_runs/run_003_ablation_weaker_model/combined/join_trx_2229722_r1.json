@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2229722,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2229722.json",
+  "model_proba": 0.9974950551986694,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.860833168029785,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 18663.0,
+      "shap_value": 0.9466368556022644,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 11296.0,
+      "shap_value": -0.8533885478973389,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7656073570251465,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 18663.0,
+      "shap_value": 0.7323427796363831,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1457.0,
+      "shap_value": 0.32519111037254333,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12328023463487625,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 17.0,
+      "shap_value": 0.10309850424528122,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.08680042624473572,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.08184255659580231,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- The most influential driver is payment_format_ach (value=1) with SHAP 2.86083 (increase). This indicates the transaction uses ACH, which the model associates with higher risk, contributing strongly to the flag.\n- Next, amount_received (18663) has SHAP 0.946637 (increase). A large incoming amount increases the model’s risk score.\n- The from_bank (11296) shows SHAP -0.853389 (decrease). This negative contribution reduces risk, partially offsetting other drivers.\n- dayofweek (6) has SHAP 0.765607 (increase). The Sunday timing contributes to the risk signal.\n- amount_paid (18663) has SHAP 0.732343 (increase). The identical large paid amount further elevates risk.\n\nIn sum, the flag is driven primarily by ACH usage and large payment amounts, with a still-present but mitigating effect from the sending bank. Minor contributors (e.g., hour, to_bank, payment_currency_us_dollar) have smaller absolute SHAP values and are not cited as primary drivers here.\n\nConclusion:\n- Based on the provided drivers, the transaction exhibits elevated AML risk driven by ACH format and large monetary amounts, with partial mitigation from the sending bank and USD currency indicators. The overall signal supports prioritizing this transaction for review, while recognizing that the negative from_bank reduces risk somewhat. If corroborating information confirms legitimate counterparties and purpose, risk may be lower; otherwise, maintain heightened scrutiny.",
+  "llm_file": "llm_trx_2229722_r1.json"
+}

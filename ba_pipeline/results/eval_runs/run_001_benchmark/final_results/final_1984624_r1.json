@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong coverage and clear structure, but it makes an unsupported inference about “same-currency/no conversion” and omits other provided drivers (e.g., to_bank, hour, non-cheque/non-credit-card indicators).",
+  "transaction_id": 1984624,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 185,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

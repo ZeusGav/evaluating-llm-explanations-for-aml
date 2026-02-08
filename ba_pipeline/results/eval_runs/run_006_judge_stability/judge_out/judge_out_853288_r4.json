@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately reflects directions and covers the major SHAP drivers, but provides limited AML-investigative context beyond restating model contributions."
+}

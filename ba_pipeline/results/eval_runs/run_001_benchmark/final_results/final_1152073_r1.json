@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately ties the main uplift to ACH and higher amounts with correct directions and strong coverage, but provides limited AML interpretation beyond restating model drivers.",
+  "transaction_id": 1152073,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 180,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

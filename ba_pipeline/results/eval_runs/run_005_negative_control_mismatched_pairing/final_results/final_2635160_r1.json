@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 2,
+  "note": "Biggest issue: it cites multiple non-existent/mismatched drivers and directions (e.g., from_bank increasing, USD currency), making the explanation unsupported by the provided SHAP.",
+  "transaction_id": 2635160,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 185,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

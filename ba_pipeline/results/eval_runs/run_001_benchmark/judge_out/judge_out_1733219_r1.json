@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, accurate SHAP-tied summary with high driver coverage; could be slightly more useful by briefly addressing remaining (smaller) drivers like hour and currency without adding new facts."
+}

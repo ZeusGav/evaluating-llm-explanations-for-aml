@@ -1,0 +1,72 @@
+{
+  "transaction_id": 4389487,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 4750577,
+  "shap_file": "shap_trx_4750577.json",
+  "model_proba": 0.9967658519744873,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.851951837539673,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 8884.75,
+      "shap_value": 0.8363304138183594,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 8884.75,
+      "shap_value": 0.7349957823753357,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7168519496917725,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 29251.0,
+      "shap_value": -0.5139749646186829,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1412.0,
+      "shap_value": 0.22633792459964752,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -0.19466152787208557,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14169786870479584,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.12014360725879669,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.11199550330638885,
+      "direction": "decrease"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) — large positive contribution (SHAP ≈ +2.973); the ACH payment format was the strongest driver that increased the model score.\n- dayofweek (value=6) — positive contribution (SHAP ≈ +0.636); the transaction occurring on dayofweek=6 (Sunday) increased the score.\n- payment_currency_saudi_riyal (value=1) — positive contribution (SHAP ≈ +0.613); payment currency = Saudi Riyal increased the score.\n- amount_received (value=59658.8) — positive contribution (SHAP ≈ +0.535); the received amount (59658.8) increased the score.\n- from_bank (value=119) — negative contribution (SHAP ≈ −0.395); the sending bank ID 119 partially decreased the model score (offsetting some risk).\n\nConclusion:\nThe model flagged this transaction primarily because it was an ACH payment (payment_format_ach=1) in Saudi Riyals (payment_currency_saudi_riyal=1) of a relatively large amount (amount_received=59658.8) that occurred on dayofweek=6 (Sunday). This signal is somewhat offset by the sending bank feature (from_bank=119) which reduced the score. If one interprets ACH payments in SAR on dayofweek=6 as higher-risk patterns (per the model drivers), then this transaction matches that pattern and warrants review.",
+  "llm_file": "llm_trx_4389487_r1.json"
+}

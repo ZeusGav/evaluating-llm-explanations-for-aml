@@ -1,0 +1,72 @@
+{
+  "transaction_id": 3635796,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2670183,
+  "shap_file": "shap_trx_2670183.json",
+  "model_proba": 0.9958221912384033,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.993736505508423,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 223.0,
+      "shap_value": -0.6901993155479431,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 44617.31,
+      "shap_value": 0.5056024193763733,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.49733829498291016,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 44617.31,
+      "shap_value": 0.304208904504776,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.2916164696216583,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.21613921225070953,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.19831548631191254,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14967644214630127,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 118.0,
+      "shap_value": -0.13988733291625977,
+      "direction": "decrease"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+2.87653, direction=increase): the payment being ACH is the single largest driver increasing the alert score.\n- amount_received (value=15333.3; SHAP=+0.934122, direction=increase): the received amount (15,333.3) meaningfully increases the score.\n- dayofweek (value=6 → Sunday; SHAP=+0.766317, direction=increase): the transaction occurring on dayofweek=6 (Sunday) contributes to a higher score.\n- amount_paid (value=15333.3; SHAP=+0.711315, direction=increase): the paid amount equals the received amount (15,333.3) and further increases the score.\n- receiving_currency_euro (value=1; SHAP=−0.234298, direction=decrease): receiving_currency_euro slightly reduces the alert score (a mild mitigating factor).\n\nConclusion:\nThe model flagged this transaction primarily because it was an ACH transfer (payment_format_ach=1) involving a relatively large, matching paid and received amount (amount_received=15333.3 and amount_paid=15333.3) that occurred on a Sunday (dayofweek=6). The fact that the receiving currency is euro (receiving_currency_euro=1) modestly decreases the score but does not offset the stronger increasing drivers. \n\nConditional note (hedged): if an ACH payment (payment_format_ach=1) of this magnitude and with identical paid/received amounts occurs on a weekend (dayofweek=6), the model’s score is expected to be higher given the cited driver contributions.",
+  "llm_file": "llm_trx_3635796_r1.json"
+}

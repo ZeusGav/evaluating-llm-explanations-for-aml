@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, well-structured coverage of the main SHAP drivers, but it omits other provided drivers (e.g., payment_currency_us_dollar=0, receiving_currency_euro=0, to_bank) while making a small interpretive claim about being “SAR-denominated.”",
+  "transaction_id": 1030747,
+  "repeat": 7,
+  "run_name": "run_002_stability",
+  "word_count": 168,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

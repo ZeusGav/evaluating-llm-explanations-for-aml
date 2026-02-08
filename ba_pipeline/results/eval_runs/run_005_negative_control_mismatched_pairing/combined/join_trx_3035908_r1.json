@@ -1,0 +1,72 @@
+{
+  "transaction_id": 3035908,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 695448,
+  "shap_file": "shap_trx_695448.json",
+  "model_proba": 0.997031569480896,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.828012704849243,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 12481.86,
+      "shap_value": 0.8510227799415588,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7563846707344055,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 12481.86,
+      "shap_value": 0.7351575493812561,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 211.0,
+      "shap_value": -0.39746659994125366,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.22610214352607727,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.1985020637512207,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 5425.0,
+      "shap_value": -0.1669425070285797,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12897177040576935,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.09012802690267563,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) — highest contributor (SHAP +3.03318, direction: increase). The model score rose substantially because the payment is ACH.\n- payment_currency_saudi_riyal (value=1) — (SHAP +0.571676, direction: increase). Payment currency being Saudi Riyal increased the score.\n- amount_received (value=30072.8) — (SHAP +0.322905, direction: increase). The reported received amount contributed positively to the score.\n- receiving_currency_saudi_riyal (value=1) — (SHAP +0.257559, direction: increase). Receiving currency also being Saudi Riyal added to the score.\n- from_bank (value=48308) — (SHAP −0.416701, direction: decrease). The sending bank ID reduced the model score modestly.\n\nConclusion:\nThe flag is driven primarily by the payment being ACH (payment_format_ach=1) and by both payment and receiving currencies being Saudi Riyal (payment_currency_saudi_riyal=1, receiving_currency_saudi_riyal=1), with the amount_received (30072.8) adding further upward pressure; the from_bank (48308) partially offset the score. If similar transactions combine ACH in SAR with comparable amounts, the model is likely to produce elevated risk scores.",
+  "llm_file": "llm_trx_3035908_r1.json"
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and coverage of the dominant SHAP drivers, but it omits smaller contributing factors like hour and non-credit-card/cheque indicators that could add context."
+}

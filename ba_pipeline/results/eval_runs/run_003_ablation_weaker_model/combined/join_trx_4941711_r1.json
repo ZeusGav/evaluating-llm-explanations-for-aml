@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4941711,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_4941711.json",
+  "model_proba": 0.9964216947555542,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8824150562286377,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.6142871379852295,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 43845.91,
+      "shap_value": 0.43578943610191345,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 49508.0,
+      "shap_value": -0.3730654716491699,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 249176.0,
+      "shap_value": -0.3520820140838623,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.3215755820274353,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.2605927586555481,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 43845.91,
+      "shap_value": 0.2582186758518219,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.1549394577741623,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13824410736560822,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) has the highest absolute SHAP contribution (2.88242) with direction increase, meaning the ACH payment method strongly drove the flag.\n- payment_currency_saudi_riyal (value=1) shows a sizeable positive SHAP (0.614287) with direction increase, indicating the payment is in Saudi Riyal and contributed to risk.\n- amount_received (value=43845.9) adds further positive SHAP (0.435789) with direction increase, suggesting a relatively large inbound amount contributed to the flag.\n\nConclusion:\nBased on the top drivers, the transaction exhibits an ACH-based payment in Saudi Riyal with a sizable inbound amount, which collectively elevated the AML risk signal. This pattern warrants further review and due diligence, including confirmation of source of funds and purposes, alignment with expected business activity, and counterparty verification. If those checks align with legitimate activity, risk may be mitigated; otherwise, escalate for heightened scrutiny.",
+  "llm_file": "llm_trx_4941711_r1.json"
+}

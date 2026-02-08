@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and well-structured, but it makes an unsupported claim by interpreting equal amounts as a “paired transfer pattern,” which is not a provided driver (e.g., amount_ratio/amount_diff are absent)."
+}

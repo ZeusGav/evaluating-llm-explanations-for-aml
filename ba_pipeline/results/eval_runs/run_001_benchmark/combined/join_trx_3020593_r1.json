@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3020593,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_3020593.json",
+  "model_proba": 0.996195912361145,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.891624927520752,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11972.8,
+      "shap_value": 0.8897443413734436,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11972.8,
+      "shap_value": 0.787084698677063,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 11056.0,
+      "shap_value": -0.3364693820476532,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.30021315813064575,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.19389329850673676,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12309077382087708,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1299.0,
+      "shap_value": 0.11802566051483154,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.0647156834602356,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06073963642120361,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- The model’s strongest positive driver is payment_format_ach (payment_format_ach = 1; SHAP 2.89162, direction = increase), so the use of ACH materially raised the alert score.\n- The transaction amount signals contributed positively: amount_paid (11972.8; SHAP 0.889744, increase) and amount_received (11972.8; SHAP 0.787085, increase) both increased the score.\n- hour (12; SHAP 0.300213, increase) gave a small additional upward contribution.\n- Partially offsetting these were from_bank (from_bank = 11056; SHAP -0.336469, decrease) and receiving_currency_euro (receiving_currency_euro = 1; SHAP -0.193893, decrease), which modestly reduced the score.\n\nConclusion:\n- The alert is primarily driven by payment_format_ach = 1 together with the relatively large amount (amount_paid = amount_received = 11972.8), with a small additional contribution from hour = 12. These factors explain why the model flagged the transaction. The sending bank (from_bank = 11056) and the receiving currency being euro (receiving_currency_euro = 1) reduced the model score somewhat; if further review is needed, focus first on the ACH method and the payment size.",
+  "llm_file": "llm_trx_3020593_r1.json"
+}

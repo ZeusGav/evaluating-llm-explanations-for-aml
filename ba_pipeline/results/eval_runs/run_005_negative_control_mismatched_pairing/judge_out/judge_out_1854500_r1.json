@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it contradicts SHAP on to_bank (SHAP says decrease but text says increase) and also cites multiple incorrect feature values, making several claims unsupported by the provided drivers."
+}

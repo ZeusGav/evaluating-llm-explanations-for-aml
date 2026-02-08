@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it adds an unsupported qualitative claim (“relatively large/sizable amount”) without any comparative baseline provided by the drivers.",
+  "transaction_id": 4389487,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 128,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

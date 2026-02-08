@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strongly aligned to the main SHAP drivers with clear structure, but the investigative guidance remains fairly generic beyond restating factor impacts.",
+  "transaction_id": 2699456,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 164,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

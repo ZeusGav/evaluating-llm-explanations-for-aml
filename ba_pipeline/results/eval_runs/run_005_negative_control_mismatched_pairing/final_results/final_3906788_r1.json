@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The narrative includes unsupported/mismatched drivers (e.g., mentions payment_currency_euro and to_bank=22 not in SHAP, and contradicts SHAP by saying USD decreased feature is euro increasing).",
+  "transaction_id": 3906788,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 129,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 2,
+  "note": "Biggest issue: multiple mismatches to SHAP_JSON (wrong feature values/SHAP magnitudes and at least one wrong direction, e.g., from_bank stated as decreasing though labeled increase)."
+}

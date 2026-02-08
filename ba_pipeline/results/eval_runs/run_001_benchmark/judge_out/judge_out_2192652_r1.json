@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "The only major issue is an unsupported claim that amount_paid equals amount_received increased risk (no SHAP driver for equality/ratio/diff was provided)."
+}

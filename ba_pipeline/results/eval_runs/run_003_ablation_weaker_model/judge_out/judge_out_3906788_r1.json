@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and broad coverage of the main SHAP drivers; it could be more operationally useful by briefly noting the smaller countervailing factors (from_bank and hour) without adding new facts."
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately tied the main risk to ACH and large amounts with correct directions, but it omits several smaller drivers (time/day, to_bank, currency and other format indicators) that could add investigative color."
+}

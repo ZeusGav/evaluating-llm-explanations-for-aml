@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4941711,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_4941711.json",
+  "model_proba": 0.9964216947555542,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8824150562286377,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.6142871379852295,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 43845.91,
+      "shap_value": 0.43578943610191345,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 49508.0,
+      "shap_value": -0.3730654716491699,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 249176.0,
+      "shap_value": -0.3520820140838623,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.3215755820274353,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.2605927586555481,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 43845.91,
+      "shap_value": 0.2582186758518219,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.1549394577741623,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13824410736560822,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.88242, direction: increase) — the transaction being sent via ACH is the single largest driver increasing the model score.\n- payment_currency_saudi_riyal = 1 (SHAP +0.614287, direction: increase) and receiving_currency_saudi_riyal = 1 (SHAP +0.321576, direction: increase) — both payment and receiving currency indicators are SAR, which add further upward pressure on the score.\n- amount_received = 43845.9 (SHAP +0.435789, direction: increase) — the monetary magnitude in the receiving currency contributes to the increase.\n- to_bank = 49508 (SHAP -0.373065, direction: decrease) and from_bank = 249176 (SHAP -0.352082, direction: decrease) — these sending/receiving bank identifiers reduce the model score and partially offset other increasing drivers.\n\nConclusion:\nThe model flagged this transaction primarily because it was sent by ACH (payment_format_ach=1) and involves Saudi riyal as both payment and receiving currency (payment_currency_saudi_riyal=1 and receiving_currency_saudi_riyal=1), with a non‑trivial amount received (amount_received=43845.9). The sending and receiving bank identifiers (from_bank=249176 and to_bank=49508) modestly decrease the score, but do not fully offset the ACH and SAR-related increases. If further review is needed, confirm ACH routing details and the reason for SAR denomination given the amount.",
+  "llm_file": "llm_trx_4941711_r1.json"
+}

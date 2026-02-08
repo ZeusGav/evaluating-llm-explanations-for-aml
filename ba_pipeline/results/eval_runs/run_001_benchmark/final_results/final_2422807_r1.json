@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, well-structured coverage of the main SHAP drivers, but the “pass-through/one-to-one transfer flow” interpretation is not directly supported by the provided features.",
+  "transaction_id": 2422807,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 136,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

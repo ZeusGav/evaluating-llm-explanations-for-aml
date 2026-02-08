@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it introduces an unsupported claim by referring to “SAR-denominated” rather than sticking to the provided one-hot feature name (payment_currency_saudi_riyal)."
+}

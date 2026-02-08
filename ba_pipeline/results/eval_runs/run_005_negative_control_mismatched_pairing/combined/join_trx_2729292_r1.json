@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2729292,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 3045598,
+  "shap_file": "shap_trx_3045598.json",
+  "model_proba": 0.9957631826400757,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0540807247161865,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 9880.3,
+      "shap_value": 0.5183521509170532,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 9880.3,
+      "shap_value": 0.47739723324775696,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 148785.0,
+      "shap_value": -0.35692599415779114,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.20349209010601044,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1923195719718933,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.15215083956718445,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1508224606513977,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 119.0,
+      "shap_value": 0.0775059387087822,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": 0.06204868108034134,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant positive driver (SHAP +2.77623 → increases score); the model flagged the transaction largely because it was an ACH payment.\n- amount_received (17441.1) contributed positively (SHAP +0.96677 → increases score); amount_paid (17441.1) also contributed positively (SHAP +0.44970 → increases score). Both features point to the same sizable amount flowing in and out.\n- to_bank (1467) contributed a further positive effect (SHAP +0.51002 → increases score), indicating the receiving bank ID raised the alert score.\n- hour (22) had a negative contribution (SHAP -0.45552 → decreases score) that partially offset the above increases.\n- from_bank (21611) had a small negative contribution (SHAP -0.18196 → decreases score).\n\nConclusion:\n- The alert is primarily driven by the transaction being an ACH transfer (payment_format_ach=1) combined with matched, relatively large amount values (amount_received=17441.1 and amount_paid=17441.1) and the receiving bank identifier (to_bank=1467). The late hour (hour=22) and the sending bank (from_bank=21611) modestly reduced the model score but did not outweigh the positive drivers.\n- If the model treats ACH payments and these amount/to_bank patterns as higher risk, then the observed SHAP contributions are consistent with that behavior.",
+  "llm_file": "llm_trx_2729292_r1.json"
+}

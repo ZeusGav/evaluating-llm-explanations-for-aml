@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it contradicts SHAP on payment_currency_us_dollar (SHAP shows value=0 with an increasing effect, but the text says USD=1 and decreasing) and also cites incorrect amounts/bank IDs."
+}

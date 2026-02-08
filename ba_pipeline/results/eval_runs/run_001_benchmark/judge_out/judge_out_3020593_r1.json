@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately matches SHAP directions and covers the major drivers; main limitation is slightly generic investigative guidance beyond pointing to ACH and amount."
+}

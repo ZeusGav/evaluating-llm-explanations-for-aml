@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is multiple unsupported/inaccurate specifics (e.g., to_bank=12, dayofweek=6/Sunday, amount_ratio mention) that are not supported by the provided SHAP values."
+}

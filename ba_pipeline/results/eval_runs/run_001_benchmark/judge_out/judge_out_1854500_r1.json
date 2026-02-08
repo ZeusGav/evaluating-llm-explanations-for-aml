@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, direction-faithful summary of the dominant ACH and amount drivers with no extraneous claims, though it could add a bit more investigative context beyond restating SHAP impacts."
+}

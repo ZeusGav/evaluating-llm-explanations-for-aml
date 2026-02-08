@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and coverage of the main SHAP drivers; utility is slightly limited by not addressing smaller listed contributors (e.g., hour, amount_paid) in the narrative."
+}

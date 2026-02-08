@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2635160,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2635160.json",
+  "model_proba": 0.9978824257850647,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.810856580734253,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 9226.42,
+      "shap_value": 0.8082485198974609,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 9226.42,
+      "shap_value": 0.7223267555236816,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 233580.0,
+      "shap_value": 0.2590033710002899,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 17.0,
+      "shap_value": 0.22502289712429047,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.14983585476875305,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 0.0,
+      "shap_value": 0.13665784895420074,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 3420.0,
+      "shap_value": 0.12174966186285019,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1118410974740982,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09336426109075546,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1; SHAP +2.81086), which strongly increased the score. Elevated transaction size—amount_paid (9226.42; SHAP +0.80825) and amount_received (9226.42; SHAP +0.72233)—further increased the score. Sending bank (from_bank = 233580; SHAP +0.25900) and transaction timing (hour = 17; SHAP +0.22502) also contributed positively. Payment_currency_us_dollar (value=1; SHAP -0.14984) modestly decreased the score but did not offset the positive drivers.\n\nConclusion: Based solely on the listed drivers, the combination of ACH format, the specific amounts (9226.42), the sending bank (233580) and the 17:00 hour produced a net increase in the model score and triggered the alert; USD currency presence slightly reduced the score. For further review, focus on the ACH payment characteristics (payment_format_ach), the identical paid/received amounts, the from_bank (233580), and the time (hour=17).",
+  "llm_file": "llm_trx_2635160_r1.json"
+}

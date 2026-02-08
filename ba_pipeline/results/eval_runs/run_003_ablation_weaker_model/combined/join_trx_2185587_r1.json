@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2185587,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2185587.json",
+  "model_proba": 0.9962443113327026,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8248631954193115,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16206.44,
+      "shap_value": 0.9141411185264587,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7623053193092346,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16206.44,
+      "shap_value": 0.5835891962051392,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 25981.0,
+      "shap_value": -0.48165926337242126,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.18607985973358154,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15063276886940002,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 19729.0,
+      "shap_value": -0.1264508068561554,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 11.0,
+      "shap_value": 0.12106452137231827,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09949110448360443,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1, shap_value=2.82486, direction=increase): The strongest contributor. Indicates the transaction used ACH, which the model flags as higher risk in this context.\n- amount_received (value=16206.4, shap_value=0.914141, direction=increase): Large inflow with a notable SHAP impact, contributing to the risk signal.\n- dayofweek (value=6, shap_value=0.762305, direction=increase): Occurs on Sunday. Weekend timing is contributing to the elevated risk in this flag.\n- amount_paid (value=16206.4, shap_value=0.583589, direction=increase): Large outflow of the same magnitude, reinforcing the same risk pattern noted for the inflow.\n\nConclusion:\n- The flag appears driven by a combination of ACH payment format, a substantial USD amount moving in and out, and weekend timing. These top drivers together indicate an elevated risk requiring further review to confirm legitimacy (business purpose, sender/receiver identity, and source of funds). If a valid business justification is available, document it clearly; otherwise, initiate appropriate investigation.",
+  "llm_file": "llm_trx_2185587_r1.json"
+}

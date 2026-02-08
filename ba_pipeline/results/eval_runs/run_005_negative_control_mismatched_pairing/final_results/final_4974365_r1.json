@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it contradicts SHAP directions for to_bank (stated increase but SHAP says decrease) and also invents/changes several feature values and SHAP magnitudes not supported by the provided drivers.",
+  "transaction_id": 4974365,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 165,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

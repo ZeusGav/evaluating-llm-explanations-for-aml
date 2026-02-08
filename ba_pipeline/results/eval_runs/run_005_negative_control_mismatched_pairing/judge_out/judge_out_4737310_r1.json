@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it invents/contradicts key drivers (e.g., from_bank and payment_currency_euro) versus the provided SHAP features/directions."
+}

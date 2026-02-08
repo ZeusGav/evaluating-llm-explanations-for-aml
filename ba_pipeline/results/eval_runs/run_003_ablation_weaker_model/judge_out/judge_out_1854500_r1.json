@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, well-structured coverage of the top SHAP drivers, but it makes unsupported claims like calling the amounts “unusually large” and recommending “enhanced due diligence” beyond what the provided features justify."
+}

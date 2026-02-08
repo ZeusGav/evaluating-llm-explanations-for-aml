@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and direction-consistent, but it introduces unsupported details about “typical customer behavior,” “manual review,” and “confirm intent and counterparties” that are not grounded in the provided features."
+}

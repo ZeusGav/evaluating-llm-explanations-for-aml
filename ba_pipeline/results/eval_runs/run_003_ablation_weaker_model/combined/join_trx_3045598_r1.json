@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3045598,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_3045598.json",
+  "model_proba": 0.9957631826400757,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0540807247161865,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 9880.3,
+      "shap_value": 0.5183521509170532,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 9880.3,
+      "shap_value": 0.47739723324775696,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 148785.0,
+      "shap_value": -0.35692599415779114,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.20349209010601044,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1923195719718933,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.15215083956718445,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1508224606513977,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 119.0,
+      "shap_value": 0.0775059387087822,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": 0.06204868108034134,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- The strongest driver is payment_format_ach (value=1, SHAP=3.05408, direction increase), indicating ACH payments are a major contributor to the flag.\n- High-value components also push risk: amount_paid (9880.3, SHAP=0.518, increase) and amount_received (9880.3, SHAP=0.477, increase) both contribute positively to the flag.\n- A moderate opposing signal comes from from_bank (148785, SHAP=-0.356926, decrease), which slightly reduces the risk signal.\n- Additional positive contributors include payment_currency_saudi_riyal (value=1, SHAP=0.203492, increase), hour (13, SHAP=0.152151, increase), and to_bank (119, SHAP=0.0775059, increase). These collectively add modest support to the risk signal.\n- Other listed drivers with smaller absolute SHAP values (e.g., dayofweek 1, SHAP=0.0620) provide minor incremental input but are less influential.\n\nConclusion:\n- Based on the top drivers, the transaction shows elevated AML risk driven primarily by the ACH payment format and high-value transfer components, with a modest, partially counterbalancing signal from the sending bank. The overall pattern is a net positive risk signal from the strongest drivers, warranting manual review or further verification.",
+  "llm_file": "llm_trx_3045598_r1.json"
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3045598,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_3045598.json",
+  "model_proba": 0.9957631826400757,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0540807247161865,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 9880.3,
+      "shap_value": 0.5183521509170532,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 9880.3,
+      "shap_value": 0.47739723324775696,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 148785.0,
+      "shap_value": -0.35692599415779114,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.20349209010601044,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1923195719718933,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.15215083956718445,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1508224606513977,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 119.0,
+      "shap_value": 0.0775059387087822,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": 0.06204868108034134,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The flag is driven primarily by payment_format_ach = 1 (strong positive contribution), indicating an ACH payment format raised the score. Both amount_paid = 9880.3 and amount_received = 9880.3 contributed positively, so the transaction amount and the identical paid/received values increased risk. payment_currency_saudi_riyal = 1 also increased the score. Conversely, from_bank = 148785 had a negative contribution (decreased the score), partially offsetting the above.\n\nConclusion: The model flagged this transaction mainly because it is an ACH transfer (payment_format_ach) of a substantial, identical amount (amount_paid and amount_received = 9880.3) in Saudi Riyals (payment_currency_saudi_riyal), despite a reducing signal from from_bank = 148785. If ACH format and these amount/currency patterns are treated as higher-risk by the model, this combination explains the alert.",
+  "llm_file": "llm_trx_3045598_r1.json"
+}

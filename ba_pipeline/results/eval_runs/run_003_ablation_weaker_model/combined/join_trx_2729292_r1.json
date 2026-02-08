@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2729292,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2729292.json",
+  "model_proba": 0.9959419369697571,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.7762274742126465,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17441.08,
+      "shap_value": 0.9667733311653137,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1467.0,
+      "shap_value": 0.5100181698799133,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 22.0,
+      "shap_value": -0.45551797747612,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17441.08,
+      "shap_value": 0.44970056414604187,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21611.0,
+      "shap_value": -0.18195536732673645,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.16594956815242767,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10801881551742554,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": 0.07996947318315506,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.07631915807723999,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) has a SHAP_value of 2.77623 with direction \"increase\": use of ACH payment format strongly increases the risk signal, making it the primary driver for the flag.\n- amount_received (value=17441.1) has a SHAP_value of 0.966773 with direction \"increase\": the notable receiving amount adds to the risk signal.\n- to_bank (value=1467) has a SHAP_value of 0.510018 with direction \"increase\": sending to this receiving bank contributes to the flag.\n- hour (value=22) has a SHAP_value of -0.455518 with direction \"decrease\": the late hour reduces the risk signal, acting as a mitigating factor.\n\nConclusion:\nThe flag appears primarily driven by the ACH payment format, the substantial amount received, and the receiving bank, with a modest mitigating effect from the late-hour timing. Based on these drivers alone, the transaction would warrant review as a potential AML concern, while the late-hour signal slightly reduces the overall risk impression.",
+  "llm_file": "llm_trx_2729292_r1.json"
+}

@@ -1,0 +1,72 @@
+{
+  "transaction_id": 695448,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 3020593,
+  "shap_file": "shap_trx_3020593.json",
+  "model_proba": 0.996195912361145,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.891624927520752,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11972.8,
+      "shap_value": 0.8897443413734436,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11972.8,
+      "shap_value": 0.787084698677063,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 11056.0,
+      "shap_value": -0.3364693820476532,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.30021315813064575,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.19389329850673676,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12309077382087708,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1299.0,
+      "shap_value": 0.11802566051483154,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.0647156834602356,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06073963642120361,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.82801, direction: increase) — the payment being ACH was the single largest driver raising the model score.\n- amount_received = 12481.9 (SHAP +0.851023, direction: increase) — the received amount materially increased the score.\n- dayofweek = 6 (SHAP +0.756385, direction: increase) — the transaction occurring on day 6 (Sunday) contributed to a higher score.\n- amount_paid = 12481.9 (SHAP +0.735158, direction: increase) — the paid amount (equal to the received amount) further increased the score.\n- from_bank = 211 (SHAP -0.397467, direction: decrease) — the sending bank ID reduced the score modestly (a mitigating contribution).\n\nConclusion:\nThe transaction was flagged because the model score was driven up primarily by payment_format_ach = 1 together with relatively large amount_received/amount_paid (12481.9) and execution on dayofweek = 6 (Sunday). The sending bank (from_bank = 211) partially mitigates the score but does not offset the strong positive contributions from the ACH format and amounts. If one accepts only the provided drivers, the net effect is an elevated model score attributable chiefly to ACH + the ~12,481.9 amount occurring on day 6.",
+  "llm_file": "llm_trx_695448_r1.json"
+}

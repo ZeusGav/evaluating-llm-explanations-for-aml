@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, direction-consistent coverage of the key SHAP drivers, though it omits several smaller listed features (hour, currencies, other payment formats) from the narrative.",
+  "transaction_id": 2206450,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 181,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

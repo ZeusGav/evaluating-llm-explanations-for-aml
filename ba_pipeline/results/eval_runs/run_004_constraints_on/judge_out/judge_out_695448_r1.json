@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strongly aligned and well-structured, but it omits several smaller opposing/supporting drivers (e.g., from_bank, to_bank, receiving_currency_euro) that could add nuance."
+}

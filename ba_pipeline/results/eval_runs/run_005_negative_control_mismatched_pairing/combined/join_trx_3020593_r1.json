@@ -1,0 +1,72 @@
+{
+  "transaction_id": 3020593,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 4269465,
+  "shap_file": "shap_trx_4269465.json",
+  "model_proba": 0.9994687438011169,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.021085262298584,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 53104.45,
+      "shap_value": 0.878929078578949,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8072264194488525,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.4591444432735443,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.3121919333934784,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 249176.0,
+      "shap_value": -0.30612581968307495,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.24296949803829193,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 53104.45,
+      "shap_value": 0.24191522598266602,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.16266223788261414,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15870854258537292,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- The model’s strongest positive driver is payment_format_ach (payment_format_ach = 1; SHAP 2.89162, direction = increase), so the use of ACH materially raised the alert score.\n- The transaction amount signals contributed positively: amount_paid (11972.8; SHAP 0.889744, increase) and amount_received (11972.8; SHAP 0.787085, increase) both increased the score.\n- hour (12; SHAP 0.300213, increase) gave a small additional upward contribution.\n- Partially offsetting these were from_bank (from_bank = 11056; SHAP -0.336469, decrease) and receiving_currency_euro (receiving_currency_euro = 1; SHAP -0.193893, decrease), which modestly reduced the score.\n\nConclusion:\n- The alert is primarily driven by payment_format_ach = 1 together with the relatively large amount (amount_paid = amount_received = 11972.8), with a small additional contribution from hour = 12. These factors explain why the model flagged the transaction. The sending bank (from_bank = 11056) and the receiving currency being euro (receiving_currency_euro = 1) reduced the model score somewhat; if further review is needed, focus first on the ACH method and the payment size.",
+  "llm_file": "llm_trx_3020593_r1.json"
+}

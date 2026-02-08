@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1566107,
+  "run_name": "run_002_stability",
+  "shap_file": "shap_trx_1566107.json",
+  "model_proba": 0.9958776235580444,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.734300136566162,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16269.7,
+      "shap_value": 0.9757144451141357,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16269.7,
+      "shap_value": 0.9126797318458557,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 4.0,
+      "shap_value": -0.45828962326049805,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 10.0,
+      "shap_value": 0.4243406355381012,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 23833.0,
+      "shap_value": -0.28619804978370667,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 14.0,
+      "shap_value": 0.16330327093601227,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.1566728949546814,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12483295798301697,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11453524231910706,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 7,
+  "llm_text": "Why:\n- payment_format_ach = 1 (payment_format_ach) was the dominant driver and substantially increased the model score (SHAP +2.7343), i.e., the ACH payment format is the primary reason for the flag.\n- amount_paid = 16269.7 (amount_paid) and amount_received = 16269.7 (amount_received) both contributed positively (SHAP +0.9757 and +0.9127 respectively), so a relatively large, equal paid/received amount further increased the flagging score.\n- to_bank = 10 (to_bank) provided an additional positive contribution (SHAP +0.4243), indicating the receiving bank identity increased the risk signal.\n- dayofweek = 4 (dayofweek) reduced the score (SHAP −0.4583), but this negative contribution was smaller in magnitude than the combined positive drivers above and did not prevent the overall flag.\n\nConclusion:\nThe transaction was flagged mainly because it is an ACH transfer (payment_format_ach=1) with a sizable, identical paid and received amount (16269.7) and a receiving bank (to_bank=10) that further raised the score; the day of week (dayofweek=4) slightly lowered the score but did not offset the other effects. If further review is needed, focus checks on the ACH payment details and the receiving bank (to_bank=10), given these features drove the model decision.",
+  "llm_file": "llm_trx_1566107_r7.json"
+}

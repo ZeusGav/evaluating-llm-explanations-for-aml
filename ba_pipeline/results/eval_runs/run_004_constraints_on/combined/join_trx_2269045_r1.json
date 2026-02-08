@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2269045,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2269045.json",
+  "model_proba": 0.9958568215370178,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0492825508117676,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 12498.02,
+      "shap_value": 0.6588079929351807,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 12498.02,
+      "shap_value": 0.642949104309082,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 21.0,
+      "shap_value": -0.5958096981048584,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.5470510125160217,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 148389.0,
+      "shap_value": -0.5428847670555115,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.18344038724899292,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.17769365012645721,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1726028025150299,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.1218707412481308,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (value=1; SHAP +3.049), indicating an ACH transfer strongly increased the score. Large transaction size (amount_paid = 12,498.0, SHAP +0.659; amount_received = 12,498.0, SHAP +0.643) further increased the score. Timing factors partly offset and amplified the score: hour = 21 (9 PM) had a negative contribution (SHAP −0.596, decreases), while dayofweek = 6 (Sunday, SHAP +0.547) increased the score. The sending bank identifier (from_bank = 148389, SHAP −0.543) reduced the score.\n\nConclusion:\nIn summary, the flag is mainly due to an ACH payment (payment_format_ach) of 12,498 (amount_paid and amount_received) occurring on a Sunday (dayofweek=6). Evening hour (hour=21) and this specific from_bank value lowered the risk contribution. If prioritizing review, the strongest drivers to consider are payment_format_ach and the matched high amounts.",
+  "llm_file": "llm_trx_2269045_r1.json"
+}

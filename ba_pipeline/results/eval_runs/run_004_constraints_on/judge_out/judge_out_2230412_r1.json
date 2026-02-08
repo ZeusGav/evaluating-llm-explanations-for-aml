@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue is an unsupported recommendation to focus on “ACH routing and counterparty bank details,” which is not evidenced by the provided SHAP drivers (and to_bank is not discussed)."
+}

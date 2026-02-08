@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 2,
+  "note": "Main issue is unsupported/mismatched feature claims (e.g., mentions payment_currency_saudi_riyal and different amounts/bank IDs not present in SHAP_JSON), reducing reliability despite clear structure.",
+  "transaction_id": 1984624,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 185,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

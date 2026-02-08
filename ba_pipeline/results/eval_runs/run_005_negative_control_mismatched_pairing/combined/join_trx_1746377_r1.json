@@ -1,0 +1,72 @@
+{
+  "transaction_id": 1746377,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 585477,
+  "shap_file": "shap_trx_585477.json",
+  "model_proba": 0.9982796907424927,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8815298080444336,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14962.84,
+      "shap_value": 0.8308278322219849,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14962.84,
+      "shap_value": 0.7600811123847961,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7407539486885071,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21174.0,
+      "shap_value": -0.29131805896759033,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1547.0,
+      "shap_value": 0.2665441632270813,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.18468846380710602,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.16968558728694916,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14943677186965942,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.06675083935260773,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach = 1 (feature: payment_format_ach) was the dominant positive driver (SHAP +2.9112), i.e., the use of ACH substantially increased the model score.\n- amount_paid = 7052.99 (feature: amount_paid) was the next-largest positive contributor (SHAP +1.1174), so the transaction amount further increased the score.\n- dayofweek = 6 (feature: dayofweek) contributed positively (SHAP +0.891227), indicating the transaction occurring on day 6 (Sunday) raised the score.\n- from_bank = 23842 (feature: from_bank) had a negative contribution (SHAP −0.391379), meaning the sending bank ID modestly reduced the model score (a mitigating factor).\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach) of $7,052.99 (amount_paid) executed on dayofweek = 6 (Sunday), which together materially increased the model’s risk score; the sending bank (from_bank = 23842) slightly offset that increase. If further review is desired, focus on verifying the ACH payment details and the context of a weekend (dayofweek = 6) ACH for this amount, since those features drove the alert.",
+  "llm_file": "llm_trx_1746377_r1.json"
+}

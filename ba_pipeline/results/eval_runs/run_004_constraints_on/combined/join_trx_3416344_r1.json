@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3416344,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_3416344.json",
+  "model_proba": 0.9959105253219604,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8341872692108154,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13014.28,
+      "shap_value": 1.0451008081436157,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13014.28,
+      "shap_value": 0.648651659488678,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 214322.0,
+      "shap_value": 0.36542147397994995,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 10404.0,
+      "shap_value": -0.27378782629966736,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 7.0,
+      "shap_value": -0.2546016275882721,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14261387288570404,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.12926046550273895,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.1056327298283577,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.06937599927186966,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model flag is driven primarily by payment_format_ach (value=1; SHAP=+2.83419 → increase), indicating an ACH payment strongly raises the score. Large transaction size (amount_received=13014.3; SHAP=+1.04510 → increase and amount_paid=13014.3; SHAP=+0.64865 → increase) further push the score upward. Sending bank (from_bank=214322; SHAP=+0.36542 → increase) also contributes positively to the alert.\n\nConclusion:\nThe alert stems from an ACH transfer of ~13,014.3 (payment_format_ach and both amount features increasing risk) with an elevated contribution from from_bank. If these feature values accurately reflect the payment, the model’s output reasonably escalated the transaction score; conversely, any correction to those specific features would likely reduce the score.",
+  "llm_file": "llm_trx_3416344_r1.json"
+}

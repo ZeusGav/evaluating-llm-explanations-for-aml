@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strongly aligned and well-structured, but it omits several provided drivers (currency and non-cheque/credit-card indicators), making a subset of the narrative incomplete relative to SHAP_JSON."
+}

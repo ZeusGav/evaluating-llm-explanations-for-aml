@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The explanation includes multiple contradictions/unsupported details versus SHAP_JSON (e.g., hour and negative from_bank SHAP, and mismatched feature values), despite being clearly written.",
+  "transaction_id": 2085615,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 151,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

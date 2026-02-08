@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 3,
+  "note": "Biggest issue: it cites from_bank as a negative driver even though from_bank is not present in the provided SHAP_JSON (and it also invents different feature values)."
+}

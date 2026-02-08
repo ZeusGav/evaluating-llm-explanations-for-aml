@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3635796,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_3635796.json",
+  "model_proba": 0.9977005124092102,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.876525640487671,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15333.27,
+      "shap_value": 0.93412184715271,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7663170099258423,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15333.27,
+      "shap_value": 0.7113146185874939,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.2342979460954666,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15713632106781006,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.06773142516613007,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06434579938650131,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 3123.0,
+      "shap_value": -0.06208823621273041,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_ratio",
+      "value": 0.9999999999347824,
+      "shap_value": -0.053790055215358734,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.8765, increase): the use of ACH was the largest driver increasing the flag score.\n- amount_received = 15333.3 (SHAP +0.9341, increase) and amount_paid = 15333.3 (SHAP +0.7113, increase): both high-value amounts contributed to raising the score; the identical values amplify the signal from the paid/received legs.\n- dayofweek = 6 (SHAP +0.7663, increase): occurrence on day 6 (Sunday) further increased the model score.\n\nConclusion:\nThe model flagged this transaction primarily because it is a large-value (15333.3) ACH transfer executed on dayofweek 6, with matching paid and received amounts. Based solely on these drivers, the item warrants manual review; if ACH transfers or weekend activity are subject to heightened controls, this would further support escalation.",
+  "llm_file": "llm_trx_3635796_r1.json"
+}

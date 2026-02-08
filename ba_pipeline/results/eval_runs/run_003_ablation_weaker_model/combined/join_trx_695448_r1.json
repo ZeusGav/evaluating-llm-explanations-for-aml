@@ -1,0 +1,71 @@
+{
+  "transaction_id": 695448,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_695448.json",
+  "model_proba": 0.997031569480896,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.828012704849243,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 12481.86,
+      "shap_value": 0.8510227799415588,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7563846707344055,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 12481.86,
+      "shap_value": 0.7351575493812561,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 211.0,
+      "shap_value": -0.39746659994125366,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.22610214352607727,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.1985020637512207,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 5425.0,
+      "shap_value": -0.1669425070285797,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12897177040576935,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.09012802690267563,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach: value=1 with shap_value=2.82801 (direction: increase). This indicates the transaction uses the ACH payment format and this method contributes strongly to the flag.\n- amount_received: 12481.9 with shap_value=0.851023 (increase). The large amount received is a notable positive contributor to the flag.\n- dayofweek: 6 with shap_value=0.756385 (increase). The event occurring on day 6 (Sunday) adds to the risk signal.\n- amount_paid: 12481.9 with shap_value=0.735158 (increase). The identical large amount paid further reinforces the risk signal.\n\nConclusion:\nBased on the provided drivers, the flag is driven primarily by the ACH payment format in combination with a large, equal inbound/outbound amount and a Sunday timing. These signals collectively indicate elevated risk per the model’s SHAP contributions. There are smaller negative signals from from_bank (negative shap_value) and receiving_currency_euro (negative shap_value) which slightly mitigate risk, but the primary drivers listed above remain the strongest contributors to the flag. Further review should consider corroborating context for ACH activity and the matched amounts on a weekend.",
+  "llm_file": "llm_trx_695448_r1.json"
+}

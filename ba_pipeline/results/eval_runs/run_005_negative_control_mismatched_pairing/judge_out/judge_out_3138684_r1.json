@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 0,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 2,
+  "note": "The explanation cites multiple non-provided/mismatched drivers and SHAP values (e.g., amount_paid, to_bank, different feature values), creating unsupported claims and direction contradictions."
+}

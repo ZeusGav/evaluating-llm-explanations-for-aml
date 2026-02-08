@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, directionally correct explanation with high driver coverage, but it doesn’t interpret why the specific banks/counterparty IDs matter beyond their SHAP impact."
+}

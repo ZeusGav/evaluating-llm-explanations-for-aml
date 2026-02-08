@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4269465,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_4269465.json",
+  "model_proba": 0.9994687438011169,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.021085262298584,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 53104.45,
+      "shap_value": 0.878929078578949,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8072264194488525,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.4591444432735443,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.3121919333934784,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 249176.0,
+      "shap_value": -0.30612581968307495,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.24296949803829193,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 53104.45,
+      "shap_value": 0.24191522598266602,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.16266223788261414,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15870854258537292,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1) which strongly increased the score (SHAP 3.021). Contributing further were a large amount_received (53104.4; SHAP 0.879, increase) and the transaction timing dayofweek (6; SHAP 0.807, increase). Currency signals also increased the score: payment_currency_saudi_riyal (value=1; SHAP 0.459, increase) and payment_currency_us_dollar (value=0; SHAP 0.312, increase — i.e., not USD). The sending bank (from_bank=249176) had a negative SHAP (-0.306), modestly reducing the flagged score.\n\nConclusion: The combination of ACH payment (payment_format_ach=1), high value (amount_received=53104.4), Sunday timing (dayofweek=6), and Saudi Riyal currency (payment_currency_saudi_riyal=1; payment_currency_us_dollar=0) produced the elevated risk signal. The from_bank (from_bank=249176) partially offsets but does not eliminate the flag.",
+  "llm_file": "llm_trx_4269465_r1.json"
+}

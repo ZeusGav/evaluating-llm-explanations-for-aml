@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3167831,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_3167831.json",
+  "model_proba": 0.9960873126983643,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.968294620513916,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 6426.47,
+      "shap_value": 0.9633570313453674,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.46395614743232727,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -0.1933576613664627,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17668256163597107,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.14666388928890228,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.12880678474903107,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 19777.0,
+      "shap_value": 0.1024395227432251,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 6426.47,
+      "shap_value": -0.09993313997983932,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.07727397233247757,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP_value 2.96829, direction: increase) is the strongest driver, indicating the use of ACH as the payment method is the primary contributor to the flag.\n- amount_paid = 6426.47 (SHAP_value 0.963357, direction: increase) shows a relatively large payment amount adding to the risk signal.\n- to_bank = 12 (SHAP_value 0.463956, direction: increase) further elevates risk due to the identified receiving bank factor.\n\nConclusion:\n- Based on the top drivers (payment_format_ach, amount_paid, and to_bank), the transaction is flagged due to ACH usage combined with a sizable payment directed to a specific receiving bank. These drivers collectively push the model toward a higher risk assessment. \n- Other drivers exist but have smaller absolute SHAP contributions and do not change the core conclusion from the three primary factors. If additional context suggests legitimate purposes for ACH payments to this recipient, the risk profile could be reassessed; otherwise, escalation for manual review is advisable.",
+  "llm_file": "llm_trx_3167831_r1.json"
+}

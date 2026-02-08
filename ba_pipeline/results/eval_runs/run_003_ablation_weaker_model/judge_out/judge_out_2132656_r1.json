@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong structure and high driver coverage, but it makes unsupported claims about a specific “risk pattern” for domestic SAR ACH transfers that are not evidenced by the provided features."
+}

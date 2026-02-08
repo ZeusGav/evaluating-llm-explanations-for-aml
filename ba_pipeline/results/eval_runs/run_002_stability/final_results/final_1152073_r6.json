@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it adds an unsupported inference about “no apparent reduction between paid/received amounts” implying a fee/spread concept not provided by any feature.",
+  "transaction_id": 1152073,
+  "repeat": 6,
+  "run_name": "run_002_stability",
+  "word_count": 181,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4949831,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_4949831.json",
+  "model_proba": 0.995891809463501,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.028151035308838,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17119.89,
+      "shap_value": 0.7424536347389221,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 118.0,
+      "shap_value": -0.5749984383583069,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17119.89,
+      "shap_value": 0.4952637851238251,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.3892296850681305,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.21016940474510193,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14535419642925262,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11511333286762238,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.10234515368938446,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 7.0,
+      "shap_value": -0.08209586143493652,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model flag is driven most strongly by payment_format_ach (value=1; SHAP=+3.028), indicating an ACH payment format strongly increased the score. Large amounts also increased the score: amount_received (value=17119.9; SHAP=+0.742) and amount_paid (value=17119.9; SHAP=+0.495). The sending bank (from_bank, value=118; SHAP=-0.575) modestly reduced the score. Day of week (dayofweek, value=5 i.e., Saturday; SHAP=+0.389) further increased the score.\n\nConclusion:\nPrimarily because payment_format_ach=1 combined with relatively high amount_received/amount_paid (17119.9) and occurrence on dayofweek=5 (Saturday) raised the model score, the transaction was flagged. The from_bank=118 partially offset risk. If ACH payments and high same-valued amount fields are treated as higher-risk by the model, this explains the alert.",
+  "llm_file": "llm_trx_4949831_r1.json"
+}

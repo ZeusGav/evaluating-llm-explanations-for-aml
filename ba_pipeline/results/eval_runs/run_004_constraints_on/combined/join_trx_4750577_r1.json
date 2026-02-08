@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4750577,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_4750577.json",
+  "model_proba": 0.9967658519744873,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.851951837539673,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 8884.75,
+      "shap_value": 0.8363304138183594,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 8884.75,
+      "shap_value": 0.7349957823753357,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7168519496917725,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 29251.0,
+      "shap_value": -0.5139749646186829,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1412.0,
+      "shap_value": 0.22633792459964752,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -0.19466152787208557,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14169786870479584,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.12014360725879669,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.11199550330638885,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model score is driven primarily by payment_format_ach (value=1) which strongly increases the flag (SHAP +2.85195). Large, equal send/receive amounts (amount_paid = 8884.75, SHAP +0.83633; amount_received = 8884.75, SHAP +0.734996) further increase the score. The transaction occurring on dayofweek = 6 (Sunday) also increases the score (SHAP +0.716852). The sending bank (from_bank = 29251) contributes a decrease to the score (SHAP −0.513975), partially offsetting the increases.\n\nConclusion: Net model signal is elevated, mainly because payment_format_ach and the sizable, identical amount_paid/amount_received on dayofweek=6 increase risk. The from_bank feature reduces the score but does not fully negate the increase. If triaging, prioritize review of ACH details and bank identifiers given these drivers.",
+  "llm_file": "llm_trx_4750577_r1.json"
+}

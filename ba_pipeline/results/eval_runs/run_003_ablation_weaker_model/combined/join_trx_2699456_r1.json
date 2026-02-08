@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2699456,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2699456.json",
+  "model_proba": 0.9969590902328491,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.979386806488037,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.7734626531600952,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 48526.0,
+      "shap_value": -0.5001256465911865,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 66965.31,
+      "shap_value": 0.31121811270713806,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.27727606892585754,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.26131296157836914,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.2246266007423401,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.15395140647888184,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 66965.31,
+      "shap_value": 0.15088742971420288,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13803964853286743,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1, shap_value=2.97939, direction increase): This ACH payment format is the largest contributor, and its increase pushes the flag higher.\n- payment_currency_saudi_riyal (value=1, shap_value=0.773463, direction increase): Use of Saudi Riyal as the payment currency increases the risk signal.\n- from_bank (value=48526, shap_value=-0.500126, direction decrease): This factor decreases the risk signal, partially offsetting the top drivers.\n- amount_received (value=66965.3, shap_value=0.311218, direction increase): A relatively large received amount adds to the risk signal.\n- receiving_currency_saudi_riyal (value=1, shap_value=0.277276, direction increase): Receiving in Saudi Riyal further increases the risk signal.\n\nConclusion:\n- The flag is driven primarily by the ACH payment method and the Saudi Riyal currency context, with a notable but offsetting contribution from the sending bank and a moderately strong signal from a high amount received. Overall, the dominant factors (payment_format_ach and payment_currency_saudi_riyal, plus amount_received and receiving_currency_saudi_riyal) indicate elevated risk, while the from_bank factor reduces that signal somewhat. If these drivers reflect the transaction context, this would support a heightened-risk classification pending further investigation.",
+  "llm_file": "llm_trx_2699456_r1.json"
+}

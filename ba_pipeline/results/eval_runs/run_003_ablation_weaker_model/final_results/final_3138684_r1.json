@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Covers the dominant SHAP drivers with correct directions and a clear narrative, though it could better interpret the smaller timing/currency/payment-format factors.",
+  "transaction_id": 3138684,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 142,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

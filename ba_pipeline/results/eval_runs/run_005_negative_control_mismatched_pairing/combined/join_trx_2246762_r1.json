@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2246762,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2689569,
+  "shap_file": "shap_trx_2689569.json",
+  "model_proba": 0.9962555170059204,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0040135383605957,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.5959071516990662,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 149340.0,
+      "shap_value": -0.45353034138679504,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.3209315836429596,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 77127.4,
+      "shap_value": 0.2720400393009186,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.24470210075378418,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.16513121128082275,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.15922750532627106,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 77127.4,
+      "shap_value": 0.15310180187225342,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.11734806001186371,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) produced the largest positive contribution (SHAP=+2.97763, direction=increase), so the model’s strongest driver for flagging is that the payment was sent as ACH.\n- amount_paid (value=7257.05) contributed positively (SHAP=+0.993532, direction=increase), indicating the payment size increased the flag score.\n- dayofweek (value=6 — Sunday) contributed positively (SHAP=+0.802643, direction=increase), so the transaction occurring on day 6 raised the score.\n- to_bank (value=12) had a smaller positive effect (SHAP=+0.337979, direction=increase), meaning the receiving bank ID modestly increased the score.\n- hour (value=19) had a negative contribution (SHAP=–0.405103, direction=decrease), and from_bank (value=23691) also lowered the score (SHAP=–0.31674, direction=decrease); these partially offset the positive drivers but did not outweigh them.\n\nConclusion:\n- The model flagged the transaction primarily because it was an ACH payment (payment_format_ach=1) of 7,257.05 (amount_paid) occurring on day 6 (Sunday), with an additional positive contribution from to_bank=12. Although hour=19 and from_bank=23691 reduced the score, the net SHAP contributions remain positive, producing the alert.\n- If prioritizing review steps, focus first on the payment method (payment_format_ach=1), the payment amount (amount_paid=7257.05), the day of week (dayofweek=6), and the receiving bank (to_bank=12), since these are the strongest model drivers.",
+  "llm_file": "llm_trx_2246762_r1.json"
+}

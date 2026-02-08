@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The narrative is well-aligned and covers most drivers, but it omits the two listed payment-format one-hot features with value=0 (cheque/credit_card) while still implying it addresses all drivers, making those points unsupported/absent."
+}

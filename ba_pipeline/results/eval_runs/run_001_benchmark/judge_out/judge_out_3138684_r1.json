@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it asserts that paid and received amounts being the same increased risk, which is not a provided driver (amount_ratio/amount_diff are not in SHAP_JSON)."
+}

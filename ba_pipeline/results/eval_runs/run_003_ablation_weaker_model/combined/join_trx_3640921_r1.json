@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3640921,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_3640921.json",
+  "model_proba": 0.9961549639701843,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.873241662979126,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13325.48,
+      "shap_value": 1.0940178632736206,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 230257.0,
+      "shap_value": 0.6672874093055725,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13325.48,
+      "shap_value": 0.6496484279632568,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 25309.0,
+      "shap_value": -0.5825059413909912,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 2.0,
+      "shap_value": -0.2841194272041321,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -0.2462163269519806,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.14760304987430573,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13182641565799713,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.08923949301242828,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) with SHAP_value=2.87324, direction increase: This is the strongest contributor, indicating that an ACH payment format is strongly associated with the flag in this model’s reasoning.\n- amount_received (13325.5) with SHAP_value=1.09402, direction increase: The sizable received amount contributes to the risk signal.\n- from_bank (230257) with SHAP_value=0.667287, direction increase: The sending bank ID is linked to higher risk in this case.\n- amount_paid (13325.5) with SHAP_value=0.649648, direction increase: The matching substantial amount paid also contributes to the risk signal.\n\nNote: The remaining drivers (e.g., to_bank, dayofweek, hour, etc.) have smaller absolute SHAP values and are not included as primary drivers here to reflect the top contributors.\n\nConclusion:\nThe flag is primarily driven by the ACH payment format plus relatively large matching received/paid amounts and the sending bank ID, which together indicate a higher risk signal in this instance. Based solely on these drivers, the transaction appears elevated risk relative to a baseline; however, this does not constitute a definitive determination of illicit activity. If these drivers reflect patterns seen in our training data, a follow-up review focusing on ACH-related transactions, the counterparties involved, and the transaction amounts is warranted to assess intent and legitimacy.",
+  "llm_file": "llm_trx_3640921_r1.json"
+}

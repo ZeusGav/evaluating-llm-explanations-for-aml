@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong coverage and correct directionality, but it makes an unsupported claim that dayofweek=6 is Sunday (the fact sheet only defines 0=Mon..6=Sun, so Sunday would be 6 only if 0=Mon mapping is assumed rather than explicitly provided)."
+}

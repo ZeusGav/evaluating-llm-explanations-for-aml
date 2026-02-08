@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1970067,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_1970067.json",
+  "model_proba": 0.9972822666168213,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9191606044769287,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13573.33,
+      "shap_value": 1.1527025699615479,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13573.33,
+      "shap_value": 0.8272976875305176,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.41900426149368286,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 8623.0,
+      "shap_value": -0.39904606342315674,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.12099749594926834,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.10885109752416611,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10647939145565033,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.08087611943483353,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yen",
+      "value": 0.0,
+      "shap_value": 0.05757210776209831,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach: value=1; shap_value=2.91916; direction=increase. This is the largest positive driver, indicating the ACH payment method strongly contributed to the flag.\n- amount_received: value=13573.3; shap_value=1.1527; direction=increase. A high incoming amount supports the model’s concern.\n- amount_paid: value=13573.3; shap_value=0.827298; direction=increase. The same magnitude for amount_paid reinforces the prominent transfer signal.\n- dayofweek: value=5; shap_value=0.419004; direction=increase. Friday timing adds incremental risk signal.\n- from_bank: value=8623; shap_value=-0.399046; direction=decrease. This sending-bank factor reduces the overall risk signal, providing a mitigating effect.\n\nConclusion:\nThe flag appears to be driven primarily by the ACH payment format (highest positive SHAP) together with a large, symmetric transfer (amount_received and amount_paid both 13573.3) and a Friday transaction (dayofweek=5). The sending-bank factor (from_bank) provides a modest mitigating effect. Based solely on these drivers, this pattern could reflect a routine ACH settlement on a Friday, but it warrants review to determine AML risk given the strong ACH signal and sizable transfer amounts.",
+  "llm_file": "llm_trx_1970067_r1.json"
+}

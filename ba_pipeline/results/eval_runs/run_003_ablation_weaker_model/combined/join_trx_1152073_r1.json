@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1152073,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_1152073.json",
+  "model_proba": 0.9970992803573608,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.90216064453125,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 908.0,
+      "shap_value": -0.9224379658699036,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15968.23,
+      "shap_value": 0.8998066186904907,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7816022634506226,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15968.23,
+      "shap_value": 0.7641443610191345,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1420.0,
+      "shap_value": 0.23143066465854645,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": 0.20711490511894226,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.16433247923851013,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1395576000213623,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.08807489275932312,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) has the largest positive SHAP contribution (2.90216, direction: increase), indicating the use of ACH payment format is the strongest driver for the flag.\n- amount_received (15968.2) with SHAP 0.899807 (increase) and amount_paid (15968.2) with SHAP 0.764144 (increase) together point to a high-value transfer, contributing meaningfully to the flag.\n- dayofweek (value=6, Sunday) with SHAP 0.781602 (increase) and hour (16) with SHAP 0.207115 (increase) suggest weekend/late-afternoon timing is a contributing pattern.\n- to_bank (1420) has a smaller but positive SHAP 0.231431 (increase), indicating the receiving party adds some risk signal, though it is not as strong as the ACH or amount signals.\n- from_bank (value=908) has a negative SHAP -0.922438 (decrease), which reduces the risk signal, but the stronger ACH/amount/time drivers dominate the overall assessment.\n- payment_currency_us_dollar (1) shows a small negative SHAP -0.164332 (decrease), indicating USD currency usage modestly lowers the risk signal compared with the dominant drivers.\n(Other smaller drivers, such as payment_format_credit_card and payment_format_cash, have positive SHAPs but with much smaller magnitude and are not central to the rationale.)\n\nConclusion:\nBased on the top drivers, the flag appears driven primarily by the ACH payment format combined with high-value transfer amounts and weekend/late-afternoon timing. The from_bank factor slightly reduces risk, but it does not overturn the stronger signals from ACH and amount/time features. This pattern would warrant manual review to assess AML risk, given the concentration of risk signals around ACH usage and high-value, off-typical timing. If organizational profiles or policies treat ACH-high-value Sunday transactions as riskier, that would further align with these drivers.",
+  "llm_file": "llm_trx_1152073_r1.json"
+}

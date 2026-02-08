@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately tied the main risk to ACH and large amounts with correct directions, but it omits several smaller drivers (time/day, to_bank, currency and other format indicators) that could add investigative color.",
+  "transaction_id": 3035808,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 151,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

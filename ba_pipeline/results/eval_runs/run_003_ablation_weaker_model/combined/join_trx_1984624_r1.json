@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1984624,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_1984624.json",
+  "model_proba": 0.9977466464042664,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.945861339569092,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 19753.45,
+      "shap_value": 0.8061840534210205,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6857200860977173,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.4588778018951416,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 118.0,
+      "shap_value": -0.45185112953186035,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 19753.45,
+      "shap_value": 0.35909348726272583,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 48308.0,
+      "shap_value": -0.23512573540210724,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.16106726229190826,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1592380553483963,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.14777927100658417,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1, shap_value=2.94586, direction an increase): The use of ACH is the strongest driver increasing the flag signal.\n- amount_received (19753.5, shap_value=0.806184, direction increase): A relatively large received amount contributes to the risk signal.\n- dayofweek (6, shap_value=0.68572, direction increase): Transaction occurring on day 6 (Sunday) adds to the flag probability.\n- payment_currency_saudi_riyal (1, shap_value=0.458878, direction increase): Use of Saudi Riyal as the payment currency increases the risk signal.\n- amount_paid (19753.5, shap_value=0.359093, direction increase): The corresponding large amount paid reinforces the flag.\n- from_bank (118, shap_value=-0.451851, direction decrease): This sending bank factor reduces the risk signal, partially offsetting the overall trigger.\n\nConclusion:\n- The flag is driven primarily by the ACH payment format, the large amount received/paid, and Sunday timing, with SAR currency contributing to the elevated signal. The from_bank factor slightly mitigates the risk. Overall, the provided drivers collectively support a higher-risk assessment for this transaction based on the stated attributes. If additional context shows this aligns with known customer behavior or legitimate operation, the assessment may be revisited; otherwise, the top drivers suggest continued scrutiny.",
+  "llm_file": "llm_trx_1984624_r1.json"
+}

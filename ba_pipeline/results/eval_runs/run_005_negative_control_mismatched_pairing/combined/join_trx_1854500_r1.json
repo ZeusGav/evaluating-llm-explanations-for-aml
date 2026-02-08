@@ -1,0 +1,72 @@
+{
+  "transaction_id": 1854500,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 1577254,
+  "shap_file": "shap_trx_1577254.json",
+  "model_proba": 0.9975314140319824,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9222829341888428,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13305.86,
+      "shap_value": 0.9019328951835632,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13305.86,
+      "shap_value": 0.7015852928161621,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7002566456794739,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 15723.0,
+      "shap_value": -0.28026890754699707,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.15064465999603271,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12928758561611176,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 11.0,
+      "shap_value": 0.11362779140472412,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09415484964847565,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.06703060865402222,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) — this feature had the largest positive contribution (SHAP 2.8416, direction: increase). The model weighted an ACH payment strongly toward flagging.\n- amount_received (value=17498.0) — a high received amount contributed positively (SHAP 1.02106, direction: increase).\n- amount_paid (value=17498.0) — the payment amount also increased the score (SHAP 0.650169, direction: increase).\n- to_bank (value=12) — the receiving bank ID contributed further to the increase (SHAP 0.458209, direction: increase).\n- payment_currency_us_dollar (value=1) — paying in US dollars slightly reduced the model score (SHAP -0.143899, direction: decrease), acting as a minor mitigating factor.\n\nConclusion:\nThe transaction was flagged mainly because payment_format_ach=1 combined with relatively large amount_received and amount_paid (both 17,498.0) and the to_bank (ID 12) produced the largest positive SHAP contributions. The fact that payment_currency_us_dollar=1 slightly lowered the score is a small offset but does not outweigh the dominant ACH and amount-driven contributions.",
+  "llm_file": "llm_trx_1854500_r1.json"
+}

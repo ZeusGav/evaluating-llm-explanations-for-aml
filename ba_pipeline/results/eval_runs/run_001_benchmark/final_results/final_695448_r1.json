@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Covers most high-impact drivers with correct directions, but omits several smaller listed factors (hour, currencies, to_bank/credit_card) that could add investigative nuance.",
+  "transaction_id": 695448,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 182,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

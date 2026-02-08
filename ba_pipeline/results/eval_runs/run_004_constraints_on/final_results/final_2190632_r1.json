@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it claims the amounts are “mid-range” and suggests investigative focus areas not directly supported by the provided SHAP drivers.",
+  "transaction_id": 2190632,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 125,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

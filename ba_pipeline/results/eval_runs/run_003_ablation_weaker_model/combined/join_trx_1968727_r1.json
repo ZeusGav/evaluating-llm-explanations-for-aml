@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1968727,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_1968727.json",
+  "model_proba": 0.9958003163337708,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.6841602325439453,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 19426.84,
+      "shap_value": 1.0767951011657715,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 19426.84,
+      "shap_value": 0.5313646793365479,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.4734882712364197,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 23402.0,
+      "shap_value": -0.3459492325782776,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 21940.0,
+      "shap_value": 0.2231615036725998,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 10.0,
+      "shap_value": -0.1724998950958252,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.14245471358299255,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12517164647579193,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.05362844467163086,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why\n- payment_format_ach (value=1; SHAP_value=2.68416; direction: increase)\n  - The ACH payment format contributes the largest positive signal, indicating the transaction uses an ACH method, which is a strong driver of the flag in this dataset.\n- amount_received (value=19426.8; SHAP_value=1.0768; direction: increase)\n  - A large inflow amount is contributing positively to the flag, suggesting a sizable receipt in the receiving currency.\n- amount_paid (value=19426.8; SHAP_value=0.531365; direction: increase)\n  - The identical large outflow amount also contributes positively, which together with the inflow implies a large transfer of equal value.\n- dayofweek (value=5; SHAP_value=0.473488; direction: increase)\n  - The transaction occurring on day 5 (Friday) adds to the risk signal, per the model’s pattern recognition.\n\nNote: Other drivers (e.g., from_bank, hour, payment_currency_us_dollar, etc.) have smaller absolute SHAP contributions and are not included here as “most relevant” per the instruction to omit minor drivers.\n\nConclusion\n- The flag appears driven by a strong ACH-based payment format coupled with a large, possibly round-tripping inflow/outflow amount occurring on a Friday. This pattern could be indicative of a high-risk transfer profile in the data (e.g., potential round-tripping or reconciliation activity) but is not conclusive of illicit activity. Given these drivers, a targeted review is warranted to confirm transaction purpose, verify counterparties, and assess source of funds/sources of transfer. This assessment remains conditional on the provided drivers and their top contributions.",
+  "llm_file": "llm_trx_1968727_r1.json"
+}

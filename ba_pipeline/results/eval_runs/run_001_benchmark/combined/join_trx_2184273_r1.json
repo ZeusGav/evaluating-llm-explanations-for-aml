@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2184273,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2184273.json",
+  "model_proba": 0.9959937334060669,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8732028007507324,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13055.75,
+      "shap_value": 1.2104157209396362,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13055.75,
+      "shap_value": 0.6412769556045532,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.5052267909049988,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.44581761956214905,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 13057.0,
+      "shap_value": -0.30394184589385986,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 238845.0,
+      "shap_value": -0.1917065978050232,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12988099455833435,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_swiss_franc",
+      "value": 0.0,
+      "shap_value": 0.07798898965120316,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.07035297900438309,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.8732, direction: increase): the payment method (ACH) is the single largest positive driver of the flag.\n- amount_received = 13,055.8 (SHAP +1.21042, direction: increase): a mid-five-figure received amount materially increased the score.\n- amount_paid = 13,055.8 (SHAP +0.641277, direction: increase): the paid amount (equal to the received amount) further increased the score.\n- dayofweek = 6 (Sunday) (SHAP +0.505227, direction: increase): transaction occurring on day 6 (Sunday) contributed positively to the flag.\n- receiving_currency_euro = 1 (SHAP -0.445818, direction: decrease): receiving in euro partially reduced the model score but did not offset the positive contributors above.\n\nConclusion:\nThe model flagged this transaction primarily because it is an ACH payment (payment_format_ach) with identical paid and received amounts of 13,055.8 (amount_received and amount_paid) executed on dayofweek = 6 (Sunday); these features together produced a net positive score despite a modest negative contribution from receiving_currency_euro. If ACH transfers of this size or ACH activity on Sundays are atypical for the customer, further review is recommended.",
+  "llm_file": "llm_trx_2184273_r1.json"
+}

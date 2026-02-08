@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3756246,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_3756246.json",
+  "model_proba": 0.9965117573738098,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8941879272460938,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15710.55,
+      "shap_value": 0.8011788725852966,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15710.55,
+      "shap_value": 0.7704539895057678,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.4300616979598999,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1674.0,
+      "shap_value": -0.26727813482284546,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.22955867648124695,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21258.0,
+      "shap_value": -0.20429380238056183,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.11899252980947495,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1166076809167862,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.08536326885223389,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model score is driven primarily by payment_format_ach = 1 (SHAP +2.89419), indicating ACH payments strongly increase the flag. Large values for amount_received = 15710.5 (SHAP +0.801179) and amount_paid = 15710.5 (SHAP +0.770454) further increase the score. dayofweek = 5 (SHAP +0.430062) contributes a smaller upward effect. to_bank = 1674 (SHAP -0.267278) modestly decreases the score, partially offsetting the increases.\n\nConclusion: The transaction was flagged mainly because it is an ACH payment (payment_format_ach) with relatively large, equal paid/received amounts (amount_paid and amount_received) and occurred on dayofweek = 5. The receiving bank (to_bank) slightly reduced the model risk. If ACH format combined with these amount levels is regarded as higher risk by policy, this item warrants review; otherwise the negative to_bank contribution may lessen priority.",
+  "llm_file": "llm_trx_3756246_r1.json"
+}

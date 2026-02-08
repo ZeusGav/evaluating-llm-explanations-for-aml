@@ -1,0 +1,100 @@
+You are an evaluator in the domain of Anti-Money-Laundering.
+
+INPUT:
+1. SHAP_JSON = JSON array of {feature, value, shap_value, direction}
+2. LLM_TEXT = LLM generated explanation of why a transaction is flagged as suspicious or not.
+3. FACT_SHEET = Only defines feature-name semantics
+
+TASK:
+Score the LLM_TEXT for:
+(1) Direction alignment,
+(2) Driver coverage,
+(3) No unsupported claims,
+(4) Composition,
+(5) Context utility.
+
+FACT_SHEET:
+    "from_bank": "sending bank ID",
+    "to_bank": "receiving bank ID",
+    "amount_received": "amount received (receiving currency)",
+    "amount_paid": "amount paid (payment currency)",
+    "hour": "hour of day (0–23)",
+    "dayofweek": "day of week (0=Mon..6=Sun)",
+    "amount_ratio": "amount_paid / amount_received",
+    "amount_diff": "|amount_paid − amount_received|",
+    "payment_format_": "payment method indicator (1=yes, 0=no)",
+    "receiving_currency_": "receiving currency indicator (1=this, 0=other)",
+    "payment_currency_": "payment currency indicator (1=this, 0=other)"
+
+ONE-HOT SEMANTICS:
+One-hot currency/payment-format features are those whose feature names contain "currency_" or "payment_format_".
+- value = 1 supports text meaning "is X"
+- value = 0 supports text meaning "is not X" / "non-X"
+
+METRICS:
+A) Direction alignment (0/1)
+Check that every driver direction (increase/decrease) stated in LLM_TEXT about a provided SHAP feature matches that feature’s direction label in SHAP_JSON; any mismatch fails.
+Score:
+1 = Pass: No such driver-linked direction statement in LLM_TEXT contradicts the corresponding direction in SHAP_JSON.
+0 = Fail: At least one such driver-linked direction statement in LLM_TEXT contradicts the corresponding direction in SHAP_JSON.
+
+B) Driver coverage (0/1/2)
+Computation:
+1. Take the list of provided SHAP-drivers from SHAP_JSON and look at the absolute size of each driver's shap_value (ignore the sign). Add these up to get the total shap_value available in the provided list.
+2. Read the narrative and mark which of those drivers it actually mentions (i.e., it clearly refers to that feature). For just the mentioned drivers, again take the absolute shap_value and add them up.
+3. Divide the "total mentioned shap_values" by the "total shap_values" to get the driver_coverage.
+4. Convert that fraction into the score.
+Score:
+2 = driver_coverage ≥ 0.80
+1 = 0.50 ≤ driver_coverage < 0.80
+0 = driver_coverage < 0.50
+
+C) no_unsupported_claims (0/1)
+Check whether the narrative makes any unsupported factual statements: a claim counts as unsupported if it states a fact that cannot be linked to a provided driver.
+The score is 1 only if there are zero such claims; otherwise it is 0.
+Score:
+1 = No UNSUPPORTED CLAIM exists.
+0 = At least one UNSUPPORTED CLAIM exists.
+
+D) composition (0–4)
+This is a rubric score for the form of the writing only: how clear, well-structured, and non-repetitive the explanation is.
+It explicitly ignores factual correctness and scores only readability/organization.
+Score:
+4 = very clear; well-structured; minimal repetition; grammar never blocks understanding
+3 = clear overall; minor wording/structure issues
+2 = readable but clunky; noticeable repetition; weak cohesion
+1 = hard to follow; poorly organized; frequent confusing phrasing
+0 = incoherent/unreadable
+
+E) context_utility (0–4)
+This is a rubric score for how useful the text would be to an AML investigator given only the provided drivers (e.g., does it clearly explain the main risk signal and why it matters, without adding facts).
+4 = concrete, clear rationale tied to factors; easy to act on
+3 = generally helpful but somewhat generic
+2 = limited; mostly restates factors with little interpretation
+1 = vague/template-like; little interpretive value
+0 = misleading/contradictory/harmful
+
+OUTPUT:
+Return VALID JSON ONLY with exactly these keys:
+{
+  "direction_alignment": 0|1,
+  "driver_coverage": 0|1|2,
+  "no_unsupported_claims": 0|1,
+  "composition": 0|1|2|3|4,
+  "context_utility": 0|1|2|3|4,
+  "note": "max 1 sentence; mention the single biggest issue or strongest point"
+}
+
+SHAP_JSON:
+[{"feature": "payment_format_ach", "value": 1.0, "shap_value": 2.7481510639190674, "direction": "increase"}, {"feature": "amount_paid", "value": 10148.7, "shap_value": 0.9167976975440979, "direction": "increase"}, {"feature": "dayofweek", "value": 6.0, "shap_value": 0.8824121952056885, "direction": "increase"}, {"feature": "from_bank", "value": 24850.0, "shap_value": -0.8131362199783325, "direction": "decrease"}, {"feature": "to_bank", "value": 22.0, "shap_value": 0.7938103675842285, "direction": "increase"}, {"feature": "amount_received", "value": 10148.7, "shap_value": 0.578353762626648, "direction": "increase"}, {"feature": "payment_format_credit_card", "value": 0.0, "shap_value": 0.1704486906528473, "direction": "increase"}, {"feature": "receiving_currency_euro", "value": 1.0, "shap_value": -0.15329912304878235, "direction": "decrease"}, {"feature": "hour", "value": 9.0, "shap_value": 0.0915684774518013, "direction": "increase"}, {"feature": "payment_format_cash", "value": 0.0, "shap_value": 0.08771967142820358, "direction": "increase"}]
+
+LLM_TEXT:
+Why:
+- payment_format_ach: The transaction uses ACH (payment_format_ach = 1), which has the largest positive SHAP contribution (2.74815), strongly increasing the flag.
+- amount_paid: A high paid amount (amount_paid = 10148.7) contributes positively to the risk score (SHAP = 0.916798).
+- dayofweek: Dayofweek = 6 (Sunday) shows a notable positive contribution (SHAP = 0.882412), indicating weekend activity associated with higher risk in this context.
+- from_bank: Sending bank ID (from_bank = 24850) has a negative SHAP (-0.813136), which reduces the risk score relative to the other drivers, acting as a dampening factor.
+- to_bank: Receiving bank ID (to_bank = 22) adds to the risk (SHAP = 0.79381), supporting the flag due to the receiving endpoint.
+
+Conclusion:
+Based on these top drivers, the transaction exhibits elevated AML risk characteristics driven by an ACH payment with a large amount around Sunday to a specific receiving bank, with the sending bank contributing a dampening effect. Overall, the model indicates an elevated risk signal that warrants further review, though the from_bank factor slightly offsets the risk.

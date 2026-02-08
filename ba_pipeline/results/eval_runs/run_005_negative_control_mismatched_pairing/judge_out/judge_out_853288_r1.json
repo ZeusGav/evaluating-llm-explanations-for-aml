@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 2,
+  "note": "It cites and relies on an unsupported driver (to_bank) and also uses incorrect feature values/SHAP magnitudes, undermining factual grounding."
+}

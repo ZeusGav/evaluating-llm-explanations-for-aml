@@ -1,0 +1,72 @@
+{
+  "transaction_id": 3006741,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2200191,
+  "shap_file": "shap_trx_2200191.json",
+  "model_proba": 0.9958937168121338,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9438421726226807,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7267115116119385,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 9853.57,
+      "shap_value": 0.5671257972717285,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 119.0,
+      "shap_value": -0.4828392267227173,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 9853.57,
+      "shap_value": 0.34022894501686096,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.27000734210014343,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 48309.0,
+      "shap_value": -0.25046107172966003,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.16393592953681946,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.15966950356960297,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.11516278237104416,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the dominant positive driver (SHAP +2.84553), i.e., the use of ACH substantially increased the model's flagging score.\n- amount_received (18120.0) (SHAP +0.98853) and amount_paid (18120.0) (SHAP +0.60001) both increased the score — notably both values are equal (18120.0), contributing to the higher score.\n- to_bank (701) contributed a smaller positive effect (SHAP +0.28407), modestly increasing the score.\n- from_bank (21258) had a negative contribution (SHAP -0.31516), partially offsetting the increases.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH transfer (payment_format_ach=1) combined with relatively large, matching amount_received and amount_paid (18120.0 each), with additional (smaller) upward pressure from the receiving bank (to_bank=701). This effect was partially reduced by the sending bank (from_bank=21258). If further review is performed, prioritize examination of the ACH payment details and the receiving bank (to_bank=701), since those features materially contributed to the model score.",
+  "llm_file": "llm_trx_3006741_r1.json"
+}

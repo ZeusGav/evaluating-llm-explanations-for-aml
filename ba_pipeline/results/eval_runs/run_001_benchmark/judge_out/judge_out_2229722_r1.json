@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strongly aligned and high coverage, but it makes an unsupported inference about “no conversion or net fee impact” which is not evidenced by the provided features."
+}

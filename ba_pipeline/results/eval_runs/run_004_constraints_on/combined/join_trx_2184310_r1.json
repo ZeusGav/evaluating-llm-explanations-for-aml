@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2184310,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2184310.json",
+  "model_proba": 0.9968812465667725,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8985300064086914,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15756.01,
+      "shap_value": 0.9146668910980225,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15756.01,
+      "shap_value": 0.6902109384536743,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 4.0,
+      "shap_value": -0.3005788028240204,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15280315279960632,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.1129467561841011,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 238845.0,
+      "shap_value": 0.0860937088727951,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 19535.0,
+      "shap_value": 0.08607161790132523,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_swiss_franc",
+      "value": 0.0,
+      "shap_value": 0.08600982278585434,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_swiss_franc",
+      "value": 0.0,
+      "shap_value": 0.07926186174154282,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach (value=1; SHAP=+2.89853), indicating an ACH payment format strongly increases the score. Large transaction size—amount_received (15756.0; SHAP=+0.914667) and amount_paid (15756.0; SHAP=+0.690211)—also meaningfully increase the score. The hour (4; SHAP=-0.300579) modestly decreases the score but does not offset the positive contributions from payment_format_ach and the amounts.\n\nConclusion: The transaction was flagged mainly because payment_format_ach=1 combined with sizeable amounts (amount_received and amount_paid ≈ 15,756) substantially raised the model score. If payment_format_ach indeed denotes an ACH transfer, the model treats that format plus these amount levels as higher risk (based on the reported SHAP contributions).",
+  "llm_file": "llm_trx_2184310_r1.json"
+}

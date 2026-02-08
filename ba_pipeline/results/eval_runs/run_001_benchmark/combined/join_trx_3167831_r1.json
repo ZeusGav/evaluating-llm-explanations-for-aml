@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3167831,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_3167831.json",
+  "model_proba": 0.9960873126983643,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.968294620513916,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 6426.47,
+      "shap_value": 0.9633570313453674,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.46395614743232727,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -0.1933576613664627,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17668256163597107,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.14666388928890228,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.12880678474903107,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 19777.0,
+      "shap_value": 0.1024395227432251,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 6426.47,
+      "shap_value": -0.09993313997983932,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.07727397233247757,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+2.96829; direction=increase): The model’s largest contributor — the transaction being an ACH payment strongly increased the flag score.\n- amount_paid (value=6426.47; SHAP=+0.963357; direction=increase): The paid amount materially increased the score and is a secondary driver.\n- to_bank (value=12; SHAP=+0.463956; direction=increase): The receiving bank ID (12) contributed further to raising the risk score.\n- hour (value=19; SHAP=-0.193358; direction=decrease): The transaction hour (19:00) slightly reduced the score but did not offset the above increases.\n\nConclusion:\n- The alert is primarily driven by the combination of payment_format_ach=1, a notable amount_paid=6426.47, and routing to to_bank=12; hour=19 provided a small mitigating effect. \n- Based solely on these drivers, a focused review of the ACH payment details and the relationship to receiving bank 12 is warranted (conditional recommendation inferred from the named drivers).",
+  "llm_file": "llm_trx_3167831_r1.json"
+}

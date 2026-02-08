@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2046274,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2046274.json",
+  "model_proba": 0.9968884587287903,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8588743209838867,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16450.28,
+      "shap_value": 0.9940911531448364,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16450.28,
+      "shap_value": 0.6147741675376892,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.40222635865211487,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 20.0,
+      "shap_value": -0.3643019199371338,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 14804.0,
+      "shap_value": 0.22065429389476776,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 243254.0,
+      "shap_value": -0.20251086354255676,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12576010823249817,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_swiss_franc",
+      "value": 0.0,
+      "shap_value": 0.08375371992588043,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.07510329782962799,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +2.85887, increase) — the model's largest positive contributor; the ACH payment format strongly increased the flagging score.\n- amount_received = 16450.3 (SHAP +0.99409, increase) and amount_paid = 16450.3 (SHAP +0.61477, increase) — both amounts are identical and materially large in magnitude, and each increased the score.\n- dayofweek = 5 (Saturday) (SHAP +0.402226, increase) — occurring on Saturday contributed to a higher score.\n- hour = 20 (20:00) (SHAP −0.364302, decrease) — the 8 PM execution time modestly reduced the score.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach) combined with relatively large, equal received and paid amounts (amount_received and amount_paid), with additional upward pressure from occurring on a Saturday (dayofweek). This upward pressure was partially offset by the later hour (hour = 20). If the model treats ACH and larger/equal send/receive amounts as higher risk (as the SHAP values indicate), that combination explains the elevated score.",
+  "llm_file": "llm_trx_2046274_r1.json"
+}

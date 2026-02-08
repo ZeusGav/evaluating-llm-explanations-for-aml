@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue is an unsupported claim that hour=19 is “late-evening processing” and that weekend ACH activity is risky, which is not evidenced by the provided drivers alone.",
+  "transaction_id": 2246762,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 160,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

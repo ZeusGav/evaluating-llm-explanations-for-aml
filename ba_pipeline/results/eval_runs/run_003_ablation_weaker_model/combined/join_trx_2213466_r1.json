@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2213466,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2213466.json",
+  "model_proba": 0.9959732890129089,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.934264659881592,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11226.25,
+      "shap_value": 0.7621866464614868,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11226.25,
+      "shap_value": 0.6643211245536804,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6199004054069519,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 117453.0,
+      "shap_value": -0.5531288981437683,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15061186254024506,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.14797431230545044,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11594361811876297,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 29404.0,
+      "shap_value": 0.11051692813634872,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 15.0,
+      "shap_value": -0.0997602716088295,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) with shap_value 2.93426, direction increase: This is the strongest driver and indicates the ACH payment method substantially pushes the model toward flagging the transaction.\n- amount_received (11226.2) with shap_value 0.762187, direction increase: A relatively large inbound amount contributes to the elevated risk signal.\n- amount_paid (11226.2) with shap_value 0.664321, direction increase: The identical outbound amount also increases risk.\n- dayofweek (6) with shap_value 0.6199, direction increase: The Sunday timing adds to the risk signal.\n- from_bank (117453) with shap_value -0.553129, direction decrease: This sending-bank factor provides a counter-signal that reduces risk, but does not negate the stronger positive contributions above.\n\nConclusion:\nThe transaction is flagged primarily due to ACH usage and sizable equal inbound/outbound amounts, with weekend timing reinforcing the concern. The sending-bank factor provides an offsetting signal but is not sufficient to overturn the top drivers. Overall, there is an elevated AML risk signal that warrants further review focused on ACH patterns, source/destination accounts, and weekend timing.",
+  "llm_file": "llm_trx_2213466_r1.json"
+}

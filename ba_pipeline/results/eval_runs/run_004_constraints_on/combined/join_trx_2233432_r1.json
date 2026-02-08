@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2233432,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2233432.json",
+  "model_proba": 0.9968982934951782,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9843339920043945,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14011.41,
+      "shap_value": 0.9929596185684204,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7102907299995422,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14011.41,
+      "shap_value": 0.6947610378265381,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 111443.0,
+      "shap_value": -0.5950776934623718,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.17912791669368744,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15192535519599915,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1241.0,
+      "shap_value": -0.11935391277074814,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.10119207948446274,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.0940827950835228,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flagged this transaction primarily because payment_format_ach=1 (strong positive driver) and relatively large amounts (amount_received=14011.4 and amount_paid=14011.4 each increased the score). The dayofweek=6 (Sunday) also contributed to a higher score. Conversely, from_bank=111443 and payment_currency_us_dollar=1 exerted negative SHAP effects (they reduced the model score), partially offsetting the increases.\n\nConclusion: The model’s rationale centers on an ACH payment of ~14,011.4 executed on dayofweek=6, which raised the alert likelihood; however, the originating bank (from_bank=111443) and USD payment currency lowered it. If further review is needed, focus checks on the ACH nature and transaction timing given these driver contributions.",
+  "llm_file": "llm_trx_2233432_r1.json"
+}

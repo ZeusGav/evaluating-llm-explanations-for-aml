@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue is an unsupported inference that “identical” amounts (and “mid-size”) were themselves a risk signal, which is not directly supported by the provided features beyond both amounts being positive contributors."
+}

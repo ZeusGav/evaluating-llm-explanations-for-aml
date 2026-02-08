@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and coverage of the main SHAP drivers, though it leaves a few smaller drivers (e.g., cheque/credit-card/euro indicators and amount_paid) unmentioned and the investigative guidance is somewhat generic.",
+  "transaction_id": 4723788,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 218,
+  "word_limit": 200,
+  "word_limit_pass": 0
+}

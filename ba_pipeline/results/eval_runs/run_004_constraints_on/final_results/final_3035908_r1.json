@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and directionally correct, but it omits several listed SHAP drivers (e.g., hour/dayofweek and the 0-valued format/currency indicators), limiting coverage.",
+  "transaction_id": 3035908,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 149,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

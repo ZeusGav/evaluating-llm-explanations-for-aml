@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2670183,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2670183.json",
+  "model_proba": 0.9958221912384033,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.993736505508423,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 223.0,
+      "shap_value": -0.6901993155479431,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 44617.31,
+      "shap_value": 0.5056024193763733,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.49733829498291016,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 44617.31,
+      "shap_value": 0.304208904504776,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.2916164696216583,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.21613921225070953,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.19831548631191254,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14967644214630127,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 118.0,
+      "shap_value": -0.13988733291625977,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- Top driver by absolute SHAP is payment_format_ach (SHAP 2.99374, direction: increase). This indicates the use of ACH as the payment method is strongly associated with the flag.\n- Strong supporting drivers that increase the risk signal:\n  - amount_received (SHAP 0.505602, increase) with value 44617.3 in receiving currency.\n  - payment_currency_saudi_riyal (SHAP 0.497338, increase) with value 1.\n  - amount_paid (SHAP 0.304209, increase) with value 44617.3 in payment currency.\n  - receiving_currency_saudi_riyal (SHAP 0.291616, increase) with value 1.\n- Together, these indicate a substantial SAR-denominated value moving via ACH on both payment and receiving sides.\n- Counterbalancing factor:\n  - from_bank (SHAP -0.690199, decrease) with value 223. This negative contribution suggests that, relative to other drivers, the sending bank reduces the flag likelihood, partially offsetting the high risk signal from the ACH/SAR-related features.\n- Minor drivers (omitted per guidance) include smaller SHAP contributions from other payment-format indicators and bank targets, which do not meaningfully change the core interpretation above.\n\nConclusion:\n- The flag appears primarily driven by the ACH payment format (payment_format_ach) in conjunction with SAR-denominated transaction amounts (amount_paid/amount_received and both currencies indicated as Saudi Riyal). The negative contribution from from_bank reduces the overall signal somewhat, but the ACH and SAR-currency features provide the strongest evidence for the model’s flag. Based solely on these drivers, the transaction presents a notable but not definitive AML concern that merits targeted review of the ACH SAR flow and source/destination bank details.",
+  "llm_file": "llm_trx_2670183_r1.json"
+}

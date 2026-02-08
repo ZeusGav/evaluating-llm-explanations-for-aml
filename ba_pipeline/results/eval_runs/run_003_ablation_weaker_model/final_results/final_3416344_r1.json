@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The main issue is an unsupported inference that equal paid/received amounts imply a “symmetrical transfer” pattern, which is not a defined feature/driver in the provided inputs.",
+  "transaction_id": 3416344,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 234,
+  "word_limit": 200,
+  "word_limit_pass": 0
+}

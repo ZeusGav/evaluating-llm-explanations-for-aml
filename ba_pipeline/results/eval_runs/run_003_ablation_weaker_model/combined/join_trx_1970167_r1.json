@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1970167,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_1970167.json",
+  "model_proba": 0.9970476031303406,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0886967182159424,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11995.36,
+      "shap_value": 0.8307732939720154,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11995.36,
+      "shap_value": 0.7868212461471558,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 20.0,
+      "shap_value": -0.7735604643821716,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 11.0,
+      "shap_value": 0.4499165415763855,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.35576626658439636,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.1393255740404129,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.13434983789920807,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.13282600045204163,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12653900682926178,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 -> This ACH payment method strongly increases the flag indicator (SHAP_value = 3.0887; direction: increase).\n- amount_received = 11995.4 -> A relatively large receiving amount contributes to the flag (SHAP_value = 0.8308; direction: increase).\n- amount_paid = 11995.4 -> The matched large paid amount also contributes (SHAP_value = 0.7868; direction: increase).\n- from_bank = 20 -> This sending-bank feature reduces the flag (SHAP_value = -0.7736; direction: decrease).\n- to_bank = 11 -> Receiving bank involvement adds moderate risk (SHAP_value = 0.4499; direction: increase).\n- dayofweek = 5 -> The day-of-week factor adds moderate risk (SHAP_value = 0.3558; direction: increase).\n\nConclusion:\n- The transaction is primarily driven by the ACH payment format (payment_format_ach) with a large positive contribution, complemented by substantial positive signals from the high amount_received and amount_paid. The presence of to_bank and the day of week further reinforce elevated risk, while from_bank provides a mitigating signal. Overall, the driver set indicates a higher likelihood of ML concern associated with an ACH payment with sizable, matched amounts, warranting a closer manual review focused on ACH-related activity and counterparties.",
+  "llm_file": "llm_trx_1970167_r1.json"
+}

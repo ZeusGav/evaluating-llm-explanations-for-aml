@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately reflects the main SHAP drivers and their directions, but omits several smaller payment-format indicators that also contributed.",
+  "transaction_id": 2233432,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 97,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

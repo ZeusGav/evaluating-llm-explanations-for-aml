@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3167831,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_3167831.json",
+  "model_proba": 0.9960873126983643,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.968294620513916,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 6426.47,
+      "shap_value": 0.9633570313453674,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.46395614743232727,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 19.0,
+      "shap_value": -0.1933576613664627,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17668256163597107,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.14666388928890228,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.12880678474903107,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 19777.0,
+      "shap_value": 0.1024395227432251,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 6426.47,
+      "shap_value": -0.09993313997983932,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.07727397233247757,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe model’s strongest contributors indicate this was flagged because payment_format_ach (value=1) had a large positive impact (SHAP 2.96829, direction=increase), meaning an ACH payment strongly raised the risk score. amount_paid (value=6426.47) was the next largest positive driver (SHAP 0.963357, direction=increase), so the relatively large payment amount further increased the score. to_bank (value=12) also contributed positively (SHAP 0.463956, direction=increase), indicating the receiving bank (to_bank=12) raised the score.\n\nConclusion:\nBased solely on the cited drivers, the alert arises primarily from an ACH payment (payment_format_ach=1) of 6,426.47 (amount_paid) routed to to_bank=12. Minor negative contributions (e.g., hour=19 and receiving_currency_euro=1) did not offset the main drivers. If ACH payments to to_bank=12 at this amount are normal for the customer, the score may be explainable; otherwise, review ACH routing and beneficiary bank details.",
+  "llm_file": "llm_trx_3167831_r1.json"
+}

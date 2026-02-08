@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue is unsupported specificity: it quotes incorrect feature values (amounts and bank IDs) and omits several provided drivers (dayofweek, hour, and other payment_format/currency indicators)."
+}

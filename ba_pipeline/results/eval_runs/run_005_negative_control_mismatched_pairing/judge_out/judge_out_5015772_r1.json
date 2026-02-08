@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is multiple contradictions with SHAP_JSON (e.g., to_bank stated as decreasing and dayofweek mentioned despite not being provided), plus several mismatched feature values."
+}

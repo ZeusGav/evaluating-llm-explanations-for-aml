@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, SHAP-faithful writeup with strong driver coverage; the main limitation is only moderate investigative utility beyond restating top factors (e.g., no mention of other provided minor drivers like hour/to_bank)."
+}

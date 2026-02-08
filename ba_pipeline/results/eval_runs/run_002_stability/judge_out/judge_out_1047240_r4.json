@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue is an unsupported claim that the identical amounts themselves increase risk (no amount_ratio/amount_diff driver provided), though overall the explanation is clear and covers the major SHAP drivers."
+}

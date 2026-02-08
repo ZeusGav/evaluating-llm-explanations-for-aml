@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 2,
+  "note": "The narrative introduces multiple features and specific values not present in SHAP_JSON (e.g., dayofweek, receiving_currency_euro, and different amounts), making several claims unsupported despite clear structure."
+}

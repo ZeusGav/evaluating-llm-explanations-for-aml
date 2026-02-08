@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong, well-aligned coverage of the top SHAP drivers, but it adds an unsupported claim by mapping dayofweek=6 to “Sunday,” which is not supported by the provided fact sheet."
+}

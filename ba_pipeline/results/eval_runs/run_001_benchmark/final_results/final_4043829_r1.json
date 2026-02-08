@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, well-structured explanation with correct SHAP directionality, but it omits several smaller one-hot drivers (currencies and non-card/non-cash formats) that could add context.",
+  "transaction_id": 4043829,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 171,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

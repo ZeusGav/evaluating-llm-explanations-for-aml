@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and broad SHAP-driver coverage; could be more useful to investigators by briefly interpreting why ACH+SAR+timing/amount are risk-relevant without adding new facts."
+}

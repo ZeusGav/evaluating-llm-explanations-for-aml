@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2277774,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2277774.json",
+  "model_proba": 0.9968398809432983,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.765446901321411,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 19693.8,
+      "shap_value": 1.2086377143859863,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 19693.8,
+      "shap_value": 0.6680705547332764,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.600432276725769,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 23.0,
+      "shap_value": -0.5170638561248779,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 111443.0,
+      "shap_value": -0.34961509704589844,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14613288640975952,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.14379280805587769,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.09883754700422287,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": 0.08825113624334335,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1, SHAP=2.76545, direction=increase): The strongest driver; ACH payments significantly push the model toward flagging this transaction.\n- amount_received (19693.8, SHAP=1.20864, direction=increase) and amount_paid (19693.8, SHAP=0.668071, direction=increase): Large, equalized transfer amounts in the transaction contribute to elevated risk signals.\n- dayofweek (6, SHAP=0.600432, direction=increase): Saturday processing adds to the risk signal.\n- hour (23, SHAP=-0.517064, direction=decrease): Late-hour timing reduces risk slightly, partially offsetting the above drivers.\n\nConclusion:\nThe flag appears driven primarily by the ACH payment format and the high, equal transfer amounts, with weekend timing amplifying risk and late-hour timing providing a modest counterbalance. Based on these drivers alone, the transaction warrants review, though the late hour slightly mitigates the overall risk impression.",
+  "llm_file": "llm_trx_2277774_r1.json"
+}

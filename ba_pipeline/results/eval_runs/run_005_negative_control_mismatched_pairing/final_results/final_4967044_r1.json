@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 3,
+  "context_utility": 3,
+  "note": "Biggest issue: it cites from_bank as a negative driver even though from_bank is not present in the provided SHAP_JSON (and it also invents different feature values).",
+  "transaction_id": 4967044,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 160,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

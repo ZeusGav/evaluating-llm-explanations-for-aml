@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and directionally correct on the main positive drivers, but it omits several non-trivial decreasing/increasing contributors (to_bank, hour, credit_card=0, currencies) which limits coverage and investigative completeness."
+}

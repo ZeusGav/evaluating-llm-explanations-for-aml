@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2192652,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2192652.json",
+  "model_proba": 0.9968183040618896,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9033701419830322,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 2991.0,
+      "shap_value": -0.838694155216217,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8298149704933167,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13786.65,
+      "shap_value": 0.7891790270805359,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13786.65,
+      "shap_value": 0.731416642665863,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.28125181794166565,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.15738503634929657,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14079549908638,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1124.0,
+      "shap_value": 0.10089335590600967,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.10047042369842529,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=2.90337; direction=increase): The ACH payment format significantly increases the risk signal, making this a primary driver of the flag.\n- from_bank (value=2991; shap_value=-0.838694; direction=decrease): The sending bank reduces the risk signal, providing a mitigating effect relative to the ACH-driven risk.\n- dayofweek (value=6; shap_value=0.829815; direction=increase): Sunday timing increases risk, contributing meaningfully to the flag.\n- amount_received (value=13786.6; shap_value=0.789179; direction=increase): A large inbound amount adds to the risk signal.\n- amount_paid (value=13786.6; shap_value=0.731417; direction=increase): A large outbound amount adds to the risk signal and reinforces the concern around the transfer.\n- hour (value=12; shap_value=0.281252; direction=increase): Midday hour contributes a smaller but positive risk signal.\n\nNote: The negative effect for payment_currency_us_dollar (not among the top contributors) and the modest positive/negative signals from other smaller drivers are not emphasized here, as the dominant contributors are the ACH format and the large amounts on a Sunday, with a partial offset from the sending bank.\n\nConclusion:\n- The transaction is flagged primarily due to the ACH payment format in combination with large matched amounts and Sunday timing, with a partial mitigating effect from the sending bank. Based on these drivers alone, the overall signal supports a positive risk indication, though not fully negated by the negative from_bank driver.",
+  "llm_file": "llm_trx_2192652_r1.json"
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately ties the main risk uplift to ACH format and higher amounts with clear directionality, but omits several smaller SHAP drivers (e.g., to_bank/hour/currency/payment-format negatives/zeros) that could add context."
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is unsupported claims: it cites dayofweek (and multiple feature values/SHAPs) not present in the provided SHAP_JSON."
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is multiple unsupported specifics (amounts/day/bank IDs and several SHAP magnitudes) that do not match the provided SHAP_JSON values.",
+  "transaction_id": 4750577,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 167,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

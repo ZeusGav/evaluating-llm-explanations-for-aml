@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Clear, well-structured explanation that correctly reflects the main SHAP drivers and their increasing effect without adding unsupported facts.",
+  "transaction_id": 3075650,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 112,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

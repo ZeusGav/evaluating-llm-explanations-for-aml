@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it introduces an unsupported claim by calling the amounts “large exchange amounts,” which is not justified by the provided features (no FX/threshold context).",
+  "transaction_id": 2358561,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 125,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

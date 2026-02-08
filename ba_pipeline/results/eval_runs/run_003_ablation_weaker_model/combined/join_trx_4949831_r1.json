@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4949831,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_4949831.json",
+  "model_proba": 0.995891809463501,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.028151035308838,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17119.89,
+      "shap_value": 0.7424536347389221,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 118.0,
+      "shap_value": -0.5749984383583069,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17119.89,
+      "shap_value": 0.4952637851238251,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.3892296850681305,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.21016940474510193,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14535419642925262,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11511333286762238,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.10234515368938446,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 7.0,
+      "shap_value": -0.08209586143493652,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1; shap_value=3.02815; direction: increase) — ACH as the payment method is the single strongest contributor to the flag.\n- amount_received (value=17119.9; shap_value=0.742454; direction: increase) — a large incoming amount adds notable risk signal.\n- amount_paid (value=17119.9; shap_value=0.495264; direction: increase) — matching large payout further supports the flag signal.\n- dayofweek (value=5; shap_value=0.38923; direction: increase) — activity on this day contributes to risk per the model.\n- from_bank (value=118; shap_value=-0.574998; direction: decrease) — sending-bank factor reduces risk signal, partially offsetting the above drivers.\n\nConclusion:\nBased solely on the provided drivers, the transaction is flagged due to strong risk signals from ACH usage and large, matched transfer amounts, with a modest offset from the sending-bank factor. Overall, the model indicates elevated risk for this transaction, though the from_bank driver partially mitigates the score.",
+  "llm_file": "llm_trx_4949831_r1.json"
+}

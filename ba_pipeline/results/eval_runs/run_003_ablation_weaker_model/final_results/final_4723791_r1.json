@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it claims “SAR currency usage for both sending and receiving,” but only the payment/receiving currency indicators are provided (no “sending currency” feature).",
+  "transaction_id": 4723791,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 183,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

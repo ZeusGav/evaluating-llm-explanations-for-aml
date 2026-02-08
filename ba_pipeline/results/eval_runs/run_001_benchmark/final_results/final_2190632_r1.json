@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong alignment and coverage of the main SHAP drivers; utility is slightly limited by not addressing several smaller listed features (hour, currencies, to_bank, credit_card indicator).",
+  "transaction_id": 2190632,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 166,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

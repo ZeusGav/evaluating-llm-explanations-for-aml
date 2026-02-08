@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2422807,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 2190632,
+  "shap_file": "shap_trx_2190632.json",
+  "model_proba": 0.997028648853302,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8293824195861816,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8411428928375244,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10726.78,
+      "shap_value": 0.7253270149230957,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10726.78,
+      "shap_value": 0.7162503600120544,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 27241.0,
+      "shap_value": -0.4744831621646881,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.27979350090026855,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.16626347601413727,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14643433690071106,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.10795577615499496,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1669.0,
+      "shap_value": 0.08634655922651291,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) — SHAP +2.90659 (increase): the largest single contributor; the model strongly penalized the ACH payment format.\n- amount_paid (value=10873.2) — SHAP +0.76320 (increase): a material payment amount that raised the score.\n- amount_received (value=10873.2) — SHAP +0.60027 (increase): the received amount is the same numeric value as the paid amount and also increased the score.\n- to_bank (value=20) — SHAP +0.58188 (increase): the receiving bank ID contributed meaningfully to the higher risk score.\n\nConclusion:\nThe transaction was flagged primarily because payment_format_ach=1 (largest positive driver) combined with relatively large, identical amount_paid and amount_received (10873.2) and the receiving bank (to_bank=20) increased the model risk score. Conditionally, given amount_paid equals amount_received, this pattern could indicate a direct pass‑through/one‑to‑one transfer flow (may warrant review), and the receiving bank (to_bank=20) should be examined as a contributing factor.",
+  "llm_file": "llm_trx_2422807_r1.json"
+}

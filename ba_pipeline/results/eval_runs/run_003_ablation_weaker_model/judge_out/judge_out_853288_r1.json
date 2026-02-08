@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "It incorrectly implies receiving_currency_euro is a “smaller driver” toward risk despite its SHAP direction being decrease, and it adds unsupported claims about weekend risk and recipient bank profile."
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Strong, tightly driver-grounded explanation that correctly reflects directions and prioritizes the dominant SHAP contributors.",
+  "transaction_id": 3640921,
+  "repeat": 1,
+  "run_name": "run_001_benchmark",
+  "word_count": 156,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

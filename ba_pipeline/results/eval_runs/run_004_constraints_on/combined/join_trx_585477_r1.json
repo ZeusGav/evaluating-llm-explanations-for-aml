@@ -1,0 +1,71 @@
+{
+  "transaction_id": 585477,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_585477.json",
+  "model_proba": 0.9982796907424927,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8815298080444336,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 14962.84,
+      "shap_value": 0.8308278322219849,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 14962.84,
+      "shap_value": 0.7600811123847961,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7407539486885071,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21174.0,
+      "shap_value": -0.29131805896759033,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1547.0,
+      "shap_value": 0.2665441632270813,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 13.0,
+      "shap_value": 0.18468846380710602,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.16968558728694916,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14943677186965942,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.06675083935260773,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flag is driven primarily by payment_format_ach = 1 (increase), which has the largest positive SHAP contribution, indicating ACH format strongly raised the score. Secondary contributors were amount_received = 14962.8 (increase) and amount_paid = 14962.8 (increase), both increasing the score (similar sizable amounts). dayofweek = 6 (increase) also raised the score, indicating weekend timing contributed. These factors combined increased the model output above the alert threshold.\n\nConclusion: The alert is mainly attributable to payment_format_ach (increase) together with high identical amounts (amount_received and amount_paid) and Sunday execution (dayofweek = 6). If an ACH transfer of ~14,962.8 occurs on dayofweek = 6, the model is more likely to flag it — further review of payment purpose and counterparty details is recommended.",
+  "llm_file": "llm_trx_585477_r1.json"
+}

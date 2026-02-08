@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Strong, well-structured explanation that correctly reflects driver directions and stays within supported claims while covering the dominant SHAP contributors.",
+  "transaction_id": 2230403,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 167,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

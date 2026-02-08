@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2150318,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_2150318.json",
+  "model_proba": 0.9995651841163635,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9889745712280273,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.7753599882125854,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10215.28,
+      "shap_value": 0.6557506322860718,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6350468397140503,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.4889634847640991,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10215.28,
+      "shap_value": 0.47994232177734375,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.43776458501815796,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 7.0,
+      "shap_value": -0.2165587991476059,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17788119614124298,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.1337752342224121,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (shap 2.98897, direction: increase): the use of ACH was the single largest contributor to the flag.\n- to_bank = 12 (shap 0.77536, direction: increase): the receiving bank identifier (to_bank) increased the model score.\n- amount_paid = 10215.3 (shap 0.655751, direction: increase) and amount_received = 10215.3 (shap 0.479942, direction: increase): the ~10,215.3 payment and identical received amount both increased the score.\n- dayofweek = 6 (shap 0.635047, direction: increase): the transaction occurring on day 6 (Sunday) increased the score.\n- payment_currency_euro = 1 (shap 0.488963, direction: increase): payment in euros contributed to the higher score.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach=1) routed to receiving bank ID 12, for a relatively large amount (amount_paid/amount_received = 10215.3) in euros on dayofweek=6; these features jointly raised the model score. If patterns that raise risk in the model include ACH usage, higher amounts, euro currency, weekend timing, and this specific to_bank value, then this record aligns with those risk-driving characteristics.",
+  "llm_file": "llm_trx_2150318_r1.json"
+}

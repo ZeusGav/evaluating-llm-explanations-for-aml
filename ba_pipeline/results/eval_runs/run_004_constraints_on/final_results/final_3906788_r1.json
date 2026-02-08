@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is unsupported assumptions/claims such as calling the amounts “relatively large/identical” and suggesting operational next steps (verify origin/destination/documentation) without those being supported by the provided SHAP drivers.",
+  "transaction_id": 3906788,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 115,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

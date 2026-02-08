@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it contradicts SHAP on payment_currency_us_dollar (SHAP shows value=0 with an increasing effect, but the text says USD=1 and decreasing) and also cites incorrect amounts/bank IDs.",
+  "transaction_id": 2233431,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 187,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1566107,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_1566107.json",
+  "model_proba": 0.9958776235580444,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.734300136566162,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16269.7,
+      "shap_value": 0.9757144451141357,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16269.7,
+      "shap_value": 0.9126797318458557,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 4.0,
+      "shap_value": -0.45828962326049805,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 10.0,
+      "shap_value": 0.4243406355381012,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 23833.0,
+      "shap_value": -0.28619804978370667,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 14.0,
+      "shap_value": 0.16330327093601227,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.1566728949546814,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12483295798301697,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.11453524231910706,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\nThe alert is primarily driven by payment_format_ach = 1 (strong positive contribution), indicating an ACH payment increased the model score. Secondary positive drivers are amount_paid = 16269.7 and amount_received = 16269.7 (both increased the score), showing a relatively large, equal paid and received amount. dayofweek = 4 contributed negatively (decreased the score), partially offsetting risk. to_bank = 10 had a smaller positive effect (increased the score).\n\nConclusion:\nThe model flagged the transaction mainly because payment_format_ach = 1 combined with sizable, matching amount_paid and amount_received increased risk. This is somewhat offset by dayofweek = 4. If ACH transfers of this magnitude and symmetry to to_bank = 10 are atypical for the customer, further review is warranted; otherwise the flag may reflect expected ACH activity.",
+  "llm_file": "llm_trx_1566107_r1.json"
+}

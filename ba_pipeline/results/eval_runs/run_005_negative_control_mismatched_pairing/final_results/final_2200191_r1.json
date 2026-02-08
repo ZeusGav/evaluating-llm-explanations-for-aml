@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is multiple unsupported drivers/values (e.g., Saudi riyal and mismatched amounts/bank IDs) that are not present in the provided SHAP_JSON.",
+  "transaction_id": 2200191,
+  "repeat": 1,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "word_count": 157,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

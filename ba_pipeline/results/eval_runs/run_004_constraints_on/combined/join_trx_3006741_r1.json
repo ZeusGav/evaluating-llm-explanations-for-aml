@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3006741,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_3006741.json",
+  "model_proba": 0.9962272644042969,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.845527410507202,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 18119.95,
+      "shap_value": 0.9885319471359253,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 18119.95,
+      "shap_value": 0.6000137329101562,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 21258.0,
+      "shap_value": -0.3151632249355316,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 701.0,
+      "shap_value": 0.2840646207332611,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.11463514715433121,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.11282400786876678,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.08184818178415298,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.07011102885007858,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06551428139209747,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 was the dominant driver (SHAP increase), so an ACH payment strongly increased the model score.\n- amount_received = 18,120 and amount_paid = 18,120 both contributed positive SHAP effects, indicating the relatively large transaction amounts increased the score.\n- from_bank = 21258 contributed a modest negative SHAP (decrease), partially offsetting risk, while to_bank = 701 had a small positive SHAP (increase).\n\nConclusion:\n- The flag is primarily driven by an ACH transfer (payment_format_ach) combined with substantial equal payment and receipt amounts (amount_received and amount_paid = 18,120). The sending bank reduced the score slightly, and the receiving bank added a small lift. If pursuing review, focus on ACH origin/destination details given these drivers.",
+  "llm_file": "llm_trx_3006741_r1.json"
+}

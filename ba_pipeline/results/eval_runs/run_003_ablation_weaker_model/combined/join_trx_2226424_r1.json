@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2226424,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2226424.json",
+  "model_proba": 0.9959335923194885,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.893157482147217,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 5183.46,
+      "shap_value": 0.8037891983985901,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7319795489311218,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.24970673024654388,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": 0.15825222432613373,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1347792148590088,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.07720857858657837,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.05964413285255432,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.052841298282146454,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_diff",
+      "value": 0.0,
+      "shap_value": 0.03849285840988159,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (payment_format_ach) has the largest positive SHAP value (2.89316) with direction increase, indicating the model strongly associates ACH payments with this flag.\n- amount_paid = 5183.46 (amount_paid) shows a notable positive SHAP contribution (0.8038, increase), meaning the relatively large payment amount contributes to risk.\n- dayofweek = 6 (Sunday) has a substantial positive SHAP (0.7320, increase), suggesting weekend timing elevates risk in the model’s view.\n- receiving_currency_euro = 1 (receiving_currency_euro) has a negative SHAP (-0.2497, decrease), indicating euro as the receiving currency slightly lowers the risk signal, countering part of the above factors.\n- hour = 16 (hour) adds a smaller positive SHAP (0.1583, increase), providing a minor timing signal that aligns with the flag.\n\nConclusion:\nBased on the top drivers, the transaction shows elevated risk driven by an ACH payment format and a relatively large amount, occurring on a Sunday, with euro receiving slightly mitigating the signal. While euro receiving reduces the risk contribution somewhat, the combined pattern from payment_format_ach, amount_paid, dayofweek, and hour supports the flagged status. Further investigation is warranted to verify the legitimacy of the counterparties and transaction purpose. This assessment relies solely on the cited driver features and their directions.",
+  "llm_file": "llm_trx_2226424_r1.json"
+}

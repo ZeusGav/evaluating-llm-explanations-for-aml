@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "The main issue is an unsupported inference about “equal high inbound/outbound amounts” (and “payment routing”) since amount_ratio/amount_diff and routing features are not provided as drivers."
+}

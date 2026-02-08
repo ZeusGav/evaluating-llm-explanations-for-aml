@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue is an unsupported claim about “review of ACH details”/next steps that is not grounded in the provided SHAP drivers.",
+  "transaction_id": 2265303,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 100,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

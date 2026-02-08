@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is an unsupported claim about the paid/received amounts being “equal” (amount_ratio/amount_diff not provided), though the explanation is otherwise clear and directionally aligned."
+}

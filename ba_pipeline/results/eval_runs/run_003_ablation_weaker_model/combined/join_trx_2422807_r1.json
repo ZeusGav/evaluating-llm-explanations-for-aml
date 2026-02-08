@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2422807,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2422807.json",
+  "model_proba": 0.9963834285736084,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9065864086151123,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10873.16,
+      "shap_value": 0.7631999254226685,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10873.16,
+      "shap_value": 0.6002710461616516,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 20.0,
+      "shap_value": 0.5818842649459839,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 6.0,
+      "shap_value": -0.27255335450172424,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17787855863571167,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.15607529878616333,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.15354172885417938,
+      "direction": "decrease"
+    },
+    {
+      "feature": "from_bank",
+      "value": 18230.0,
+      "shap_value": -0.12467774748802185,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 0.0,
+      "shap_value": -0.10793258249759674,
+      "direction": "decrease"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- The top driver is payment_format_ach (value=1) with SHAP 2.90659 and direction: increase. This indicates the ACH payment format materially contributed to the flag.\n- The next strongest contributors are amount_paid (10873.2) with SHAP 0.7632 and amount_received (10873.2) with SHAP 0.600271, both increasing the flag, suggesting a large transfer with equal paid/received amounts.\n- The to_bank feature (value=20) has SHAP 0.581884 with direction: increase, further contributing to the flag via the receiving-bank context.\n- The hour feature (hour=6) has SHAP -0.272553 with direction: decrease, indicating this hour modestly reduces the flag probability (a minor mitigating signal relative to the top drivers).\n\nConclusion:\n- Based on the provided drivers, there is an elevated AML risk signal driven by the ACH payment format, a large, mirrored payment/receiving amount, and a specific receiving bank. The hour factor provides a small mitigating signal. Overall, the transaction should remain flagged for further review, focusing on ACH usage, the legitimacy of counterparties, and confirmation of sender/receiver details.",
+  "llm_file": "llm_trx_2422807_r1.json"
+}

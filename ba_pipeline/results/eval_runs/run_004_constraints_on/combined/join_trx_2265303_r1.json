@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2265303,
+  "run_name": "run_004_constraints_on",
+  "shap_file": "shap_trx_2265303.json",
+  "model_proba": 0.9959600567817688,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8048648834228516,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 16586.31,
+      "shap_value": 1.1453509330749512,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 11471.0,
+      "shap_value": -0.8076523542404175,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7132982611656189,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 16586.31,
+      "shap_value": 0.6741536855697632,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 21.0,
+      "shap_value": -0.607936441898346,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.4513150453567505,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.18753547966480255,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17744971811771393,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.15422891080379486,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why: The model flagged the transaction mainly because payment_format_ach (value=1; SHAP=+2.80486, direction=increase) strongly raised the score, combined with large amounts: amount_received (16586.3; SHAP=+1.14535, direction=increase) and amount_paid (16586.3; SHAP=+0.674154, direction=increase). Timing on dayofweek (6, Sunday; SHAP=+0.713298, direction=increase) further increased the score. The from_bank feature (from_bank=11471; SHAP=-0.807652, direction=decrease) partially reduced the overall signal.\n\nConclusion: The alert is driven principally by ACH method and relatively high, symmetric payment amounts, with Sunday timing adding risk weight; however the sending bank (from_bank=11471) lowers the modeled risk. Conditional on these named features, review of ACH details and the counterparty bank may be the next relevant steps.",
+  "llm_file": "llm_trx_2265303_r1.json"
+}

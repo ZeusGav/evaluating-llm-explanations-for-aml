@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong coverage and correct directionality; the only weakness is slightly generic risk interpretation (e.g., why ACH/weekend/to_bank are risky) without actionable next-step cues beyond “manual review.”"
+}

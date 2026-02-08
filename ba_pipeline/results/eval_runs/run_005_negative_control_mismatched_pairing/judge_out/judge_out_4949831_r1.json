@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it cites multiple incorrect feature values (e.g., amounts, dayofweek, from_bank) not supported by the provided SHAP_JSON, even though the driver directions are aligned and coverage is strong."
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Well-structured and directionally consistent, but it makes an unsupported claim by interpreting equal paid/received amounts as a “direct transfer” (amount_ratio/amount_diff not provided as drivers)."
+}

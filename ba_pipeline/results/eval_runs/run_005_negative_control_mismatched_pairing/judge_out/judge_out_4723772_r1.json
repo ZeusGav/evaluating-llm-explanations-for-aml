@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Strong structure and directionally consistent, but it contains multiple unsupported specifics (wrong feature values/SHAP magnitudes and mentions Sunday/day=6 not in the provided inputs)."
+}

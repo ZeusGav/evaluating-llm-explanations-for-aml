@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3075650,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_3075650.json",
+  "model_proba": 0.9973649382591248,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.82790207862854,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17441.08,
+      "shap_value": 0.919704258441925,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17441.08,
+      "shap_value": 0.592573344707489,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1467.0,
+      "shap_value": 0.2930598855018616,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 1.0,
+      "shap_value": 0.0998745858669281,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09567248076200485,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.0956583172082901,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.07351510226726532,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.0612824410200119,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": 0.05543696507811546,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- The flag is primarily driven by payment_format_ach (value=1) with a large positive SHAP contribution (shap_value=2.8279), indicating ACH as the payment method strongly contributed to risk in this case.\n- The transaction has a large, matching pair of amounts for receive and pay (amount_received=17441.1 and amount_paid=17441.1) with substantial positive SHAP contributions (0.919704 and 0.592573 respectively). This pattern of a large, mirrored value increases the model’s risk signal.\n- The funds are moving toward a specific receiving bank (to_bank=1467) with a positive SHAP contribution (0.29306), further amplifying risk per the model.\n- Day of week also contributes modestly (dayofweek=1, shap_value=0.0998746), adding a small incremental risk signal.\n\nConclusion:\n- Based on the listed drivers, the transaction shows a model-driven elevated AML risk signal driven by ACH payment format, a large mirrored transfer value, and movement to a specific bank. The day-of-week signal adds a minor, supporting risk signal. This pattern warrants standard AML investigation and review of source-of-funds, beneficiary details, and consistency with expected business activity.",
+  "llm_file": "llm_trx_3075650_r1.json"
+}

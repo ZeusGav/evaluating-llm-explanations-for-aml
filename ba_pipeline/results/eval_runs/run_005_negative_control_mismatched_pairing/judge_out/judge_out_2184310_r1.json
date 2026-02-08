@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is factual inconsistency with SHAP_JSON (hour is stated as decreasing/negative while SHAP shows increase, and multiple feature values/SHAP magnitudes are misstated)."
+}

@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately reflects the main SHAP drivers and directions with clear structure, but omits several smaller listed features (e.g., from_bank, hour, payment_currency, other payment formats) that could add marginal context.",
+  "transaction_id": 1566107,
+  "repeat": 3,
+  "run_name": "run_002_stability",
+  "word_count": 176,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

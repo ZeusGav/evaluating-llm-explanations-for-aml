@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 2,
+  "note": "Biggest issue is multiple contradictions and unsupported specifics (dayofweek/to_bank/from_bank/hour values and directions) versus the provided SHAP drivers."
+}

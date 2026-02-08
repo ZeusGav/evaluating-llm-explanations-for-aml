@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue: it claims the transaction was “flagged”/“triggered the flag,” which is not supported by the provided SHAP drivers alone.",
+  "transaction_id": 1392744,
+  "repeat": 2,
+  "run_name": "run_002_stability",
+  "word_count": 174,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 3020593,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_3020593.json",
+  "model_proba": 0.996195912361145,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.891624927520752,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 11972.8,
+      "shap_value": 0.8897443413734436,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 11972.8,
+      "shap_value": 0.787084698677063,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 11056.0,
+      "shap_value": -0.3364693820476532,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.30021315813064575,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.19389329850673676,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.12309077382087708,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1299.0,
+      "shap_value": 0.11802566051483154,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.0647156834602356,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06073963642120361,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach: value=1; SHAP=2.89162; direction increase. Explanation: The ACH-based payment method is the strongest contributor to the flag, per the SHAP signal, indicating this format raises risk.\n- amount_paid: 11972.8; SHAP=0.889744; direction increase. Explanation: A sizeable amount being paid increases risk signal.\n- amount_received: 11972.8; SHAP=0.787085; direction increase. Explanation: An equal-sized receiving amount further increases the risk signal.\n- from_bank: 11056; SHAP=-0.336469; direction decrease. Explanation: The sending-bank signal reduces risk, but this negative contribution is smaller in magnitude than the positive signals from ACH and the amounts.\n- hour: 12; SHAP=0.300213; direction increase. Explanation: Midday timing adds a modest risk signal.\n\nConclusion:\nBased on the top drivers, the transaction is flagged primarily due to the ACH payment format and the large, matched paid/received amounts, with a secondary, modest contribution from the midday hour. The sending bank signal reduces risk, but not enough to offset the dominant positive signals. If supported by further review, this pattern could be consistent with higher-risk fund movement patterns, though no definitive conclusion can be drawn from these driver signals alone.",
+  "llm_file": "llm_trx_3020593_r1.json"
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 2,
+  "note": "The main issue is unsupported/mismatched drivers: the text cites Saudi Riyal currency features (and values/SHAPs) that are not present in the provided SHAP_JSON."
+}

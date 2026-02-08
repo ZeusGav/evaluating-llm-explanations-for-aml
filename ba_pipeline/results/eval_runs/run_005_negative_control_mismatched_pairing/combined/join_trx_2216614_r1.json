@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2216614,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 5018226,
+  "shap_file": "shap_trx_5018226.json",
+  "model_proba": 0.9973401427268982,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.82993745803833,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 17462.31,
+      "shap_value": 1.2830201387405396,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 17462.31,
+      "shap_value": 0.6187801957130432,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12979.0,
+      "shap_value": -0.18900567293167114,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.17161493003368378,
+      "direction": "decrease"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 0.0,
+      "shap_value": 0.1310025453567505,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.10416458547115326,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 235509.0,
+      "shap_value": 0.08228650689125061,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.06299548596143723,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 17.0,
+      "shap_value": 0.0613396130502224,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach: payment_format_ach = 1 contributed strongly to an increased score (SHAP +3.05803), so the ACH payment method was the primary driver of the flag.\n- dayofweek: dayofweek = 6 (Sunday) increased the score (SHAP +0.719058), indicating the transaction timing (Sunday) pushed the alert higher.\n- amount_received and amount_paid: amount_received = 17,113.6 (SHAP +0.604153) and amount_paid = 17,113.6 (SHAP +0.494747) both increased the score, so the magnitude of the payment in the reported currency contributed to the flag.\n- from_bank: from_bank = 222 decreased the score (SHAP −0.671646), so the sender bank identifier partially offset the other increasing factors.\n\nConclusion:\nThe model flagged this transaction mainly because it was an ACH payment (payment_format_ach=1) of relatively large size (amount_received and amount_paid ≈ 17,113.6) executed on dayofweek=6 (Sunday), with those factors producing the largest positive SHAP contributions. This increase was partially mitigated by the negative contribution from from_bank=222. If further review is needed, focus checks on the ACH characteristics and the Sunday execution, since those features most directly drove the alert.",
+  "llm_file": "llm_trx_2216614_r1.json"
+}

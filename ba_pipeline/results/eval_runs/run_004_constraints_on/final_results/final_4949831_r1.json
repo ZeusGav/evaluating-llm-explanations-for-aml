@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear, directionally correct explanation covering the dominant drivers, though it omits minor contributors like currency indicators and hour.",
+  "transaction_id": 4949831,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 103,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

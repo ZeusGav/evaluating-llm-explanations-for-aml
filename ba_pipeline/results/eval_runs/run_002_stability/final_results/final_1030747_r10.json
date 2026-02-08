@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Well-structured and directionally consistent, but it adds unsupported context by asserting the amount is “relatively large” and implying atypicality without any driver evidence.",
+  "transaction_id": 1030747,
+  "repeat": 10,
+  "run_name": "run_002_stability",
+  "word_count": 171,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

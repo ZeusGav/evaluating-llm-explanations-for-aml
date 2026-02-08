@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is unsupported specifics: it invents different feature values/SHAP magnitudes (e.g., amount_received 56,984; from_bank 249176; SHAPs) not present in SHAP_JSON."
+}

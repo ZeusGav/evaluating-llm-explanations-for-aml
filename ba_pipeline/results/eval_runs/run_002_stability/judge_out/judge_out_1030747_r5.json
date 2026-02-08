@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 1,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Accurately reflects the main positive drivers and their directions, but it omits the smaller opposing (decreasing) bank-ID effects that slightly offset risk."
+}

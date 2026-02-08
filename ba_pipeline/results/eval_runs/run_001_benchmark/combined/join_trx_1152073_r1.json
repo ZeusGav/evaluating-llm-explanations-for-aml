@@ -1,0 +1,71 @@
+{
+  "transaction_id": 1152073,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_1152073.json",
+  "model_proba": 0.9970992803573608,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.90216064453125,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 908.0,
+      "shap_value": -0.9224379658699036,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15968.23,
+      "shap_value": 0.8998066186904907,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.7816022634506226,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15968.23,
+      "shap_value": 0.7641443610191345,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1420.0,
+      "shap_value": 0.23143066465854645,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": 0.20711490511894226,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 1.0,
+      "shap_value": -0.16433247923851013,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1395576000213623,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cash",
+      "value": 0.0,
+      "shap_value": 0.08807489275932312,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) had the largest positive contribution (shap_value=+2.90216, direction=increase) — the use of ACH format is the single strongest driver pushing the score up.\n- amount_received (value=15968.2) contributed positively (shap_value=+0.899807, direction=increase); the receiving amount is a material upward driver.\n- amount_paid (value=15968.2) also contributed positively (shap_value=+0.764144, direction=increase); the payment amount reinforces the increase.\n- dayofweek (value=6 — Sunday) contributed positively (shap_value=+0.781602, direction=increase); the transaction occurring on dayofweek=6 increases the score.\n- from_bank (value=908) provided a reducing effect (shap_value=−0.922438, direction=decrease); the sending bank ID partially mitigates the flagged signal.\n\nConclusion:\n- The model flagged the transaction primarily because payment_format_ach=1 combined with relatively large amount_received and amount_paid (both 15968.2) and occurrence on dayofweek=6 produced strong positive contributions. The from_bank (908) contribution partially offsets this, but the top drivers sum to a net positive effect (≈ +4.43 from the five drivers listed), explaining why the transaction was flagged.\n- Conditional note: if ACH format or transactions on dayofweek=6 are treated as higher-risk by the model, then those features are the dominant reasons for the alert (based on the named drivers above).",
+  "llm_file": "llm_trx_1152073_r1.json"
+}

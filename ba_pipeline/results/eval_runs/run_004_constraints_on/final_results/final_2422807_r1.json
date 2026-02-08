@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 4,
+  "note": "Main issue: it asserts the paid/received amounts are “identical/matched,” which is not a supported feature-level fact beyond listing both amounts.",
+  "transaction_id": 2422807,
+  "repeat": 1,
+  "run_name": "run_004_constraints_on",
+  "word_count": 104,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

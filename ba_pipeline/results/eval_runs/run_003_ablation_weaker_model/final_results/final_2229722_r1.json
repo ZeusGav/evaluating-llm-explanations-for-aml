@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it asserts ACH is inherently higher AML risk (a causal claim) which is not supported by the provided feature definitions/SHAP alone.",
+  "transaction_id": 2229722,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 204,
+  "word_limit": 200,
+  "word_limit_pass": 0
+}

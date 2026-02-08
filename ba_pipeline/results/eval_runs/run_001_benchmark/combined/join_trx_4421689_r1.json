@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4421689,
+  "run_name": "run_001_benchmark",
+  "shap_file": "shap_trx_4421689.json",
+  "model_proba": 0.9991680383682251,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0263831615448,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 12249.73,
+      "shap_value": 0.8399993181228638,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 12249.73,
+      "shap_value": 0.7673541307449341,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1490.0,
+      "shap_value": 0.49708616733551025,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.4797377586364746,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.38179728388786316,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 10.0,
+      "shap_value": -0.22749283909797668,
+      "direction": "decrease"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.16317187249660492,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_yuan",
+      "value": 0.0,
+      "shap_value": 0.12435197085142136,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1143561452627182,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach = 1 (SHAP +3.02638): the use of ACH was the single largest driver increasing the model score.\n- amount_paid = 12249.7 (SHAP +0.839999): the reported payment amount increased the score.\n- amount_received = 12249.7 (SHAP +0.767354): the reported received amount also increased the score.\n- to_bank = 1490 (SHAP +0.497086): routing to receiving bank ID 1490 contributed to a higher score.\n- payment_currency_euro = 1 (SHAP +0.479738): the payment being in euro increased the score.\n\nConclusion:\nThe transaction was flagged primarily because it was an ACH payment (payment_format_ach=1) combined with matching paid and received amounts of 12,249.7 (amount_paid and amount_received) and routing to bank ID 1490, with the payment currency set to euro (payment_currency_euro=1). These features, taken together, raised the model’s risk score. If further review is needed, verify ACH details and the receiving bank (to_bank=1490) consistent with the transaction record.",
+  "llm_file": "llm_trx_4421689_r1.json"
+}

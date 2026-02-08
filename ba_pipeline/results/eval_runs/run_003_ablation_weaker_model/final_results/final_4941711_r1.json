@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Clear and well-structured, but it makes unsupported investigative suggestions (e.g., source of funds/purpose/counterparty verification) not evidenced by the provided SHAP drivers.",
+  "transaction_id": 4941711,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 134,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2947913,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2947913.json",
+  "model_proba": 0.9988365769386292,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.914236545562744,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 13431.63,
+      "shap_value": 1.0636574029922485,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 13431.63,
+      "shap_value": 0.7168673276901245,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 214621.0,
+      "shap_value": 0.5695084929466248,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1547.0,
+      "shap_value": 0.3090933561325073,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.1314639449119568,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.10500264167785645,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.09738694876432419,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_rupee",
+      "value": 0.0,
+      "shap_value": 0.08064523339271545,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.07606125622987747,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach: The transaction uses ACH (payment_format_ach = 1) and this feature shows a high positive SHAP contribution (shap_value = 2.91424) driving the flag (direction: increase).\n- amount_received: The receiving amount is 13431.6 (amount_received), with a notable positive SHAP contribution (shap_value = 1.06366) indicating increased risk (direction: increase).\n- amount_paid: The amount paid is 13431.6 (amount_paid), with a positive SHAP contribution (shap_value = 0.716867) toward the flag (direction: increase).\n- from_bank: Sending from_bank = 214621 contributes positively to the flag (shap_value = 0.569508) (direction: increase).\n- to_bank: Receiving bank (to_bank = 1547) also contributes positively (shap_value = 0.309093) toward the flag (direction: increase).\n\nConclusion:\nBased solely on the named drivers, the model indicates a high-risk signal driven by ACH payment method, a relatively large and exact-match transfer amount (amount_received and amount_paid both 13431.6), and the identified sending/receiving banks. This combination supports an elevated risk assessment and would warrant escalation to a manual review for further investigation.",
+  "llm_file": "llm_trx_2947913_r1.json"
+}

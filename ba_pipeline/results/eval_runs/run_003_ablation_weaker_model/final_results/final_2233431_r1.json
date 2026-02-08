@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Main issue is an unsupported claim that ACH is a “high-risk payment channel,” which is not justified by the provided features/FACT_SHEET.",
+  "transaction_id": 2233431,
+  "repeat": 1,
+  "run_name": "run_003_ablation_weaker_model",
+  "word_count": 151,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

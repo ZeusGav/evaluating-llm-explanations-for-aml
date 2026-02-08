@@ -1,0 +1,94 @@
+You are an evaluator in the domain of Anti-Money-Laundering.
+
+INPUT:
+1. SHAP_JSON = JSON array of {feature, value, shap_value, direction}
+2. LLM_TEXT = LLM generated explanation of why a transaction is flagged as suspicious or not.
+3. FACT_SHEET = Only defines feature-name semantics
+
+TASK:
+Score the LLM_TEXT for:
+(1) Direction alignment,
+(2) Driver coverage,
+(3) No unsupported claims,
+(4) Composition,
+(5) Context utility.
+
+FACT_SHEET:
+    "from_bank": "sending bank ID",
+    "to_bank": "receiving bank ID",
+    "amount_received": "amount received (receiving currency)",
+    "amount_paid": "amount paid (payment currency)",
+    "hour": "hour of day (0–23)",
+    "dayofweek": "day of week (0=Mon..6=Sun)",
+    "amount_ratio": "amount_paid / amount_received",
+    "amount_diff": "|amount_paid − amount_received|",
+    "payment_format_": "payment method indicator (1=yes, 0=no)",
+    "receiving_currency_": "receiving currency indicator (1=this, 0=other)",
+    "payment_currency_": "payment currency indicator (1=this, 0=other)"
+
+ONE-HOT SEMANTICS:
+One-hot currency/payment-format features are those whose feature names contain "currency_" or "payment_format_".
+- value = 1 supports text meaning "is X"
+- value = 0 supports text meaning "is not X" / "non-X"
+
+METRICS:
+A) Direction alignment (0/1)
+Check that every driver direction (increase/decrease) stated in LLM_TEXT about a provided SHAP feature matches that feature’s direction label in SHAP_JSON; any mismatch fails.
+Score:
+1 = Pass: No such driver-linked direction statement in LLM_TEXT contradicts the corresponding direction in SHAP_JSON.
+0 = Fail: At least one such driver-linked direction statement in LLM_TEXT contradicts the corresponding direction in SHAP_JSON.
+
+B) Driver coverage (0/1/2)
+Computation:
+1. Take the list of provided SHAP-drivers from SHAP_JSON and look at the absolute size of each driver's shap_value (ignore the sign). Add these up to get the total shap_value available in the provided list.
+2. Read the narrative and mark which of those drivers it actually mentions (i.e., it clearly refers to that feature). For just the mentioned drivers, again take the absolute shap_value and add them up.
+3. Divide the "total mentioned shap_values" by the "total shap_values" to get the driver_coverage.
+4. Convert that fraction into the score.
+Score:
+2 = driver_coverage ≥ 0.80
+1 = 0.50 ≤ driver_coverage < 0.80
+0 = driver_coverage < 0.50
+
+C) no_unsupported_claims (0/1)
+Check whether the narrative makes any unsupported factual statements: a claim counts as unsupported if it states a fact that cannot be linked to a provided driver.
+The score is 1 only if there are zero such claims; otherwise it is 0.
+Score:
+1 = No UNSUPPORTED CLAIM exists.
+0 = At least one UNSUPPORTED CLAIM exists.
+
+D) composition (0–4)
+This is a rubric score for the form of the writing only: how clear, well-structured, and non-repetitive the explanation is.
+It explicitly ignores factual correctness and scores only readability/organization.
+Score:
+4 = very clear; well-structured; minimal repetition; grammar never blocks understanding
+3 = clear overall; minor wording/structure issues
+2 = readable but clunky; noticeable repetition; weak cohesion
+1 = hard to follow; poorly organized; frequent confusing phrasing
+0 = incoherent/unreadable
+
+E) context_utility (0–4)
+This is a rubric score for how useful the text would be to an AML investigator given only the provided drivers (e.g., does it clearly explain the main risk signal and why it matters, without adding facts).
+4 = concrete, clear rationale tied to factors; easy to act on
+3 = generally helpful but somewhat generic
+2 = limited; mostly restates factors with little interpretation
+1 = vague/template-like; little interpretive value
+0 = misleading/contradictory/harmful
+
+OUTPUT:
+Return VALID JSON ONLY with exactly these keys:
+{
+  "direction_alignment": 0|1,
+  "driver_coverage": 0|1|2,
+  "no_unsupported_claims": 0|1,
+  "composition": 0|1|2|3|4,
+  "context_utility": 0|1|2|3|4,
+  "note": "max 1 sentence; mention the single biggest issue or strongest point"
+}
+
+SHAP_JSON:
+[{"feature": "payment_format_ach", "value": 1.0, "shap_value": 2.8293824195861816, "direction": "increase"}, {"feature": "dayofweek", "value": 6.0, "shap_value": 0.8411428928375244, "direction": "increase"}, {"feature": "amount_received", "value": 10726.78, "shap_value": 0.7253270149230957, "direction": "increase"}, {"feature": "amount_paid", "value": 10726.78, "shap_value": 0.7162503600120544, "direction": "increase"}, {"feature": "from_bank", "value": 27241.0, "shap_value": -0.4744831621646881, "direction": "decrease"}, {"feature": "hour", "value": 12.0, "shap_value": 0.27979350090026855, "direction": "increase"}, {"feature": "receiving_currency_euro", "value": 1.0, "shap_value": -0.16626347601413727, "direction": "decrease"}, {"feature": "payment_format_credit_card", "value": 0.0, "shap_value": 0.14643433690071106, "direction": "increase"}, {"feature": "payment_currency_euro", "value": 1.0, "shap_value": -0.10795577615499496, "direction": "decrease"}, {"feature": "to_bank", "value": 1669.0, "shap_value": 0.08634655922651291, "direction": "increase"}]
+
+LLM_TEXT:
+Why: The model flagged this transaction primarily because payment_format_ach (value=1) strongly increased risk (SHAP +2.829). Additional increases came from dayofweek (value=6 — Sunday; SHAP +0.841) and the transaction size: amount_received (10726.8; SHAP +0.725) and amount_paid (10726.8; SHAP +0.716) — notably the received and paid amounts are the same. from_bank (27241) provided a partial decrease in score (SHAP −0.474), slightly offsetting the increase. Hour (12) provided a small further increase (SHAP +0.280).
+
+Conclusion: Based solely on these drivers, the alert is driven mainly by an ACH transfer (payment_format_ach=1) occurring on dayofweek=6 (Sunday) at hour=12 with identical mid‑range amounts (amount_received and amount_paid = 10726.8). The sending bank (from_bank=27241) modestly reduces the model score. If additional review is needed, focus on ACH timing (Sunday/noon) and the matching amounts.

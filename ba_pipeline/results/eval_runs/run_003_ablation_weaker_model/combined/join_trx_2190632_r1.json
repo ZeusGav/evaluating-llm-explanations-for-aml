@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2190632,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2190632.json",
+  "model_proba": 0.997028648853302,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.8293824195861816,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.8411428928375244,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10726.78,
+      "shap_value": 0.7253270149230957,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10726.78,
+      "shap_value": 0.7162503600120544,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 27241.0,
+      "shap_value": -0.4744831621646881,
+      "direction": "decrease"
+    },
+    {
+      "feature": "hour",
+      "value": 12.0,
+      "shap_value": 0.27979350090026855,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.16626347601413727,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14643433690071106,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": -0.10795577615499496,
+      "direction": "decrease"
+    },
+    {
+      "feature": "to_bank",
+      "value": 1669.0,
+      "shap_value": 0.08634655922651291,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach: (value=1, shap_value=2.82938, direction=increase) The transaction uses ACH as the payment format, which the model assigns the strongest positive contribution to the flag. This format is a primary driver of the detected risk.\n- dayofweek: (value=6, shap_value=0.841143, direction=increase) The transaction occurs on Sunday, and this timing contributes positively to the flag, indicating elevated risk for weekend processing.\n- amount_received: (value=10726.8, shap_value=0.725327, direction=increase) The receiving amount is substantial and contributes positively to the flag, signaling a notable transfer size from the receiving side.\n- amount_paid: (value=10726.8, shap_value=0.71625, direction=increase) The paying amount matches the receiving amount and also contributes positively, reinforcing the pattern of a sizable transfer in both directions.\n\nConclusion:\n- Based on the top drivers, the flag is supported by the combination of ACH payment format, Sunday timing, and substantial symmetric transfer amounts (receiving and paying). The overall signal is elevated. Note: this assessment is confined to the provided drivers; without external context, it indicates a risk pattern warranting further review but does not in itself prove illicit activity.",
+  "llm_file": "llm_trx_2190632_r1.json"
+}

@@ -1,0 +1,8 @@
+{
+  "direction_alignment": 0,
+  "driver_coverage": 2,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue is unsupported/misaligned content: it cites an 'hour' driver not in SHAP_JSON and gives several feature values (e.g., to_bank, amounts) that don’t match the provided drivers."
+}

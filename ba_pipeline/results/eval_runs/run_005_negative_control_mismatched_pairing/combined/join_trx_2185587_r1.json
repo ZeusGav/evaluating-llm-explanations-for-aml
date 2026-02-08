@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2185587,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 4723788,
+  "shap_file": "shap_trx_4723788.json",
+  "model_proba": 0.9965607523918152,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9259986877441406,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.61603844165802,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 148016.0,
+      "shap_value": -0.4321020543575287,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.3349631130695343,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_saudi_riyal",
+      "value": 1.0,
+      "shap_value": 0.24228274822235107,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 14.0,
+      "shap_value": 0.2114797979593277,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.16313819587230682,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.15649427473545074,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 0.0,
+      "shap_value": 0.12032550573348999,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 74628.48,
+      "shap_value": 0.11144252866506577,
+      "direction": "increase"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1) was the largest driver, contributing +2.82486 (direction: increase) — the model raised the score primarily because the payment was ACH.\n- amount_received (value=16206.4) contributed +0.91414 (direction: increase) — a relatively large received amount increased the score.\n- dayofweek (value=6) contributed +0.76231 (direction: increase) — the transaction occurring on dayofweek=6 (Sunday) increased the score.\n- amount_paid (value=16206.4) contributed +0.58359 (direction: increase) — the paid amount (16206.4) also increased the score.\n- to_bank (value=25981) contributed −0.48166 (direction: decrease) — the receiving bank (to_bank=25981) reduced the model score somewhat but did not offset the increases above.\n\nConclusion:\nThe flag is driven primarily by payment_format_ach=1 together with high transaction amounts (amount_received and amount_paid = 16206.4) and weekend timing (dayofweek=6), while the to_bank (25981) provided a modest mitigating effect. If these feature values are accurate, the model views this ACH transfer of 16206.4 on a Sunday as higher risk and warrants manual review focused on ACH origin, the transaction amount, and weekend activity.",
+  "llm_file": "llm_trx_2185587_r1.json"
+}

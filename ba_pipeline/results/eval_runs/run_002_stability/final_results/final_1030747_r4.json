@@ -1,0 +1,14 @@
+{
+  "direction_alignment": 1,
+  "driver_coverage": 1,
+  "no_unsupported_claims": 0,
+  "composition": 4,
+  "context_utility": 3,
+  "note": "Biggest issue: it adds unsupported investigative recommendations (e.g., “ACH routing details” and “verification of sending bank identity”) that are not grounded in the provided features.",
+  "transaction_id": 1030747,
+  "repeat": 4,
+  "run_name": "run_002_stability",
+  "word_count": 159,
+  "word_limit": 200,
+  "word_limit_pass": 1
+}

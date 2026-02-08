@@ -1,0 +1,71 @@
+{
+  "transaction_id": 4974365,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_4974365.json",
+  "model_proba": 0.9974478483200073,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.913022518157959,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 11157.0,
+      "shap_value": -1.0054454803466797,
+      "direction": "decrease"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 12682.48,
+      "shap_value": 0.8439751267433167,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 12682.48,
+      "shap_value": 0.7826548218727112,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.6889042854309082,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 14.0,
+      "shap_value": 0.2377489060163498,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.14572234451770782,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.1419767141342163,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_format_cheque",
+      "value": 0.0,
+      "shap_value": 0.1369686871767044,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.10990817844867706,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1) has the largest positive impact (SHAP=2.91302, direction increase), strongly indicating the use of an ACH payment format contributes to the flag.\n- amount_paid (12682.5) has a positive contribution (SHAP=0.843975, direction increase) as does amount_received (12682.5) with SHAP=0.782655 (direction increase). These sizable, equal payment/receiving amounts raise the risk signal.\n- to_bank (12) adds a positive contribution (SHAP=0.688904, direction increase), indicating transfer to a different bank is part of the risk pattern.\n- from_bank (11157) has a negative contribution (SHAP=-1.00545, direction decrease), i.e., this sending bank feature reduces risk relative to baseline; however, the strong positive signals from ACH and the amounts dominate, keeping the overall risk signal elevated.\n\nConclusion:\n- The transaction is flagged primarily due to the ACH payment format combined with large, equal payment/receiving amounts and a transfer to another bank. The negative contribution from from_bank slightly mitigates risk but does not negate the overall elevated risk indicated by the top drivers (payment_format_ach, amount_paid, amount_received, to_bank).",
+  "llm_file": "llm_trx_4974365_r1.json"
+}

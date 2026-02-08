@@ -1,0 +1,71 @@
+{
+  "transaction_id": 2150318,
+  "run_name": "run_003_ablation_weaker_model",
+  "shap_file": "shap_trx_2150318.json",
+  "model_proba": 0.9995651841163635,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 2.9889745712280273,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 12.0,
+      "shap_value": 0.7753599882125854,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 10215.28,
+      "shap_value": 0.6557506322860718,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 6.0,
+      "shap_value": 0.6350468397140503,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.4889634847640991,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 10215.28,
+      "shap_value": 0.47994232177734375,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.43776458501815796,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 7.0,
+      "shap_value": -0.2165587991476059,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.17788119614124298,
+      "direction": "increase"
+    },
+    {
+      "feature": "receiving_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.1337752342224121,
+      "direction": "increase"
+    }
+  ],
+  "repeat": 1,
+  "llm_text": "Why:\n- payment_format_ach (value=1, shap_value=2.98897, direction: increase): The ACH payment format is the top contributor, increasing the flag. This indicates the transaction used ACH as the payment method, a strong risk signal per this driver.\n- to_bank (value=12, shap_value=0.77536, direction: increase): Receiving bank ID 12 adds to the risk signal, contributing to the flag.\n- amount_paid (value=10215.3, shap_value=0.655751, direction: increase): A large payment amount increases risk according to this driver.\n- dayofweek (value=6, shap_value=0.635047, direction: increase): Saturday (day 6) contributes to risk, raising the flag.\n- payment_currency_euro (value=1, shap_value=0.488963, direction: increase): Use of EUR as the payment currency is a contributing risk signal.\n- amount_received (value=10215.3, shap_value=0.479942, direction: increase): The receiving amount matches the paid amount, which adds to the risk signal under this driver.\n- payment_currency_us_dollar (value=0, shap_value=0.437765, direction: increase): The non-USD receiving context (0 for USD) is associated with an increased risk signal per this driver.\nNote: The SHAP directions indicate these features push the model toward flagging the transaction as higher risk.\n\nConclusion:\nBased on the listed high-impact drivers, the transaction is flagged due to the combination of ACH payment format, transfer to a specific bank (to_bank=12), a large EUR payment amount, a weekend timing (dayofweek=6), and the EUR payment context with equal paid/received amounts. These factors, as captured by the top SHAP contributors, collectively raise AML risk signals per the provided drivers. This assessment remains strictly bounded to the named drivers and their directions; additional context could refine the risk interpretation.\n\nAssumptions (conditional, based on named drivers):\n- If these drivers reflect typical customer behavior, the use of ACH to a specific bank with a large EUR amount on a weekend, coupled with equal paid/received amounts, could indicate a cross-border or institutional payment pattern. This is speculative and should be validated against customer profile and transaction history before final actions.",
+  "llm_file": "llm_trx_2150318_r1.json"
+}

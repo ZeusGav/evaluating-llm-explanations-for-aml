@@ -1,0 +1,72 @@
+{
+  "transaction_id": 2148531,
+  "run_name": "run_005_negative_control_mismatched_pairing",
+  "repeat": 1,
+  "shap_transaction_id": 3906788,
+  "shap_file": "shap_trx_3906788.json",
+  "model_proba": 0.9996052384376526,
+  "top_features": [
+    {
+      "feature": "payment_format_ach",
+      "value": 1.0,
+      "shap_value": 3.0867185592651367,
+      "direction": "increase"
+    },
+    {
+      "feature": "to_bank",
+      "value": 22.0,
+      "shap_value": 0.9826977849006653,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_received",
+      "value": 15526.31,
+      "shap_value": 0.8839613199234009,
+      "direction": "increase"
+    },
+    {
+      "feature": "amount_paid",
+      "value": 15526.31,
+      "shap_value": 0.5532007813453674,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_euro",
+      "value": 1.0,
+      "shap_value": 0.44051000475883484,
+      "direction": "increase"
+    },
+    {
+      "feature": "payment_currency_us_dollar",
+      "value": 0.0,
+      "shap_value": 0.4307614862918854,
+      "direction": "increase"
+    },
+    {
+      "feature": "dayofweek",
+      "value": 5.0,
+      "shap_value": 0.3215208351612091,
+      "direction": "increase"
+    },
+    {
+      "feature": "from_bank",
+      "value": 1.0,
+      "shap_value": -0.13971275091171265,
+      "direction": "decrease"
+    },
+    {
+      "feature": "payment_format_credit_card",
+      "value": 0.0,
+      "shap_value": 0.13082221150398254,
+      "direction": "increase"
+    },
+    {
+      "feature": "hour",
+      "value": 16.0,
+      "shap_value": -0.10314688831567764,
+      "direction": "decrease"
+    }
+  ],
+  "llm_text": "Why:\n- payment_format_ach (value=1; SHAP=+2.87547; direction=increase): the payment being ACH was the single largest driver raising the model score.\n- payment_currency_saudi_riyal (value=1; SHAP=+0.67731; direction=increase) and receiving_currency_saudi_riyal (value=1; SHAP=+0.34126; direction=increase): the payment and receiving currency indicators for Saudi Riyal both increased the score.\n- dayofweek (value=6; SHAP=+0.60278; direction=increase): the transaction occurring on day index 6 (per fact sheet mapping) increased the score.\n- amount_received (value=46154.1; SHAP=+0.50341; direction=increase): the received amount contributed positively to the flag.\n- from_bank (value=119; SHAP=-0.41556; direction=decrease) and to_bank (value=48211; SHAP=-0.34716; direction=decrease): these specific bank identifiers reduced the model score (partial offsets).\n\nConclusion:\nThe alert is primarily driven by the transaction being an ACH payment (payment_format_ach=1) denominated in Saudi Riyal (payment_currency_saudi_riyal=1 and receiving_currency_saudi_riyal=1), processed on dayofweek=6, and for amount_received=46154.1 — all of which increased the model’s risk score. This elevated signal was partially mitigated by the negative contributions from from_bank=119 and to_bank=48211. \n\nPotentially helpful, hedged observations (derived from named drivers only):\n- If both payment_currency_saudi_riyal=1 and receiving_currency_saudi_riyal=1, this suggests the payment and receipt are in the same currency (Saudi Riyal), i.e., likely no currency conversion. \n- dayofweek=6 corresponds to Sunday per the provided mapping.",
+  "llm_file": "llm_trx_2148531_r1.json"
+}
