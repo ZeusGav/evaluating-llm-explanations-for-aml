@@ -1,0 +1,4 @@
+run,n_tx_common,delta_direction_alignment,delta_direction_alignment_ci_lo,delta_direction_alignment_ci_hi,delta_no_unsupported_claims,delta_no_unsupported_claims_ci_lo,delta_no_unsupported_claims_ci_hi,delta_driver_coverage,delta_driver_coverage_ci_lo,delta_driver_coverage_ci_hi,delta_composition,delta_composition_ci_lo,delta_composition_ci_hi,delta_context_utility,delta_context_utility_ci_lo,delta_context_utility_ci_hi,delta_word_count,delta_word_count_ci_lo,delta_word_count_ci_hi
+run_003_ablation_weaker_model,100,-0.03,-0.07,0.0,-0.26,-0.39,-0.13,-0.05,-0.11,0.01,0.0,0.0,0.0,-0.1,-0.2,0.0,10.41,2.1597500000000003,18.770500000000002
+run_004_constraints_on,100,-0.01,-0.03,0.0,-0.12,-0.24,0.01,-0.01,-0.06,0.03,0.0,0.0,0.0,0.11,0.0,0.23,-53.39,-57.961,-48.77
+run_005_negative_control_mismatched_pairing,100,-0.56,-0.66,-0.46,-0.66,-0.75,-0.57,-0.73,-0.84,-0.63,-0.17,-0.25,-0.1,-0.51,-0.64,-0.38,0.0,0.0,0.0
